@@ -1,0 +1,2377 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    119948,       2369]
+NotebookOptionsPosition[    115299,       2284]
+NotebookOutlinePosition[    115701,       2300]
+CellTagsIndexPosition[    115658,       2297]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Analysis", "Title",
+ CellChangeTimes->{{3.839919424688694*^9, 
+  3.839919426482007*^9}},ExpressionUUID->"675e6912-781d-4012-a726-\
+6865cfd55596"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"bblpath", "=", 
+   RowBox[{
+    RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<main.bbl\>\""}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.8399053149193783`*^9, 3.839905335651888*^9}},
+ CellLabel->
+  "In[900]:=",ExpressionUUID->"09b2b1fd-a0df-4b2b-905f-e287ae1b3370"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"string", "=", 
+  RowBox[{"Import", "[", "bblpath", "]"}], 
+  RowBox[{"(*", 
+   RowBox[{"//", "FullForm"}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.8399053396146774`*^9, 3.839905376188969*^9}, {
+   3.8399054551967335`*^9, 3.8399054705359125`*^9}, {3.8399206018977437`*^9, 
+   3.8399206103271184`*^9}, 3.8399207506027946`*^9, {3.839921447101616*^9, 
+   3.839921540578436*^9}},
+ CellLabel->
+  "In[903]:=",ExpressionUUID->"daea0135-2fe6-42aa-a783-edb966fb6406"],
+
+Cell[BoxData["\<\"%apsrev4-2.bst 2019-01-14 (MD) hand-edited version of \
+apsrev4-1.bst\\n%Control: key (0)\\n%Control: author (72) initials \
+jnrlst\\n%Control: editor formatted (1) identically to author\\n%Control: \
+production of article title (-1) disabled\\n%Control: page (0) \
+single\\n%Control: year (1) truncated\\n%Control: production of eprint (0) \
+enabled\\n\\\\begin{thebibliography}{6}%\\n\\\\makeatletter\\n\\\\\
+providecommand \\\\@ifxundefined [1]{%\\n \\\\@ifx{#1\\\\undefined}\\n}%\\n\\\
+\\providecommand \\\\@ifnum [1]{%\\n \\\\ifnum #1\\\\expandafter \
+\\\\@firstoftwo\\n \\\\else \\\\expandafter \\\\@secondoftwo\\n \
+\\\\fi\\n}%\\n\\\\providecommand \\\\@ifx [1]{%\\n \\\\ifx #1\\\\expandafter \
+\\\\@firstoftwo\\n \\\\else \\\\expandafter \\\\@secondoftwo\\n \
+\\\\fi\\n}%\\n\\\\providecommand \\\\natexlab [1]{#1}%\\n\\\\providecommand \
+\\\\enquote  [1]{``#1''}%\\n\\\\providecommand \\\\bibnamefont  [1]{#1}%\\n\\\
+\\providecommand \\\\bibfnamefont [1]{#1}%\\n\\\\providecommand \
+\\\\citenamefont [1]{#1}%\\n\\\\providecommand \\\\href@noop \
+[0]{\\\\@secondoftwo}%\\n\\\\providecommand \\\\href [0]{\\\\begingroup \
+\\\\@sanitize@url \\\\@href}%\\n\\\\providecommand \
+\\\\@href[1]{\\\\@@startlink{#1}\\\\@@href}%\\n\\\\providecommand \
+\\\\@@href[1]{\\\\endgroup#1\\\\@@endlink}%\\n\\\\providecommand \
+\\\\@sanitize@url [0]{\\\\catcode `\\\\\\\\12\\\\catcode \
+`\\\\$12\\\\catcode\\n  `\\\\&12\\\\catcode `\\\\#12\\\\catcode \
+`\\\\^12\\\\catcode `\\\\_12\\\\catcode \
+`\\\\%12\\\\relax}%\\n\\\\providecommand \
+\\\\@@startlink[1]{}%\\n\\\\providecommand \
+\\\\@@endlink[0]{}%\\n\\\\providecommand \\\\url  \
+[0]{\\\\begingroup\\\\@sanitize@url \\\\@url }%\\n\\\\providecommand \\\\@url \
+[1]{\\\\endgroup\\\\@href {#1}{\\\\urlprefix }}%\\n\\\\providecommand \
+\\\\urlprefix  [0]{URL }%\\n\\\\providecommand \\\\Eprint [0]{\\\\href \
+}%\\n\\\\providecommand \\\\doibase \
+[0]{https://doi.org/}%\\n\\\\providecommand \\\\selectlanguage \
+[0]{\\\\@gobble}%\\n\\\\providecommand \\\\bibinfo  [0]{\\\\@secondoftwo}%\\n\
+\\\\providecommand \\\\bibfield  [0]{\\\\@secondoftwo}%\\n\\\\providecommand \
+\\\\translation [1]{[#1]}%\\n\\\\providecommand \\\\BibitemOpen \
+[0]{}%\\n\\\\providecommand \\\\bibitemStop [0]{}%\\n\\\\providecommand \
+\\\\bibitemNoStop [0]{.\\\\EOS\\\\space}%\\n\\\\providecommand \\\\EOS [0]{\\\
+\\spacefactor3000\\\\relax}%\\n\\\\providecommand \\\\BibitemShut  \
+[1]{\\\\csname \
+bibitem#1\\\\endcsname}%\\n\\\\let\\\\auto@bib@innerbib\\\\@empty\\n%</\
+preamble>\\n\\\\bibitem [{\\\\citenamefont {Po}\\\\ \\\\emph {et~al.}(2018)\\\
+\\citenamefont {Po},\\n  \\\\citenamefont {Zou}, \\\\citenamefont \
+{Vishwanath},\\\\ and\\\\ \\\\citenamefont\\n  {Senthil}}]{Po2018PRX}%\\n  \\\
+\\BibitemOpen\\n  \\\\bibfield  {author} {\\\\bibinfo {author} \
+{\\\\bibfnamefont {H.~C.}\\\\ \\\\bibnamefont\\n  {Po}}, \\\\bibinfo {author} \
+{\\\\bibfnamefont {L.}~\\\\bibnamefont {Zou}}, \\\\bibinfo\\n  {author} \
+{\\\\bibfnamefont {A.}~\\\\bibnamefont {Vishwanath}},\\\\ and\\\\ \\\\bibinfo\
+\\n  {author} {\\\\bibfnamefont {T.}~\\\\bibnamefont {Senthil}},\\\\ \
+}\\\\href\\n  {https://doi.org/10.1103/physrevx.8.031089} {\\\\bibfield  \
+{journal} {\\\\bibinfo\\n  {journal} {Phys. Rev. X}\\\\ }\\\\textbf \
+{\\\\bibinfo {volume} {8}},\\\\ \\\\bibinfo {pages}\\n  {031089} (\\\\bibinfo \
+{year} {2018})}\\\\BibitemShut {NoStop}%\\n\\\\bibitem [{\\\\citenamefont \
+{Codecido}\\\\ \\\\emph {et~al.}(2019)\\\\citenamefont\\n  {Codecido}, \
+\\\\citenamefont {Wang}, \\\\citenamefont {Koester}, \\\\citenamefont\\n  \
+{Che}, \\\\citenamefont {Tian}, \\\\citenamefont {Lv}, \\\\citenamefont \
+{Tran},\\n  \\\\citenamefont {Watanabe}, \\\\citenamefont {Taniguchi}, \
+\\\\citenamefont {Zhang},\\n  \\\\citenamefont {Bockrath},\\\\ and\\\\ \
+\\\\citenamefont {Lau}}]{Codecido2019SA}%\\n  \\\\BibitemOpen\\n  \
+\\\\bibfield  {author} {\\\\bibinfo {author} {\\\\bibfnamefont \
+{E.}~\\\\bibnamefont\\n  {Codecido}}, \\\\bibinfo {author} {\\\\bibfnamefont \
+{Q.}~\\\\bibnamefont {Wang}},\\n  \\\\bibinfo {author} {\\\\bibfnamefont \
+{R.}~\\\\bibnamefont {Koester}}, \\\\bibinfo\\n  {author} {\\\\bibfnamefont \
+{S.}~\\\\bibnamefont {Che}}, \\\\bibinfo {author}\\n  {\\\\bibfnamefont {H.}~\
+\\\\bibnamefont {Tian}}, \\\\bibinfo {author} {\\\\bibfnamefont\\n  \
+{R.}~\\\\bibnamefont {Lv}}, \\\\bibinfo {author} {\\\\bibfnamefont \
+{S.}~\\\\bibnamefont\\n  {Tran}}, \\\\bibinfo {author} {\\\\bibfnamefont \
+{K.}~\\\\bibnamefont {Watanabe}},\\n  \\\\bibinfo {author} {\\\\bibfnamefont \
+{T.}~\\\\bibnamefont {Taniguchi}}, \\\\bibinfo\\n  {author} {\\\\bibfnamefont \
+{F.}~\\\\bibnamefont {Zhang}}, \\\\bibinfo {author}\\n  {\\\\bibfnamefont \
+{M.}~\\\\bibnamefont {Bockrath}},\\\\ and\\\\ \\\\bibinfo {author}\\n  \
+{\\\\bibfnamefont {C.~N.}\\\\ \\\\bibnamefont {Lau}},\\\\ }\\\\href\\n  \
+{https://doi.org/10.1126/sciadv.aaw9770} {\\\\bibfield  {journal} \
+{\\\\bibinfo\\n  {journal} {Sci. Adv.}\\\\ }\\\\textbf {\\\\bibinfo {volume} \
+{5}},\\\\ \\\\bibinfo {pages}\\n  {eaaw9770} (\\\\bibinfo {year} \
+{2019})}\\\\BibitemShut {NoStop}%\\n\\\\bibitem [{\\\\citenamefont \
+{Zhang}\\\\ \\\\emph {et~al.}(2017)\\\\citenamefont {Zhang},\\n  \
+\\\\citenamefont {Chuu}, \\\\citenamefont {Ren}, \\\\citenamefont {Li}, \
+\\\\citenamefont\\n  {Li}, \\\\citenamefont {Jin}, \\\\citenamefont {Chou},\\\
+\\ and\\\\ \\\\citenamefont\\n  {Shih}}]{Zhang2017SA}%\\n  \\\\BibitemOpen\\n \
+ \\\\bibfield  {author} {\\\\bibinfo {author} {\\\\bibfnamefont \
+{C.}~\\\\bibnamefont\\n  {Zhang}}, \\\\bibinfo {author} {\\\\bibfnamefont \
+{C.-P.}\\\\ \\\\bibnamefont {Chuu}},\\n  \\\\bibinfo {author} \
+{\\\\bibfnamefont {X.}~\\\\bibnamefont {Ren}}, \\\\bibinfo {author}\\n  \
+{\\\\bibfnamefont {M.-Y.}\\\\ \\\\bibnamefont {Li}}, \\\\bibinfo {author} {\\\
+\\bibfnamefont\\n  {L.-J.}\\\\ \\\\bibnamefont {Li}}, \\\\bibinfo {author} \
+{\\\\bibfnamefont\\n  {C.}~\\\\bibnamefont {Jin}}, \\\\bibinfo {author} \
+{\\\\bibfnamefont {M.-Y.}\\\\\\n  \\\\bibnamefont {Chou}},\\\\ and\\\\ \
+\\\\bibinfo {author} {\\\\bibfnamefont {C.-K.}\\\\\\n  \\\\bibnamefont \
+{Shih}},\\\\ }\\\\href {https://doi.org/10.1126/sciadv.1601459}\\n  \
+{\\\\bibfield  {journal} {\\\\bibinfo  {journal} {Sci. Adv.}\\\\ }\\\\textbf \
+{\\\\bibinfo\\n  {volume} {3}},\\\\ \\\\bibinfo {pages} {e1601459} \
+(\\\\bibinfo {year}\\n  {2017})}\\\\BibitemShut {NoStop}%\\n\\\\bibitem \
+[{\\\\citenamefont {Liu}\\\\ \\\\emph {et~al.}(2020)\\\\citenamefont \
+{Liu},\\n  \\\\citenamefont {Zong}, \\\\citenamefont {Wang}, \\\\citenamefont \
+{Wen},\\n  \\\\citenamefont {Wu}, \\\\citenamefont {Xia},\\\\ and\\\\ \
+\\\\citenamefont\\n  {Wei}}]{Liu2020JPDAP}%\\n  \\\\BibitemOpen\\n  \
+\\\\bibfield  {author} {\\\\bibinfo {author} {\\\\bibfnamefont \
+{H.}~\\\\bibnamefont\\n  {Liu}}, \\\\bibinfo {author} {\\\\bibfnamefont {Y.}~\
+\\\\bibnamefont {Zong}}, \\\\bibinfo\\n  {author} {\\\\bibfnamefont \
+{P.}~\\\\bibnamefont {Wang}}, \\\\bibinfo {author}\\n  {\\\\bibfnamefont \
+{H.}~\\\\bibnamefont {Wen}}, \\\\bibinfo {author} {\\\\bibfnamefont\\n  {H.}~\
+\\\\bibnamefont {Wu}}, \\\\bibinfo {author} {\\\\bibfnamefont \
+{J.}~\\\\bibnamefont\\n  {Xia}},\\\\ and\\\\ \\\\bibinfo {author} \
+{\\\\bibfnamefont {Z.}~\\\\bibnamefont {Wei}},\\\\\\n  }\\\\href \
+{https://doi.org/10.1088/1361-6463/abbf75} {\\\\bibfield  {journal}\\n  \
+{\\\\bibinfo  {journal} {J. Phys. D: Appl. Phys.}\\\\ }\\\\textbf \
+{\\\\bibinfo {volume}\\n  {54}},\\\\ \\\\bibinfo {pages} {053001} \
+(\\\\bibinfo {year} {2020})}\\\\BibitemShut\\n  {NoStop}%\\n\\\\bibitem \
+[{\\\\citenamefont {Mucha-Kruczy{\\\\'{n}}ski}\\\\ \\\\emph\\n  \
+{et~al.}(2013)\\\\citenamefont {Mucha-Kruczy{\\\\'{n}}ski}, \
+\\\\citenamefont\\n  {Wallbank},\\\\ and\\\\ \\\\citenamefont\\n  \
+{Fal{\\\\textquotesingle}ko}}]{MuchaKruczynski2013PRB}%\\n  \
+\\\\BibitemOpen\\n  \\\\bibfield  {author} {\\\\bibinfo {author} \
+{\\\\bibfnamefont {M.}~\\\\bibnamefont\\n  {Mucha-Kruczy{\\\\'{n}}ski}}, \
+\\\\bibinfo {author} {\\\\bibfnamefont {J.~R.}\\\\\\n  \\\\bibnamefont \
+{Wallbank}},\\\\ and\\\\ \\\\bibinfo {author} {\\\\bibfnamefont \
+{V.~I.}\\\\\\n  \\\\bibnamefont {Fal{\\\\textquotesingle}ko}},\\\\ \
+}\\\\href\\n  {https://doi.org/10.1103/physrevb.88.205418} {\\\\bibfield  \
+{journal} {\\\\bibinfo\\n  {journal} {Phys. Rev. B}\\\\ }\\\\textbf \
+{\\\\bibinfo {volume} {88}},\\\\ \\\\bibinfo\\n  {pages} {205418} \
+(\\\\bibinfo {year} {2013})}\\\\BibitemShut {NoStop}%\\n\\\\bibitem \
+[{\\\\citenamefont {Gruji{\\\\'c}}\\\\ \\\\emph \
+{et~al.}(2011)\\\\citenamefont\\n  {Gruji{\\\\'c}}, \\\\citenamefont \
+{Zarenia}, \\\\citenamefont {Chaves}, \\\\citenamefont\\n  {Tadi{\\\\'c}}, \\\
+\\citenamefont {Farias},\\\\ and\\\\ \\\\citenamefont\\n  \
+{Peeters}}]{Grujic2011PRB}%\\n  \\\\BibitemOpen\\n  \\\\bibfield  {author} \
+{\\\\bibinfo {author} {\\\\bibfnamefont {M.}~\\\\bibnamefont\\n  \
+{Gruji{\\\\'c}}}, \\\\bibinfo {author} {\\\\bibfnamefont {M.}~\\\\bibnamefont \
+{Zarenia}},\\n  \\\\bibinfo {author} {\\\\bibfnamefont {A.}~\\\\bibnamefont \
+{Chaves}}, \\\\bibinfo\\n  {author} {\\\\bibfnamefont {M.}~\\\\bibnamefont \
+{Tadi{\\\\'c}}}, \\\\bibinfo {author}\\n  {\\\\bibfnamefont {G.~A.}\\\\ \
+\\\\bibnamefont {Farias}},\\\\ and\\\\ \\\\bibinfo {author}\\n  \
+{\\\\bibfnamefont {F.~M.}\\\\ \\\\bibnamefont {Peeters}},\\\\ }\\\\href\\n  \
+{https://doi.org/10.1103/PhysRevB.84.205441} {\\\\bibfield  {journal} \
+{\\\\bibinfo\\n  {journal} {Phys. Rev. B}\\\\ }\\\\textbf {\\\\bibinfo \
+{volume} {84}},\\\\ \\\\bibinfo\\n  {pages} {205441} (\\\\bibinfo {year} \
+{2011})}\\\\BibitemShut {NoStop}%\\n\\\\end{thebibliography}%\"\>"], "Output",
+ CellChangeTimes->{{3.8399053498711205`*^9, 3.839905377534423*^9}, {
+   3.8399054574238033`*^9, 3.8399054712613487`*^9}, {3.839920246094081*^9, 
+   3.8399202512335215`*^9}, {3.83992060518602*^9, 3.8399206109423137`*^9}, {
+   3.8399214425975237`*^9, 3.83992145972836*^9}, {3.839921490424139*^9, 
+   3.839921529720907*^9}, 3.839921597645201*^9, 3.8399218016542764`*^9},
+ CellLabel->
+  "Out[903]=",ExpressionUUID->"85a565e1-8ac1-465f-9b3d-8da88a68486f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"regexes", "=", 
+    RowBox[{"RegularExpression", "/@", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<  \\\\\\\\BibitemOpen\\n\>\"", ",", 
+       "\"\<\\\\\\\\BibitemShut \\\\{NoStop\\\\}\>\"", ",", 
+       "\"\<  \\\\\\\\bibfield  \\\\{author\\\\} \>\""}], "}"}]}]}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"StringDelete", "[", 
+     RowBox[{"string", ",", 
+      RowBox[{"RegularExpression", "[", "\"\<(?m)^\\\\%.+\\n\>\"", "]"}]}], 
+     "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"StringDelete", "[", 
+     RowBox[{"%", ",", 
+      RowBox[{
+      "RegularExpression", "[", "\"\<\\\\\\\\makeatletter\\n\>\"", "]"}]}], 
+     "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"StringDelete", "[", 
+     RowBox[{"%", ",", "\"\<\\\\let\\\\auto@bib@innerbib\\\\@empty\\n\>\""}], 
+     "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"StringDelete", "[", 
+     RowBox[{"%", ",", 
+      RowBox[{
+      "RegularExpression", "[", 
+       "\"\<\\\\\\\\providecommand .+\\\\{(?s).+?\\\\}%\\n\>\"", "]"}]}], 
+     "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"string2", "=", 
+    RowBox[{"StringDelete", "[", 
+     RowBox[{"%", ",", 
+      RowBox[{"RegularExpression", "[", "\"\< \\\\[(?s).+?\\\\]\>\"", "]"}]}],
+      "]"}]}], 
+   RowBox[{"(*", 
+    RowBox[{";", "\[IndentingNewLine]", 
+     RowBox[{"Fold", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"StringDelete", "[", 
+         RowBox[{"%", ",", "#"}], "]"}], "&"}], ",", "regexes"}], "]"}]}], 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"StringCases", "[", "]"}], "*)"}]}]}]], "Input",
+ CellChangeTimes->{{3.8399054153259068`*^9, 3.839905442075653*^9}, {
+   3.839905478539751*^9, 3.839905593772375*^9}, {3.8399056299164047`*^9, 
+   3.839905702484356*^9}, {3.839905826588708*^9, 3.8399058812927103`*^9}, {
+   3.839905969818122*^9, 3.839905987116534*^9}, {3.8399060230213704`*^9, 
+   3.8399060362126184`*^9}, {3.839906325532967*^9, 3.839906327645976*^9}, {
+   3.839906370357088*^9, 3.8399063720849047`*^9}, {3.8399064665099163`*^9, 
+   3.83990648133315*^9}, {3.8399065485808487`*^9, 3.8399065487486725`*^9}, {
+   3.83990664706907*^9, 3.839906697916967*^9}, {3.8399067721892824`*^9, 
+   3.839906794108985*^9}, {3.8399068271820946`*^9, 3.839906928957102*^9}, {
+   3.8399069705183425`*^9, 3.8399070330229073`*^9}, {3.8399070682100105`*^9, 
+   3.839907078661436*^9}, 3.839907126701404*^9, {3.839907162869947*^9, 
+   3.839907170364422*^9}, {3.8399072405574493`*^9, 3.8399072847894545`*^9}, {
+   3.8399073967522287`*^9, 3.8399074870633426`*^9}, {3.8399079362140274`*^9, 
+   3.839908008477212*^9}, {3.839908043189165*^9, 3.839908129031307*^9}, {
+   3.839908216414836*^9, 3.839908228278234*^9}, 3.839908261022855*^9, {
+   3.839908332629125*^9, 3.839908339738133*^9}, {3.839908389814534*^9, 
+   3.839908390807121*^9}, {3.839908440438035*^9, 3.83990853249356*^9}, {
+   3.8399085730090027`*^9, 3.8399085984650326`*^9}, {3.839908643170166*^9, 
+   3.8399088083826637`*^9}, {3.8399088542790613`*^9, 
+   3.8399089384941063`*^9}, {3.8399092478984847`*^9, 3.839909262609824*^9}, 
+   3.8399094901455717`*^9, {3.8399125955117407`*^9, 3.839912598704216*^9}, 
+   3.8399184903553195`*^9, 3.839918612741229*^9},
+ CellLabel->
+  "In[783]:=",ExpressionUUID->"db09a213-bc88-446e-8c58-74b14877e1dc"],
+
+Cell[BoxData["\<\"\\\\begin{thebibliography}{4}%\\n\\\\bibitem{Po2018PRX}%\\n \
+ \\\\BibitemOpen\\n  \\\\bibfield  {author} {\\\\bibinfo {author} \
+{\\\\bibfnamefont {H.~C.}\\\\ \\\\bibnamefont\\n  {Po}}, \\\\bibinfo {author} \
+{\\\\bibfnamefont {L.}~\\\\bibnamefont {Zou}}, \\\\bibinfo\\n  {author} \
+{\\\\bibfnamefont {A.}~\\\\bibnamefont {Vishwanath}},\\\\ and\\\\ \\\\bibinfo\
+\\n  {author} {\\\\bibfnamefont {T.}~\\\\bibnamefont {Senthil}},\\\\ \
+}\\\\href\\n  {https://doi.org/10.1103/physrevx.8.031089} {\\\\bibfield  \
+{journal} {\\\\bibinfo\\n  {journal} {Phys. Rev. X}\\\\ }\\\\textbf \
+{\\\\bibinfo {volume} {8}},\\\\ \\\\bibinfo {pages}\\n  {031089} (\\\\bibinfo \
+{year} {2018})}\\\\BibitemShut {NoStop}%\\n\\\\bibitem{Codecido2019SA}%\\n  \
+\\\\BibitemOpen\\n  \\\\bibfield  {author} {\\\\bibinfo {author} \
+{\\\\bibfnamefont {E.}~\\\\bibnamefont\\n  {Codecido}}, \\\\bibinfo {author} \
+{\\\\bibfnamefont {Q.}~\\\\bibnamefont {Wang}},\\n  \\\\bibinfo {author} \
+{\\\\bibfnamefont {R.}~\\\\bibnamefont {Koester}}, \\\\bibinfo\\n  {author} {\
+\\\\bibfnamefont {S.}~\\\\bibnamefont {Che}}, \\\\bibinfo {author}\\n  \
+{\\\\bibfnamefont {H.}~\\\\bibnamefont {Tian}}, \\\\bibinfo {author} \
+{\\\\bibfnamefont\\n  {R.}~\\\\bibnamefont {Lv}}, \\\\bibinfo {author} \
+{\\\\bibfnamefont {S.}~\\\\bibnamefont\\n  {Tran}}, \\\\bibinfo {author} \
+{\\\\bibfnamefont {K.}~\\\\bibnamefont {Watanabe}},\\n  \\\\bibinfo {author} \
+{\\\\bibfnamefont {T.}~\\\\bibnamefont {Taniguchi}}, \\\\bibinfo\\n  {author} \
+{\\\\bibfnamefont {F.}~\\\\bibnamefont {Zhang}}, \\\\bibinfo {author}\\n  {\\\
+\\bibfnamefont {M.}~\\\\bibnamefont {Bockrath}},\\\\ and\\\\ \\\\bibinfo \
+{author}\\n  {\\\\bibfnamefont {C.~N.}\\\\ \\\\bibnamefont {Lau}},\\\\ \
+}\\\\href\\n  {https://doi.org/10.1126/sciadv.aaw9770} {\\\\bibfield  \
+{journal} {\\\\bibinfo\\n  {journal} {Sci. Adv.}\\\\ }\\\\textbf {\\\\bibinfo \
+{volume} {5}},\\\\ \\\\bibinfo {pages}\\n  {eaaw9770} (\\\\bibinfo {year} \
+{2019})}\\\\BibitemShut {NoStop}%\\n\\\\bibitem{Zhang2017SA}%\\n  \
+\\\\BibitemOpen\\n  \\\\bibfield  {author} {\\\\bibinfo {author} \
+{\\\\bibfnamefont {C.}~\\\\bibnamefont\\n  {Zhang}}, \\\\bibinfo {author} {\\\
+\\bibfnamefont {C.-P.}\\\\ \\\\bibnamefont {Chuu}},\\n  \\\\bibinfo {author} \
+{\\\\bibfnamefont {X.}~\\\\bibnamefont {Ren}}, \\\\bibinfo {author}\\n  \
+{\\\\bibfnamefont {M.-Y.}\\\\ \\\\bibnamefont {Li}}, \\\\bibinfo {author} {\\\
+\\bibfnamefont\\n  {L.-J.}\\\\ \\\\bibnamefont {Li}}, \\\\bibinfo {author} \
+{\\\\bibfnamefont\\n  {C.}~\\\\bibnamefont {Jin}}, \\\\bibinfo {author} \
+{\\\\bibfnamefont {M.-Y.}\\\\\\n  \\\\bibnamefont {Chou}},\\\\ and\\\\ \
+\\\\bibinfo {author} {\\\\bibfnamefont {C.-K.}\\\\\\n  \\\\bibnamefont \
+{Shih}},\\\\ }\\\\href {https://doi.org/10.1126/sciadv.1601459}\\n  \
+{\\\\bibfield  {journal} {\\\\bibinfo  {journal} {Sci. Adv.}\\\\ }\\\\textbf \
+{\\\\bibinfo\\n  {volume} {3}},\\\\ \\\\bibinfo {pages} {e1601459} \
+(\\\\bibinfo {year}\\n  {2017})}\\\\BibitemShut \
+{NoStop}%\\n\\\\bibitem{Liu2020JPDAP}%\\n  \\\\BibitemOpen\\n  \\\\bibfield  \
+{author} {\\\\bibinfo {author} {\\\\bibfnamefont {H.}~\\\\bibnamefont\\n  \
+{Liu}}, \\\\bibinfo {author} {\\\\bibfnamefont {Y.}~\\\\bibnamefont {Zong}}, \
+\\\\bibinfo\\n  {author} {\\\\bibfnamefont {P.}~\\\\bibnamefont {Wang}}, \
+\\\\bibinfo {author}\\n  {\\\\bibfnamefont {H.}~\\\\bibnamefont {Wen}}, \
+\\\\bibinfo {author} {\\\\bibfnamefont\\n  {H.}~\\\\bibnamefont {Wu}}, \
+\\\\bibinfo {author} {\\\\bibfnamefont {J.}~\\\\bibnamefont\\n  {Xia}},\\\\ \
+and\\\\ \\\\bibinfo {author} {\\\\bibfnamefont {Z.}~\\\\bibnamefont {Wei}},\\\
+\\\\n  }\\\\href {https://doi.org/10.1088/1361-6463/abbf75} {\\\\bibfield  \
+{journal}\\n  {\\\\bibinfo  {journal} {J. Phys. D: Appl. Phys.}\\\\ \
+}\\\\textbf {\\\\bibinfo {volume}\\n  {54}},\\\\ \\\\bibinfo {pages} {053001} \
+(\\\\bibinfo {year} {2020})}\\\\BibitemShut\\n  \
+{NoStop}%\\n\\\\end{thebibliography}%\"\>"], "Output",
+ CellChangeTimes->{{3.839908491901142*^9, 3.839908532696806*^9}, 
+   3.8399085987085953`*^9, {3.8399087117515216`*^9, 3.8399087176271257`*^9}, {
+   3.83990876064972*^9, 3.8399088090625763`*^9}, 3.839908872820574*^9, {
+   3.839908903709217*^9, 3.839908941714422*^9}, 3.839909255016695*^9, 
+   3.839909490748988*^9, 3.83991259943781*^9, 3.839918491104065*^9, 
+   3.8399186141222334`*^9},
+ CellLabel->
+  "Out[787]=",ExpressionUUID->"23bc914d-7791-4f30-9d86-82d19f5944ea"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"StringCases", "[", 
+    RowBox[{"string", ",", 
+     RowBox[{
+     "RegularExpression", "[", 
+      "\"\<(?<=%</preamble>\\n)((?s).+)(?=\\n\\\\\\\\end)\>\"", "]"}]}], 
+    "]"}], "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"string22", "=", 
+  RowBox[{"StringDelete", "[", 
+   RowBox[{"%", ",", 
+    RowBox[{"RegularExpression", "[", "\"\< \\\\[(?s).+?\\\\]\>\"", "]"}]}], 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.839918621795017*^9, 3.8399186916650195`*^9}, {
+  3.839918748635912*^9, 3.839918777690782*^9}, {3.839918855721373*^9, 
+  3.83991890748975*^9}},
+ CellLabel->
+  "In[802]:=",ExpressionUUID->"3c55583d-86a5-4a9a-98ee-8e6ce81de50f"],
+
+Cell[BoxData["\<\"\\\\bibitem{Po2018PRX}%\\n  \\\\BibitemOpen\\n  \
+\\\\bibfield  {author} {\\\\bibinfo {author} {\\\\bibfnamefont {H.~C.}\\\\ \\\
+\\bibnamefont\\n  {Po}}, \\\\bibinfo {author} {\\\\bibfnamefont \
+{L.}~\\\\bibnamefont {Zou}}, \\\\bibinfo\\n  {author} {\\\\bibfnamefont {A.}~\
+\\\\bibnamefont {Vishwanath}},\\\\ and\\\\ \\\\bibinfo\\n  {author} \
+{\\\\bibfnamefont {T.}~\\\\bibnamefont {Senthil}},\\\\ }\\\\href\\n  \
+{https://doi.org/10.1103/physrevx.8.031089} {\\\\bibfield  {journal} \
+{\\\\bibinfo\\n  {journal} {Phys. Rev. X}\\\\ }\\\\textbf {\\\\bibinfo \
+{volume} {8}},\\\\ \\\\bibinfo {pages}\\n  {031089} (\\\\bibinfo {year} \
+{2018})}\\\\BibitemShut {NoStop}%\\n\\\\bibitem{Codecido2019SA}%\\n  \
+\\\\BibitemOpen\\n  \\\\bibfield  {author} {\\\\bibinfo {author} \
+{\\\\bibfnamefont {E.}~\\\\bibnamefont\\n  {Codecido}}, \\\\bibinfo {author} \
+{\\\\bibfnamefont {Q.}~\\\\bibnamefont {Wang}},\\n  \\\\bibinfo {author} \
+{\\\\bibfnamefont {R.}~\\\\bibnamefont {Koester}}, \\\\bibinfo\\n  {author} {\
+\\\\bibfnamefont {S.}~\\\\bibnamefont {Che}}, \\\\bibinfo {author}\\n  \
+{\\\\bibfnamefont {H.}~\\\\bibnamefont {Tian}}, \\\\bibinfo {author} \
+{\\\\bibfnamefont\\n  {R.}~\\\\bibnamefont {Lv}}, \\\\bibinfo {author} \
+{\\\\bibfnamefont {S.}~\\\\bibnamefont\\n  {Tran}}, \\\\bibinfo {author} \
+{\\\\bibfnamefont {K.}~\\\\bibnamefont {Watanabe}},\\n  \\\\bibinfo {author} \
+{\\\\bibfnamefont {T.}~\\\\bibnamefont {Taniguchi}}, \\\\bibinfo\\n  {author} \
+{\\\\bibfnamefont {F.}~\\\\bibnamefont {Zhang}}, \\\\bibinfo {author}\\n  {\\\
+\\bibfnamefont {M.}~\\\\bibnamefont {Bockrath}},\\\\ and\\\\ \\\\bibinfo \
+{author}\\n  {\\\\bibfnamefont {C.~N.}\\\\ \\\\bibnamefont {Lau}},\\\\ \
+}\\\\href\\n  {https://doi.org/10.1126/sciadv.aaw9770} {\\\\bibfield  \
+{journal} {\\\\bibinfo\\n  {journal} {Sci. Adv.}\\\\ }\\\\textbf {\\\\bibinfo \
+{volume} {5}},\\\\ \\\\bibinfo {pages}\\n  {eaaw9770} (\\\\bibinfo {year} \
+{2019})}\\\\BibitemShut {NoStop}%\\n\\\\bibitem{Zhang2017SA}%\\n  \
+\\\\BibitemOpen\\n  \\\\bibfield  {author} {\\\\bibinfo {author} \
+{\\\\bibfnamefont {C.}~\\\\bibnamefont\\n  {Zhang}}, \\\\bibinfo {author} {\\\
+\\bibfnamefont {C.-P.}\\\\ \\\\bibnamefont {Chuu}},\\n  \\\\bibinfo {author} \
+{\\\\bibfnamefont {X.}~\\\\bibnamefont {Ren}}, \\\\bibinfo {author}\\n  \
+{\\\\bibfnamefont {M.-Y.}\\\\ \\\\bibnamefont {Li}}, \\\\bibinfo {author} {\\\
+\\bibfnamefont\\n  {L.-J.}\\\\ \\\\bibnamefont {Li}}, \\\\bibinfo {author} \
+{\\\\bibfnamefont\\n  {C.}~\\\\bibnamefont {Jin}}, \\\\bibinfo {author} \
+{\\\\bibfnamefont {M.-Y.}\\\\\\n  \\\\bibnamefont {Chou}},\\\\ and\\\\ \
+\\\\bibinfo {author} {\\\\bibfnamefont {C.-K.}\\\\\\n  \\\\bibnamefont \
+{Shih}},\\\\ }\\\\href {https://doi.org/10.1126/sciadv.1601459}\\n  \
+{\\\\bibfield  {journal} {\\\\bibinfo  {journal} {Sci. Adv.}\\\\ }\\\\textbf \
+{\\\\bibinfo\\n  {volume} {3}},\\\\ \\\\bibinfo {pages} {e1601459} \
+(\\\\bibinfo {year}\\n  {2017})}\\\\BibitemShut \
+{NoStop}%\\n\\\\bibitem{Liu2020JPDAP}%\\n  \\\\BibitemOpen\\n  \\\\bibfield  \
+{author} {\\\\bibinfo {author} {\\\\bibfnamefont {H.}~\\\\bibnamefont\\n  \
+{Liu}}, \\\\bibinfo {author} {\\\\bibfnamefont {Y.}~\\\\bibnamefont {Zong}}, \
+\\\\bibinfo\\n  {author} {\\\\bibfnamefont {P.}~\\\\bibnamefont {Wang}}, \
+\\\\bibinfo {author}\\n  {\\\\bibfnamefont {H.}~\\\\bibnamefont {Wen}}, \
+\\\\bibinfo {author} {\\\\bibfnamefont\\n  {H.}~\\\\bibnamefont {Wu}}, \
+\\\\bibinfo {author} {\\\\bibfnamefont {J.}~\\\\bibnamefont\\n  {Xia}},\\\\ \
+and\\\\ \\\\bibinfo {author} {\\\\bibfnamefont {Z.}~\\\\bibnamefont {Wei}},\\\
+\\\\n  }\\\\href {https://doi.org/10.1088/1361-6463/abbf75} {\\\\bibfield  \
+{journal}\\n  {\\\\bibinfo  {journal} {J. Phys. D: Appl. Phys.}\\\\ \
+}\\\\textbf {\\\\bibinfo {volume}\\n  {54}},\\\\ \\\\bibinfo {pages} {053001} \
+(\\\\bibinfo {year} {2020})}\\\\BibitemShut\\n  {NoStop}%\"\>"], "Output",
+ CellChangeTimes->{{3.8399186836789927`*^9, 3.83991869217138*^9}, {
+  3.8399187505181017`*^9, 3.839918777875547*^9}, {3.839918864340536*^9, 
+  3.8399189080734377`*^9}},
+ CellLabel->
+  "Out[803]=",ExpressionUUID->"187a47c4-9e3d-449d-809d-75774fc4918b"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"StringSplit", "[", 
+   RowBox[{"string22", ",", "\"\<\\\\bibitem\>\""}], "]"}], 
+  RowBox[{"(*", 
+   RowBox[{"//", "Rest"}], "*)"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"StringCases", "[", 
+  RowBox[{"%", ",", 
+   RowBox[{
+   "RegularExpression", "[", 
+    "\"\<(?<=\\\\{)((?!author|journal|volume|year|pages|NoStop|\
+thebibliography)[\\\\d\\\\w\\\\.\\\\~ \\\\-\\\\:]+?)(?=\\\\})\>\"", "]"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"StringTemplate", "[", "\"\<\\\\bibitem{``}\>\"", "]"}], "[", 
+      RowBox[{"First", "[", "#", "]"}], "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Insert", "[", 
+       RowBox[{
+        RowBox[{"BlockMap", "[", 
+         RowBox[{
+          RowBox[{"s", "|->", 
+           RowBox[{
+            RowBox[{"StringTemplate", "[", "\"\< `` ``, \>\"", "]"}], "[", 
+            RowBox[{
+             RowBox[{
+             "s", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], ",", 
+             RowBox[{
+             "s", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}]}], 
+            "]"}]}], ",", 
+          RowBox[{"#", "\[LeftDoubleBracket]", 
+           RowBox[{"2", ";;", 
+            RowBox[{"-", "5"}]}], "\[RightDoubleBracket]"}], ",", "2"}], 
+         "]"}], ",", "\"\<and\>\"", ",", 
+        RowBox[{"-", "2"}]}], "]"}], "//", "StringJoin"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"StringJoin", "[", 
+        RowBox[{"#1", ",", 
+         RowBox[{
+          RowBox[{"StringTemplate", "[", "\"\< \\\\textbf{``}, \>\"", "]"}], 
+          "[", "#2", "]"}], ",", "#3", ",", 
+         RowBox[{
+          RowBox[{"StringTemplate", "[", "\"\< (``).\>\"", "]"}], "[", "#4", 
+          "]"}]}], "]"}], "&"}], "@@", 
+      RowBox[{"(", 
+       RowBox[{"#", "\[LeftDoubleBracket]", 
+        RowBox[{
+         RowBox[{"-", "4"}], ";;"}], "\[RightDoubleBracket]"}], ")"}]}]}], 
+    "}"}], "&"}], "/@", "%"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"StringJoin", "/@", "%"}], "//", "InputForm"}], "//", 
+  "TableForm"}], "\[IndentingNewLine]", 
+ RowBox[{"StringJoin", "[", 
+  RowBox[{"\"\<\\\\begin{thebibliography}{999}\\n\\t\>\"", ",", 
+   RowBox[{"Riffle", "[", 
+    RowBox[{"%", ",", "\"\<\\n\\t\>\""}], "]"}], ",", 
+   "\"\<\\n\\\\end{thebibliography}\>\""}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<bib.txt\>\""}], ",", 
+   "%", ",", "\"\<TEXT\>\""}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"StringReplace", "[", 
+      RowBox[{"{", 
+       RowBox[{"(*", 
+        RowBox[{
+         RowBox[{"\"\<\\\\BibitemOpen\>\"", "->", "\"\<\>\""}], ","}], "*)"}], 
+       RowBox[{
+        RowBox[{"\"\< \>\"", "->", "\"\<\>\""}], ",", 
+        RowBox[{"\"\<\\n\>\"", "->", "\"\<\>\""}], ",", 
+        RowBox[{"\"\<\\\\bibfield  {author}\>\"", "->", "\"\<\>\""}], ",", 
+        RowBox[{"\"\<\\\\bibinfo {author}\>\"", "->", "\"\<\>\""}]}], "}"}], 
+      "]"}], "[", "%", "]"}], 
+    RowBox[{"(*", 
+     RowBox[{"//", "InputForm"}], "*)"}], "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"StringDelete", "[", 
+      RowBox[{"%", ",", 
+       RowBox[{
+       "RegularExpression", "[", "\"\<\\\\\\\\href.+\\\\{.+?\\\\}\>\"", 
+        "]"}]}], "]"}], "*)"}], "\[IndentingNewLine]", 
+    RowBox[{"StringCases", "[", 
+     RowBox[{"%", ",", 
+      RowBox[{
+       RowBox[{
+       "RegularExpression", "[", 
+        "\"\<\\\\~\\\\\\\\bibfnamefont\\\\{(.+?)\\\\}\>\"", "]"}], "->", 
+       "\"\<$1 $2\>\""}]}], "]"}]}], "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.839913453094797*^9, 3.8399135363507586`*^9}, {
+   3.839913567806929*^9, 3.8399139556721134`*^9}, 3.8399140234485984`*^9, {
+   3.839914064065213*^9, 3.8399140944474993`*^9}, {3.83991416239252*^9, 
+   3.8399142881212196`*^9}, 3.839914462784096*^9, {3.8399145266961126`*^9, 
+   3.839914618601169*^9}, 3.839914850512148*^9, 3.8399148880753927`*^9, {
+   3.8399154371717844`*^9, 3.8399154885121098`*^9}, {3.8399157278406124`*^9, 
+   3.839915827048532*^9}, 3.839915876960495*^9, {3.839915939689283*^9, 
+   3.839915957936446*^9}, {3.8399160959765825`*^9, 3.83991614409626*^9}, {
+   3.839916211274849*^9, 3.839916329507156*^9}, {3.8399163716892586`*^9, 
+   3.839916560201431*^9}, {3.8399166852023277`*^9, 3.8399166880014095`*^9}, {
+   3.839916737282428*^9, 3.8399167580334826`*^9}, {3.839916907036582*^9, 
+   3.839917073178567*^9}, {3.8399171157908225`*^9, 3.8399171330982*^9}, {
+   3.8399171759905405`*^9, 3.8399172004343987`*^9}, {3.8399173171794467`*^9, 
+   3.839917499984167*^9}, {3.8399175372222166`*^9, 3.8399177003785954`*^9}, {
+   3.8399177665879583`*^9, 3.839917809762639*^9}, {3.8399178489405775`*^9, 
+   3.839917863435947*^9}, {3.8399178993245497`*^9, 3.839917923291359*^9}, {
+   3.8399179614224787`*^9, 3.839917963582493*^9}, {3.8399189120600767`*^9, 
+   3.839918924898924*^9}},
+ CellLabel->
+  "In[810]:=",ExpressionUUID->"6792a393-f82f-4aa3-92ab-00c4bd845bb7"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"Po2018PRX\"\>", ",", "\<\"H.~C.\"\>", ",", "\<\"Po\"\>", 
+     ",", "\<\"L.\"\>", ",", "\<\"Zou\"\>", ",", "\<\"A.\"\>", 
+     ",", "\<\"Vishwanath\"\>", ",", "\<\"T.\"\>", ",", "\<\"Senthil\"\>", 
+     ",", "\<\"Phys. Rev. X\"\>", ",", "\<\"8\"\>", ",", "\<\"031089\"\>", 
+     ",", "\<\"2018\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Codecido2019SA\"\>", ",", "\<\"E.\"\>", 
+     ",", "\<\"Codecido\"\>", ",", "\<\"Q.\"\>", ",", "\<\"Wang\"\>", 
+     ",", "\<\"R.\"\>", ",", "\<\"Koester\"\>", ",", "\<\"S.\"\>", 
+     ",", "\<\"Che\"\>", ",", "\<\"H.\"\>", ",", "\<\"Tian\"\>", 
+     ",", "\<\"R.\"\>", ",", "\<\"Lv\"\>", ",", "\<\"S.\"\>", 
+     ",", "\<\"Tran\"\>", ",", "\<\"K.\"\>", ",", "\<\"Watanabe\"\>", 
+     ",", "\<\"T.\"\>", ",", "\<\"Taniguchi\"\>", ",", "\<\"F.\"\>", 
+     ",", "\<\"Zhang\"\>", ",", "\<\"M.\"\>", ",", "\<\"Bockrath\"\>", 
+     ",", "\<\"C.~N.\"\>", ",", "\<\"Lau\"\>", ",", "\<\"Sci. Adv.\"\>", 
+     ",", "\<\"5\"\>", ",", "\<\"eaaw9770\"\>", ",", "\<\"2019\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Zhang2017SA\"\>", ",", "\<\"C.\"\>", ",", "\<\"Zhang\"\>", 
+     ",", "\<\"C.-P.\"\>", ",", "\<\"Chuu\"\>", ",", "\<\"X.\"\>", 
+     ",", "\<\"Ren\"\>", ",", "\<\"M.-Y.\"\>", ",", "\<\"Li\"\>", 
+     ",", "\<\"L.-J.\"\>", ",", "\<\"Li\"\>", ",", "\<\"C.\"\>", 
+     ",", "\<\"Jin\"\>", ",", "\<\"M.-Y.\"\>", ",", "\<\"Chou\"\>", 
+     ",", "\<\"C.-K.\"\>", ",", "\<\"Shih\"\>", ",", "\<\"Sci. Adv.\"\>", 
+     ",", "\<\"3\"\>", ",", "\<\"e1601459\"\>", ",", "\<\"2017\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Liu2020JPDAP\"\>", ",", "\<\"H.\"\>", ",", "\<\"Liu\"\>", 
+     ",", "\<\"Y.\"\>", ",", "\<\"Zong\"\>", ",", "\<\"P.\"\>", 
+     ",", "\<\"Wang\"\>", ",", "\<\"H.\"\>", ",", "\<\"Wen\"\>", 
+     ",", "\<\"H.\"\>", ",", "\<\"Wu\"\>", ",", "\<\"J.\"\>", 
+     ",", "\<\"Xia\"\>", ",", "\<\"Z.\"\>", ",", "\<\"Wei\"\>", 
+     ",", "\<\"J. Phys. D: Appl. Phys.\"\>", ",", "\<\"54\"\>", 
+     ",", "\<\"053001\"\>", ",", "\<\"2020\"\>"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.839913784462103*^9, 3.83991385635592*^9}, {
+   3.839913914280766*^9, 3.8399139562285967`*^9}, 3.8399140249601283`*^9, {
+   3.839914065148265*^9, 3.83991409477195*^9}, {3.839914172321305*^9, 
+   3.8399142895842495`*^9}, 3.8399144634322424`*^9, {3.8399145274691424`*^9, 
+   3.8399146192371593`*^9}, 3.839914851118202*^9, 3.839914889192206*^9, 
+   3.839915489314183*^9, {3.839915774606718*^9, 3.8399158275410643`*^9}, 
+   3.8399158775384474`*^9, {3.839915944616742*^9, 3.839915958766617*^9}, 
+   3.839916109090371*^9, {3.839916195820101*^9, 3.8399162150674133`*^9}, {
+   3.8399162465289974`*^9, 3.839916286232993*^9}, {3.83991631725074*^9, 
+   3.839916341287511*^9}, 3.8399164241623516`*^9, {3.839916464125113*^9, 
+   3.839916477040574*^9}, {3.8399165323875628`*^9, 3.8399165611655493`*^9}, 
+   3.839916688596208*^9, 3.839916758757077*^9, {3.8399169417990885`*^9, 
+   3.839916970955268*^9}, 3.8399170034153056`*^9, {3.8399170408871913`*^9, 
+   3.83991707385555*^9}, 3.8399171338268595`*^9, {3.8399171766207685`*^9, 
+   3.8399172011612806`*^9}, {3.839917440547234*^9, 3.8399175005480676`*^9}, {
+   3.8399175957218714`*^9, 3.8399176265774527`*^9}, 3.839917701105318*^9, {
+   3.8399177883481965`*^9, 3.8399178146803145`*^9}, 3.8399178646837816`*^9, {
+   3.8399179009541483`*^9, 3.839917924098297*^9}, 3.839917969203438*^9, {
+   3.8399189127049174`*^9, 3.83991892552947*^9}},
+ CellLabel->
+  "Out[811]=",ExpressionUUID->"9706d30e-cdb2-416f-874e-883b3d57a082"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"\\\\bibitem{Po2018PRX}\"\>", 
+     ",", "\<\" H.~C. Po,  L. Zou,  A. Vishwanath, and T. Senthil, \"\>", 
+     ",", "\<\"Phys. Rev. X \\\\textbf{8}, 031089 (2018).\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\\\\bibitem{Codecido2019SA}\"\>", 
+     ",", "\<\" E. Codecido,  Q. Wang,  R. Koester,  S. Che,  H. Tian,  R. \
+Lv,  S. Tran,  K. Watanabe,  T. Taniguchi,  F. Zhang,  M. Bockrath, and C.~N. \
+Lau, \"\>", ",", "\<\"Sci. Adv. \\\\textbf{5}, eaaw9770 (2019).\"\>"}], "}"}],
+    ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\\\\bibitem{Zhang2017SA}\"\>", 
+     ",", "\<\" C. Zhang,  C.-P. Chuu,  X. Ren,  M.-Y. Li,  L.-J. Li,  C. \
+Jin,  M.-Y. Chou, and C.-K. Shih, \"\>", 
+     ",", "\<\"Sci. Adv. \\\\textbf{3}, e1601459 (2017).\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"\\\\bibitem{Liu2020JPDAP}\"\>", 
+     ",", "\<\" H. Liu,  Y. Zong,  P. Wang,  H. Wen,  H. Wu,  J. Xia, and Z. \
+Wei, \"\>", 
+     ",", "\<\"J. Phys. D: Appl. Phys. \\\\textbf{54}, 053001 (2020).\"\>"}], 
+    "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.839913784462103*^9, 3.83991385635592*^9}, {
+   3.839913914280766*^9, 3.8399139562285967`*^9}, 3.8399140249601283`*^9, {
+   3.839914065148265*^9, 3.83991409477195*^9}, {3.839914172321305*^9, 
+   3.8399142895842495`*^9}, 3.8399144634322424`*^9, {3.8399145274691424`*^9, 
+   3.8399146192371593`*^9}, 3.839914851118202*^9, 3.839914889192206*^9, 
+   3.839915489314183*^9, {3.839915774606718*^9, 3.8399158275410643`*^9}, 
+   3.8399158775384474`*^9, {3.839915944616742*^9, 3.839915958766617*^9}, 
+   3.839916109090371*^9, {3.839916195820101*^9, 3.8399162150674133`*^9}, {
+   3.8399162465289974`*^9, 3.839916286232993*^9}, {3.83991631725074*^9, 
+   3.839916341287511*^9}, 3.8399164241623516`*^9, {3.839916464125113*^9, 
+   3.839916477040574*^9}, {3.8399165323875628`*^9, 3.8399165611655493`*^9}, 
+   3.839916688596208*^9, 3.839916758757077*^9, {3.8399169417990885`*^9, 
+   3.839916970955268*^9}, 3.8399170034153056`*^9, {3.8399170408871913`*^9, 
+   3.83991707385555*^9}, 3.8399171338268595`*^9, {3.8399171766207685`*^9, 
+   3.8399172011612806`*^9}, {3.839917440547234*^9, 3.8399175005480676`*^9}, {
+   3.8399175957218714`*^9, 3.8399176265774527`*^9}, 3.839917701105318*^9, {
+   3.8399177883481965`*^9, 3.8399178146803145`*^9}, 3.8399178646837816`*^9, {
+   3.8399179009541483`*^9, 3.839917924098297*^9}, 3.839917969203438*^9, {
+   3.8399189127049174`*^9, 3.839918925536461*^9}},
+ CellLabel->
+  "Out[812]=",ExpressionUUID->"6398dc3b-6049-4ad2-9d1b-9eb24cc3309f"],
+
+Cell[BoxData[
+ TagBox[
+  InterpretationBox[
+   StyleBox[
+    RowBox[{"{", 
+     RowBox[{
+     "\"\<\\\\bibitem{Po2018PRX} H.~C. Po,  L. Zou,  A. Vishwanath, and T. \
+Senthil, Phys. Rev. X \\\\textbf{8}, 031089 (2018).\>\"", ",", " ", 
+      "\"\<\\\\bibitem{Codecido2019SA} E. Codecido,  Q. Wang,  R. Koester,  \
+S. Che,  H. Tian,  R. Lv,  S. Tran,  K. Watanabe,  T. Taniguchi,  F. Zhang,  \
+M. Bockrath, and C.~N. Lau, Sci. Adv. \\\\textbf{5}, eaaw9770 (2019).\>\"", 
+      ",", " ", 
+      "\"\<\\\\bibitem{Zhang2017SA} C. Zhang,  C.-P. Chuu,  X. Ren,  M.-Y. \
+Li,  L.-J. Li,  C. Jin,  M.-Y. Chou, and C.-K. Shih, Sci. Adv. \\\\textbf{3}, \
+e1601459 (2017).\>\"", ",", " ", 
+      "\"\<\\\\bibitem{Liu2020JPDAP} H. Liu,  Y. Zong,  P. Wang,  H. Wen,  H. \
+Wu,  J. Xia, and Z. Wei, J. Phys. D: Appl. Phys. \\\\textbf{54}, 053001 \
+(2020).\>\""}], "}"}],
+    ShowStringCharacters->True,
+    NumberMarks->True],
+   InputForm[{
+    "\\bibitem{Po2018PRX} H.~C. Po,  L. Zou,  A. Vishwanath, and T. Senthil, \
+Phys. Rev. X \\textbf{8}, 031089 (2018).", 
+     "\\bibitem{Codecido2019SA} E. Codecido,  Q. Wang,  R. Koester,  S. Che,  \
+H. Tian,  R. Lv,  S. Tran,  K. Watanabe,  T. Taniguchi,  F. Zhang,  M. \
+Bockrath, and C.~N. Lau, Sci. Adv. \\textbf{5}, eaaw9770 (2019).", 
+     "\\bibitem{Zhang2017SA} C. Zhang,  C.-P. Chuu,  X. Ren,  M.-Y. Li,  \
+L.-J. Li,  C. Jin,  M.-Y. Chou, and C.-K. Shih, Sci. Adv. \\textbf{3}, \
+e1601459 (2017).", 
+     "\\bibitem{Liu2020JPDAP} H. Liu,  Y. Zong,  P. Wang,  H. Wen,  H. Wu,  \
+J. Xia, and Z. Wei, J. Phys. D: Appl. Phys. \\textbf{54}, 053001 (2020)."}],
+   AutoDelete->True,
+   Editable->True],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.839913784462103*^9, 3.83991385635592*^9}, {
+   3.839913914280766*^9, 3.8399139562285967`*^9}, 3.8399140249601283`*^9, {
+   3.839914065148265*^9, 3.83991409477195*^9}, {3.839914172321305*^9, 
+   3.8399142895842495`*^9}, 3.8399144634322424`*^9, {3.8399145274691424`*^9, 
+   3.8399146192371593`*^9}, 3.839914851118202*^9, 3.839914889192206*^9, 
+   3.839915489314183*^9, {3.839915774606718*^9, 3.8399158275410643`*^9}, 
+   3.8399158775384474`*^9, {3.839915944616742*^9, 3.839915958766617*^9}, 
+   3.839916109090371*^9, {3.839916195820101*^9, 3.8399162150674133`*^9}, {
+   3.8399162465289974`*^9, 3.839916286232993*^9}, {3.83991631725074*^9, 
+   3.839916341287511*^9}, 3.8399164241623516`*^9, {3.839916464125113*^9, 
+   3.839916477040574*^9}, {3.8399165323875628`*^9, 3.8399165611655493`*^9}, 
+   3.839916688596208*^9, 3.839916758757077*^9, {3.8399169417990885`*^9, 
+   3.839916970955268*^9}, 3.8399170034153056`*^9, {3.8399170408871913`*^9, 
+   3.83991707385555*^9}, 3.8399171338268595`*^9, {3.8399171766207685`*^9, 
+   3.8399172011612806`*^9}, {3.839917440547234*^9, 3.8399175005480676`*^9}, {
+   3.8399175957218714`*^9, 3.8399176265774527`*^9}, 3.839917701105318*^9, {
+   3.8399177883481965`*^9, 3.8399178146803145`*^9}, 3.8399178646837816`*^9, {
+   3.8399179009541483`*^9, 3.839917924098297*^9}, 3.839917969203438*^9, {
+   3.8399189127049174`*^9, 3.8399189255404587`*^9}},
+ CellLabel->
+  "Out[813]//TableForm=",ExpressionUUID->"b12985de-55a7-4fd4-92cd-\
+62a2f641f1e8"],
+
+Cell[BoxData["\<\"\\\\begin{thebibliography}{999}\\n\\t\\\\bibitem{Po2018PRX} \
+H.~C. Po,  L. Zou,  A. Vishwanath, and T. Senthil, Phys. Rev. X \
+\\\\textbf{8}, 031089 (2018).\\n\\t\\\\bibitem{Codecido2019SA} E. Codecido,  \
+Q. Wang,  R. Koester,  S. Che,  H. Tian,  R. Lv,  S. Tran,  K. Watanabe,  T. \
+Taniguchi,  F. Zhang,  M. Bockrath, and C.~N. Lau, Sci. Adv. \\\\textbf{5}, \
+eaaw9770 (2019).\\n\\t\\\\bibitem{Zhang2017SA} C. Zhang,  C.-P. Chuu,  X. \
+Ren,  M.-Y. Li,  L.-J. Li,  C. Jin,  M.-Y. Chou, and C.-K. Shih, Sci. Adv. \\\
+\\textbf{3}, e1601459 (2017).\\n\\t\\\\bibitem{Liu2020JPDAP} H. Liu,  Y. \
+Zong,  P. Wang,  H. Wen,  H. Wu,  J. Xia, and Z. Wei, J. Phys. D: Appl. Phys. \
+\\\\textbf{54}, 053001 (2020).\\n\\\\end{thebibliography}\"\>"], "Output",
+ CellChangeTimes->{{3.839913784462103*^9, 3.83991385635592*^9}, {
+   3.839913914280766*^9, 3.8399139562285967`*^9}, 3.8399140249601283`*^9, {
+   3.839914065148265*^9, 3.83991409477195*^9}, {3.839914172321305*^9, 
+   3.8399142895842495`*^9}, 3.8399144634322424`*^9, {3.8399145274691424`*^9, 
+   3.8399146192371593`*^9}, 3.839914851118202*^9, 3.839914889192206*^9, 
+   3.839915489314183*^9, {3.839915774606718*^9, 3.8399158275410643`*^9}, 
+   3.8399158775384474`*^9, {3.839915944616742*^9, 3.839915958766617*^9}, 
+   3.839916109090371*^9, {3.839916195820101*^9, 3.8399162150674133`*^9}, {
+   3.8399162465289974`*^9, 3.839916286232993*^9}, {3.83991631725074*^9, 
+   3.839916341287511*^9}, 3.8399164241623516`*^9, {3.839916464125113*^9, 
+   3.839916477040574*^9}, {3.8399165323875628`*^9, 3.8399165611655493`*^9}, 
+   3.839916688596208*^9, 3.839916758757077*^9, {3.8399169417990885`*^9, 
+   3.839916970955268*^9}, 3.8399170034153056`*^9, {3.8399170408871913`*^9, 
+   3.83991707385555*^9}, 3.8399171338268595`*^9, {3.8399171766207685`*^9, 
+   3.8399172011612806`*^9}, {3.839917440547234*^9, 3.8399175005480676`*^9}, {
+   3.8399175957218714`*^9, 3.8399176265774527`*^9}, 3.839917701105318*^9, {
+   3.8399177883481965`*^9, 3.8399178146803145`*^9}, 3.8399178646837816`*^9, {
+   3.8399179009541483`*^9, 3.839917924098297*^9}, 3.839917969203438*^9, {
+   3.8399189127049174`*^9, 3.8399189255444565`*^9}},
+ CellLabel->
+  "Out[814]=",ExpressionUUID->"b21582c4-731f-4de3-866d-08ec1afdbfab"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\Administrator\\\\Downloads\\\\tBLG_ZLM_\
+transport\\\\bib.txt\"\>"], "Output",
+ CellChangeTimes->{{3.839913784462103*^9, 3.83991385635592*^9}, {
+   3.839913914280766*^9, 3.8399139562285967`*^9}, 3.8399140249601283`*^9, {
+   3.839914065148265*^9, 3.83991409477195*^9}, {3.839914172321305*^9, 
+   3.8399142895842495`*^9}, 3.8399144634322424`*^9, {3.8399145274691424`*^9, 
+   3.8399146192371593`*^9}, 3.839914851118202*^9, 3.839914889192206*^9, 
+   3.839915489314183*^9, {3.839915774606718*^9, 3.8399158275410643`*^9}, 
+   3.8399158775384474`*^9, {3.839915944616742*^9, 3.839915958766617*^9}, 
+   3.839916109090371*^9, {3.839916195820101*^9, 3.8399162150674133`*^9}, {
+   3.8399162465289974`*^9, 3.839916286232993*^9}, {3.83991631725074*^9, 
+   3.839916341287511*^9}, 3.8399164241623516`*^9, {3.839916464125113*^9, 
+   3.839916477040574*^9}, {3.8399165323875628`*^9, 3.8399165611655493`*^9}, 
+   3.839916688596208*^9, 3.839916758757077*^9, {3.8399169417990885`*^9, 
+   3.839916970955268*^9}, 3.8399170034153056`*^9, {3.8399170408871913`*^9, 
+   3.83991707385555*^9}, 3.8399171338268595`*^9, {3.8399171766207685`*^9, 
+   3.8399172011612806`*^9}, {3.839917440547234*^9, 3.8399175005480676`*^9}, {
+   3.8399175957218714`*^9, 3.8399176265774527`*^9}, 3.839917701105318*^9, {
+   3.8399177883481965`*^9, 3.8399178146803145`*^9}, 3.8399178646837816`*^9, {
+   3.8399179009541483`*^9, 3.839917924098297*^9}, 3.839917969203438*^9, {
+   3.8399189127049174`*^9, 3.839918925645214*^9}},
+ CellLabel->
+  "Out[815]=",ExpressionUUID->"6813651e-417e-4c40-b9c7-443d670443c9"]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[StyleBox["Synthesis", "Title"]], "Title",
+ CellChangeTimes->{{3.839918184712407*^9, 3.8399181936794195`*^9}, {
+  3.8399194317682858`*^9, 
+  3.8399194334783473`*^9}},ExpressionUUID->"99040ae5-1fcc-47d0-a490-\
+ce7f8042afd2"],
+
+Cell[CellGroupData[{
+
+Cell["Version I", "Chapter",
+ CellChangeTimes->{{3.840007000921957*^9, 
+  3.840007017176976*^9}},ExpressionUUID->"29bb7313-2461-46ce-8a3d-\
+5f54893ff351"],
+
+Cell[BoxData["\"\<(?<=\\\\{)((?!author|journal|volume|year|pages|NoStop|\
+thebibliography|editor|https|a|b)[\\\\d\\\\w\\\\.\\\\~ \
+\\\\-\\\\:[:alpha:]\\\\(\\\\)\\\\/]+?)(?=\\\\})\>\""], "Input",ExpressionUUID->\
+"b01b1d70-abd6-43ca-8e2a-96e20dd689d4"],
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", "bbltotex", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"bbltotex", "[", 
+   RowBox[{"bblpath_String", ",", 
+    RowBox[{"outname_String", ":", "\"\<bib.txt\>\""}]}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "regexes", ",", "strI", ",", "strII", ",", "strIII", ",", "formfunc"}], 
+     "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"Phase", " ", 
+      RowBox[{"I", ":", " ", "delete"}]}], "*)"}], "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"regexes", "=", 
+      RowBox[{"RegularExpression", "/@", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<(?<=%</preamble>\\n)((?s).+)(?=\\n\\\\\\\\end)\>\"", ",", 
+         "\"\< \\\\[(?s).+?\\\\]\>\"", ",", 
+         "\"\<(?<=\\\\{)((?!author|journal|volume|year|pages|NoStop|\
+thebibliography|editor|https|title|a|b)[\\\\d\\\\w\\\\.\\\\~ \
+\\\\-\\\\:\\\\(\\\\)\\\\/]+?)(?=\\\\})\>\""}], "}"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"strI", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"StringDelete", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"StringCases", "[", 
+            RowBox[{
+             RowBox[{"Import", "[", "bblpath", "]"}], ",", "#"}], "]"}], 
+           "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], ",", 
+          "#2"}], "]"}], "&"}], "@@", "regexes"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"Phase", " ", 
+       RowBox[{"II", ":", " ", "divide"}]}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"strII", "=", 
+      RowBox[{"StringCases", "[", 
+       RowBox[{
+        RowBox[{"StringSplit", "[", 
+         RowBox[{"strI", ",", "\"\<\\\\bibitem\>\""}], "]"}], ",", 
+        RowBox[{
+        "regexes", "\[LeftDoubleBracket]", "3", "\[RightDoubleBracket]"}]}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"Phase", " ", 
+       RowBox[{"III", ":", " ", "combine"}]}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"formfunc", "=", 
+      RowBox[{
+       RowBox[{"If", "[", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"StringEndsQ", "[", 
+          RowBox[{
+           RowBox[{"First", "[", "#", "]"}], ",", 
+           RowBox[{"RegularExpression", "[", "\"\<\\\\w\>\"", "]"}]}], "]"}], 
+         ",", "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"StringTemplate", "[", "\"\<\\\\bibitem{``} \>\"", "]"}], 
+            "[", 
+            RowBox[{"First", "[", "#", "]"}], "]"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"Insert", "[", 
+             RowBox[{
+              RowBox[{"BlockMap", "[", 
+               RowBox[{
+                RowBox[{"s", "|->", 
+                 RowBox[{
+                  RowBox[{"StringTemplate", "[", "\"\<`` ``, \>\"", "]"}], 
+                  "[", 
+                  RowBox[{
+                   RowBox[{
+                   "s", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], ",", 
+                   RowBox[{
+                   "s", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}]}], "]"}]}], ",", 
+                RowBox[{"#", "\[LeftDoubleBracket]", 
+                 RowBox[{"2", ";;", 
+                  RowBox[{"-", "5"}]}], "\[RightDoubleBracket]"}], ",", "2"}],
+                "]"}], ",", "\"\<and \>\"", ",", 
+              RowBox[{"-", "2"}]}], "]"}], "//", "StringJoin"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"StringJoin", "[", 
+              RowBox[{"#1", ",", 
+               RowBox[{
+                RowBox[{
+                "StringTemplate", "[", "\"\< \\\\textbf{``}, \>\"", "]"}], 
+                "[", "#2", "]"}], ",", "#3", ",", 
+               RowBox[{
+                RowBox[{"StringTemplate", "[", "\"\< (``).\>\"", "]"}], "[", 
+                "#4", "]"}]}], "]"}], "&"}], "@@", 
+            RowBox[{"(", 
+             RowBox[{"#", "\[LeftDoubleBracket]", 
+              RowBox[{
+               RowBox[{"-", "4"}], ";;"}], "\[RightDoubleBracket]"}], 
+             ")"}]}]}], "}"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"StringTemplate", "[", "\"\<\\\\bibitem{``} \>\"", "]"}], 
+            "[", 
+            RowBox[{"First", "[", "#", "]"}], "]"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"Insert", "[", 
+             RowBox[{
+              RowBox[{"BlockMap", "[", 
+               RowBox[{
+                RowBox[{"s", "|->", 
+                 RowBox[{
+                  RowBox[{"StringTemplate", "[", "\"\<`` ``, \>\"", "]"}], 
+                  "[", 
+                  RowBox[{
+                   RowBox[{
+                   "s", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], ",", 
+                   RowBox[{
+                   "s", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}]}], "]"}]}], ",", 
+                RowBox[{"#", "\[LeftDoubleBracket]", 
+                 RowBox[{"2", ";;", 
+                  RowBox[{"-", "6"}]}], "\[RightDoubleBracket]"}], ",", "2"}],
+                "]"}], ",", "\"\<and \>\"", ",", 
+              RowBox[{"-", "2"}]}], "]"}], "//", "StringJoin"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"StringJoin", "[", 
+              RowBox[{"#1", ",", 
+               RowBox[{
+                RowBox[{
+                "StringTemplate", "[", "\"\< \\\\textbf{``}, \>\"", "]"}], 
+                "[", "#2", "]"}], ",", "#3", ",", 
+               RowBox[{
+                RowBox[{"StringTemplate", "[", "\"\< (``).\>\"", "]"}], "[", 
+                "#4", "]"}]}], "]"}], "&"}], "@@", 
+            RowBox[{"(", 
+             RowBox[{"#", "\[LeftDoubleBracket]", 
+              RowBox[{
+               RowBox[{"-", "5"}], ";;"}], "\[RightDoubleBracket]"}], 
+             ")"}]}]}], "}"}]}], "\[IndentingNewLine]", "]"}], "&"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"strIII", "=", 
+      RowBox[{"StringJoin", "[", 
+       RowBox[{"\"\<\\\\begin{thebibliography}{999}\\n\\t\>\"", ",", 
+        RowBox[{"Riffle", "[", 
+         RowBox[{
+          RowBox[{"StringJoin", "/@", 
+           RowBox[{"formfunc", "/@", "strII"}]}], ",", "\"\<\\n\\t\>\""}], 
+         "]"}], ",", "\"\<\\n\\\\end{thebibliography}\>\""}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{"FileNameJoin", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"FileNameDrop", "[", 
+           RowBox[{"bblpath", ",", 
+            RowBox[{"-", "1"}]}], "]"}], ",", "outname"}], "}"}], "]"}], ",", 
+       "strIII", ",", "\"\<TEXT\>\""}], "]"}]}]}], "\[IndentingNewLine]", 
+   "]"}]}]}], "Input",
+ CellChangeTimes->{{3.8399182091876154`*^9, 3.839918456020646*^9}, {
+   3.839918511185341*^9, 3.839918522258212*^9}, {3.8399185607948933`*^9, 
+   3.8399185794821253`*^9}, {3.839918955882887*^9, 3.8399190729851418`*^9}, {
+   3.839919110061036*^9, 3.839919361677105*^9}, {3.8399194941727324`*^9, 
+   3.8399194954843287`*^9}, {3.839919690262931*^9, 3.8399197887499094`*^9}, 
+   3.8399201603894014`*^9, {3.83992019444119*^9, 3.83992019640269*^9}, {
+   3.8399206312838416`*^9, 3.8399206349707603`*^9}, {3.839921809790388*^9, 
+   3.839921820506783*^9}, 3.839922018084098*^9, {3.839922248485936*^9, 
+   3.8399222814216566`*^9}, {3.8399224007424593`*^9, 
+   3.8399224557195525`*^9}, {3.8399224859820004`*^9, 3.8399224910360193`*^9}, 
+   3.839922627827589*^9, {3.83992471892638*^9, 3.8399247452628555`*^9}, {
+   3.8399248047761116`*^9, 3.8399248061454945`*^9}, {3.839925097663806*^9, 
+   3.8399250981927257`*^9}, {3.839925441071656*^9, 3.839925442375465*^9}, {
+   3.839925517729896*^9, 3.839925531286766*^9}, {3.8399257509435697`*^9, 
+   3.8399257613047905`*^9}, {3.8399324298666058`*^9, 3.839932432394309*^9}, {
+   3.8399325106094704`*^9, 3.8399325109856625`*^9}, 3.8399329591781006`*^9, {
+   3.839933029954069*^9, 3.839933045345686*^9}, {3.8399330765828886`*^9, 
+   3.839933081081754*^9}, {3.839933114915736*^9, 3.839933115738085*^9}, {
+   3.839933281293722*^9, 3.8399333656579514`*^9}, {3.839933434681657*^9, 
+   3.839933437929496*^9}, {3.839933566833887*^9, 3.839933571641608*^9}, {
+   3.8399665382377815`*^9, 3.839966538700328*^9}, {3.8399665865497074`*^9, 
+   3.83996658922558*^9}, {3.8399666315333633`*^9, 3.839966632652753*^9}, {
+   3.8399934003466063`*^9, 3.8399934367202215`*^9}, {3.8399935359599924`*^9, 
+   3.839993536692408*^9}, {3.8399937216875477`*^9, 3.839993724238625*^9}, {
+   3.83999390335353*^9, 3.839993926384147*^9}, {3.8399941777284374`*^9, 
+   3.8399941841288233`*^9}, {3.8399943424773054`*^9, 
+   3.8399945381010275`*^9}, {3.839994695886237*^9, 3.839994702986981*^9}},
+ Background->RGBColor[1, 1, 0.85],
+ CellLabel->"In[92]:=",ExpressionUUID->"e16b0fe9-58fd-4094-888c-0edae5d6f415"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"bblpath", "=", 
+   RowBox[{
+    RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<main.bbl\>\""}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"bbltotex", "[", "bblpath", "]"}]}], "Input",
+ CellChangeTimes->{{3.839918458931534*^9, 3.8399184666043177`*^9}, {
+  3.839919405752765*^9, 3.8399194063382735`*^9}},
+ CellLabel->
+  "In[997]:=",ExpressionUUID->"b7d83bc4-d591-4a41-ba60-6cac1ee8b2d5"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\Administrator\\\\Downloads\\\\tBLG_ZLM_\
+transport\\\\bib.txt\"\>"], "Output",
+ CellChangeTimes->{
+  3.8399184672844167`*^9, {3.83991851450743*^9, 3.8399185249790497`*^9}, 
+   3.8399185811506433`*^9, 3.83991904375196*^9, 3.839919115798528*^9, 
+   3.8399192001780534`*^9, 3.8399192986414413`*^9, {3.8399193394311695`*^9, 
+   3.8399193672404256`*^9}, 3.839919409913063*^9, 3.8399194472544575`*^9, 
+   3.839919497245782*^9, {3.8399197076817975`*^9, 3.8399197328560324`*^9}, {
+   3.83991978190444*^9, 3.839919791180488*^9}, 3.83992016582454*^9, {
+   3.839920198041368*^9, 3.8399202248173904`*^9}, {3.8399206368047*^9, 
+   3.839920642258685*^9}, 3.8399218234309835`*^9, {3.8399220220820513`*^9, 
+   3.839922060296317*^9}, {3.839922270448848*^9, 3.8399222915599117`*^9}, {
+   3.839922437201638*^9, 3.839922459411986*^9}, 3.839922495390373*^9, 
+   3.839922636653556*^9, {3.839924833233858*^9, 3.839924833687496*^9}, 
+   3.839925769030587*^9},
+ CellLabel->
+  "Out[998]=",ExpressionUUID->"3dd87d7b-eb34-4625-9806-f544a25d3fde"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "bblpath2", "=", 
+   "\"\<C:\\\\Users\\\\Administrator\\\\Downloads\\\\tBLG_ZLM_transport\\\\\
+main2.txt\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.8399247597817545`*^9, 3.839924781275406*^9}, 
+   3.839924939134719*^9, {3.839924979259282*^9, 3.8399250041068773`*^9}},
+ CellLabel->
+  "In[999]:=",ExpressionUUID->"bb0548d0-b27b-4e44-bdb1-79a1e6be5b80"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"bbltotex", "[", 
+  RowBox[{"bblpath2", ",", "\"\<bib2.txt\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.8399247883390284`*^9, 3.839924794642415*^9}, 
+   3.8399248447794027`*^9},
+ CellLabel->
+  "In[1000]:=",ExpressionUUID->"8d8d4bc0-c2a3-45f4-aadb-367bc87ad286"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\Administrator\\\\Downloads\\\\tBLG_ZLM_\
+transport\\\\bib2.txt\"\>"], "Output",
+ CellChangeTimes->{{3.839924795733857*^9, 3.8399248103583355`*^9}, 
+   3.8399248462092094`*^9, {3.8399249429361525`*^9, 3.8399250058007097`*^9}, 
+   3.839925104385638*^9, 3.8399254497469215`*^9, 3.8399257759147015`*^9},
+ CellLabel->
+  "Out[1000]=",ExpressionUUID->"1e80a2ce-394b-40da-9f2a-4b403b2c1e25"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "bblpath3", "=", 
+   "\"\<C:\\\\Users\\\\Administrator\\\\Desktop\\\\bbl_to_tex_test\\\\aipsamp.\
+bbl\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.8399282066269026`*^9, 3.8399282128281136`*^9}, {
+  3.839928246583894*^9, 3.8399282757317944`*^9}},
+ CellLabel->
+  "In[1007]:=",ExpressionUUID->"14025036-832e-4fc4-99e3-47d3d5ce41c6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"bbltotex", "[", 
+  RowBox[{"bblpath3", ",", "\"\<bib.txt\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.839928225604156*^9, 3.839928227868295*^9}},
+ CellLabel->
+  "In[1008]:=",ExpressionUUID->"716683c3-fce8-49f4-866b-a8259affb62d"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\Administrator\\\\Desktop\\\\bbl_to_tex_test\\\
+\\bib.txt\"\>"], "Output",
+ CellChangeTimes->{{3.8399282288110995`*^9, 3.8399282780150805`*^9}},
+ CellLabel->
+  "Out[1008]=",ExpressionUUID->"9b718e44-f12f-4027-a4e3-cea736699d02"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"bbltotex", "[", 
+  "\"\<F:\\\\Research\\\\Projects\\\\large-angle_twisted_bilayer_graphene\\\\\
+Manuscript\\\\main.bbl\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.8399322379952793`*^9, 3.839932254621374*^9}, {
+   3.8399323204503927`*^9, 3.8399323217025995`*^9}, {3.839933633472787*^9, 
+   3.839933640218772*^9}, {3.8399926385328813`*^9, 3.8399926392036486`*^9}, {
+   3.8399934831989307`*^9, 3.8399934842126527`*^9}, 3.8399935450603204`*^9},
+ CellLabel->"In[94]:=",ExpressionUUID->"c9e6e90e-f874-4d02-90f3-5c84c8485fb9"],
+
+Cell[BoxData["\<\"F:\\\\Research\\\\Projects\\\\large-angle_twisted_bilayer_\
+graphene\\\\Manuscript\\\\bib.txt\"\>"], "Output",
+ CellChangeTimes->{
+  3.8399322567409024`*^9, 3.8399323222969685`*^9, 3.8399324362753177`*^9, {
+   3.8399324897583094`*^9, 3.839932518825493*^9}, 3.8399329693290057`*^9, 
+   3.8399330490935636`*^9, {3.8399330916900673`*^9, 3.839933119086259*^9}, 
+   3.839933304720412*^9, {3.839933336439698*^9, 3.8399333424723673`*^9}, 
+   3.839933372907173*^9, 3.8399335789108963`*^9, 3.8399336363817253`*^9, 
+   3.839933680032037*^9, 3.8399339656531973`*^9, 3.8399665451388655`*^9, {
+   3.8399665945373893`*^9, 3.839966610038933*^9}, 3.8399666429871597`*^9, {
+   3.8399926196447678`*^9, 3.8399926401805573`*^9}, 3.8399929897848606`*^9, 
+   3.8399934413382025`*^9, 3.8399934849428167`*^9, {3.8399935404940987`*^9, 
+   3.8399935457486343`*^9}, 3.8399937291676*^9, 3.839993930267634*^9, 
+   3.8399941895708184`*^9, 3.839994653986821*^9, 3.839994707530785*^9},
+ CellLabel->"Out[94]=",ExpressionUUID->"4e744b2d-6355-41c4-9e97-c70cd9a54da0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"StringCases", "[", 
+  RowBox[{
+  "\"\<{Goldstein2005}\\\\bibfield{author}{\\\\bibinfo{author}{\\\\\
+bibfnamefont{H.}~\\\\bibnamefont{Goldstein}},\\\\bibinfo{author}{\\\\\
+bibfnamefont{C.}~\\\\bibnamefont{Poole}},\\\\ and\\\\ \
+\\\\bibinfo{author}{\\\\bibfnamefont{J.}~\\\\bibnamefont{Safko}},\\\\ \
+}\\\\href{https://www.hep.com.cn/book/show/14d2e65a-37c1-4280-aa8e-\
+a4c9a465f283}{\\\\emph{\\\\bibinfo{title}{Classical Mechanics}}},\\\\ \
+\\\\bibinfo{edition}{3rd}\\\\ ed.\\\\ (\\\\bibinfo{publisher}{Higher \
+Education Press},\\\\ \\\\bibinfo{address}{Beijing},\\\\ \
+\\\\bibinfo{year}{2005})\\\\BibitemShut{NoStop}%\>\"", ",", 
+   RowBox[{
+    RowBox[{
+    "RegularExpression", "[", 
+     "\"\<\\\\\\\\bibinfo\\\\{((?!author).+?)\\\\}\\\\{(.+?)\\\\}\>\"", "]"}],
+     "->", 
+    RowBox[{"(", 
+     RowBox[{"\"\<$1\>\"", "->", "\"\<$2\>\""}], ")"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.839994849352513*^9, 3.839994878351899*^9}, {
+  3.839995138765207*^9, 3.8399953904054265`*^9}, {3.839995424485217*^9, 
+  3.8399954488858757`*^9}, {3.839995483999214*^9, 3.8399954860701523`*^9}, {
+  3.839995526750588*^9, 3.8399955391019754`*^9}},
+ CellLabel->
+  "In[102]:=",ExpressionUUID->"9493ee5d-b564-41c2-8d65-2447f1f6908c"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\<\"title\"\>", "\[Rule]", "\<\"Classical Mechanics\"\>"}], ",", 
+   RowBox[{"\<\"edition\"\>", "\[Rule]", "\<\"3rd\"\>"}], ",", 
+   RowBox[{"\<\"publisher\"\>", "\[Rule]", "\<\"Higher Education Press\"\>"}],
+    ",", 
+   RowBox[{"\<\"address\"\>", "\[Rule]", "\<\"Beijing\"\>"}], ",", 
+   RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2005\"\>"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.839995223506787*^9, {3.8399953561044397`*^9, 3.8399953818629856`*^9}, {
+   3.8399954253888893`*^9, 3.8399954495151243`*^9}, 3.8399954869650955`*^9, 
+   3.8399955394967904`*^9},
+ CellLabel->
+  "Out[102]=",ExpressionUUID->"8e07f79e-c3fd-4218-a140-9df24d115c56"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"StringCases", "[", 
+   RowBox[{
+   "\"\<{Goldstein2005}\\\\bibfield{author}{\\\\bibinfo{author}{\\\\\
+bibfnamefont{H.}~\\\\bibnamefont{Goldstein}},\\\\bibinfo{author}{\\\\\
+bibfnamefont{C.}~\\\\bibnamefont{Poole}},\\\\ and\\\\ \
+\\\\bibinfo{author}{\\\\bibfnamefont{J.}~\\\\bibnamefont{Safko}},\\\\ \
+}\\\\href{https://www.hep.com.cn/book/show/14d2e65a-37c1-4280-aa8e-\
+a4c9a465f283}{\\\\emph{\\\\bibinfo{title}{Classical Mechanics}}},\\\\ \
+\\\\bibinfo{edition}{3rd}\\\\ ed.\\\\ (\\\\bibinfo{publisher}{Higher \
+Education Press},\\\\ \\\\bibinfo{address}{Beijing},\\\\ \
+\\\\bibinfo{year}{2005})\\\\BibitemShut{NoStop}%\>\"", ",", 
+    RowBox[{
+     RowBox[{
+     "RegularExpression", "[", 
+      "\"\<\\\\\\\\bibfnamefont\\\\{(.+?)\\\\}~\\\\\\\\bibnamefont\\\\{(.+?)\\\
+\\}\>\"", "]"}], "->", "\"\<$1 $2\>\""}]}], "]"}], "//", 
+  "InputForm"}]], "Input",
+ CellChangeTimes->{{3.839995563861392*^9, 3.839995608887225*^9}, {
+  3.8399956555908337`*^9, 3.8399957760760765`*^9}, {3.839995938368934*^9, 
+  3.8399960438708477`*^9}, {3.8399960760888395`*^9, 3.8399960863575926`*^9}, {
+  3.839996136568174*^9, 3.839996180318499*^9}},
+ CellLabel->
+  "In[123]:=",ExpressionUUID->"dee4b475-2d49-4df3-83ef-45568f6674cb"],
+
+Cell["{\"H. Goldstein\", \"C. Poole\", \"J. Safko\"}", "Output",
+ CellChangeTimes->{{3.839995605275013*^9, 3.839995609432099*^9}, {
+   3.8399957149732313`*^9, 3.839995776838098*^9}, {3.8399959395617533`*^9, 
+   3.83999595943929*^9}, {3.839995994874217*^9, 3.8399960444931126`*^9}, 
+   3.8399960875373244`*^9, {3.8399961371204166`*^9, 3.8399961809052496`*^9}},
+ CellLabel->
+  "Out[123]//InputForm=",ExpressionUUID->"aca9425f-305b-49ca-a514-\
+4a8f658f643d"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"string", "=", 
+   RowBox[{
+   "Import", "[", 
+    "\"\<F:\\\\Research\\\\Projects\\\\large-angle_twisted_bilayer_graphene\\\
+\\Manuscript\\\\main.bbl\>\"", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.8399990233009787`*^9, 3.839999042718279*^9}},
+ CellLabel->
+  "In[125]:=",ExpressionUUID->"950cd585-bb69-4c19-91dc-78071b1f053b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Version II", "Chapter",
+ CellChangeTimes->{{3.8400070101209545`*^9, 
+  3.8400070126279125`*^9}},ExpressionUUID->"ead4fb73-f767-49b6-b573-\
+2565eae7f4a2"],
+
+Cell[BoxData[{
+ RowBox[{"Clear", "[", 
+  RowBox[{"bblclear", ",", "format", ",", "exporttex"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"bblclear", "[", "bblpath_String", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "regexes", ",", "strI", ",", "strII", ",", "strIII", ",", "formfunc", 
+       ",", "citationkey", ",", "author", ",", "authorfunc", ",", 
+       "otherfields", ",", "otherfieldsfunc", ",", "addspace"}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"Phase", " ", 
+       RowBox[{"I", ":", " ", "clear"}]}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"regexes", "=", 
+       RowBox[{"RegularExpression", "/@", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<(?<=%</preamble>\\n)((?s).+)(?=\\n\\\\\\\\end)\>\"", ",", 
+          "\"\< \\\\[(?s).+?\\\\]\>\""}], "}"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"strI", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"StringDelete", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"StringCases", "[", 
+             RowBox[{
+              RowBox[{"Import", "[", "bblpath", "]"}], ",", "#"}], "]"}], 
+            "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], ",", 
+           "#2"}], "]"}], "&"}], "@@", "regexes"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{"Phase", " ", 
+        RowBox[{"II", ":", " ", 
+         RowBox[{"extract", " ", "fields"}]}]}], "*)"}], 
+      "\[IndentingNewLine]", 
+      RowBox[{"strII", "=", 
+       RowBox[{
+        RowBox[{"StringDelete", "[", 
+         RowBox[{"\"\<\\n\>\"", "|", "\"\< \>\"", "|", "\"\<\\\\\>\""}], 
+         "]"}], "@", 
+        RowBox[{"StringSplit", "[", 
+         RowBox[{"strI", ",", "\"\<\\\\bibitem\>\""}], "]"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"addspace", "=", 
+       RowBox[{"StringReplace", "[", 
+        RowBox[{
+         RowBox[{"RegularExpression", "[", "\"\<([^A-Z])([A-Z])\>\"", "]"}], 
+         "->", "\"\<$1 $2\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"otherfieldsfunc", "=", 
+       RowBox[{"StringCases", "[", 
+        RowBox[{
+         RowBox[{
+         "RegularExpression", "[", 
+          "\"\<bibinfo\\\\{((?!author).+?)\\\\}\\\\{(.+?)\\\\}\>\"", "]"}], ":>", 
+         RowBox[{"(", 
+          RowBox[{"\"\<$1\>\"", "->", 
+           RowBox[{"addspace", "[", "\"\<$2\>\"", "]"}]}], ")"}]}], "]"}]}], 
+      ";", "\[IndentingNewLine]", 
+      RowBox[{"authorfunc", "=", 
+       RowBox[{"StringCases", "[", 
+        RowBox[{
+         RowBox[{
+         "RegularExpression", "[", 
+          "\"\<bibfnamefont\\\\{(.+?\\\\.)\\\\}~?bibnamefont\\\\{(.+?)\\\\}\>\
+\"", "]"}], "->", "\"\<$1 $2\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"otherfields", "=", 
+       RowBox[{"otherfieldsfunc", "@", "strII"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{"author", "=", 
+         RowBox[{"Thread", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"\"\<author\>\"", "->", 
+             RowBox[{"StringRiffle", "[", 
+              RowBox[{"#", ",", "\"\<, \>\""}], "]"}]}], "&"}], "/@", 
+           RowBox[{"MapAt", "[", 
+            RowBox[{
+             RowBox[{"StringTemplate", "[", "\"\<and ``\>\"", "]"}], ",", 
+             RowBox[{"authorfunc", "@", "strII"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"All", ",", 
+               RowBox[{"-", "1"}]}], "}"}]}], "]"}]}], "]"}]}], ";"}], "*)"}],
+       "\[IndentingNewLine]", 
+      RowBox[{"author", "=", 
+       RowBox[{"Thread", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"\"\<author\>\"", "->", 
+           RowBox[{"Which", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Length", "[", "#", "]"}], "==", "1"}], ",", 
+             RowBox[{
+             "#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], ",",
+              "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"Length", "[", "#", "]"}], "==", "2"}], ",", 
+             RowBox[{"StringRiffle", "[", 
+              RowBox[{"#", ",", "\"\< and \>\""}], "]"}], ",", 
+             "\[IndentingNewLine]", "True", ",", 
+             RowBox[{"StringRiffle", "[", 
+              RowBox[{
+               RowBox[{"MapAt", "[", 
+                RowBox[{
+                 RowBox[{"StringTemplate", "[", "\"\<and ``\>\"", "]"}], ",", 
+                 "#", ",", 
+                 RowBox[{"-", "1"}]}], "]"}], ",", "\"\<, \>\""}], "]"}]}], 
+            "\[IndentingNewLine]", "]"}]}], "&"}], "/@", 
+         RowBox[{"authorfunc", "@", "strII"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"citationkey", "=", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"\"\<key\>\"", "->", "#"}], "&"}], "@@@", 
+        RowBox[{"StringCases", "[", 
+         RowBox[{"strII", ",", 
+          RowBox[{
+           RowBox[{
+           "RegularExpression", "[", "\"\<^\\\\{(.+?)\\\\}\>\"", "]"}], "->", 
+           "\"\<$1\>\""}]}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{"Phase", " ", 
+        RowBox[{"III", ":", " ", "combine"}]}], "*)"}], "\[IndentingNewLine]", 
+      RowBox[{"Association", "/@", 
+       RowBox[{"Join", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"citationkey", ",", "author"}], "}"}], "\[Transpose]"}], 
+         ",", "otherfields", ",", "2"}], "]"}]}]}]}], "\[IndentingNewLine]", 
+    "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"format", "[", "asso_Association", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"journalart", ",", "book"}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"journalart", "=", 
+       RowBox[{
+       "StringTemplate", "[", 
+        "\"\<\\t\\\\bibitem{`key`} `author`, `journal` \\\\textbf{`volume`}, \
+`pages` (`year`).\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"book", "=", 
+       RowBox[{
+       "StringTemplate", "[", 
+        "\"\<\\t\\\\bibitem{`key`} `author`, \\\\textit{`title`}, `edition` \
+ed. (`publisher`, `address`, `year`).\>\"", "]"}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"StringEndsQ", "[", 
+           RowBox[{
+            RowBox[{"#", "[", "\"\<key\>\"", "]"}], ",", 
+            RowBox[{"RegularExpression", "[", "\"\<[a-zA-Z]\>\"", "]"}]}], 
+           "]"}], ",", 
+          RowBox[{"journalart", "[", "#", "]"}], ",", 
+          RowBox[{"book", "[", "#", "]"}]}], "]"}], "&"}], "[", "asso", 
+       "]"}]}]}], "\[IndentingNewLine]", "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"exporttex", "[", 
+   RowBox[{"bblpath_String", ",", 
+    RowBox[{"outname_String", ":", "\"\<bib.txt\>\""}]}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"finalstring", ",", "n", ",", "itemlist", ",", "asso"}], "}"}], 
+    ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"itemlist", "=", 
+      RowBox[{"format", "/@", 
+       RowBox[{"bblclear", "[", "bblpath", "]"}]}]}], ";", 
+     RowBox[{"n", "=", 
+      RowBox[{"Length", "[", "itemlist", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"finalstring", "=", 
+      RowBox[{
+       RowBox[{
+       "StringTemplate", "[", 
+        "\"\<\\\\begin{thebibliography}{``}\\n``\\n\\\\end{thebibliography}\>\
+\"", "]"}], "[", 
+       RowBox[{"n", ",", 
+        RowBox[{"StringRiffle", "[", 
+         RowBox[{"itemlist", ",", "\"\<\\n\>\""}], "]"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Export", "[", 
+      RowBox[{
+       RowBox[{"FileNameJoin", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"FileNameDrop", "[", 
+           RowBox[{"bblpath", ",", 
+            RowBox[{"-", "1"}]}], "]"}], ",", "outname"}], "}"}], "]"}], ",", 
+       "finalstring", ",", "\"\<TEXT\>\""}], "]"}]}]}], "\[IndentingNewLine]",
+    "]"}]}]}], "Input",
+ CellChangeTimes->{{3.839999368040634*^9, 3.8399993906719155`*^9}, {
+   3.8399994768569174`*^9, 3.8399995008239613`*^9}, {3.839999559473008*^9, 
+   3.8399996205078087`*^9}, {3.8399996762258496`*^9, 
+   3.8399996871604323`*^9}, {3.839999734408451*^9, 3.839999876467166*^9}, {
+   3.840000159905284*^9, 3.8400001650166216`*^9}, {3.840000199097272*^9, 
+   3.8400002029926367`*^9}, {3.8400003596660914`*^9, 
+   3.8400004090018325`*^9}, {3.8400005376020784`*^9, 3.84000053892432*^9}, {
+   3.8400005766412697`*^9, 3.840000630503336*^9}, 3.8400006878388667`*^9, {
+   3.840000781906041*^9, 3.8400008748739033`*^9}, {3.840000919936211*^9, 
+   3.8400009445941405`*^9}, {3.8400010092031527`*^9, 
+   3.8400010513299727`*^9}, {3.840001177970949*^9, 3.84000120591803*^9}, 
+   3.840001271122013*^9, {3.8400013523540955`*^9, 3.8400013843062544`*^9}, {
+   3.8400014183382893`*^9, 3.840001419442539*^9}, {3.840001481899602*^9, 
+   3.840001523938159*^9}, {3.8400015543272667`*^9, 3.840001565613283*^9}, {
+   3.840001667098216*^9, 3.840001687930612*^9}, {3.84000172184324*^9, 
+   3.8400018530579453`*^9}, {3.8400018833999276`*^9, 3.840002017775439*^9}, {
+   3.840002063826857*^9, 3.8400020705587463`*^9}, {3.8400021126026945`*^9, 
+   3.8400023097724566`*^9}, {3.8400023529809175`*^9, 
+   3.8400024133308983`*^9}, {3.8400024512978706`*^9, 
+   3.8400024682665215`*^9}, {3.8400025104029355`*^9, 3.840002559475169*^9}, {
+   3.8400033008592005`*^9, 3.840003531179884*^9}, {3.8400035707469716`*^9, 
+   3.840003596491448*^9}, 3.840003685731451*^9, {3.84000372838888*^9, 
+   3.8400038141162186`*^9}, {3.8400038477106237`*^9, 
+   3.8400039109241223`*^9}, {3.840003949341121*^9, 3.8400040391405144`*^9}, {
+   3.8400040698201685`*^9, 3.840004140396821*^9}, {3.8400042004532084`*^9, 
+   3.8400042276226482`*^9}, {3.840004260888737*^9, 3.8400047292360888`*^9}, {
+   3.840004776773449*^9, 3.8400047780926933`*^9}, {3.8400048342086678`*^9, 
+   3.840004908797618*^9}, {3.8400049546125193`*^9, 3.8400053459599714`*^9}, {
+   3.8400054132067003`*^9, 3.840005439238695*^9}, {3.8400056149346123`*^9, 
+   3.8400056194384346`*^9}, {3.8400057639144335`*^9, 3.840005771258914*^9}, {
+   3.840005804950109*^9, 3.840006034631976*^9}, {3.840006082985025*^9, 
+   3.840006114291579*^9}, {3.840006147620881*^9, 3.8400062597359486`*^9}, {
+   3.840006293058051*^9, 3.8400063056004305`*^9}, {3.8400063417291045`*^9, 
+   3.840006370112616*^9}, {3.8400064063201375`*^9, 3.8400064078682423`*^9}},
+ Background->RGBColor[1, 1, 0.85],
+ CellLabel->
+  "In[631]:=",ExpressionUUID->"46ce6700-6656-428c-b019-a0fa2ce24858"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"bblclear", "[", 
+  "\"\<F:\\\\Research\\\\Projects\\\\large-angle_twisted_bilayer_graphene\\\\\
+Manuscript\\\\main.bbl\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"StringEndsQ", "[", 
+       RowBox[{
+        RowBox[{"#", "[", "\"\<key\>\"", "]"}], ",", 
+        RowBox[{"RegularExpression", "[", "\"\<[a-zA-Z]\>\"", "]"}]}], "]"}], 
+      "&"}], "/@", "%"}], "\[IndentingNewLine]", 
+    RowBox[{"format", "/@", "%%"}]}], "*)"}]}]}], "Input",
+ CellChangeTimes->{{3.8399994056649942`*^9, 3.8399994116383257`*^9}, 
+   3.8399994449604135`*^9, {3.840000117174671*^9, 3.840000141208612*^9}, 
+   3.8400001745843105`*^9, {3.8400002180263605`*^9, 3.840000264414649*^9}, 
+   3.8400003488842106`*^9, {3.8400006400068665`*^9, 3.8400006404573154`*^9}, {
+   3.840000980632267*^9, 3.8400009828273544`*^9}, {3.8400010685769396`*^9, 
+   3.8400010939119473`*^9}, {3.8400012218726587`*^9, 3.840001241360104*^9}, {
+   3.8400012914567127`*^9, 3.840001320069771*^9}, {3.8400018622246313`*^9, 
+   3.8400018702332497`*^9}, {3.840003229650242*^9, 3.840003277856857*^9}, 
+   3.840003372314556*^9, 3.8400035402484555`*^9, {3.8400036706966333`*^9, 
+   3.8400036710159974`*^9}, {3.840004663898509*^9, 3.840004682448888*^9}, 
+   3.8400047906025333`*^9, 3.840004932049513*^9, 3.840005495698389*^9, {
+   3.8400055565690947`*^9, 3.840005587913868*^9}, 3.8400056303547764`*^9, 
+   3.8400057770066786`*^9},
+ CellLabel->
+  "In[629]:=",ExpressionUUID->"1f0eafd3-6b23-459b-bd0d-5042446fb274"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Cao2018N\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"Y. Cao, V. Fatemi, S. Fang, K. Watanabe, T. Taniguchi, \
+E. Kaxiras, and P. Jarillo-Herrero\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Nature\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"556\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"43\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2018\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Po2018PRX\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"H.~C. Po, L. Zou, A. Vishwanath, and T. Senthil\"\>"}], 
+     ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. X\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"8\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"031089\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2018\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Codecido2019SA\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"E. Codecido, Q. Wang, R. Koester, S. Che, H. Tian, R. \
+Lv, S. Tran, K. Watanabe, T. Taniguchi, F. Zhang, M. Bockrath, and C.~N. \
+Lau\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Sci. Adv.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"5\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"eaaw9770\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2019\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Arora2020N\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"H.~S. Arora, R. Polski, Y. Zhang, A. Thomson, Y. Choi, \
+H. Kim, Z. Lin, I.~Z. Wilson, X. Xu, J.-H. Chu, K. Watanabe, T. Taniguchi, J. \
+Alicea, and S. Nadj-Perge\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Nature\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"583\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"379\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2020\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Hao2021S\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"Z. Hao, A.~M. Zimmerman, P. Ledwith, E. Khalaf, D.~H. \
+Najafabadi, K. Watanabe, T. Taniguchi, A. Vishwanath, and P. Kim\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Science\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"371\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"1133\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2021\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Zhou2021N\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"H. Zhou, T. Xie, T. Taniguchi, K. Watanabe, and A.~F. \
+Young\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Nature\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"TBA\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"TBA\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2021\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Cao2018Na\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"Y. Cao, V. Fatemi, A. Demir, S. Fang, S.~L. Tomarken, \
+J.~Y. Luo, J.~D. Sanchez-Yamagishi, K. Watanabe, T. Taniguchi, E. Kaxiras, \
+R.~C. Ashoori, and P. Jarillo-Herrero\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Nature\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"556\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"80\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2018\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Calderon2020nQM\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"M.~J. Calder\[OAcute]nandE. Bascones\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"npj Quantum Mater.\"\>"}], 
+     ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"5\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"57\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2020\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Zhang2017SA\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"C. Zhang, C.-P. Chuu, X. Ren, M.-Y. Li, L.-J. Li, C. \
+Jin, M.-Y. Chou, and C.-K. Shih\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Sci. Adv.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"3\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"e1601459\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2017\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Jin2019N\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"C. Jin, E.~C. Regan, A. Yan, M.~I.~B. Utama, D. Wang, \
+S. Zhao, Y. Qin, S. Yang, Z. Zheng, S. Shi, K. Watanabe, T. Taniguchi, S. \
+Tongay, A. Zettl, and F. Wang\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Nature\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"567\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"76\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2019\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Seyler2019N\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"K.~L. Seyler, P. Rivera, H. Yu, N.~P. Wilson, E.~L. \
+Ray, D.~G. Mandrus, J. Yan, W. Yao, and X. Xu\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Nature\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"567\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"66\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2019\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Tran2019N\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"K. Tran, G. Moody, F. Wu, X. Lu, J. Choi, K. Kim, A. \
+Rai, D.~A. Sanchez, J. Quan, A. Singh, J. Embley, A. Zepeda, M. Campbell, T. \
+Autry, T. Taniguchi, K. Watanabe, N. Lu, S.~K. Banerjee, K.~L. Silverman, S. \
+Kim, E. Tutuc, L. Yang, A.~H. MacDonald, and X. Li\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Nature\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"567\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"71\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2019\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Liu2020JPDAP\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"H. Liu, Y. Zong, P. Wang, H. Wen, H. Wu, J. Xia, and Z. \
+Wei\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", 
+      "\[Rule]", "\<\"J. Phys. D: Appl. Phys.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"54\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"053001\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2020\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Zhang2020NC\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"L. Zhang, Z. Zhang, F. Wu, D. Wang, R. Gogna, S. Hou, \
+K. Watanabe, T. Taniguchi, K. Kulkarni, T. Kuo, S.~R. Forrest, and H. \
+Deng\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Nat. Commun.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"11\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"5888\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2020\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Brem2020NL\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"S. Brem, C. Linder\[ADoubleDot]lv, P. Erhart, and E. \
+Malic\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Nano Lett.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"20\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"8534\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2020\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Song2019PRL\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"Z. Song, Z. Wang, W. Shi, G. Li, C. Fang, and B.~A. \
+Bernevig\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. Lett.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"123\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"036401\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2019\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Nuckolls2020N\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"K.~P. Nuckolls, M. Oh, D. Wong, B. Lian, K. Watanabe, \
+T. Taniguchi, B.~A. Bernevig, and A. Yazdani\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Nature\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"588\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"610\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2020\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Wu2021NM\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"S. Wu, Z. Zhang, K. Watanabe, T. Taniguchi, and E.~Y. \
+Andrei\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Nat. Mater.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"20\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"488\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2021\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Stepanov2020a\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"P. Stepanov, M. Xie, T. Taniguchi, K. Watanabe, X. Lu, \
+A.~H. MacDonald, B.~A. Bernevig, and D.~K. Efetov\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"ar Xiv\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"2012\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"15126\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2020\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Repellin2020PRR\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"C. RepellinandT. Senthil\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. Research\"\>"}], 
+     ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"2\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"023238\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2020\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Park2019PRL\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"M.~J. Park, Y. Kim, G.~Y. Cho, and S. Lee\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. Lett.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"123\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"216803\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2019\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Liu2021PRL\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"B. Liu, L. Xian, H. Mu, G. Zhao, Z. Liu, A. Rubio, and \
+Z. Wang\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. Lett.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"126\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"066401\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2021\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Park2021C\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"M.~J. Park, S. Jeon, S. Lee, H.~C. Park, and Y. \
+Kim\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Carbon\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"174\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"260\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2021\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Santos2007PRL\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"J.~M.B.~L. dosSantos, N.~M.~R. Peres, and A.~H.~C. Neto\
+\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. Lett.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"99\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"256802\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2007\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Bistritzer2011PNAS\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"R. BistritzerandA.~H. MacDonald\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Proc. Natl. Acad. Sci.\"\>"}],
+      ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"108\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"12233\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2011\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Carr2019PRR\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"S. Carr, S. Fang, Z. Zhu, and E. Kaxiras\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. Research\"\>"}], 
+     ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"1\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"013001\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2019\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Balents2019SP\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", "\[Rule]", "\<\"L. Balents\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Sci Post Phys.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"7\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"048\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2019\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Guinea2019PRB\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", "\[Rule]", "\<\"F. GuineaandN.~R. Walet\"\>"}],
+      ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. B\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"99\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"205134\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2019\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Phong2020PRL\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", "\[Rule]", "\<\"V.~T. PhongandE. Mele\"\>"}], 
+     ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. Lett.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"125\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"176404\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2020\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Koshino2020PRB\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"M. KoshinoandN.~N.~T. Nam\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. B\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"101\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"195425\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2020\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Andrei2020NM\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"E.~Y. AndreiandA.~H. MacDonald\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Nat. Mater.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"19\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"1265\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2020\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Nam2017PRB\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"N.~N.~T. NamandM. Koshino\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. B\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"96\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"075311\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2017\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Perebeinos2012PRL\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"V. Perebeinos, J. Tersoff, and P. Avouris\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. Lett.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"109\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"236604\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2012\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Laissardiere2012PRB\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"G.~T. de~Laissardi\[EGrave]re, D. Mayou, and L. \
+Magaud\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. B\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"86\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"125413\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2012\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Moon2012PRB\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", "\[Rule]", "\<\"P. MoonandM. Koshino\"\>"}], 
+     ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. B\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"85\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"195458\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2012\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Andelkovic2018PRM\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"M. An\:0111elkovi\[CAcute], L. Covaci, and F.~M. \
+Peeters\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. Materials\"\>"}], 
+     ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"2\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"034004\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2018\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Po2019PRB\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"H.~C. Po, L. Zou, T. Senthil, and A. Vishwanath\"\>"}], 
+     ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. B\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"99\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"195455\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2019\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Gargiulo20172M\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"F. GargiuloandO.~V. Yazyev\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"2 DMater.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"5\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"015019\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2017\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Yan2013NC\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"W. Yan, W.-Y. He, Z.-D. Chu, M. Liu, L. Meng, R.-F. \
+Dou, Y. Zhang, Z. Liu, J.-C. Nie, and L. He\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Nat. Commun.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"4\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"2159\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2013\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Yoo2019NM\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"H. Yoo, R. Engelke, S. Carr, S. Fang, K. Zhang, P. \
+Cazeaux, S.~H. Sung, R. Hovden, A.~W. Tsen, T. Taniguchi, K. Watanabe, G.-C. \
+Yi, M. Kim, M. Luskin, E.~B. Tadmor, E. Kaxiras, and P. Kim\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Nat. Mater.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"18\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"448\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2019\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Shi2020NC\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"H. Shi, Z. Zhan, Z. Qi, K. Huang, E. vanVeen, J. \
+\[CapitalAAcute]ngelSilva-Guill\[EAcute]n, R. Zhang, P. Li, K. Xie, H. Ji, \
+M.~I. Katsnelson, S. Yuan, S. Qin, and Z. Zhang\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Nat. Commun.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"11\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"371\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2020\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Liu2020PRL\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"Y.-W. Liu, Y. Su, X.-F. Zhou, L.-J. Yin, C. Yan, S.-Y. \
+Li, W. Yan, S. Han, Z.-Q. Fu, Y. Zhang, Q. Yang, Y.-N. Ren, and L. He\"\>"}], 
+     ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. Lett.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"125\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"236102\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2020\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Uchida2014PRB\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"K. Uchida, S. Furuya, J.-I. Iwata, and A. \
+Oshiyama\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. B\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"90\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"155451\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2014\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Jain20162M\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"S.~K. Jain, V. Juri\[CHacek]i\[CAcute], and G.~T. \
+Barkema\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"2 DMater.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"4\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"015018\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2016\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Dai2016NL\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"S. Dai, Y. Xiang, and D.~J. Srolovitz\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Nano Lett.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"16\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"5923\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2016\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Wijk20152M\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"M.~M. vanWijk, A. Schuring, M.~I. Katsnelson, and A. \
+Fasolino\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"2 DMater.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"2\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"034010\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2015\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Goldstein2005\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"H. Goldstein, C. Poole, and J. Safko\"\>"}], ",", 
+     RowBox[{"\<\"title\"\>", "\[Rule]", "\<\"Classical Mechanics\"\>"}], ",", 
+     RowBox[{"\<\"edition\"\>", "\[Rule]", "\<\"3rd\"\>"}], ",", 
+     RowBox[{"\<\"publisher\"\>", 
+      "\[Rule]", "\<\"Higher Education Press\"\>"}], ",", 
+     RowBox[{"\<\"address\"\>", "\[Rule]", "\<\"Beijing\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2005\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Lin2020PRB\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"X. Lin, H. Zhu, and J. Ni\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. B\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"101\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"155405\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2020\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"SanJose2014PRB\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"P. San-Jose, A. Guti\[EAcute]rrez-Rubio, M. Sturla, and \
+F. Guinea\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. B\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"90\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"075428\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2014\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"SanJose2014PRBa\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"P. San-Jose, A. Guti\[EAcute]rrez-Rubio, M. Sturla, and \
+F. Guinea\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. B\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"90\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"115152\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2014\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Suzuura2002PRB\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", "\[Rule]", "\<\"H. SuzuuraandT. Ando\"\>"}], 
+     ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. B\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"65\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"235412\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2002\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Jackiw1976PRD\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", "\[Rule]", "\<\"R. JackiwandC. Rebbi\"\>"}], 
+     ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. D\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"13\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"3398\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"1976\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Shen2017\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", "\[Rule]", "\<\"S.-Q. Shen\"\>"}], ",", 
+     RowBox[{"\<\"title\"\>", 
+      "\[Rule]", "\<\"Topological Insulators: Dirac Equationin Condensed \
+Matter\"\>"}], ",", 
+     RowBox[{"\<\"edition\"\>", "\[Rule]", "\<\"2nd\"\>"}], ",", 
+     RowBox[{"\<\"publisher\"\>", 
+      "\[Rule]", "\<\"Springer- Verlag Gmb H\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2017\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Yin2016NC\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"L.-J. Yin, H. Jiang, J.-B. Qiao, and L. He\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Nat. Commun.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"7\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"11760\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2016\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Hou2018PRB\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"T. Hou, G. Cheng, W.-K. Tse, C. Zeng, and Z. \
+Qiao\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. B\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"98\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"245417\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2018\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Ren2016RPP\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"Y. Ren, Z. Qiao, and Q. Niu\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Rep. Prog. Phys.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"79\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"066501\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2016\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Zhang2013PRB\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"Y.-T. Zhang, Z. Qiao, and Q.-F. Sun\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. B\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"87\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"235405\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2013\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Ju2015N\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"L. Ju, Z. Shi, N. Nair, Y. Lv, C. Jin, J. Velasco, C. \
+Ojeda-Aristizabal, H.~A. Bechtel, M.~C. Martin, A. Zettl, J. Analytis, and F. \
+Wang\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Nature\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"520\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"650\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2015\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Bi2015PRB\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"X. Bi, J. Jung, and Z. Qiao\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. B\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"92\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"235421\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2015\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Li2016NN\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"J. Li, K. Wang, K.~J. McFaul, Z. Zern, Y. Ren, K. \
+Watanabe, T. Taniguchi, Z. Qiao, and J. Zhu\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Nat. Nanotech.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"11\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"1060\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2016\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Wang2017PRB\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"K. Wang, Y. Ren, X. Deng, S.~A. Yang, J. Jung, and Z. \
+Qiao\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. B\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"95\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"245420\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2017\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Ren2017PRB\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"Y. Ren, J. Zeng, K. Wang, F. Xu, and Z. Qiao\"\>"}], 
+     ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. B\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"96\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"155445\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2017\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Wang2018FP\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"K. Wang, T. Hou, Y. Ren, and Z. Qiao\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Front. Phys.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"14\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"23501\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2018\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Hou2020PRB\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"T. Hou, Y. Ren, Y. Quan, J. Jung, W. Ren, and Z. Qiao\"\
+\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. B\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"101\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"201403\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2020\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Hou2020PRBa\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"T. Hou, Y. Ren, Y. Quan, J. Jung, W. Ren, and Z. Qiao\"\
+\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. B\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"102\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"085433\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2020\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Qiao2014PRL\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"Z. Qiao, J. Jung, C. Lin, Y. Ren, A.~H. MacDonald, and \
+Q. Niu\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Phys. Rev. Lett.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"112\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"206601\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2014\"\>"}]}], 
+    "\[RightAssociation]"}], ",", 
+   RowBox[{"\[LeftAssociation]", 
+    RowBox[{
+     RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Kim2016NP\"\>"}], ",", 
+     RowBox[{"\<\"author\"\>", 
+      "\[Rule]", "\<\"M. Kim, J.-H. Choi, S.-H. Lee, K. Watanabe, T. \
+Taniguchi, S.-H. Jhi, and H.-J. Lee\"\>"}], ",", 
+     RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Nat. Phys.\"\>"}], ",", 
+     RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"12\"\>"}], ",", 
+     RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"1022\"\>"}], ",", 
+     RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2016\"\>"}]}], 
+    "\[RightAssociation]"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.8399994123342075`*^9, 3.8399994456889043`*^9, 3.839999503696492*^9, 
+   3.8399995643046503`*^9, {3.8399996067103744`*^9, 3.8399996260202937`*^9}, 
+   3.83999969090455*^9, {3.839999737245816*^9, 3.8399997549393682`*^9}, {
+   3.8399998417123117`*^9, 3.839999879412036*^9}, {3.840000135634583*^9, 
+   3.8400001752819576`*^9}, {3.840000206566062*^9, 3.8400002659359713`*^9}, 
+   3.840000381705993*^9, 3.8400004130127215`*^9, 3.8400005430148125`*^9, {
+   3.840000634511047*^9, 3.840000642327112*^9}, 3.8400006944400673`*^9, {
+   3.8400007928422775`*^9, 3.840000815904232*^9}, 3.8400008796584864`*^9, 
+   3.840000923378419*^9, 3.8400009835911264`*^9, {3.8400010201943493`*^9, 
+   3.8400010944382606`*^9}, {3.840001184016574*^9, 3.840001208579885*^9}, 
+   3.840001242049154*^9, {3.840001273484331*^9, 3.840001320972463*^9}, {
+   3.8400013565047493`*^9, 3.840001387274032*^9}, 3.840001422740913*^9, {
+   3.8400014869831395`*^9, 3.8400015671646214`*^9}, {3.8400016730641985`*^9, 
+   3.840001691274954*^9}, {3.8400017235588994`*^9, 3.8400017926508846`*^9}, {
+   3.84000183544319*^9, 3.8400019484092236`*^9}, 3.840001989116747*^9, 
+   3.8400020194630613`*^9, {3.8400020659144955`*^9, 3.840002072763549*^9}, {
+   3.8400021454027786`*^9, 3.840002170417514*^9}, {3.840002211550091*^9, 
+   3.8400022401506767`*^9}, {3.8400022708982105`*^9, 
+   3.8400023117129173`*^9}, {3.8400024064939127`*^9, 3.840002420665677*^9}, 
+   3.840002472237234*^9, 3.840002561137394*^9, {3.840003232984984*^9, 
+   3.8400032787817345`*^9}, {3.840003362985235*^9, 3.8400033772911277`*^9}, 
+   3.8400034143788567`*^9, {3.8400035337270565`*^9, 3.84000354097019*^9}, 
+   3.8400035982601337`*^9, 3.840003678331623*^9, 3.8400037327818832`*^9, {
+   3.8400038048102293`*^9, 3.8400038153576393`*^9}, 3.8400038578306932`*^9, {
+   3.8400038920191793`*^9, 3.840003907674537*^9}, {3.8400039513777347`*^9, 
+   3.8400039593373857`*^9}, 3.84000400236827*^9, 3.84000404139318*^9, {
+   3.8400040736017046`*^9, 3.8400041020760975`*^9}, {3.8400041323304467`*^9, 
+   3.8400041422859087`*^9}, 3.8400042304950724`*^9, 3.8400043185924635`*^9, 
+   3.8400046833250837`*^9, 3.8400047140196853`*^9, 3.84000479139906*^9, 
+   3.840004932853055*^9, 3.840005496474023*^9, {3.8400055645547976`*^9, 
+   3.8400055886016207`*^9}, 3.840005630988826*^9, 3.8400057777540183`*^9, 
+   3.8400059642145443`*^9, {3.8400060190841064`*^9, 3.8400060376317244`*^9}, {
+   3.8400061066189537`*^9, 3.840006117652708*^9}, {3.8400061654021564`*^9, 
+   3.8400062094770823`*^9}, {3.840006239897299*^9, 3.8400062639227123`*^9}, 
+   3.8400063084354286`*^9, {3.8400063499445195`*^9, 3.8400063740500345`*^9}},
+ CellLabel->
+  "Out[629]=",ExpressionUUID->"58b26b41-d757-4295-a4ba-0e57748516fc"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"exporttex", "[", 
+  "\"\<F:\\\\Research\\\\Projects\\\\large-angle_twisted_bilayer_graphene\\\\\
+Manuscript\\\\main.bbl\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.8399999416975327`*^9, 3.839999951695183*^9}, {
+  3.8400000110413485`*^9, 3.840000112576657*^9}, {3.8400053569341316`*^9, 
+  3.8400053612904077`*^9}},
+ CellLabel->
+  "In[635]:=",ExpressionUUID->"e6e2fd5e-4709-4eae-8dae-8268886cb73c"],
+
+Cell[BoxData["\<\"F:\\\\Research\\\\Projects\\\\large-angle_twisted_bilayer_\
+graphene\\\\Manuscript\\\\bib.txt\"\>"], "Output",
+ CellChangeTimes->{
+  3.840005366350706*^9, {3.8400054201638002`*^9, 3.8400054458021116`*^9}, 
+   3.840005644873633*^9, 3.8400063831874332`*^9, 3.840006414724642*^9},
+ CellLabel->
+  "Out[635]=",ExpressionUUID->"4509dba4-e6d7-4298-8061-5d244772f34d"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.840000082003398*^9, 
+  3.840000088230756*^9}},ExpressionUUID->"84d66100-6b35-4ecc-8529-\
+b986d799ccc1"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1920, 1117},
+WindowMargins->{{Automatic, 1912}, {Automatic, -8}},
+FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (June 19, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"e24491d6-7544-4469-99c5-63bbb8198f48"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 151, 3, 123, "Title",ExpressionUUID->"675e6912-781d-4012-a726-6865cfd55596"],
+Cell[734, 27, 308, 8, 54, "Input",ExpressionUUID->"09b2b1fd-a0df-4b2b-905f-e287ae1b3370"],
+Cell[CellGroupData[{
+Cell[1067, 39, 483, 10, 54, "Input",ExpressionUUID->"daea0135-2fe6-42aa-a783-edb966fb6406"],
+Cell[1553, 51, 9983, 141, 3402, "Output",ExpressionUUID->"85a565e1-8ac1-465f-9b3d-8da88a68486f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11573, 197, 3381, 72, 310, "Input",ExpressionUUID->"db09a213-bc88-446e-8c58-74b14877e1dc"],
+Cell[14957, 271, 4385, 60, 1266, "Output",ExpressionUUID->"23bc914d-7791-4f30-9d86-82d19f5944ea"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[19379, 336, 746, 19, 93, "Input",ExpressionUUID->"3c55583d-86a5-4a9a-98ee-8e6ce81de50f"],
+Cell[20128, 357, 4105, 56, 1218, "Output",ExpressionUUID->"187a47c4-9e3d-449d-809d-75774fc4918b"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[24270, 418, 5102, 118, 439, "Input",ExpressionUUID->"6792a393-f82f-4aa3-92ab-00c4bd845bb7"],
+Cell[29375, 538, 3602, 58, 114, "Output",ExpressionUUID->"9706d30e-cdb2-416f-874e-883b3d57a082"],
+Cell[32980, 598, 2578, 44, 114, "Output",ExpressionUUID->"6398dc3b-6049-4ad2-9d1b-9eb24cc3309f"],
+Cell[35561, 644, 3185, 56, 154, "Output",ExpressionUUID->"b12985de-55a7-4fd4-92cd-62a2f641f1e8"],
+Cell[38749, 702, 2243, 30, 186, "Output",ExpressionUUID->"b21582c4-731f-4de3-866d-08ec1afdbfab"],
+Cell[40995, 734, 1586, 22, 41, "Output",ExpressionUUID->"6813651e-417e-4c40-b9c7-443d670443c9"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[42630, 762, 236, 4, 89, "Title",ExpressionUUID->"99040ae5-1fcc-47d0-a490-ce7f8042afd2"],
+Cell[CellGroupData[{
+Cell[42891, 770, 154, 3, 86, "Chapter",ExpressionUUID->"29bb7313-2461-46ce-8a3d-5f54893ff351"],
+Cell[43048, 775, 251, 3, 36, "Input",ExpressionUUID->"b01b1d70-abd6-43ca-8e2a-96e20dd689d4"],
+Cell[43302, 780, 9009, 199, 852, "Input",ExpressionUUID->"e16b0fe9-58fd-4094-888c-0edae5d6f415"],
+Cell[CellGroupData[{
+Cell[52336, 983, 429, 10, 82, "Input",ExpressionUUID->"b7d83bc4-d591-4a41-ba60-6cac1ee8b2d5"],
+Cell[52768, 995, 1051, 16, 41, "Output",ExpressionUUID->"3dd87d7b-eb34-4625-9806-f544a25d3fde"]
+}, Open  ]],
+Cell[53834, 1014, 391, 9, 36, "Input",ExpressionUUID->"bb0548d0-b27b-4e44-bdb1-79a1e6be5b80"],
+Cell[CellGroupData[{
+Cell[54250, 1027, 286, 6, 36, "Input",ExpressionUUID->"8d8d4bc0-c2a3-45f4-aadb-367bc87ad286"],
+Cell[54539, 1035, 416, 6, 41, "Output",ExpressionUUID->"1e80a2ce-394b-40da-9f2a-4b403b2c1e25"]
+}, Open  ]],
+Cell[54970, 1044, 368, 9, 36, "Input",ExpressionUUID->"14025036-832e-4fc4-99e3-47d3d5ce41c6"],
+Cell[CellGroupData[{
+Cell[55363, 1057, 255, 5, 36, "Input",ExpressionUUID->"716683c3-fce8-49f4-866b-a8259affb62d"],
+Cell[55621, 1064, 260, 4, 41, "Output",ExpressionUUID->"9b718e44-f12f-4027-a4e3-cea736699d02"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[55918, 1073, 544, 8, 36, "Input",ExpressionUUID->"c9e6e90e-f874-4d02-90f3-5c84c8485fb9"],
+Cell[56465, 1083, 1050, 14, 41, "Output",ExpressionUUID->"4e744b2d-6355-41c4-9e97-c70cd9a54da0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[57552, 1102, 1246, 24, 171, "Input",ExpressionUUID->"9493ee5d-b564-41c2-8d65-2447f1f6908c"],
+Cell[58801, 1128, 698, 14, 41, "Output",ExpressionUUID->"8e07f79e-c3fd-4218-a140-9df24d115c56"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[59536, 1147, 1243, 24, 171, "Input",ExpressionUUID->"dee4b475-2d49-4df3-83ef-45568f6674cb"],
+Cell[60782, 1173, 455, 7, 57, "Output",ExpressionUUID->"aca9425f-305b-49ca-a514-4a8f658f643d"]
+}, Open  ]],
+Cell[61252, 1183, 367, 9, 54, "Input",ExpressionUUID->"950cd585-bb69-4c19-91dc-78071b1f053b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[61656, 1197, 159, 3, 86, "Chapter",ExpressionUUID->"ead4fb73-f767-49b6-b573-2565eae7f4a2"],
+Cell[61818, 1202, 10657, 244, 1243, "Input",ExpressionUUID->"46ce6700-6656-428c-b019-a0fa2ce24858"],
+Cell[CellGroupData[{
+Cell[72500, 1450, 1552, 29, 85, "Input",ExpressionUUID->"1f0eafd3-6b23-459b-bd0d-5042446fb274"],
+Cell[74055, 1481, 40210, 772, 1782, "Output",ExpressionUUID->"58b26b41-d757-4295-a4ba-0e57748516fc"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[114302, 2258, 421, 8, 30, "Input",ExpressionUUID->"e6e2fd5e-4709-4eae-8dae-8268886cb73c"],
+Cell[114726, 2268, 378, 6, 41, "Output",ExpressionUUID->"4509dba4-e6d7-4298-8061-5d244772f34d"]
+}, Open  ]],
+Cell[115119, 2277, 152, 3, 36, "Input",ExpressionUUID->"84d66100-6b35-4ecc-8529-b986d799ccc1"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
