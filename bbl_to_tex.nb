@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    273523,       5460]
-NotebookOptionsPosition[    268772,       5374]
-NotebookOutlinePosition[    269174,       5390]
-CellTagsIndexPosition[    269131,       5387]
+NotebookDataLength[    284124,       5689]
+NotebookOptionsPosition[    279341,       5601]
+NotebookOutlinePosition[    279743,       5617]
+CellTagsIndexPosition[    279700,       5614]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1253,16 +1253,16 @@ Cell[BoxData[{
       "\[IndentingNewLine]", 
       RowBox[{"(*", "\[IndentingNewLine]", 
        RowBox[{
-       "\"\<(?!rX|iP)((?!\\-|\\d)[\\.\\w])([[:upper:]])\>\"", 
-        "\[IndentingNewLine]", "\"\<((?!\\\\-).)([A-Z])\>\""}], 
-       "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
+       "\"\<(?!rX|iP)((?!\\\\-|\\\\d)[\\\\.\\\\w])([[:upper:]])\>\"", ",", 
+        " ", "\"\<((?!\\\\-).)([A-Z])\>\""}], "\[IndentingNewLine]", "*)"}], 
+      "\[IndentingNewLine]", 
       RowBox[{"addspace", "=", 
        RowBox[{"StringReplace", "[", 
         RowBox[{
          RowBox[{
          "RegularExpression", "[", 
-          "\"\<(?!rX|iP)((?!\\-|\\d)[\\.\\w])([[:upper:]])\>\"", "]"}], "->", 
-         "\"\<$1 $2\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
+          "\"\<(?!rX|iP|TB|BA|bH)((?!\\\\-|\\\\d)[\\\\.\\\\w\\\\:])([[:upper:]\
+])\>\"", "]"}], "->", "\"\<$1 $2\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
       RowBox[{"otherfieldsfunc", "=", 
        RowBox[{"StringCases", "[", 
         RowBox[{
@@ -1279,27 +1279,12 @@ Cell[BoxData[{
          RowBox[{
          "RegularExpression", "[", 
           "\"\<bibfnamefont\\\\{(.+?\\\\.)\\\\}~?bibnamefont\\\\{(.+?)\\\\}\>\
-\"", "]"}], "->", "\"\<$1 $2\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
+\"", "]"}], ":>", 
+         RowBox[{"addspace", "[", "\"\<$1 $2\>\"", "]"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", 
       RowBox[{"otherfields", "=", 
        RowBox[{"otherfieldsfunc", "@", "strII"}]}], ";", 
       "\[IndentingNewLine]", 
-      RowBox[{"(*", 
-       RowBox[{
-        RowBox[{"author", "=", 
-         RowBox[{"Thread", "[", 
-          RowBox[{
-           RowBox[{
-            RowBox[{"\"\<author\>\"", "->", 
-             RowBox[{"StringRiffle", "[", 
-              RowBox[{"#", ",", "\"\<, \>\""}], "]"}]}], "&"}], "/@", 
-           RowBox[{"MapAt", "[", 
-            RowBox[{
-             RowBox[{"StringTemplate", "[", "\"\<and ``\>\"", "]"}], ",", 
-             RowBox[{"authorfunc", "@", "strII"}], ",", 
-             RowBox[{"{", 
-              RowBox[{"All", ",", 
-               RowBox[{"-", "1"}]}], "}"}]}], "]"}]}], "]"}]}], ";"}], "*)"}],
-       "\[IndentingNewLine]", 
       RowBox[{"author", "=", 
        RowBox[{"Thread", "[", 
         RowBox[{
@@ -1455,9 +1440,303 @@ thebibliography}\>\"", "]"}], "[",
    3.840068410383643*^9, 3.840068418183492*^9}, {3.8400684722501907`*^9, 
    3.8400684729360213`*^9}, {3.84006855068213*^9, 3.840068558129822*^9}, {
    3.8400686499290876`*^9, 3.8400686832507753`*^9}, {3.840068984818721*^9, 
-   3.840068985322217*^9}, {3.840069756124529*^9, 3.8400697855882845`*^9}},
- Background->RGBColor[
-  1, 1, 0.85],ExpressionUUID->"46ce6700-6656-428c-b019-a0fa2ce24858"],
+   3.840068985322217*^9}, {3.840069756124529*^9, 3.840069820138516*^9}, {
+   3.8400699005676355`*^9, 3.840069909458051*^9}, {3.8400699665393705`*^9, 
+   3.8400699838101444`*^9}, {3.840070022578267*^9, 3.8400700245609035`*^9}, {
+   3.8400703443548756`*^9, 3.840070374413652*^9}, {3.8400705175135098`*^9, 
+   3.840070529397956*^9}, {3.8400706034713125`*^9, 3.840070620489085*^9}, {
+   3.840070687985301*^9, 3.8400707173226323`*^9}},
+ Background->RGBColor[1, 1, 0.85],
+ CellLabel->
+  "In[136]:=",ExpressionUUID->"46ce6700-6656-428c-b019-a0fa2ce24858"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"bblclear", "[", 
+  "\"\<F:\\\\Research\\\\Projects\\\\large-angle_twisted_bilayer_graphene\\\\\
+Manuscript\\\\main.bbl\>\"", "]"}]], "Input",
+ CellLabel->
+  "In[131]:=",ExpressionUUID->"5d61e1f9-e8ac-46e7-a86e-c16761e1e7c2"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"Y. Cao\"\>", ",", "\<\"V. Fatemi\"\>", 
+     ",", "\<\"S. Fang\"\>", ",", "\<\"K. Watanabe\"\>", 
+     ",", "\<\"T. Taniguchi\"\>", ",", "\<\"E. Kaxiras\"\>", 
+     ",", "\<\"P. Jarillo-Herrero\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"H.~C. Po\"\>", ",", "\<\"L. Zou\"\>", 
+     ",", "\<\"A. Vishwanath\"\>", ",", "\<\"T. Senthil\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"E. Codecido\"\>", ",", "\<\"Q. Wang\"\>", 
+     ",", "\<\"R. Koester\"\>", ",", "\<\"S. Che\"\>", ",", "\<\"H. Tian\"\>",
+      ",", "\<\"R. Lv\"\>", ",", "\<\"S. Tran\"\>", 
+     ",", "\<\"K. Watanabe\"\>", ",", "\<\"T. Taniguchi\"\>", 
+     ",", "\<\"F. Zhang\"\>", ",", "\<\"M. Bockrath\"\>", 
+     ",", "\<\"C.~N. Lau\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"H.~S. Arora\"\>", ",", "\<\"R. Polski\"\>", 
+     ",", "\<\"Y. Zhang\"\>", ",", "\<\"A. Thomson\"\>", 
+     ",", "\<\"Y. Choi\"\>", ",", "\<\"H. Kim\"\>", ",", "\<\"Z. Lin\"\>", 
+     ",", "\<\"I.~Z. Wilson\"\>", ",", "\<\"X. Xu\"\>", 
+     ",", "\<\"J.-H. Chu\"\>", ",", "\<\"K. Watanabe\"\>", 
+     ",", "\<\"T. Taniguchi\"\>", ",", "\<\"J. Alicea\"\>", 
+     ",", "\<\"S. Nadj-Perge\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Z. Hao\"\>", ",", "\<\"A.~M. Zimmerman\"\>", 
+     ",", "\<\"P. Ledwith\"\>", ",", "\<\"E. Khalaf\"\>", 
+     ",", "\<\"D.~H. Najafabadi\"\>", ",", "\<\"K. Watanabe\"\>", 
+     ",", "\<\"T. Taniguchi\"\>", ",", "\<\"A. Vishwanath\"\>", 
+     ",", "\<\"P. Kim\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"H. Zhou\"\>", ",", "\<\"T. Xie\"\>", 
+     ",", "\<\"T. Taniguchi\"\>", ",", "\<\"K. Watanabe\"\>", 
+     ",", "\<\"A.~F. Young\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Y. Cao\"\>", ",", "\<\"V. Fatemi\"\>", 
+     ",", "\<\"A. Demir\"\>", ",", "\<\"S. Fang\"\>", 
+     ",", "\<\"S.~L. Tomarken\"\>", ",", "\<\"J.~Y. Luo\"\>", 
+     ",", "\<\"J.~D. Sanchez-Yamagishi\"\>", ",", "\<\"K. Watanabe\"\>", 
+     ",", "\<\"T. Taniguchi\"\>", ",", "\<\"E. Kaxiras\"\>", 
+     ",", "\<\"R.~C. Ashoori\"\>", ",", "\<\"P. Jarillo-Herrero\"\>"}], "}"}],
+    ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"M.~J. Calder\[OAcute]n\"\>", ",", "\<\"E. Bascones\"\>"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"C. Zhang\"\>", ",", "\<\"C.-P. Chuu\"\>", 
+     ",", "\<\"X. Ren\"\>", ",", "\<\"M.-Y. Li\"\>", ",", "\<\"L.-J. Li\"\>", 
+     ",", "\<\"C. Jin\"\>", ",", "\<\"M.-Y. Chou\"\>", 
+     ",", "\<\"C.-K. Shih\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"C. Jin\"\>", ",", "\<\"E.~C. Regan\"\>", 
+     ",", "\<\"A. Yan\"\>", ",", "\<\"M.~I.~B. Utama\"\>", 
+     ",", "\<\"D. Wang\"\>", ",", "\<\"S. Zhao\"\>", ",", "\<\"Y. Qin\"\>", 
+     ",", "\<\"S. Yang\"\>", ",", "\<\"Z. Zheng\"\>", ",", "\<\"S. Shi\"\>", 
+     ",", "\<\"K. Watanabe\"\>", ",", "\<\"T. Taniguchi\"\>", 
+     ",", "\<\"S. Tongay\"\>", ",", "\<\"A. Zettl\"\>", 
+     ",", "\<\"F. Wang\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"K.~L. Seyler\"\>", ",", "\<\"P. Rivera\"\>", 
+     ",", "\<\"H. Yu\"\>", ",", "\<\"N.~P. Wilson\"\>", 
+     ",", "\<\"E.~L. Ray\"\>", ",", "\<\"D.~G. Mandrus\"\>", 
+     ",", "\<\"J. Yan\"\>", ",", "\<\"W. Yao\"\>", ",", "\<\"X. Xu\"\>"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"K. Tran\"\>", ",", "\<\"G. Moody\"\>", ",", "\<\"F. Wu\"\>", 
+     ",", "\<\"X. Lu\"\>", ",", "\<\"J. Choi\"\>", ",", "\<\"K. Kim\"\>", 
+     ",", "\<\"A. Rai\"\>", ",", "\<\"D.~A. Sanchez\"\>", 
+     ",", "\<\"J. Quan\"\>", ",", "\<\"A. Singh\"\>", 
+     ",", "\<\"J. Embley\"\>", ",", "\<\"A. Zepeda\"\>", 
+     ",", "\<\"M. Campbell\"\>", ",", "\<\"T. Autry\"\>", 
+     ",", "\<\"T. Taniguchi\"\>", ",", "\<\"K. Watanabe\"\>", 
+     ",", "\<\"N. Lu\"\>", ",", "\<\"S.~K. Banerjee\"\>", 
+     ",", "\<\"K.~L. Silverman\"\>", ",", "\<\"S. Kim\"\>", 
+     ",", "\<\"E. Tutuc\"\>", ",", "\<\"L. Yang\"\>", 
+     ",", "\<\"A.~H. Mac Donald\"\>", ",", "\<\"X. Li\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"H. Liu\"\>", ",", "\<\"Y. Zong\"\>", ",", "\<\"P. Wang\"\>", 
+     ",", "\<\"H. Wen\"\>", ",", "\<\"H. Wu\"\>", ",", "\<\"J. Xia\"\>", 
+     ",", "\<\"Z. Wei\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"L. Zhang\"\>", ",", "\<\"Z. Zhang\"\>", ",", "\<\"F. Wu\"\>",
+      ",", "\<\"D. Wang\"\>", ",", "\<\"R. Gogna\"\>", ",", "\<\"S. Hou\"\>", 
+     ",", "\<\"K. Watanabe\"\>", ",", "\<\"T. Taniguchi\"\>", 
+     ",", "\<\"K. Kulkarni\"\>", ",", "\<\"T. Kuo\"\>", 
+     ",", "\<\"S.~R. Forrest\"\>", ",", "\<\"H. Deng\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"S. Brem\"\>", ",", "\<\"C. Linder\[ADoubleDot]lv\"\>", 
+     ",", "\<\"P. Erhart\"\>", ",", "\<\"E. Malic\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Z. Song\"\>", ",", "\<\"Z. Wang\"\>", ",", "\<\"W. Shi\"\>", 
+     ",", "\<\"G. Li\"\>", ",", "\<\"C. Fang\"\>", 
+     ",", "\<\"B.~A. Bernevig\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"K.~P. Nuckolls\"\>", ",", "\<\"M. Oh\"\>", 
+     ",", "\<\"D. Wong\"\>", ",", "\<\"B. Lian\"\>", 
+     ",", "\<\"K. Watanabe\"\>", ",", "\<\"T. Taniguchi\"\>", 
+     ",", "\<\"B.~A. Bernevig\"\>", ",", "\<\"A. Yazdani\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"S. Wu\"\>", ",", "\<\"Z. Zhang\"\>", 
+     ",", "\<\"K. Watanabe\"\>", ",", "\<\"T. Taniguchi\"\>", 
+     ",", "\<\"E.~Y. Andrei\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"P. Stepanov\"\>", ",", "\<\"M. Xie\"\>", 
+     ",", "\<\"T. Taniguchi\"\>", ",", "\<\"K. Watanabe\"\>", 
+     ",", "\<\"X. Lu\"\>", ",", "\<\"A.~H. Mac Donald\"\>", 
+     ",", "\<\"B.~A. Bernevig\"\>", ",", "\<\"D.~K. Efetov\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"C. Repellin\"\>", ",", "\<\"T. Senthil\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"M.~J. Park\"\>", ",", "\<\"Y. Kim\"\>", 
+     ",", "\<\"G.~Y. Cho\"\>", ",", "\<\"S. Lee\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"B. Liu\"\>", ",", "\<\"L. Xian\"\>", ",", "\<\"H. Mu\"\>", 
+     ",", "\<\"G. Zhao\"\>", ",", "\<\"Z. Liu\"\>", ",", "\<\"A. Rubio\"\>", 
+     ",", "\<\"Z. Wang\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"M.~J. Park\"\>", ",", "\<\"S. Jeon\"\>", 
+     ",", "\<\"S. Lee\"\>", ",", "\<\"H.~C. Park\"\>", 
+     ",", "\<\"Y. Kim\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"J.~M. B.~L. dos Santos\"\>", ",", "\<\"N.~M.~R. Peres\"\>", 
+     ",", "\<\"A.~H.~C. Neto\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"R. Bistritzer\"\>", ",", "\<\"A.~H. Mac Donald\"\>"}], "}"}],
+    ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"S. Carr\"\>", ",", "\<\"S. Fang\"\>", ",", "\<\"Z. Zhu\"\>", 
+     ",", "\<\"E. Kaxiras\"\>"}], "}"}], ",", 
+   RowBox[{"{", "\<\"L. Balents\"\>", "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"F. Guinea\"\>", ",", "\<\"N.~R. Walet\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"V.~T. Phong\"\>", ",", "\<\"E. Mele\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"M. Koshino\"\>", ",", "\<\"N.~N.~T. Nam\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"E.~Y. Andrei\"\>", ",", "\<\"A.~H. Mac Donald\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"N.~N.~T. Nam\"\>", ",", "\<\"M. Koshino\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"V. Perebeinos\"\>", ",", "\<\"J. Tersoff\"\>", 
+     ",", "\<\"P. Avouris\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"G.~T. de~Laissardi\[EGrave]re\"\>", ",", "\<\"D. Mayou\"\>", 
+     ",", "\<\"L. Magaud\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"P. Moon\"\>", ",", "\<\"M. Koshino\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"M. An\:0111elkovi\[CAcute]\"\>", ",", "\<\"L. Covaci\"\>", 
+     ",", "\<\"F.~M. Peeters\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"H.~C. Po\"\>", ",", "\<\"L. Zou\"\>", 
+     ",", "\<\"T. Senthil\"\>", ",", "\<\"A. Vishwanath\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"F. Gargiulo\"\>", ",", "\<\"O.~V. Yazyev\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"W. Yan\"\>", ",", "\<\"W.-Y. He\"\>", 
+     ",", "\<\"Z.-D. Chu\"\>", ",", "\<\"M. Liu\"\>", ",", "\<\"L. Meng\"\>", 
+     ",", "\<\"R.-F. Dou\"\>", ",", "\<\"Y. Zhang\"\>", ",", "\<\"Z. Liu\"\>",
+      ",", "\<\"J.-C. Nie\"\>", ",", "\<\"L. He\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"H. Yoo\"\>", ",", "\<\"R. Engelke\"\>", 
+     ",", "\<\"S. Carr\"\>", ",", "\<\"S. Fang\"\>", ",", "\<\"K. Zhang\"\>", 
+     ",", "\<\"P. Cazeaux\"\>", ",", "\<\"S.~H. Sung\"\>", 
+     ",", "\<\"R. Hovden\"\>", ",", "\<\"A.~W. Tsen\"\>", 
+     ",", "\<\"T. Taniguchi\"\>", ",", "\<\"K. Watanabe\"\>", 
+     ",", "\<\"G.-C. Yi\"\>", ",", "\<\"M. Kim\"\>", ",", "\<\"M. Luskin\"\>",
+      ",", "\<\"E.~B. Tadmor\"\>", ",", "\<\"E. Kaxiras\"\>", 
+     ",", "\<\"P. Kim\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"H. Shi\"\>", ",", "\<\"Z. Zhan\"\>", ",", "\<\"Z. Qi\"\>", 
+     ",", "\<\"K. Huang\"\>", ",", "\<\"E. van Veen\"\>", 
+     ",", "\<\"J. \[CapitalAAcute]ngel Silva-Guill\[EAcute]n\"\>", 
+     ",", "\<\"R. Zhang\"\>", ",", "\<\"P. Li\"\>", ",", "\<\"K. Xie\"\>", 
+     ",", "\<\"H. Ji\"\>", ",", "\<\"M.~I. Katsnelson\"\>", 
+     ",", "\<\"S. Yuan\"\>", ",", "\<\"S. Qin\"\>", ",", "\<\"Z. Zhang\"\>"}],
+     "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Y.-W. Liu\"\>", ",", "\<\"Y. Su\"\>", 
+     ",", "\<\"X.-F. Zhou\"\>", ",", "\<\"L.-J. Yin\"\>", 
+     ",", "\<\"C. Yan\"\>", ",", "\<\"S.-Y. Li\"\>", ",", "\<\"W. Yan\"\>", 
+     ",", "\<\"S. Han\"\>", ",", "\<\"Z.-Q. Fu\"\>", ",", "\<\"Y. Zhang\"\>", 
+     ",", "\<\"Q. Yang\"\>", ",", "\<\"Y.-N. Ren\"\>", ",", "\<\"L. He\"\>"}],
+     "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"K. Uchida\"\>", ",", "\<\"S. Furuya\"\>", 
+     ",", "\<\"J.-I. Iwata\"\>", ",", "\<\"A. Oshiyama\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"S.~K. Jain\"\>", ",", "\<\"V. Juri\[CHacek]i\[CAcute]\"\>", 
+     ",", "\<\"G.~T. Barkema\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"S. Dai\"\>", ",", "\<\"Y. Xiang\"\>", 
+     ",", "\<\"D.~J. Srolovitz\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"M.~M. van Wijk\"\>", ",", "\<\"A. Schuring\"\>", 
+     ",", "\<\"M.~I. Katsnelson\"\>", ",", "\<\"A. Fasolino\"\>"}], "}"}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"H. Goldstein\"\>", ",", "\<\"C. Poole\"\>", 
+     ",", "\<\"J. Safko\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"X. Lin\"\>", ",", "\<\"H. Zhu\"\>", ",", "\<\"J. Ni\"\>"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"P. San-Jose\"\>", ",", "\<\"A. Guti\[EAcute]rrez-Rubio\"\>", 
+     ",", "\<\"M. Sturla\"\>", ",", "\<\"F. Guinea\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"P. San-Jose\"\>", ",", "\<\"A. Guti\[EAcute]rrez-Rubio\"\>", 
+     ",", "\<\"M. Sturla\"\>", ",", "\<\"F. Guinea\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"H. Suzuura\"\>", ",", "\<\"T. Ando\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"R. Jackiw\"\>", ",", "\<\"C. Rebbi\"\>"}], "}"}], ",", 
+   RowBox[{"{", "\<\"S.-Q. Shen\"\>", "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"L.-J. Yin\"\>", ",", "\<\"H. Jiang\"\>", 
+     ",", "\<\"J.-B. Qiao\"\>", ",", "\<\"L. He\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"T. Hou\"\>", ",", "\<\"G. Cheng\"\>", 
+     ",", "\<\"W.-K. Tse\"\>", ",", "\<\"C. Zeng\"\>", 
+     ",", "\<\"Z. Qiao\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Y. Ren\"\>", ",", "\<\"Z. Qiao\"\>", ",", "\<\"Q. Niu\"\>"}],
+     "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Y.-T. Zhang\"\>", ",", "\<\"Z. Qiao\"\>", 
+     ",", "\<\"Q.-F. Sun\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"L. Ju\"\>", ",", "\<\"Z. Shi\"\>", ",", "\<\"N. Nair\"\>", 
+     ",", "\<\"Y. Lv\"\>", ",", "\<\"C. Jin\"\>", ",", "\<\"J. Velasco\"\>", 
+     ",", "\<\"C. Ojeda-Aristizabal\"\>", ",", "\<\"H.~A. Bechtel\"\>", 
+     ",", "\<\"M.~C. Martin\"\>", ",", "\<\"A. Zettl\"\>", 
+     ",", "\<\"J. Analytis\"\>", ",", "\<\"F. Wang\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"X. Bi\"\>", ",", "\<\"J. Jung\"\>", ",", "\<\"Z. Qiao\"\>"}],
+     "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"J. Li\"\>", ",", "\<\"K. Wang\"\>", 
+     ",", "\<\"K.~J. Mc Faul\"\>", ",", "\<\"Z. Zern\"\>", 
+     ",", "\<\"Y. Ren\"\>", ",", "\<\"K. Watanabe\"\>", 
+     ",", "\<\"T. Taniguchi\"\>", ",", "\<\"Z. Qiao\"\>", 
+     ",", "\<\"J. Zhu\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"K. Wang\"\>", ",", "\<\"Y. Ren\"\>", ",", "\<\"X. Deng\"\>", 
+     ",", "\<\"S.~A. Yang\"\>", ",", "\<\"J. Jung\"\>", 
+     ",", "\<\"Z. Qiao\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Y. Ren\"\>", ",", "\<\"J. Zeng\"\>", ",", "\<\"K. Wang\"\>", 
+     ",", "\<\"F. Xu\"\>", ",", "\<\"Z. Qiao\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"K. Wang\"\>", ",", "\<\"T. Hou\"\>", ",", "\<\"Y. Ren\"\>", 
+     ",", "\<\"Z. Qiao\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"T. Hou\"\>", ",", "\<\"Y. Ren\"\>", ",", "\<\"Y. Quan\"\>", 
+     ",", "\<\"J. Jung\"\>", ",", "\<\"W. Ren\"\>", ",", "\<\"Z. Qiao\"\>"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"T. Hou\"\>", ",", "\<\"Y. Ren\"\>", ",", "\<\"Y. Quan\"\>", 
+     ",", "\<\"J. Jung\"\>", ",", "\<\"W. Ren\"\>", ",", "\<\"Z. Qiao\"\>"}], 
+    "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Z. Qiao\"\>", ",", "\<\"J. Jung\"\>", ",", "\<\"C. Lin\"\>", 
+     ",", "\<\"Y. Ren\"\>", ",", "\<\"A.~H. Mac Donald\"\>", 
+     ",", "\<\"Q. Niu\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"M. Kim\"\>", ",", "\<\"J.-H. Choi\"\>", 
+     ",", "\<\"S.-H. Lee\"\>", ",", "\<\"K. Watanabe\"\>", 
+     ",", "\<\"T. Taniguchi\"\>", ",", "\<\"S.-H. Jhi\"\>", 
+     ",", "\<\"H.-J. Lee\"\>"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.84007053281092*^9, 3.84007062420533*^9, 
+  3.8400706946551237`*^9},
+ CellLabel->
+  "Out[131]=",ExpressionUUID->"1d421b01-3fc0-4bb9-895d-937229794bb0"]
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -1489,9 +1768,9 @@ Cell[BoxData[
    3.8400055565690947`*^9, 3.840005587913868*^9}, 3.8400056303547764`*^9, 
    3.8400057770066786`*^9, {3.8400679928202353`*^9, 3.8400679950662374`*^9}, {
    3.84006873546465*^9, 3.840068939459174*^9}, {3.8400690039325924`*^9, 
-   3.8400690233910503`*^9}, {3.8400697380803566`*^9, 
-   3.840069742619929*^9}},ExpressionUUID->"1f0eafd3-6b23-459b-bd0d-\
-5042446fb274"],
+   3.8400690233910503`*^9}, {3.8400697380803566`*^9, 3.840069742619929*^9}},
+ CellLabel->
+  "In[140]:=",ExpressionUUID->"1f0eafd3-6b23-459b-bd0d-5042446fb274"],
 
 Cell[BoxData[
  TagBox[
@@ -1508,13 +1787,13 @@ and P. Jarillo-Herrero", "journal" -> "Nature", "volume" -> "556", "pages" ->
        Association[
         "key" -> "Po2018PRX", "author" -> 
          "H.~C. Po, L. Zou, A. Vishwanath, and T. Senthil", "journal" -> 
-         "Phys.Rev.X", "volume" -> "8", "pages" -> "031089", "year" -> 
+         "Phys. Rev. X", "volume" -> "8", "pages" -> "031089", "year" -> 
          "2018"], 3 -> 
        Association[
         "key" -> "Codecido2019SA", "author" -> 
          "E. Codecido, Q. Wang, R. Koester, S. Che, H. Tian, R. Lv, S. Tran, \
 K. Watanabe, T. Taniguchi, F. Zhang, M. Bockrath, and C.~N. Lau", "journal" -> 
-         "Sci.Adv.", "volume" -> "5", "pages" -> "eaaw9770", "year" -> 
+         "Sci. Adv.", "volume" -> "5", "pages" -> "eaaw9770", "year" -> 
          "2019"], 4 -> 
        Association[
         "key" -> "Arora2020N", "author" -> 
@@ -1541,12 +1820,12 @@ Ashoori, and P. Jarillo-Herrero", "journal" -> "Nature", "volume" -> "556",
        Association[
         "key" -> "Calderon2020nQM", "author" -> 
          "M.~J. Calder\[OAcute]n and E. Bascones", "journal" -> 
-         "npjQuantumMater.", "volume" -> "5", "pages" -> "57", "year" -> 
+         "npj Quantum Mater.", "volume" -> "5", "pages" -> "57", "year" -> 
          "2020"], 9 -> 
        Association[
         "key" -> "Zhang2017SA", "author" -> 
          "C. Zhang, C.-P. Chuu, X. Ren, M.-Y. Li, L.-J. Li, C. Jin, M.-Y. \
-Chou, and C.-K. Shih", "journal" -> "Sci.Adv.", "volume" -> "3", "pages" -> 
+Chou, and C.-K. Shih", "journal" -> "Sci. Adv.", "volume" -> "3", "pages" -> 
          "e1601459", "year" -> "2017"], 10 -> 
        Association[
         "key" -> "Jin2019N", "author" -> 
@@ -1564,28 +1843,28 @@ Mandrus, J. Yan, W. Yao, and X. Xu", "journal" -> "Nature", "volume" -> "567",
          "K. Tran, G. Moody, F. Wu, X. Lu, J. Choi, K. Kim, A. Rai, D.~A. \
 Sanchez, J. Quan, A. Singh, J. Embley, A. Zepeda, M. Campbell, T. Autry, T. \
 Taniguchi, K. Watanabe, N. Lu, S.~K. Banerjee, K.~L. Silverman, S. Kim, E. \
-Tutuc, L. Yang, A.~H. MacDonald, and X. Li", "journal" -> "Nature", "volume" -> 
+Tutuc, L. Yang, A.~H. Mac Donald, and X. Li", "journal" -> "Nature", "volume" -> 
          "567", "pages" -> "71", "year" -> "2019"], 13 -> 
        Association[
         "key" -> "Liu2020JPDAP", "author" -> 
          "H. Liu, Y. Zong, P. Wang, H. Wen, H. Wu, J. Xia, and Z. Wei", 
-         "journal" -> "J.Phys.D:Appl.Phys.", "volume" -> "54", "pages" -> 
+         "journal" -> "J. Phys. D: Appl. Phys.", "volume" -> "54", "pages" -> 
          "053001", "year" -> "2020"], 14 -> 
        Association[
         "key" -> "Zhang2020NC", "author" -> 
          "L. Zhang, Z. Zhang, F. Wu, D. Wang, R. Gogna, S. Hou, K. Watanabe, \
 T. Taniguchi, K. Kulkarni, T. Kuo, S.~R. Forrest, and H. Deng", "journal" -> 
-         "Nat.Commun.", "volume" -> "11", "pages" -> "5888", "year" -> 
+         "Nat. Commun.", "volume" -> "11", "pages" -> "5888", "year" -> 
          "2020"], 15 -> 
        Association[
         "key" -> "Brem2020NL", "author" -> 
          "S. Brem, C. Linder\[ADoubleDot]lv, P. Erhart, and E. Malic", 
-         "journal" -> "NanoLett.", "volume" -> "20", "pages" -> "8534", 
+         "journal" -> "Nano Lett.", "volume" -> "20", "pages" -> "8534", 
          "year" -> "2020"], 16 -> 
        Association[
         "key" -> "Song2019PRL", "author" -> 
          "Z. Song, Z. Wang, W. Shi, G. Li, C. Fang, and B.~A. Bernevig", 
-         "journal" -> "Phys.Rev.Lett.", "volume" -> "123", "pages" -> 
+         "journal" -> "Phys. Rev. Lett.", "volume" -> "123", "pages" -> 
          "036401", "year" -> "2019"], 17 -> 
        Association[
         "key" -> "Nuckolls2020N", "author" -> 
@@ -1595,26 +1874,26 @@ B.~A. Bernevig, and A. Yazdani", "journal" -> "Nature", "volume" -> "588",
        Association[
         "key" -> "Wu2021NM", "author" -> 
          "S. Wu, Z. Zhang, K. Watanabe, T. Taniguchi, and E.~Y. Andrei", 
-         "journal" -> "Nat.Mater.", "volume" -> "20", "pages" -> "488", 
+         "journal" -> "Nat. Mater.", "volume" -> "20", "pages" -> "488", 
          "year" -> "2021"], 19 -> 
        Association[
         "key" -> "Stepanov2020a", "author" -> 
-         "P. Stepanov, M. Xie, T. Taniguchi, K. Watanabe, X. Lu, A.~H. \
-MacDonald, B.~A. Bernevig, and D.~K. Efetov", "journal" -> "r Xiv", "volume" -> 
+         "P. Stepanov, M. Xie, T. Taniguchi, K. Watanabe, X. Lu, A.~H. Mac \
+Donald, B.~A. Bernevig, and D.~K. Efetov", "journal" -> "arXiv", "volume" -> 
          "2012", "pages" -> "15126", "year" -> "2020"], 20 -> 
        Association[
         "key" -> "Repellin2020PRR", "author" -> "C. Repellin and T. Senthil", 
-         "journal" -> "Phys.Rev.Research", "volume" -> "2", "pages" -> 
+         "journal" -> "Phys. Rev. Research", "volume" -> "2", "pages" -> 
          "023238", "year" -> "2020"], 21 -> 
        Association[
         "key" -> "Park2019PRL", "author" -> 
          "M.~J. Park, Y. Kim, G.~Y. Cho, and S. Lee", "journal" -> 
-         "Phys.Rev.Lett.", "volume" -> "123", "pages" -> "216803", "year" -> 
+         "Phys. Rev. Lett.", "volume" -> "123", "pages" -> "216803", "year" -> 
          "2019"], 22 -> 
        Association[
         "key" -> "Liu2021PRL", "author" -> 
          "B. Liu, L. Xian, H. Mu, G. Zhao, Z. Liu, A. Rubio, and Z. Wang", 
-         "journal" -> "Phys.Rev.Lett.", "volume" -> "126", "pages" -> 
+         "journal" -> "Phys. Rev. Lett.", "volume" -> "126", "pages" -> 
          "066401", "year" -> "2021"], 23 -> 
        Association[
         "key" -> "Park2021C", "author" -> 
@@ -1622,161 +1901,162 @@ MacDonald, B.~A. Bernevig, and D.~K. Efetov", "journal" -> "r Xiv", "volume" ->
          "Carbon", "volume" -> "174", "pages" -> "260", "year" -> "2021"], 24 -> 
        Association[
         "key" -> "Santos2007PRL", "author" -> 
-         "J.~M.B.~L. dosSantos, N.~M.~R. Peres, and A.~H.~C. Neto", "journal" -> 
-         "Phys.Rev.Lett.", "volume" -> "99", "pages" -> "256802", "year" -> 
-         "2007"], 25 -> 
+         "J.~M. B.~L. dos Santos, N.~M.~R. Peres, and A.~H.~C. Neto", 
+         "journal" -> "Phys. Rev. Lett.", "volume" -> "99", "pages" -> 
+         "256802", "year" -> "2007"], 25 -> 
        Association[
         "key" -> "Bistritzer2011PNAS", "author" -> 
-         "R. Bistritzer and A.~H. MacDonald", "journal" -> 
-         "Proc.Natl.Acad.Sci.", "volume" -> "108", "pages" -> "12233", "year" -> 
-         "2011"], 26 -> 
+         "R. Bistritzer and A.~H. Mac Donald", "journal" -> 
+         "Proc. Natl. Acad. Sci.", "volume" -> "108", "pages" -> "12233", 
+         "year" -> "2011"], 26 -> 
        Association[
         "key" -> "Carr2019PRR", "author" -> 
          "S. Carr, S. Fang, Z. Zhu, and E. Kaxiras", "journal" -> 
-         "Phys.Rev.Research", "volume" -> "1", "pages" -> "013001", "year" -> 
+         "Phys. Rev. Research", "volume" -> "1", "pages" -> "013001", "year" -> 
          "2019"], 27 -> 
        Association[
         "key" -> "Balents2019SP", "author" -> "L. Balents", "journal" -> 
-         "SciPostPhys.", "volume" -> "7", "pages" -> "048", "year" -> "2019"],
-        28 -> Association[
+         "SciPost Phys.", "volume" -> "7", "pages" -> "048", "year" -> 
+         "2019"], 28 -> 
+       Association[
         "key" -> "Guinea2019PRB", "author" -> "F. Guinea and N.~R. Walet", 
-         "journal" -> "Phys.Rev.B", "volume" -> "99", "pages" -> "205134", 
+         "journal" -> "Phys. Rev. B", "volume" -> "99", "pages" -> "205134", 
          "year" -> "2019"], 29 -> 
        Association[
         "key" -> "Phong2020PRL", "author" -> "V.~T. Phong and E. Mele", 
-         "journal" -> "Phys.Rev.Lett.", "volume" -> "125", "pages" -> 
+         "journal" -> "Phys. Rev. Lett.", "volume" -> "125", "pages" -> 
          "176404", "year" -> "2020"], 30 -> 
        Association[
         "key" -> "Koshino2020PRB", "author" -> "M. Koshino and N.~N.~T. Nam", 
-         "journal" -> "Phys.Rev.B", "volume" -> "101", "pages" -> "195425", 
+         "journal" -> "Phys. Rev. B", "volume" -> "101", "pages" -> "195425", 
          "year" -> "2020"], 31 -> 
        Association[
         "key" -> "Andrei2020NM", "author" -> 
-         "E.~Y. Andrei and A.~H. MacDonald", "journal" -> "Nat.Mater.", 
+         "E.~Y. Andrei and A.~H. Mac Donald", "journal" -> "Nat. Mater.", 
          "volume" -> "19", "pages" -> "1265", "year" -> "2020"], 32 -> 
        Association[
         "key" -> "Nam2017PRB", "author" -> "N.~N.~T. Nam and M. Koshino", 
-         "journal" -> "Phys.Rev.B", "volume" -> "96", "pages" -> "075311", 
+         "journal" -> "Phys. Rev. B", "volume" -> "96", "pages" -> "075311", 
          "year" -> "2017"], 33 -> 
        Association[
         "key" -> "Perebeinos2012PRL", "author" -> 
          "V. Perebeinos, J. Tersoff, and P. Avouris", "journal" -> 
-         "Phys.Rev.Lett.", "volume" -> "109", "pages" -> "236604", "year" -> 
+         "Phys. Rev. Lett.", "volume" -> "109", "pages" -> "236604", "year" -> 
          "2012"], 34 -> 
        Association[
         "key" -> "Laissardiere2012PRB", "author" -> 
          "G.~T. de~Laissardi\[EGrave]re, D. Mayou, and L. Magaud", "journal" -> 
-         "Phys.Rev.B", "volume" -> "86", "pages" -> "125413", "year" -> 
+         "Phys. Rev. B", "volume" -> "86", "pages" -> "125413", "year" -> 
          "2012"], 35 -> 
        Association[
         "key" -> "Moon2012PRB", "author" -> "P. Moon and M. Koshino", 
-         "journal" -> "Phys.Rev.B", "volume" -> "85", "pages" -> "195458", 
+         "journal" -> "Phys. Rev. B", "volume" -> "85", "pages" -> "195458", 
          "year" -> "2012"], 36 -> 
        Association[
         "key" -> "Andelkovic2018PRM", "author" -> 
          "M. An\:0111elkovi\[CAcute], L. Covaci, and F.~M. Peeters", 
-         "journal" -> "Phys.Rev.Materials", "volume" -> "2", "pages" -> 
+         "journal" -> "Phys. Rev. Materials", "volume" -> "2", "pages" -> 
          "034004", "year" -> "2018"], 37 -> 
        Association[
         "key" -> "Po2019PRB", "author" -> 
          "H.~C. Po, L. Zou, T. Senthil, and A. Vishwanath", "journal" -> 
-         "Phys.Rev.B", "volume" -> "99", "pages" -> "195455", "year" -> 
+         "Phys. Rev. B", "volume" -> "99", "pages" -> "195455", "year" -> 
          "2019"], 38 -> 
        Association[
         "key" -> "Gargiulo20172M", "author" -> "F. Gargiulo and O.~V. Yazyev",
-          "journal" -> "2DMater.", "volume" -> "5", "pages" -> "015019", 
+          "journal" -> "2D Mater.", "volume" -> "5", "pages" -> "015019", 
          "year" -> "2017"], 39 -> 
        Association[
         "key" -> "Yan2013NC", "author" -> 
          "W. Yan, W.-Y. He, Z.-D. Chu, M. Liu, L. Meng, R.-F. Dou, Y. Zhang, \
-Z. Liu, J.-C. Nie, and L. He", "journal" -> "Nat.Commun.", "volume" -> "4", 
+Z. Liu, J.-C. Nie, and L. He", "journal" -> "Nat. Commun.", "volume" -> "4", 
          "pages" -> "2159", "year" -> "2013"], 40 -> 
        Association[
         "key" -> "Yoo2019NM", "author" -> 
          "H. Yoo, R. Engelke, S. Carr, S. Fang, K. Zhang, P. Cazeaux, S.~H. \
 Sung, R. Hovden, A.~W. Tsen, T. Taniguchi, K. Watanabe, G.-C. Yi, M. Kim, M. \
-Luskin, E.~B. Tadmor, E. Kaxiras, and P. Kim", "journal" -> "Nat.Mater.", 
+Luskin, E.~B. Tadmor, E. Kaxiras, and P. Kim", "journal" -> "Nat. Mater.", 
          "volume" -> "18", "pages" -> "448", "year" -> "2019"], 41 -> 
        Association[
         "key" -> "Shi2020NC", "author" -> 
-         "H. Shi, Z. Zhan, Z. Qi, K. Huang, E. vanVeen, J. \
-\[CapitalAAcute]ngelSilva-Guill\[EAcute]n, R. Zhang, P. Li, K. Xie, H. Ji, \
-M.~I. Katsnelson, S. Yuan, S. Qin, and Z. Zhang", "journal" -> "Nat.Commun.", 
-         "volume" -> "11", "pages" -> "371", "year" -> "2020"], 42 -> 
+         "H. Shi, Z. Zhan, Z. Qi, K. Huang, E. van Veen, J. \
+\[CapitalAAcute]ngel Silva-Guill\[EAcute]n, R. Zhang, P. Li, K. Xie, H. Ji, \
+M.~I. Katsnelson, S. Yuan, S. Qin, and Z. Zhang", "journal" -> "Nat. Commun.",
+          "volume" -> "11", "pages" -> "371", "year" -> "2020"], 42 -> 
        Association[
         "key" -> "Liu2020PRL", "author" -> 
          "Y.-W. Liu, Y. Su, X.-F. Zhou, L.-J. Yin, C. Yan, S.-Y. Li, W. Yan, \
 S. Han, Z.-Q. Fu, Y. Zhang, Q. Yang, Y.-N. Ren, and L. He", "journal" -> 
-         "Phys.Rev.Lett.", "volume" -> "125", "pages" -> "236102", "year" -> 
+         "Phys. Rev. Lett.", "volume" -> "125", "pages" -> "236102", "year" -> 
          "2020"], 43 -> 
        Association[
         "key" -> "Uchida2014PRB", "author" -> 
          "K. Uchida, S. Furuya, J.-I. Iwata, and A. Oshiyama", "journal" -> 
-         "Phys.Rev.B", "volume" -> "90", "pages" -> "155451", "year" -> 
+         "Phys. Rev. B", "volume" -> "90", "pages" -> "155451", "year" -> 
          "2014"], 44 -> 
        Association[
         "key" -> "Jain20162M", "author" -> 
          "S.~K. Jain, V. Juri\[CHacek]i\[CAcute], and G.~T. Barkema", 
-         "journal" -> "2DMater.", "volume" -> "4", "pages" -> "015018", 
+         "journal" -> "2D Mater.", "volume" -> "4", "pages" -> "015018", 
          "year" -> "2016"], 45 -> 
        Association[
         "key" -> "Dai2016NL", "author" -> 
-         "S. Dai, Y. Xiang, and D.~J. Srolovitz", "journal" -> "NanoLett.", 
+         "S. Dai, Y. Xiang, and D.~J. Srolovitz", "journal" -> "Nano Lett.", 
          "volume" -> "16", "pages" -> "5923", "year" -> "2016"], 46 -> 
        Association[
         "key" -> "Wijk20152M", "author" -> 
-         "M.~M. vanWijk, A. Schuring, M.~I. Katsnelson, and A. Fasolino", 
-         "journal" -> "2DMater.", "volume" -> "2", "pages" -> "034010", 
+         "M.~M. van Wijk, A. Schuring, M.~I. Katsnelson, and A. Fasolino", 
+         "journal" -> "2D Mater.", "volume" -> "2", "pages" -> "034010", 
          "year" -> "2015"], 47 -> 
        Association[
         "key" -> "Goldstein2005", "author" -> 
          "H. Goldstein, C. Poole, and J. Safko", "title" -> 
-         "ClassicalMechanics", "edition" -> "3rd", "publisher" -> 
-         "HigherEducationPress", "address" -> "Beijing", "year" -> "2005"], 
+         "Classical Mechanics", "edition" -> "3rd", "publisher" -> 
+         "Higher Education Press", "address" -> "Beijing", "year" -> "2005"], 
        48 -> Association[
         "key" -> "Lin2020PRB", "author" -> "X. Lin, H. Zhu, and J. Ni", 
-         "journal" -> "Phys.Rev.B", "volume" -> "101", "pages" -> "155405", 
+         "journal" -> "Phys. Rev. B", "volume" -> "101", "pages" -> "155405", 
          "year" -> "2020"], 49 -> 
        Association[
         "key" -> "SanJose2014PRB", "author" -> 
          "P. San-Jose, A. Guti\[EAcute]rrez-Rubio, M. Sturla, and F. Guinea", 
-         "journal" -> "Phys.Rev.B", "volume" -> "90", "pages" -> "075428", 
+         "journal" -> "Phys. Rev. B", "volume" -> "90", "pages" -> "075428", 
          "year" -> "2014"], 50 -> 
        Association[
         "key" -> "SanJose2014PRBa", "author" -> 
          "P. San-Jose, A. Guti\[EAcute]rrez-Rubio, M. Sturla, and F. Guinea", 
-         "journal" -> "Phys.Rev.B", "volume" -> "90", "pages" -> "115152", 
+         "journal" -> "Phys. Rev. B", "volume" -> "90", "pages" -> "115152", 
          "year" -> "2014"], 51 -> 
        Association[
         "key" -> "Suzuura2002PRB", "author" -> "H. Suzuura and T. Ando", 
-         "journal" -> "Phys.Rev.B", "volume" -> "65", "pages" -> "235412", 
+         "journal" -> "Phys. Rev. B", "volume" -> "65", "pages" -> "235412", 
          "year" -> "2002"], 52 -> 
        Association[
         "key" -> "Jackiw1976PRD", "author" -> "R. Jackiw and C. Rebbi", 
-         "journal" -> "Phys.Rev.D", "volume" -> "13", "pages" -> "3398", 
+         "journal" -> "Phys. Rev. D", "volume" -> "13", "pages" -> "3398", 
          "year" -> "1976"], 53 -> 
        Association[
         "key" -> "Shen2017", "author" -> "S.-Q. Shen", "title" -> 
-         "TopologicalInsulators:DiracEquation~inCondensedMatter", "edition" -> 
-         "2nd", "publisher" -> "Springer-VerlagGmbH", "address" -> 
+         "Topological Insulators: Dirac Equation~in Condensed Matter", 
+         "edition" -> "2nd", "publisher" -> "Springer-Verlag GmbH", "address" -> 
          "Singapore", "year" -> "2017"], 54 -> 
        Association[
         "key" -> "Yin2016NC", "author" -> 
          "L.-J. Yin, H. Jiang, J.-B. Qiao, and L. He", "journal" -> 
-         "Nat.Commun.", "volume" -> "7", "pages" -> "11760", "year" -> 
+         "Nat. Commun.", "volume" -> "7", "pages" -> "11760", "year" -> 
          "2016"], 55 -> 
        Association[
         "key" -> "Hou2018PRB", "author" -> 
          "T. Hou, G. Cheng, W.-K. Tse, C. Zeng, and Z. Qiao", "journal" -> 
-         "Phys.Rev.B", "volume" -> "98", "pages" -> "245417", "year" -> 
+         "Phys. Rev. B", "volume" -> "98", "pages" -> "245417", "year" -> 
          "2018"], 56 -> 
        Association[
         "key" -> "Ren2016RPP", "author" -> "Y. Ren, Z. Qiao, and Q. Niu", 
-         "journal" -> "Rep.Prog.Phys.", "volume" -> "79", "pages" -> "066501",
-          "year" -> "2016"], 57 -> 
+         "journal" -> "Rep. Prog. Phys.", "volume" -> "79", "pages" -> 
+         "066501", "year" -> "2016"], 57 -> 
        Association[
         "key" -> "Zhang2013PRB", "author" -> 
-         "Y.-T. Zhang, Z. Qiao, and Q.-F. Sun", "journal" -> "Phys.Rev.B", 
+         "Y.-T. Zhang, Z. Qiao, and Q.-F. Sun", "journal" -> "Phys. Rev. B", 
          "volume" -> "87", "pages" -> "235405", "year" -> "2013"], 58 -> 
        Association[
         "key" -> "Ju2015N", "author" -> 
@@ -1786,50 +2066,50 @@ Wang", "journal" -> "Nature", "volume" -> "520", "pages" -> "650", "year" ->
          "2015"], 59 -> 
        Association[
         "key" -> "Bi2015PRB", "author" -> "X. Bi, J. Jung, and Z. Qiao", 
-         "journal" -> "Phys.Rev.B", "volume" -> "92", "pages" -> "235421", 
+         "journal" -> "Phys. Rev. B", "volume" -> "92", "pages" -> "235421", 
          "year" -> "2015"], 60 -> 
        Association[
         "key" -> "Li2016NN", "author" -> 
-         "J. Li, K. Wang, K.~J. McFaul, Z. Zern, Y. Ren, K. Watanabe, T. \
-Taniguchi, Z. Qiao, and J. Zhu", "journal" -> "Nat.Nanotech.", "volume" -> 
+         "J. Li, K. Wang, K.~J. Mc Faul, Z. Zern, Y. Ren, K. Watanabe, T. \
+Taniguchi, Z. Qiao, and J. Zhu", "journal" -> "Nat. Nanotech.", "volume" -> 
          "11", "pages" -> "1060", "year" -> "2016"], 61 -> 
        Association[
         "key" -> "Wang2017PRB", "author" -> 
          "K. Wang, Y. Ren, X. Deng, S.~A. Yang, J. Jung, and Z. Qiao", 
-         "journal" -> "Phys.Rev.B", "volume" -> "95", "pages" -> "245420", 
+         "journal" -> "Phys. Rev. B", "volume" -> "95", "pages" -> "245420", 
          "year" -> "2017"], 62 -> 
        Association[
         "key" -> "Ren2017PRB", "author" -> 
          "Y. Ren, J. Zeng, K. Wang, F. Xu, and Z. Qiao", "journal" -> 
-         "Phys.Rev.B", "volume" -> "96", "pages" -> "155445", "year" -> 
+         "Phys. Rev. B", "volume" -> "96", "pages" -> "155445", "year" -> 
          "2017"], 63 -> 
        Association[
         "key" -> "Wang2018FP", "author" -> 
-         "K. Wang, T. Hou, Y. Ren, and Z. Qiao", "journal" -> "Front.Phys.", 
+         "K. Wang, T. Hou, Y. Ren, and Z. Qiao", "journal" -> "Front. Phys.", 
          "volume" -> "14", "pages" -> "23501", "year" -> "2018"], 64 -> 
        Association[
         "key" -> "Hou2020PRB", "author" -> 
          "T. Hou, Y. Ren, Y. Quan, J. Jung, W. Ren, and Z. Qiao", "journal" -> 
-         "Phys.Rev.B", "volume" -> "101", "pages" -> "201403", "year" -> 
+         "Phys. Rev. B", "volume" -> "101", "pages" -> "201403", "year" -> 
          "2020"], 65 -> 
        Association[
         "key" -> "Hou2020PRBa", "author" -> 
          "T. Hou, Y. Ren, Y. Quan, J. Jung, W. Ren, and Z. Qiao", "journal" -> 
-         "Phys.Rev.B", "volume" -> "102", "pages" -> "085433", "year" -> 
+         "Phys. Rev. B", "volume" -> "102", "pages" -> "085433", "year" -> 
          "2020"], 66 -> 
        Association[
         "key" -> "Qiao2014PRL", "author" -> 
-         "Z. Qiao, J. Jung, C. Lin, Y. Ren, A.~H. MacDonald, and Q. Niu", 
-         "journal" -> "Phys.Rev.Lett.", "volume" -> "112", "pages" -> 
+         "Z. Qiao, J. Jung, C. Lin, Y. Ren, A.~H. Mac Donald, and Q. Niu", 
+         "journal" -> "Phys. Rev. Lett.", "volume" -> "112", "pages" -> 
          "206601", "year" -> "2014"], 67 -> 
        Association[
         "key" -> "Kim2016NP", "author" -> 
          "M. Kim, J.-H. Choi, S.-H. Lee, K. Watanabe, T. Taniguchi, S.-H. \
-Jhi, and H.-J. Lee", "journal" -> "Nat.Phys.", "volume" -> "12", "pages" -> 
+Jhi, and H.-J. Lee", "journal" -> "Nat. Phys.", "volume" -> "12", "pages" -> 
          "1022", "year" -> "2016"]], "AllowEmbedding" -> True, "InitialShape" -> 
      TypeSystem`PackageScope`HeaderShape[
        Association[{All, 
-          TypeSystem`PackageScope`KeyDummy[8]} -> 1, {All, "key"} -> 
+          TypeSystem`PackageScope`KeyDummy[20]} -> 1, {All, "key"} -> 
         1, {All, "author"} -> 1, {All, "journal"} -> 1, {All, "volume"} -> 
         1, {All, "pages"} -> 1, {All, "year"} -> 1, {All, "title"} -> 
         1, {All, "edition"} -> 1, {All, "publisher"} -> 1, {All, "address"} -> 
@@ -1843,7 +2123,7 @@ Jhi, and H.-J. Lee", "journal" -> "Nat.Phys.", "volume" -> "12", "pages" ->
             Association[
             "key" -> TypeSystem`PackageScope`AtomShape[201.60000000000002`], 
              "author" -> TypeSystem`PackageScope`AtomShape[560.], "journal" -> 
-             TypeSystem`PackageScope`AtomShape[212.8], "volume" -> 
+             TypeSystem`PackageScope`AtomShape[246.40000000000003`], "volume" -> 
              TypeSystem`PackageScope`AtomShape[33.6], "pages" -> 
              TypeSystem`PackageScope`AtomShape[67.2], "year" -> 
              TypeSystem`PackageScope`AtomShape[44.800000000000004`], "title" -> 
@@ -1869,7 +2149,7 @@ Jhi, and H.-J. Lee", "journal" -> "Nat.Phys.", "volume" -> "12", "pages" ->
          TypeSystem`Atom[String]}], 67], "Meta" -> Association[], "RowTarget" -> 
      20, "ColumnTarget" -> 10, "Shape" -> TypeSystem`PackageScope`HeaderShape[
        Association[{All, 
-          TypeSystem`PackageScope`KeyDummy[8]} -> 1, {All, "key"} -> 
+          TypeSystem`PackageScope`KeyDummy[20]} -> 1, {All, "key"} -> 
         1, {All, "author"} -> 1, {All, "journal"} -> 1, {All, "volume"} -> 
         1, {All, "pages"} -> 1, {All, "year"} -> 1, {All, "title"} -> 
         1, {All, "edition"} -> 1, {All, "publisher"} -> 1, {All, "address"} -> 
@@ -1883,7 +2163,7 @@ Jhi, and H.-J. Lee", "journal" -> "Nat.Phys.", "volume" -> "12", "pages" ->
             Association[
             "key" -> TypeSystem`PackageScope`AtomShape[201.60000000000002`], 
              "author" -> TypeSystem`PackageScope`AtomShape[560.], "journal" -> 
-             TypeSystem`PackageScope`AtomShape[212.8], "volume" -> 
+             TypeSystem`PackageScope`AtomShape[246.40000000000003`], "volume" -> 
              TypeSystem`PackageScope`AtomShape[33.6], "pages" -> 
              TypeSystem`PackageScope`AtomShape[67.2], "year" -> 
              TypeSystem`PackageScope`AtomShape[44.800000000000004`], "title" -> 
@@ -2315,7 +2595,7 @@ Kaxiras, and P. Jarillo-Herrero",
                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key[1], 
                  Key["journal"]}, "Item", False], "Mouse"], 
-              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageSize -> {{246.40000000000003`, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], 
              ItemSize -> {Full, Automatic}], 
             Item[
@@ -2427,13 +2707,13 @@ Kaxiras, and P. Jarillo-Herrero",
              ItemSize -> {Full, Automatic}], 
             Item[
              Pane[
-              Annotation["Phys.Rev.X", 
+              Annotation["Phys. Rev. X", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
                 TypeSystem`NestedGrid`PackagePrivate`localHold[
                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key[2], 
                  Key["journal"]}, "Item", False], "Mouse"], 
-              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageSize -> {{246.40000000000003`, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], 
              ItemSize -> {Full, Automatic}], 
             Item[
@@ -2547,13 +2827,13 @@ Tran, K. Watanabe, T. Taniguchi, F. Zhang, M. Bockrath, and C.~N. Lau",
              ItemSize -> {Full, Automatic}], 
             Item[
              Pane[
-              Annotation["Sci.Adv.", 
+              Annotation["Sci. Adv.", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
                 TypeSystem`NestedGrid`PackagePrivate`localHold[
                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key[3], 
                  Key["journal"]}, "Item", False], "Mouse"], 
-              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageSize -> {{246.40000000000003`, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], 
              ItemSize -> {Full, Automatic}], 
             Item[
@@ -2674,7 +2954,7 @@ and S. Nadj-Perge",
                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key[4], 
                  Key["journal"]}, "Item", False], "Mouse"], 
-              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageSize -> {{246.40000000000003`, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], 
              ItemSize -> {Full, Automatic}], 
             Item[
@@ -2794,7 +3074,7 @@ Najafabadi, K. Watanabe, T. Taniguchi, A. Vishwanath, and P. Kim",
                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key[5], 
                  Key["journal"]}, "Item", False], "Mouse"], 
-              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageSize -> {{246.40000000000003`, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], 
              ItemSize -> {Full, Automatic}], 
             Item[
@@ -2913,7 +3193,7 @@ Najafabadi, K. Watanabe, T. Taniguchi, A. Vishwanath, and P. Kim",
                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key[6], 
                  Key["journal"]}, "Item", False], "Mouse"], 
-              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageSize -> {{246.40000000000003`, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], 
              ItemSize -> {Full, Automatic}], 
             Item[
@@ -3034,7 +3314,7 @@ Ashoori, and P. Jarillo-Herrero",
                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key[7], 
                  Key["journal"]}, "Item", False], "Mouse"], 
-              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageSize -> {{246.40000000000003`, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], 
              ItemSize -> {Full, Automatic}], 
             Item[
@@ -3146,13 +3426,13 @@ Ashoori, and P. Jarillo-Herrero",
              ItemSize -> {Full, Automatic}], 
             Item[
              Pane[
-              Annotation["npjQuantumMater.", 
+              Annotation["npj Quantum Mater.", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
                 TypeSystem`NestedGrid`PackagePrivate`localHold[
                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key[8], 
                  Key["journal"]}, "Item", False], "Mouse"], 
-              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageSize -> {{246.40000000000003`, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], 
              ItemSize -> {Full, Automatic}], 
             Item[
@@ -3266,13 +3546,13 @@ M.-Y. Chou, and C.-K. Shih",
              ItemSize -> {Full, Automatic}], 
             Item[
              Pane[
-              Annotation["Sci.Adv.", 
+              Annotation["Sci. Adv.", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
                 TypeSystem`NestedGrid`PackagePrivate`localHold[
                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key[9], 
                  Key["journal"]}, "Item", False], "Mouse"], 
-              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageSize -> {{246.40000000000003`, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], 
              ItemSize -> {Full, Automatic}], 
             Item[
@@ -3393,7 +3673,7 @@ Zettl, and F. Wang",
                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key[10], 
                  Key["journal"]}, "Item", False], "Mouse"], 
-              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageSize -> {{246.40000000000003`, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], 
              ItemSize -> {Full, Automatic}], 
             Item[
@@ -3513,7 +3793,7 @@ Mandrus, J. Yan, W. Yao, and X. Xu",
                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key[11], 
                  Key["journal"]}, "Item", False], "Mouse"], 
-              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageSize -> {{246.40000000000003`, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], 
              ItemSize -> {Full, Automatic}], 
             Item[
@@ -3618,7 +3898,7 @@ Mandrus, J. Yan, W. Yao, and X. Xu",
               "K. Tran, G. Moody, F. Wu, X. Lu, J. Choi, K. Kim, A. Rai, \
 D.~A. Sanchez, J. Quan, A. Singh, J. Embley, A. Zepeda, M. Campbell, T. \
 Autry, T. Taniguchi, K. Watanabe, N. Lu, S.~K. Banerjee, K.~L. Silverman, S. \
-Kim, E. Tutuc, L. Yang, A.~H. MacDonald, and X. Li", 
+Kim, E. Tutuc, L. Yang, A.~H. Mac Donald, and X. Li", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
                 TypeSystem`NestedGrid`PackagePrivate`localHold[
                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
@@ -3635,7 +3915,7 @@ Kim, E. Tutuc, L. Yang, A.~H. MacDonald, and X. Li",
                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key[12], 
                  Key["journal"]}, "Item", False], "Mouse"], 
-              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageSize -> {{246.40000000000003`, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], 
              ItemSize -> {Full, Automatic}], 
             Item[
@@ -3748,13 +4028,13 @@ Kim, E. Tutuc, L. Yang, A.~H. MacDonald, and X. Li",
              ItemSize -> {Full, Automatic}], 
             Item[
              Pane[
-              Annotation["J.Phys.D:Appl.Phys.", 
+              Annotation["J. Phys. D: Appl. Phys.", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
                 TypeSystem`NestedGrid`PackagePrivate`localHold[
                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key[13], 
                  Key["journal"]}, "Item", False], "Mouse"], 
-              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageSize -> {{246.40000000000003`, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], 
              ItemSize -> {Full, Automatic}], 
             Item[
@@ -3868,13 +4148,13 @@ Watanabe, T. Taniguchi, K. Kulkarni, T. Kuo, S.~R. Forrest, and H. Deng",
              ItemSize -> {Full, Automatic}], 
             Item[
              Pane[
-              Annotation["Nat.Commun.", 
+              Annotation["Nat. Commun.", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
                 TypeSystem`NestedGrid`PackagePrivate`localHold[
                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key[14], 
                  Key["journal"]}, "Item", False], "Mouse"], 
-              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageSize -> {{246.40000000000003`, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], 
              ItemSize -> {Full, Automatic}], 
             Item[
@@ -3987,13 +4267,13 @@ Watanabe, T. Taniguchi, K. Kulkarni, T. Kuo, S.~R. Forrest, and H. Deng",
              ItemSize -> {Full, Automatic}], 
             Item[
              Pane[
-              Annotation["NanoLett.", 
+              Annotation["Nano Lett.", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
                 TypeSystem`NestedGrid`PackagePrivate`localHold[
                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key[15], 
                  Key["journal"]}, "Item", False], "Mouse"], 
-              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageSize -> {{246.40000000000003`, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], 
              ItemSize -> {Full, Automatic}], 
             Item[
@@ -4106,13 +4386,13 @@ Watanabe, T. Taniguchi, K. Kulkarni, T. Kuo, S.~R. Forrest, and H. Deng",
              ItemSize -> {Full, Automatic}], 
             Item[
              Pane[
-              Annotation["Phys.Rev.Lett.", 
+              Annotation["Phys. Rev. Lett.", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
                 TypeSystem`NestedGrid`PackagePrivate`localHold[
                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key[16], 
                  Key["journal"]}, "Item", False], "Mouse"], 
-              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageSize -> {{246.40000000000003`, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], 
              ItemSize -> {Full, Automatic}], 
             Item[
@@ -4232,7 +4512,7 @@ Taniguchi, B.~A. Bernevig, and A. Yazdani",
                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key[17], 
                  Key["journal"]}, "Item", False], "Mouse"], 
-              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageSize -> {{246.40000000000003`, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], 
              ItemSize -> {Full, Automatic}], 
             Item[
@@ -4345,13 +4625,13 @@ Taniguchi, B.~A. Bernevig, and A. Yazdani",
              ItemSize -> {Full, Automatic}], 
             Item[
              Pane[
-              Annotation["Nat.Mater.", 
+              Annotation["Nat. Mater.", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
                 TypeSystem`NestedGrid`PackagePrivate`localHold[
                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key[18], 
                  Key["journal"]}, "Item", False], "Mouse"], 
-              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageSize -> {{246.40000000000003`, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], 
              ItemSize -> {Full, Automatic}], 
             Item[
@@ -4454,7 +4734,7 @@ Taniguchi, B.~A. Bernevig, and A. Yazdani",
              Pane[
               Annotation[
               "P. Stepanov, M. Xie, T. Taniguchi, K. Watanabe, X. Lu, A.~H. \
-MacDonald, B.~A. Bernevig, and D.~K. Efetov", 
+Mac Donald, B.~A. Bernevig, and D.~K. Efetov", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
                 TypeSystem`NestedGrid`PackagePrivate`localHold[
                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
@@ -4465,13 +4745,13 @@ MacDonald, B.~A. Bernevig, and D.~K. Efetov",
              ItemSize -> {Full, Automatic}], 
             Item[
              Pane[
-              Annotation["r Xiv", 
+              Annotation["arXiv", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
                 TypeSystem`NestedGrid`PackagePrivate`localHold[
                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key[19], 
                  Key["journal"]}, "Item", False], "Mouse"], 
-              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageSize -> {{246.40000000000003`, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], 
              ItemSize -> {Full, Automatic}], 
             Item[
@@ -4583,13 +4863,13 @@ MacDonald, B.~A. Bernevig, and D.~K. Efetov",
              ItemSize -> {Full, Automatic}], 
             Item[
              Pane[
-              Annotation["Phys.Rev.Research", 
+              Annotation["Phys. Rev. Research", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
                 TypeSystem`NestedGrid`PackagePrivate`localHold[
                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key[20], 
                  Key["journal"]}, "Item", False], "Mouse"], 
-              ImageSize -> {{212.8, Full}, Automatic}, 
+              ImageSize -> {{246.40000000000003`, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], 
              ItemSize -> {Full, Automatic}], 
             Item[
@@ -5286,63 +5566,11 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
    3.8400683285512805`*^9, 3.8400684791948357`*^9, 3.8400685660319033`*^9, {
    3.840068658336255*^9, 3.840068693960667*^9}, {3.840068751188754*^9, 
    3.8400687708831034`*^9}, {3.8400688286819267`*^9, 3.8400689405121746`*^9}, 
-   3.840068989620939*^9, 3.84006902451604*^9},
- CellLabel->"Out[73]=",ExpressionUUID->"9c8879e0-0ee7-447a-9ea9-09a48c708838"],
-
-Cell[BoxData["\<\"Nature\\nPhys.Rev.X\\nSci.Adv.\\nNature\\nScience\\nNature\\\
-nNature\\nnpjQuantumMater.\\nSci.Adv.\\nNature\\nNature\\nNature\\nJ.Phys.D:\
-Appl.Phys.\\nNat.Commun.\\nNanoLett.\\nPhys.Rev.Lett.\\nNature\\nNat.Mater.\\\
-nr Xiv\\nPhys.Rev.Research\\nPhys.Rev.Lett.\\nPhys.Rev.Lett.\\nCarbon\\nPhys.\
-Rev.Lett.\\nProc.Natl.Acad.Sci.\\nPhys.Rev.Research\\nSciPostPhys.\\nPhys.Rev.\
-B\\nPhys.Rev.Lett.\\nPhys.Rev.B\\nNat.Mater.\\nPhys.Rev.B\\nPhys.Rev.Lett.\\\
-nPhys.Rev.B\\nPhys.Rev.B\\nPhys.Rev.Materials\\nPhys.Rev.B\\n2DMater.\\nNat.\
-Commun.\\nNat.Mater.\\nNat.Commun.\\nPhys.Rev.Lett.\\nPhys.Rev.B\\n2DMater.\\\
-nNanoLett.\\n2DMater.\\n\\nPhys.Rev.B\\nPhys.Rev.B\\nPhys.Rev.B\\nPhys.Rev.B\\\
-nPhys.Rev.D\\n\\nNat.Commun.\\nPhys.Rev.B\\nRep.Prog.Phys.\\nPhys.Rev.B\\\
-nNature\\nPhys.Rev.B\\nNat.Nanotech.\\nPhys.Rev.B\\nPhys.Rev.B\\nFront.Phys.\\\
-nPhys.Rev.B\\nPhys.Rev.B\\nPhys.Rev.Lett.\\nNat.Phys.\"\>"], "Output",
- CellChangeTimes->{
-  3.8399994123342075`*^9, 3.8399994456889043`*^9, 3.839999503696492*^9, 
-   3.8399995643046503`*^9, {3.8399996067103744`*^9, 3.8399996260202937`*^9}, 
-   3.83999969090455*^9, {3.839999737245816*^9, 3.8399997549393682`*^9}, {
-   3.8399998417123117`*^9, 3.839999879412036*^9}, {3.840000135634583*^9, 
-   3.8400001752819576`*^9}, {3.840000206566062*^9, 3.8400002659359713`*^9}, 
-   3.840000381705993*^9, 3.8400004130127215`*^9, 3.8400005430148125`*^9, {
-   3.840000634511047*^9, 3.840000642327112*^9}, 3.8400006944400673`*^9, {
-   3.8400007928422775`*^9, 3.840000815904232*^9}, 3.8400008796584864`*^9, 
-   3.840000923378419*^9, 3.8400009835911264`*^9, {3.8400010201943493`*^9, 
-   3.8400010944382606`*^9}, {3.840001184016574*^9, 3.840001208579885*^9}, 
-   3.840001242049154*^9, {3.840001273484331*^9, 3.840001320972463*^9}, {
-   3.8400013565047493`*^9, 3.840001387274032*^9}, 3.840001422740913*^9, {
-   3.8400014869831395`*^9, 3.8400015671646214`*^9}, {3.8400016730641985`*^9, 
-   3.840001691274954*^9}, {3.8400017235588994`*^9, 3.8400017926508846`*^9}, {
-   3.84000183544319*^9, 3.8400019484092236`*^9}, 3.840001989116747*^9, 
-   3.8400020194630613`*^9, {3.8400020659144955`*^9, 3.840002072763549*^9}, {
-   3.8400021454027786`*^9, 3.840002170417514*^9}, {3.840002211550091*^9, 
-   3.8400022401506767`*^9}, {3.8400022708982105`*^9, 
-   3.8400023117129173`*^9}, {3.8400024064939127`*^9, 3.840002420665677*^9}, 
-   3.840002472237234*^9, 3.840002561137394*^9, {3.840003232984984*^9, 
-   3.8400032787817345`*^9}, {3.840003362985235*^9, 3.8400033772911277`*^9}, 
-   3.8400034143788567`*^9, {3.8400035337270565`*^9, 3.84000354097019*^9}, 
-   3.8400035982601337`*^9, 3.840003678331623*^9, 3.8400037327818832`*^9, {
-   3.8400038048102293`*^9, 3.8400038153576393`*^9}, 3.8400038578306932`*^9, {
-   3.8400038920191793`*^9, 3.840003907674537*^9}, {3.8400039513777347`*^9, 
-   3.8400039593373857`*^9}, 3.84000400236827*^9, 3.84000404139318*^9, {
-   3.8400040736017046`*^9, 3.8400041020760975`*^9}, {3.8400041323304467`*^9, 
-   3.8400041422859087`*^9}, 3.8400042304950724`*^9, 3.8400043185924635`*^9, 
-   3.8400046833250837`*^9, 3.8400047140196853`*^9, 3.84000479139906*^9, 
-   3.840004932853055*^9, 3.840005496474023*^9, {3.8400055645547976`*^9, 
-   3.8400055886016207`*^9}, 3.840005630988826*^9, 3.8400057777540183`*^9, 
-   3.8400059642145443`*^9, {3.8400060190841064`*^9, 3.8400060376317244`*^9}, {
-   3.8400061066189537`*^9, 3.840006117652708*^9}, {3.8400061654021564`*^9, 
-   3.8400062094770823`*^9}, {3.840006239897299*^9, 3.8400062639227123`*^9}, 
-   3.8400063084354286`*^9, {3.8400063499445195`*^9, 3.8400063740500345`*^9}, {
-   3.8400679821649327`*^9, 3.840067996860056*^9}, 3.840068143604927*^9, 
-   3.8400683285512805`*^9, 3.8400684791948357`*^9, 3.8400685660319033`*^9, {
-   3.840068658336255*^9, 3.840068693960667*^9}, {3.840068751188754*^9, 
-   3.8400687708831034`*^9}, {3.8400688286819267`*^9, 3.8400689405121746`*^9}, 
-   3.840068989620939*^9, 3.8400690251064205`*^9},
- CellLabel->"Out[74]=",ExpressionUUID->"dc067d0a-9311-444e-b027-bf5930ab8426"]
+   3.840068989620939*^9, 3.84006902451604*^9, 3.8400698254721255`*^9, 
+   3.8400699194696603`*^9, {3.840069970797024*^9, 3.8400699911042686`*^9}, 
+   3.840070028828862*^9, 3.8400703787096195`*^9, 3.8400707216825395`*^9},
+ CellLabel->
+  "Out[140]=",ExpressionUUID->"41ba0ded-530a-4fee-b74d-24d3929d9493"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -5354,21 +5582,20 @@ Manuscript\\\\main.bbl\>\"", "]"}]], "Input",
  CellChangeTimes->{{3.8399999416975327`*^9, 3.839999951695183*^9}, {
   3.8400000110413485`*^9, 3.840000112576657*^9}, {3.8400053569341316`*^9, 
   3.8400053612904077`*^9}},
- CellLabel->"In[24]:=",ExpressionUUID->"e6e2fd5e-4709-4eae-8dae-8268886cb73c"],
+ CellLabel->
+  "In[141]:=",ExpressionUUID->"e6e2fd5e-4709-4eae-8dae-8268886cb73c"],
 
 Cell[BoxData["\<\"F:\\\\Research\\\\Projects\\\\large-angle_twisted_bilayer_\
 graphene\\\\Manuscript\\\\bib.txt\"\>"], "Output",
  CellChangeTimes->{
   3.840005366350706*^9, {3.8400054201638002`*^9, 3.8400054458021116`*^9}, 
    3.840005644873633*^9, 3.8400063831874332`*^9, 3.840006414724642*^9, 
-   3.840068384416297*^9, 3.840068425128503*^9, 3.8400684818035383`*^9},
- CellLabel->"Out[24]=",ExpressionUUID->"fa7795d7-e752-4706-be01-28ee55a28827"]
-}, Open  ]],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.840000082003398*^9, 
-  3.840000088230756*^9}},ExpressionUUID->"84d66100-6b35-4ecc-8529-\
-b986d799ccc1"]
+   3.840068384416297*^9, 3.840068425128503*^9, 3.8400684818035383`*^9, 
+   3.840069829704256*^9, 3.8400699233514776`*^9, 3.840069994979699*^9, 
+   3.840070398514207*^9, 3.840070726401239*^9},
+ CellLabel->
+  "Out[141]=",ExpressionUUID->"05c07efa-8598-40e9-9a5f-ab3cb16254c1"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 },
@@ -5449,17 +5676,19 @@ Cell[61252, 1183, 367, 9, 54, "Input",ExpressionUUID->"950cd585-bb69-4c19-91dc-7
 }, Closed]],
 Cell[CellGroupData[{
 Cell[61656, 1197, 159, 3, 71, "Chapter",ExpressionUUID->"ead4fb73-f767-49b6-b573-2565eae7f4a2"],
-Cell[61818, 1202, 11403, 257, 1339, "Input",ExpressionUUID->"46ce6700-6656-428c-b019-a0fa2ce24858"],
+Cell[61818, 1202, 11182, 248, 1291, "Input",ExpressionUUID->"46ce6700-6656-428c-b019-a0fa2ce24858"],
 Cell[CellGroupData[{
-Cell[73246, 1463, 1627, 30, 54, "Input",ExpressionUUID->"1f0eafd3-6b23-459b-bd0d-5042446fb274"],
-Cell[74876, 1495, 188791, 3794, 787, "Output",ExpressionUUID->"9c8879e0-0ee7-447a-9ea9-09a48c708838"],
-Cell[263670, 5291, 4004, 53, 1626, "Output",ExpressionUUID->"dc067d0a-9311-444e-b027-bf5930ab8426"]
+Cell[73025, 1454, 248, 5, 36, "Input",ExpressionUUID->"5d61e1f9-e8ac-46e7-a86e-c16761e1e7c2"],
+Cell[73276, 1461, 13886, 276, 700, "Output",ExpressionUUID->"1d421b01-3fc0-4bb9-895d-937229794bb0"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[87199, 1742, 1649, 30, 48, "Input",ExpressionUUID->"1f0eafd3-6b23-459b-bd0d-5042446fb274"],
+Cell[88851, 1774, 189419, 3798, 787, "Output",ExpressionUUID->"41ba0ded-530a-4fee-b74d-24d3929d9493"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[267711, 5349, 417, 7, 36, "Input",ExpressionUUID->"e6e2fd5e-4709-4eae-8dae-8268886cb73c"],
-Cell[268131, 5358, 446, 6, 41, "Output",ExpressionUUID->"fa7795d7-e752-4706-be01-28ee55a28827"]
-}, Open  ]],
-Cell[268592, 5367, 152, 3, 36, "Input",ExpressionUUID->"84d66100-6b35-4ecc-8529-b986d799ccc1"]
+Cell[278307, 5577, 421, 8, 36, "Input",ExpressionUUID->"e6e2fd5e-4709-4eae-8dae-8268886cb73c"],
+Cell[278731, 5587, 570, 9, 41, "Output",ExpressionUUID->"05c07efa-8598-40e9-9a5f-ab3cb16254c1"]
+}, Open  ]]
 }, Open  ]]
 }, Open  ]]
 }
