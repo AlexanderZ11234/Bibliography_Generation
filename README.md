@@ -10,3 +10,5 @@ I use [JabRef](https://www.jabref.org/) to generate and manage `*.bib` database 
 The function `exporttotex` in the notebook then can extract the corresponding information in that `*.bbl` to generate an `apsrev`-style `thebibliography` environment.
 
 ## `*.bib` to `*.tex`
+
+I personally prefer this second solution.
