@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    309099,       5687]
-NotebookOptionsPosition[    305367,       5615]
-NotebookOutlinePosition[    305769,       5631]
-CellTagsIndexPosition[    305726,       5628]
+NotebookDataLength[    303236,       5622]
+NotebookOptionsPosition[    299278,       5546]
+NotebookOutlinePosition[    299680,       5562]
+CellTagsIndexPosition[    299637,       5559]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2135,8 +2135,10 @@ Cell[BoxData[{
     RowBox[{
      RowBox[{"key", ":", 
       RowBox[{"(", 
-       RowBox[{"_String", "|", "_Integer"}], ")"}]}], ",", "bibdb_"}], "]"}], 
-   ":=", 
+       RowBox[{"_String", "|", "_Integer"}], ")"}]}], ",", "bibdb_", ",", 
+     RowBox[{"hyperlink", ":", 
+      RowBox[{"(", 
+       RowBox[{"True", "|", "False"}], ")"}], ":", "False"}]}], "]"}], ":=", 
    RowBox[{"Module", "[", 
     RowBox[{
      RowBox[{"{", 
@@ -2150,9 +2152,13 @@ Cell[BoxData[{
           RowBox[{
           "bibdb", "\[LeftDoubleBracket]", "key", "\[RightDoubleBracket]"}]}],
           "]"}]}], ",", "authorabbr", ",", "author", ",", "pages", ",", 
-       "article", ",", "book", ",", "phdthesis"}], "}"}], ",", 
-     "\[IndentingNewLine]", 
+       "article", ",", "book", ",", "phdthesis", ",", "givennamepattern"}], 
+      "}"}], ",", "\[IndentingNewLine]", 
      RowBox[{
+      RowBox[{"givennamepattern", "=", 
+       RowBox[{
+       "RegularExpression", "[", "\"\<(?<=[[:upper:]])[[:lower:]]+(?!= )\>\"",
+         "]"}]}], ";", "\[IndentingNewLine]", 
       RowBox[{"authorabbr", "=", 
        RowBox[{
         RowBox[{
@@ -2165,11 +2171,7 @@ Cell[BoxData[{
             RowBox[{"MapAt", "[", 
              RowBox[{
               RowBox[{"StringReplace", "[", 
-               RowBox[{
-                RowBox[{
-                "RegularExpression", "[", 
-                 "\"\<(?<=[[:upper:]])[[:lower:]]+(?!= )\>\"", "]"}], "->", 
-                "\"\<.\>\""}], "]"}], ",", 
+               RowBox[{"givennamepattern", "->", "\"\<.\>\""}], "]"}], ",", 
               RowBox[{"{", 
                RowBox[{
                 RowBox[{"{", "1", "}"}], ",", 
@@ -2224,24 +2226,48 @@ Cell[BoxData[{
          RowBox[{
           RowBox[{"item", "[", "\"\<pages\>\"", "]"}], "=", "pages"}], 
          ";"}]}], "]"}], ";", "\[IndentingNewLine]", 
-      RowBox[{"article", "=", 
+      RowBox[{
+       RowBox[{"article", "[", "False", "]"}], "=", 
        RowBox[{
        "StringTemplate", "[", 
         "\"\<\\t\\t\\\\bibitem{`key`} `author`, `journal` \
 \\\\textbf{`volume`}, `pages` (`year`).\>\"", "]"}]}], ";", 
       "\[IndentingNewLine]", 
-      RowBox[{"book", "=", 
+      RowBox[{
+       RowBox[{"book", "[", "False", "]"}], "=", 
        RowBox[{
        "StringTemplate", "[", 
-        "\"\<\\t\\t\\\\bibitem{`key`} `author`, \\\\textit{`title`}, \
-`edition` ed. (`publisher`, `address`, `year`).\>\"", "]"}]}], ";", 
+        "\"\<\\t\\t\\\\bibitem{`key`} `author`, \\\\emph{`title`}, `edition` \
+ed. (`publisher`, `address`, `year`).\>\"", "]"}]}], ";", 
       "\[IndentingNewLine]", 
-      RowBox[{"phdthesis", "=", 
+      RowBox[{
+       RowBox[{"phdthesis", "[", "False", "]"}], "=", 
        RowBox[{
        "StringTemplate", "[", 
         "\"\<\\t\\t\\\\bibitem{`key`} `author`, `language`, \
-\\\\textit{`title`}, `type`, `school`, (`year`).\>\"", "]"}]}], ";", 
+\\\\emph{`title`}, `type`, `school`, (`year`).\>\"", "]"}]}], ";", 
       "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"article", "[", "True", "]"}], "=", 
+       RowBox[{
+       "StringTemplate", "[", 
+        "\"\<\\t\\t\\\\bibitem{`key`} `author`, \
+\\\\href{http://dx.doi.org/`doi`}{`journal` \\\\textbf{`volume`}, `pages` \
+(`year`)}.\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"book", "[", "True", "]"}], "=", 
+       RowBox[{
+       "StringTemplate", "[", 
+        "\"\<\\t\\t\\\\bibitem{`key`} `author`, \
+\\\\href{`url`}{\\\\emph{`title`}}, `edition` ed. (`publisher`, `address`, \
+`year`).\>\"", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"phdthesis", "[", "True", "]"}], "=", 
+       RowBox[{
+       "StringTemplate", "[", 
+        "\"\<\\t\\t\\\\bibitem{`key`} `author`, `language`, \
+\\\\href{`url`}{\\\\emph{`title`}}, `type`, `school`, (`year`).\>\"", "]"}]}],
+       ";", "\[IndentingNewLine]", 
       RowBox[{
        RowBox[{
         RowBox[{"Which", "[", "\[IndentingNewLine]", 
@@ -2249,21 +2275,29 @@ Cell[BoxData[{
           RowBox[{
            RowBox[{"#", "[", "\"\<type\>\"", "]"}], "==", "\"\<Article\>\""}],
            ",", 
-          RowBox[{"article", "[", "#", "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"article", "[", "hyperlink", "]"}], "[", "#", "]"}], ",", 
+          "\[IndentingNewLine]", 
           RowBox[{
            RowBox[{"#", "[", "\"\<type\>\"", "]"}], "==", "\"\<Book\>\""}], 
           ",", 
-          RowBox[{"book", "[", "#", "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"book", "[", "hyperlink", "]"}], "[", "#", "]"}], ",", 
+          "\[IndentingNewLine]", 
           RowBox[{
            RowBox[{"#", "[", "\"\<type\>\"", "]"}], "==", 
            "\"\<phdthesis\>\""}], ",", 
-          RowBox[{"phdthesis", "[", "#", "]"}]}], "\[IndentingNewLine]", 
-         "]"}], "&"}], "[", "item", "]"}]}]}], "\[IndentingNewLine]", "]"}]}],
-   ";"}], "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"phdthesis", "[", "hyperlink", "]"}], "[", "#", "]"}]}], 
+         "\[IndentingNewLine]", "]"}], "&"}], "[", "item", "]"}]}]}], 
+    "\[IndentingNewLine]", "]"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"exporttex", "[", 
    RowBox[{"texpath_String", ",", "bibpath_String", ",", 
-    RowBox[{"outname_String", ":", "\"\<bib.txt\>\""}]}], "]"}], ":=", 
+    RowBox[{"outname_String", ":", "\"\<bib.txt\>\""}], ",", 
+    RowBox[{"hyperlink", ":", 
+     RowBox[{"(", 
+      RowBox[{"True", "|", "False"}], ")"}], ":", "False"}]}], "]"}], ":=", 
   RowBox[{"Module", "[", 
    RowBox[{
     RowBox[{"{", 
@@ -2279,7 +2313,8 @@ Cell[BoxData[{
       RowBox[{
        RowBox[{
         RowBox[{"apsrevbibstyle", "[", 
-         RowBox[{"#", ",", "bibdb"}], "]"}], "&"}], "/@", "keys"}]}], ";", 
+         RowBox[{"#", ",", "bibdb", ",", "hyperlink"}], "]"}], "&"}], "/@", 
+       "keys"}]}], ";", 
      RowBox[{"n", "=", 
       RowBox[{"Length", "[", "keys", "]"}]}], ";", "\[IndentingNewLine]", 
      RowBox[{"finalstring", "=", 
@@ -2331,9 +2366,18 @@ thebibliography}\>\"", "]"}], "[",
    3.840113950376554*^9}, {3.840113985144231*^9, 3.840114050418248*^9}, {
    3.8401143629413395`*^9, 3.8401144315293946`*^9}, {3.8401145516605463`*^9, 
    3.840114575640755*^9}, 3.8401146081681633`*^9, {3.840114641274046*^9, 
-   3.8401147938078604`*^9}, {3.8401148973508687`*^9, 3.840114909427082*^9}},
- Background->RGBColor[
-  1, 1, 0.85],ExpressionUUID->"fc9d5688-3e7e-443f-ad88-5007756aea8a"],
+   3.8401147938078604`*^9}, {3.8401148973508687`*^9, 3.840114909427082*^9}, {
+   3.8401426318717957`*^9, 3.840142639311966*^9}, {3.840150395795307*^9, 
+   3.8401504309770365`*^9}, {3.8401890390877757`*^9, 3.840189069493682*^9}, {
+   3.8401891527617865`*^9, 3.8401892254118214`*^9}, {3.840189284017845*^9, 
+   3.8401893065655594`*^9}, {3.8401893687523203`*^9, 3.84018937315975*^9}, {
+   3.840189407698423*^9, 3.8401894167431326`*^9}, {3.8401895317274356`*^9, 
+   3.840189607207486*^9}, {3.8401897582121096`*^9, 3.8401898123758507`*^9}, 
+   3.8401898464430647`*^9, {3.840189916580244*^9, 3.8401899999342594`*^9}, {
+   3.8401901617648325`*^9, 3.8401901623104496`*^9}},
+ Background->RGBColor[1, 1, 0.85],
+ CellLabel->
+  "In[653]:=",ExpressionUUID->"fc9d5688-3e7e-443f-ad88-5007756aea8a"],
 
 Cell[CellGroupData[{
 
@@ -2357,7 +2401,7 @@ Manuscript\\\\tBLG_ZLM.bib\>\""}], ";"}], "\[IndentingNewLine]",
   3.840109272585844*^9, 3.8401093049385543`*^9}, {3.840112457849145*^9, 
   3.840112461863381*^9}},
  CellLabel->
-  "In[490]:=",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
+  "In[597]:=",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -2394,15 +2438,18 @@ Cell[BoxData[
    ",", "\<\"Wang2017PRB\"\>", ",", "\<\"Ren2017PRB\"\>", 
    ",", "\<\"Wang2018FP\"\>", ",", "\<\"Hou2020PRB\"\>", 
    ",", "\<\"Hou2020PRBa\"\>", ",", "\<\"Qiao2014PRL\"\>", 
-   ",", "\<\"Kim2016NP\"\>", ",", "\<\"Carr2020\"\>"}], "}"}]], "Output",
+   ",", "\<\"Kim2016NP\"\>", ",", "\<\"Carr2020\"\>", 
+   ",", "\<\"Zakharchenko2009PRL\"\>", ",", "\<\"Jung2015NC\"\>", 
+   ",", "\<\"Popov2011PRB\"\>", ",", "\<\"Lebedeva2011PCCP\"\>"}], 
+  "}"}]], "Output",
  CellChangeTimes->{
   3.8401087202902393`*^9, 3.840108954953451*^9, {3.840109131206562*^9, 
    3.840109181945481*^9}, {3.8401092261469226`*^9, 3.8401092374429674`*^9}, 
    3.840109276726829*^9, 3.840109896643185*^9, 3.8401106188440466`*^9, 
    3.8401111527910204`*^9, 3.8401113074510126`*^9, 3.8401124627266617`*^9, 
-   3.8401144627013397`*^9},
+   3.8401144627013397`*^9, 3.840142643428432*^9, 3.8401893117050624`*^9},
  CellLabel->
-  "Out[492]=",ExpressionUUID->"4d3a17e5-c5be-43d5-9889-419a81c8593a"],
+  "Out[599]=",ExpressionUUID->"34380783-5841-4f67-9d7c-0dfeac6a7786"],
 
 Cell[BoxData[
  TagBox[
@@ -2460,10 +2507,10 @@ by {WSe}2", "year" -> "2020", "month" -> "jul", "number" -> "7816", "pages" ->
          "Zeyu Hao and A. M. Zimmerman and Patrick Ledwith and Eslam Khalaf \
 and Danial Haie Najafabadi and Kenji Watanabe and Takashi Taniguchi and \
 Ashvin Vishwanath and Philip Kim", "journal" -> "Science", "title" -> 
-         "Electric field{\\textendash}tunable superconductivity in \
-alternating-twist magic-angle trilayer graphene", "year" -> "2021", "month" -> 
-         "feb", "number" -> "6534", "pages" -> "1133--1138", "volume" -> 
-         "371", "doi" -> "10.1126/science.abg0399", "publisher" -> 
+         "Electric field-tunable superconductivity in alternating-twist \
+magic-angle trilayer graphene", "year" -> "2021", "month" -> "feb", "number" -> 
+         "6534", "pages" -> "1133--1138", "volume" -> "371", "doi" -> 
+         "10.1126/science.abg0399", "publisher" -> 
          "American Association for the Advancement of Science ({AAAS})"], 
        "Zhou2021N" -> 
        Association[
@@ -2500,7 +2547,7 @@ optical conductivity scrutiny", "year" -> "2020", "month" -> "aug", "number" ->
          "Chendong Zhang and Chih-Piao Chuu and Xibiao Ren and Ming-Yang Li \
 and Lain-Jong Li and Chuanhong Jin and Mei-Yin Chou and Chih-Kang Shih", 
          "journal" -> "Sci. Adv.", "title" -> 
-         "Interlayer couplings, Moir{\\'{e}} patterns, and 2D electronic \
+         "Interlayer couplings, Moir\[EAcute] patterns, and 2D electronic \
 superlattices in {MoS}2/{WSe}2hetero-bilayers", "year" -> "2017", "month" -> 
          "jan", "number" -> "1", "pages" -> "e1601459", "volume" -> "3", 
          "doi" -> "10.1126/sciadv.1601459", "publisher" -> 
@@ -2512,7 +2559,7 @@ superlattices in {MoS}2/{WSe}2hetero-bilayers", "year" -> "2017", "month" ->
 Utama and Danqing Wang and Sihan Zhao and Ying Qin and Sijie Yang and Zhiren \
 Zheng and Shenyang Shi and Kenji Watanabe and Takashi Taniguchi and Sefaattin \
 Tongay and Alex Zettl and Feng Wang", "journal" -> "Nature", "title" -> 
-         "Observation of moir{\\'{e}} excitons in {WSe}2/{WS}2 \
+         "Observation of moir\[EAcute] excitons in {WSe}2/{WS}2 \
 heterostructure superlattices", "year" -> "2019", "month" -> "feb", "number" -> 
          "7746", "pages" -> "76--80", "volume" -> "567", "doi" -> 
          "10.1038/s41586-019-0976-y", "publisher" -> 
@@ -2522,7 +2569,7 @@ heterostructure superlattices", "year" -> "2019", "month" -> "feb", "number" ->
          "Kyle L. Seyler and Pasqual Rivera and Hongyi Yu and Nathan P. \
 Wilson and Essance L. Ray and David G. Mandrus and Jiaqiang Yan and Wang Yao \
 and Xiaodong Xu", "journal" -> "Nature", "title" -> 
-         "Signatures of moir{\\'{e}}-trapped valley excitons in \
+         "Signatures of moir\[EAcute]-trapped valley excitons in \
 {MoSe}2/{WSe}2 heterobilayers", "year" -> "2019", "month" -> "feb", "number" -> 
          "7746", "pages" -> "66--70", "volume" -> "567", "doi" -> 
          "10.1038/s41586-019-0957-1", "publisher" -> 
@@ -2556,7 +2603,7 @@ and Jianbai Xia and Zhongming Wei", "journal" -> "J. Phys. D: Appl. Phys.",
 Rahul Gogna and Shaocong Hou and Kenji Watanabe and Takashi Taniguchi and \
 Krishnamurthy Kulkarni and Thomas Kuo and Stephen R. Forrest and Hui Deng", 
          "journal" -> "Nat. Commun.", "title" -> 
-         "Twist-angle dependence of moir{\\'{e}} excitons in {WS}2/{MoSe}2 \
+         "Twist-angle dependence of moir\[EAcute] excitons in {WS}2/{MoSe}2 \
 heterobilayers", "year" -> "2020", "month" -> "nov", "number" -> "1", "pages" -> 
          "5888", "volume" -> "11", "doi" -> "10.1038/s41467-020-19466-6", 
          "publisher" -> "Springer Science and Business Media {LLC}"], 
@@ -2565,7 +2612,7 @@ heterobilayers", "year" -> "2020", "month" -> "nov", "number" -> "1", "pages" ->
         "type" -> "Article", "key" -> "Brem2020NL", "author" -> 
          "Samuel Brem and Christopher Linder\[ADoubleDot]lv and Paul Erhart \
 and Ermin Malic", "journal" -> "Nano Lett.", "title" -> 
-         "Tunable Phases of Moir{\\'{e}} Excitons in van der Waals \
+         "Tunable Phases of Moir\[EAcute] Excitons in van der Waals \
 Heterostructures", "year" -> "2020", "month" -> "sep", "number" -> "12", 
          "pages" -> "8534--8540", "volume" -> "20", "doi" -> 
          "10.1021/acs.nanolett.0c03019", "publisher" -> 
@@ -2724,9 +2771,9 @@ Bilayer Graphene", "year" -> "2020", "month" -> "oct", "number" -> "17",
          "Mikito Koshino and Nguyen N. T. Nam", "journal" -> "Phys. Rev. B", 
          "title" -> 
          "Effective continuum model for relaxed twisted bilayer graphene and \
-moir{\\'{e}} electron-phonon interaction", "year" -> "2020", "month" -> "may",
-          "number" -> "19", "pages" -> "195425", "volume" -> "101", "doi" -> 
-         "10.1103/physrevb.101.195425", "publisher" -> 
+moir\[EAcute] electron-phonon interaction", "year" -> "2020", "month" -> 
+         "may", "number" -> "19", "pages" -> "195425", "volume" -> "101", 
+         "doi" -> "10.1103/physrevb.101.195425", "publisher" -> 
          "American Physical Society ({APS})"], "Andrei2020NM" -> 
        Association[
         "type" -> "Article", "key" -> "Andrei2020NM", "author" -> 
@@ -2847,7 +2894,7 @@ Bilayer Graphene", "year" -> "2020", "month" -> "dec", "number" -> "23",
         "type" -> "Article", "key" -> "Uchida2014PRB", "author" -> 
          "Kazuyuki Uchida and Shinnosuke Furuya and Jun-Ichi Iwata and \
 Atsushi Oshiyama", "journal" -> "Phys. Rev. B", "title" -> 
-         "Atomic corrugation and electron localization due to Moir{\\'{e}} \
+         "Atomic corrugation and electron localization due to Moir\[EAcute] \
 patterns in twisted bilayer graphenes", "year" -> "2014", "month" -> "oct", 
          "number" -> "15", "pages" -> "155451", "volume" -> "90", "doi" -> 
          "10.1103/physrevb.90.155451", "publisher" -> 
@@ -2864,7 +2911,7 @@ Barkema", "journal" -> "2D Mater.", "title" ->
         "type" -> "Article", "key" -> "Dai2016NL", "author" -> 
          "Shuyang Dai and Yang Xiang and David J. Srolovitz", "journal" -> 
          "Nano Lett.", "title" -> 
-         "Twisted Bilayer Graphene: Moir{\\'{e}} with a Twist", "year" -> 
+         "Twisted Bilayer Graphene: Moir\[EAcute] with a Twist", "year" -> 
          "2016", "month" -> "aug", "number" -> "9", "pages" -> "5923--5927", 
          "volume" -> "16", "doi" -> "10.1021/acs.nanolett.6b02870", 
          "publisher" -> "American Chemical Society ({ACS})"], "Wijk20152M" -> 
@@ -2914,14 +2961,14 @@ hexagonal boron nitride", "year" -> "2014", "month" -> "sep", "number" ->
        Association[
         "type" -> "Article", "key" -> "Jackiw1976PRD", "author" -> 
          "R. Jackiw and C. Rebbi", "journal" -> "Phys. Rev. D", "title" -> 
-         "Solitons with fermion number {\\textonehalf}", "year" -> "1976", 
-         "month" -> "jun", "number" -> "12", "pages" -> "3398--3409", 
-         "volume" -> "13", "doi" -> "10.1103/physrevd.13.3398", "publisher" -> 
+         "Solitons with fermion number 1/2", "year" -> "1976", "month" -> 
+         "jun", "number" -> "12", "pages" -> "3398--3409", "volume" -> "13", 
+         "doi" -> "10.1103/physrevd.13.3398", "publisher" -> 
          "American Physical Society ({APS})"], "Shen2017" -> 
        Association[
         "type" -> "Book", "key" -> "Shen2017", "author" -> "Shun-Qing Shen", 
          "publisher" -> "Springer-Verlag GmbH", "title" -> 
-         "Topological Insulators: Dirac Equation~in Condensed Matter", "year" -> 
+         "Topological Insulators: Dirac Equation in Condensed Matter", "year" -> 
          "2017", "address" -> "Singapore", "edition" -> "2nd", "isbn" -> 
          "978-981-10-4606-3", "ean" -> "9789811046063", "pagetotal" -> "266", 
          "url" -> "https://www.springer.com/gp/book/9789811046056"], 
@@ -3073,11 +3120,46 @@ Methods designed for modeling these complicated systems are presented and \
 then applied to a number of important twistronic materials.", "date" -> 
          "2020", "groups" -> "tBLG_ZLMs", "language" -> "English", 
          "timestamp" -> "2021-03-10", "url" -> 
-         "https://dash.harvard.edu/handle/1/37365981"]], "AllowEmbedding" -> 
-     True, "InitialShape" -> TypeSystem`PackageScope`Limited[
+         "https://dash.harvard.edu/handle/1/37365981"], "Zakharchenko2009PRL" -> 
+       Association[
+        "type" -> "Article", "key" -> "Zakharchenko2009PRL", "author" -> 
+         "K. V. Zakharchenko and M. I. Katsnelson and A. Fasolino", "journal" -> 
+         "Phys. Rev. Lett.", "title" -> 
+         "Finite Temperature Lattice Properties of Graphene beyond the \
+Quasiharmonic Approximation", "year" -> "2009", "month" -> "jan", "number" -> 
+         "4", "pages" -> "046808", "volume" -> "102", "doi" -> 
+         "10.1103/physrevlett.102.046808", "publisher" -> 
+         "American Physical Society ({APS})"], "Jung2015NC" -> 
+       Association[
+        "type" -> "Article", "key" -> "Jung2015NC", "author" -> 
+         "Jeil Jung and Ashley M. DaSilva and Allan H. MacDonald and \
+Shaffique Adam", "journal" -> "Nat. Commun.", "title" -> 
+         "Origin of band gaps in graphene on hexagonal boron nitride", "year" -> 
+         "2015", "month" -> "feb", "number" -> "1", "pages" -> "6308", 
+         "volume" -> "6", "doi" -> "10.1038/ncomms7308", "publisher" -> 
+         "Springer Science and Business Media {LLC}"], "Popov2011PRB" -> 
+       Association[
+        "type" -> "Article", "key" -> "Popov2011PRB", "author" -> 
+         "Andrey M. Popov and Irina V. Lebedeva and Andrey A. Knizhnik and \
+Yurii E. Lozovik and Boris V. Potapkin", "journal" -> "Phys. Rev. B", "title" -> 
+         "Commensurate-incommensurate phase transition in bilayer graphene", 
+         "year" -> "2011", "month" -> "jul", "number" -> "4", "pages" -> 
+         "045404", "volume" -> "84", "doi" -> "10.1103/physrevb.84.045404", 
+         "publisher" -> "American Physical Society ({APS})"], 
+       "Lebedeva2011PCCP" -> 
+       Association[
+        "type" -> "Article", "key" -> "Lebedeva2011PCCP", "author" -> 
+         "Irina V. Lebedeva and Andrey A. Knizhnik and Andrey M. Popov and \
+Yurii E. Lozovik and Boris V. Potapkin", "journal" -> 
+         "Phys. Chem. Chem. Phys.", "title" -> 
+         "Interlayer interaction and relative vibrations of bilayer graphene",
+          "year" -> "2011", "number" -> "13", "pages" -> "5687", "volume" -> 
+         "13", "doi" -> "10.1039/c0cp02614j", "publisher" -> 
+         "Royal Society of Chemistry ({RSC})"]], "AllowEmbedding" -> True, 
+     "InitialShape" -> TypeSystem`PackageScope`Limited[
        TypeSystem`PackageScope`ColumnShape[
         TypeSystem`PackageScope`KeyValueShape[
-         TypeSystem`PackageScope`AtomShape[201.60000000000002`], 
+         TypeSystem`PackageScope`AtomShape[212.8], 
          TypeSystem`PackageScope`Limited[
           TypeSystem`PackageScope`ColumnShape[
            TypeSystem`PackageScope`KeyValueShape[
@@ -3087,12 +3169,12 @@ then applied to a number of important twistronic materials.", "date" ->
        DirectedInfinity[1], {}], "InitialType" -> TypeSystem`Assoc[
        TypeSystem`Atom[String], 
        TypeSystem`Assoc[TypeSystem`AnyType, 
-        TypeSystem`Atom[String], 12], 68], "Meta" -> Association[], 
-     "RowTarget" -> 20, "ColumnTarget" -> 10, "Shape" -> 
+        TypeSystem`Atom[String], TypeSystem`AnyLength], 72], "Meta" -> 
+     Association[], "RowTarget" -> 20, "ColumnTarget" -> 10, "Shape" -> 
      TypeSystem`PackageScope`Limited[
        TypeSystem`PackageScope`ColumnShape[
         TypeSystem`PackageScope`KeyValueShape[
-         TypeSystem`PackageScope`AtomShape[201.60000000000002`], 
+         TypeSystem`PackageScope`AtomShape[212.8], 
          TypeSystem`PackageScope`Limited[
           TypeSystem`PackageScope`ColumnShape[
            TypeSystem`PackageScope`KeyValueShape[
@@ -3102,10 +3184,11 @@ then applied to a number of important twistronic materials.", "date" ->
        DirectedInfinity[1], {}], "Type" -> TypeSystem`Assoc[
        TypeSystem`Atom[String], 
        TypeSystem`Assoc[TypeSystem`AnyType, 
-        TypeSystem`Atom[String], 12], 68], "Path" -> {}, "DisplayedRowCount" -> 
-     10, "DisplayedColumnCount" -> 1, "DataRowCount" -> 68, "DataColumnCount" -> 
-     1, "SortPaths" -> {}, "SortDirections" -> {}, "HiddenItemsMap" -> Null, 
-     "UpdateType" -> 1], TypeSystem`NestedGrid`PackagePrivate`$outputID$$, 
+        TypeSystem`Atom[String], TypeSystem`AnyLength], 72], "Path" -> {}, 
+     "DisplayedRowCount" -> 10, "DisplayedColumnCount" -> 1, "DataRowCount" -> 
+     72, "DataColumnCount" -> 1, "SortPaths" -> {}, "SortDirections" -> {}, 
+     "HiddenItemsMap" -> Null, "UpdateType" -> 1], 
+    TypeSystem`NestedGrid`PackagePrivate`$outputID$$, 
     TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
     TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 1, 
     TypeSystem`NestedGrid`PackagePrivate`$hPos$$ = 1, 
@@ -3134,22 +3217,19 @@ then applied to a number of important twistronic materials.", "date" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
                     Key["Cao2018N"]}, 1]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Cao2018N"]}, "RowHeader", False], "Mouse"], 
-              ImageSize -> {{201.60000000000002`, Full}, Automatic}, 
+              ImageSize -> {{212.8, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
              GrayLevel[0.95], Alignment -> {Left, Baseline}], 
             Item[
              Pane[
               Annotation["type", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Cao2018N"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{44.800000000000004`, Full}, Automatic}, 
@@ -3159,8 +3239,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["Article", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Cao2018N"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -3170,8 +3249,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["key", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Cao2018N"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{33.6, Full}, Automatic}, 
@@ -3181,8 +3259,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["Cao2018N", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Cao2018N"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -3210,12 +3287,10 @@ then applied to a number of important twistronic materials.", "date" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
                     Key["Cao2018N"]}, 2]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Cao2018N"]}, "Item", False], "Mouse"], 
               ImageMargins -> {{5, 3}, {4, 5}}], BaseStyle -> {{
                 RGBColor[
@@ -3223,15 +3298,14 @@ then applied to a number of important twistronic materials.", "date" ->
                 8}, ContextMenu -> {
                  MenuItem["Show 1 More Row at This Level", 
                   KernelExecute[
+                   
                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     1]& , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 More Rows at This Level", 
@@ -3243,9 +3317,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     5]& , {All}]], MenuEvaluator -> Automatic], Delimiter, 
                  MenuItem["Show 1 Fewer Row at This Level", 
@@ -3257,9 +3329,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -1]& \
 , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
@@ -3271,9 +3341,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -5]& \
 , {All}]], MenuEvaluator -> Automatic]}}, Alignment -> {Left, Baseline}, 
              Background -> GrayLevel[0.98]], SpanFromLeft}, {
@@ -3298,22 +3366,19 @@ then applied to a number of important twistronic materials.", "date" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
                     Key["Po2018PRX"]}, 1]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Po2018PRX"]}, "RowHeader", False], "Mouse"], 
-              ImageSize -> {{201.60000000000002`, Full}, Automatic}, 
+              ImageSize -> {{212.8, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
              GrayLevel[0.95], Alignment -> {Left, Baseline}], 
             Item[
              Pane[
               Annotation["type", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Po2018PRX"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{44.800000000000004`, Full}, Automatic}, 
@@ -3323,8 +3388,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["Article", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Po2018PRX"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -3334,8 +3398,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["key", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Po2018PRX"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{33.6, Full}, Automatic}, 
@@ -3345,8 +3408,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["Po2018PRX", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Po2018PRX"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -3374,12 +3436,10 @@ then applied to a number of important twistronic materials.", "date" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
                     Key["Po2018PRX"]}, 2]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Po2018PRX"]}, "Item", False], "Mouse"], 
               ImageMargins -> {{5, 3}, {4, 5}}], BaseStyle -> {{
                 RGBColor[
@@ -3394,9 +3454,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     1]& , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 More Rows at This Level", 
@@ -3408,9 +3466,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     5]& , {All}]], MenuEvaluator -> Automatic], Delimiter, 
                  MenuItem["Show 1 Fewer Row at This Level", 
@@ -3422,9 +3478,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -1]& \
 , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
@@ -3436,9 +3490,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -5]& \
 , {All}]], MenuEvaluator -> Automatic]}}, Alignment -> {Left, Baseline}, 
              Background -> GrayLevel[0.98]], SpanFromLeft}, {
@@ -3463,22 +3515,19 @@ then applied to a number of important twistronic materials.", "date" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
                     Key["Codecido2019SA"]}, 1]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Codecido2019SA"]}, "RowHeader", False], "Mouse"], 
-              ImageSize -> {{201.60000000000002`, Full}, Automatic}, 
+              ImageSize -> {{212.8, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
              GrayLevel[0.95], Alignment -> {Left, Baseline}], 
             Item[
              Pane[
               Annotation["type", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Codecido2019SA"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{44.800000000000004`, Full}, Automatic}, 
@@ -3488,8 +3537,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["Article", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Codecido2019SA"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -3499,8 +3547,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["key", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Codecido2019SA"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{33.6, Full}, Automatic}, 
@@ -3510,8 +3557,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["Codecido2019SA", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Codecido2019SA"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -3539,12 +3585,10 @@ then applied to a number of important twistronic materials.", "date" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
                     Key["Codecido2019SA"]}, 2]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Codecido2019SA"]}, "Item", False], "Mouse"], 
               ImageMargins -> {{5, 3}, {4, 5}}], BaseStyle -> {{
                 RGBColor[
@@ -3559,9 +3603,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     1]& , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 More Rows at This Level", 
@@ -3573,9 +3615,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     5]& , {All}]], MenuEvaluator -> Automatic], Delimiter, 
                  MenuItem["Show 1 Fewer Row at This Level", 
@@ -3587,9 +3627,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -1]& \
 , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
@@ -3601,9 +3639,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -5]& \
 , {All}]], MenuEvaluator -> Automatic]}}, Alignment -> {Left, Baseline}, 
              Background -> GrayLevel[0.98]], SpanFromLeft}, {
@@ -3628,22 +3664,19 @@ then applied to a number of important twistronic materials.", "date" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
                     Key["Arora2020N"]}, 1]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Arora2020N"]}, "RowHeader", False], "Mouse"], 
-              ImageSize -> {{201.60000000000002`, Full}, Automatic}, 
+              ImageSize -> {{212.8, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
              GrayLevel[0.95], Alignment -> {Left, Baseline}], 
             Item[
              Pane[
               Annotation["type", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Arora2020N"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{44.800000000000004`, Full}, Automatic}, 
@@ -3653,8 +3686,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["Article", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Arora2020N"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -3664,8 +3696,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["key", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Arora2020N"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{33.6, Full}, Automatic}, 
@@ -3675,8 +3706,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["Arora2020N", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Arora2020N"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -3704,12 +3734,10 @@ then applied to a number of important twistronic materials.", "date" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
                     Key["Arora2020N"]}, 2]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Arora2020N"]}, "Item", False], "Mouse"], 
               ImageMargins -> {{5, 3}, {4, 5}}], BaseStyle -> {{
                 RGBColor[
@@ -3724,9 +3752,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     1]& , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 More Rows at This Level", 
@@ -3738,9 +3764,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     5]& , {All}]], MenuEvaluator -> Automatic], Delimiter, 
                  MenuItem["Show 1 Fewer Row at This Level", 
@@ -3752,9 +3776,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -1]& \
 , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
@@ -3766,9 +3788,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -5]& \
 , {All}]], MenuEvaluator -> Automatic]}}, Alignment -> {Left, Baseline}, 
              Background -> GrayLevel[0.98]], SpanFromLeft}, {
@@ -3793,22 +3813,19 @@ then applied to a number of important twistronic materials.", "date" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
                     Key["Hao2021S"]}, 1]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Hao2021S"]}, "RowHeader", False], "Mouse"], 
-              ImageSize -> {{201.60000000000002`, Full}, Automatic}, 
+              ImageSize -> {{212.8, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
              GrayLevel[0.95], Alignment -> {Left, Baseline}], 
             Item[
              Pane[
               Annotation["type", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Hao2021S"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{44.800000000000004`, Full}, Automatic}, 
@@ -3818,8 +3835,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["Article", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Hao2021S"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -3829,8 +3845,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["key", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Hao2021S"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{33.6, Full}, Automatic}, 
@@ -3840,8 +3855,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["Hao2021S", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Hao2021S"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -3869,12 +3883,10 @@ then applied to a number of important twistronic materials.", "date" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
                     Key["Hao2021S"]}, 2]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Hao2021S"]}, "Item", False], "Mouse"], 
               ImageMargins -> {{5, 3}, {4, 5}}], BaseStyle -> {{
                 RGBColor[
@@ -3889,9 +3901,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     1]& , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 More Rows at This Level", 
@@ -3903,9 +3913,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     5]& , {All}]], MenuEvaluator -> Automatic], Delimiter, 
                  MenuItem["Show 1 Fewer Row at This Level", 
@@ -3917,9 +3925,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -1]& \
 , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
@@ -3931,9 +3937,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -5]& \
 , {All}]], MenuEvaluator -> Automatic]}}, Alignment -> {Left, Baseline}, 
              Background -> GrayLevel[0.98]], SpanFromLeft}, {
@@ -3958,22 +3962,19 @@ then applied to a number of important twistronic materials.", "date" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
                     Key["Zhou2021N"]}, 1]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Zhou2021N"]}, "RowHeader", False], "Mouse"], 
-              ImageSize -> {{201.60000000000002`, Full}, Automatic}, 
+              ImageSize -> {{212.8, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
              GrayLevel[0.95], Alignment -> {Left, Baseline}], 
             Item[
              Pane[
               Annotation["type", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Zhou2021N"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{44.800000000000004`, Full}, Automatic}, 
@@ -3983,8 +3984,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["Article", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Zhou2021N"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -3994,8 +3994,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["key", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Zhou2021N"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{33.6, Full}, Automatic}, 
@@ -4005,8 +4004,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["Zhou2021N", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Zhou2021N"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -4034,12 +4032,10 @@ then applied to a number of important twistronic materials.", "date" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
                     Key["Zhou2021N"]}, 2]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Zhou2021N"]}, "Item", False], "Mouse"], 
               ImageMargins -> {{5, 3}, {4, 5}}], BaseStyle -> {{
                 RGBColor[
@@ -4054,9 +4050,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     1]& , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 More Rows at This Level", 
@@ -4068,9 +4062,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     5]& , {All}]], MenuEvaluator -> Automatic], Delimiter, 
                  MenuItem["Show 1 Fewer Row at This Level", 
@@ -4082,9 +4074,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -1]& \
 , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
@@ -4096,9 +4086,8 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -5]& \
 , {All}]], MenuEvaluator -> Automatic]}}, Alignment -> {Left, Baseline}, 
              Background -> GrayLevel[0.98]], SpanFromLeft}, {
@@ -4123,22 +4112,19 @@ then applied to a number of important twistronic materials.", "date" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
                     Key["Cao2018Na"]}, 1]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Cao2018Na"]}, "RowHeader", False], "Mouse"], 
-              ImageSize -> {{201.60000000000002`, Full}, Automatic}, 
+              ImageSize -> {{212.8, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
              GrayLevel[0.95], Alignment -> {Left, Baseline}], 
             Item[
              Pane[
               Annotation["type", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Cao2018Na"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{44.800000000000004`, Full}, Automatic}, 
@@ -4148,8 +4134,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["Article", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Cao2018Na"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -4159,8 +4144,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["key", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Cao2018Na"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{33.6, Full}, Automatic}, 
@@ -4170,8 +4154,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["Cao2018Na", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Cao2018Na"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -4199,12 +4182,10 @@ then applied to a number of important twistronic materials.", "date" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
                     Key["Cao2018Na"]}, 2]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Cao2018Na"]}, "Item", False], "Mouse"], 
               ImageMargins -> {{5, 3}, {4, 5}}], BaseStyle -> {{
                 RGBColor[
@@ -4219,9 +4200,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     1]& , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 More Rows at This Level", 
@@ -4233,9 +4212,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     5]& , {All}]], MenuEvaluator -> Automatic], Delimiter, 
                  MenuItem["Show 1 Fewer Row at This Level", 
@@ -4247,9 +4224,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -1]& \
 , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
@@ -4261,9 +4236,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -5]& \
 , {All}]], MenuEvaluator -> Automatic]}}, Alignment -> {Left, Baseline}, 
              Background -> GrayLevel[0.98]], SpanFromLeft}, {
@@ -4288,22 +4261,19 @@ then applied to a number of important twistronic materials.", "date" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
                     Key["Calderon2020nQM"]}, 1]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Calderon2020nQM"]}, "RowHeader", False], "Mouse"], 
-              ImageSize -> {{201.60000000000002`, Full}, Automatic}, 
+              ImageSize -> {{212.8, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
              GrayLevel[0.95], Alignment -> {Left, Baseline}], 
             Item[
              Pane[
               Annotation["type", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Calderon2020nQM"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{44.800000000000004`, Full}, Automatic}, 
@@ -4313,8 +4283,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["Article", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Calderon2020nQM"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -4324,8 +4293,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["key", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Calderon2020nQM"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{33.6, Full}, Automatic}, 
@@ -4335,8 +4303,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["Calderon2020nQM", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Calderon2020nQM"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -4364,12 +4331,10 @@ then applied to a number of important twistronic materials.", "date" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
                     Key["Calderon2020nQM"]}, 2]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Calderon2020nQM"]}, "Item", False], "Mouse"], 
               ImageMargins -> {{5, 3}, {4, 5}}], BaseStyle -> {{
                 RGBColor[
@@ -4384,9 +4349,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     1]& , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 More Rows at This Level", 
@@ -4398,9 +4361,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     5]& , {All}]], MenuEvaluator -> Automatic], Delimiter, 
                  MenuItem["Show 1 Fewer Row at This Level", 
@@ -4412,9 +4373,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -1]& \
 , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
@@ -4426,9 +4385,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -5]& \
 , {All}]], MenuEvaluator -> Automatic]}}, Alignment -> {Left, Baseline}, 
              Background -> GrayLevel[0.98]], SpanFromLeft}, {
@@ -4453,22 +4410,19 @@ then applied to a number of important twistronic materials.", "date" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
                     Key["Zhang2017SA"]}, 1]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Zhang2017SA"]}, "RowHeader", False], "Mouse"], 
-              ImageSize -> {{201.60000000000002`, Full}, Automatic}, 
+              ImageSize -> {{212.8, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
              GrayLevel[0.95], Alignment -> {Left, Baseline}], 
             Item[
              Pane[
               Annotation["type", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Zhang2017SA"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{44.800000000000004`, Full}, Automatic}, 
@@ -4478,8 +4432,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["Article", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Zhang2017SA"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -4489,8 +4442,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["key", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Zhang2017SA"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{33.6, Full}, Automatic}, 
@@ -4500,8 +4452,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["Zhang2017SA", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Zhang2017SA"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -4529,12 +4480,10 @@ then applied to a number of important twistronic materials.", "date" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
                     Key["Zhang2017SA"]}, 2]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Zhang2017SA"]}, "Item", False], "Mouse"], 
               ImageMargins -> {{5, 3}, {4, 5}}], BaseStyle -> {{
                 RGBColor[
@@ -4549,9 +4498,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     1]& , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 More Rows at This Level", 
@@ -4563,9 +4510,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     5]& , {All}]], MenuEvaluator -> Automatic], Delimiter, 
                  MenuItem["Show 1 Fewer Row at This Level", 
@@ -4577,9 +4522,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -1]& \
 , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
@@ -4591,9 +4534,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -5]& \
 , {All}]], MenuEvaluator -> Automatic]}}, Alignment -> {Left, Baseline}, 
              Background -> GrayLevel[0.98]], SpanFromLeft}, {
@@ -4618,22 +4559,19 @@ then applied to a number of important twistronic materials.", "date" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
                     Key["Jin2019N"]}, 1]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Jin2019N"]}, "RowHeader", False], "Mouse"], 
-              ImageSize -> {{201.60000000000002`, Full}, Automatic}, 
+              ImageSize -> {{212.8, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
              GrayLevel[0.95], Alignment -> {Left, Baseline}], 
             Item[
              Pane[
               Annotation["type", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Jin2019N"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{44.800000000000004`, Full}, Automatic}, 
@@ -4643,8 +4581,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["Article", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Jin2019N"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -4654,8 +4591,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["key", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Jin2019N"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{33.6, Full}, Automatic}, 
@@ -4665,8 +4601,7 @@ then applied to a number of important twistronic materials.", "date" ->
              Pane[
               Annotation["Jin2019N", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Jin2019N"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -4694,12 +4629,10 @@ then applied to a number of important twistronic materials.", "date" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
                     Key["Jin2019N"]}, 2]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
                  Key["Jin2019N"]}, "Item", False], "Mouse"], 
               ImageMargins -> {{5, 3}, {4, 5}}], BaseStyle -> {{
                 RGBColor[
@@ -4714,9 +4647,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     1]& , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 More Rows at This Level", 
@@ -4728,9 +4659,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     5]& , {All}]], MenuEvaluator -> Automatic], Delimiter, 
                  MenuItem["Show 1 Fewer Row at This Level", 
@@ -4742,9 +4671,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -1]& \
 , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
@@ -4756,9 +4683,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -5]& \
 , {All}]], MenuEvaluator -> Automatic]}}, Alignment -> {Left, Baseline}, 
              Background -> GrayLevel[0.98]], SpanFromLeft}, {
@@ -4808,7 +4733,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$state$$], 
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
                     Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + (-10) 
-                    If[True, 68, 1], {1, 68 - -10 + 1}]; 
+                    If[True, 72, 1], {1, 72 - -10 + 1}]; 
                     TypeSystem`NestedGrid`PackagePrivate`updateState[
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -4816,8 +4741,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                     TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]], True][
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"], True][
                     TypeSystem`NestedGrid`PackagePrivate`$path$$]], 
                     Appearance -> None], 
                     Button[
@@ -4857,7 +4781,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$state$$], 
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
                     Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + (-10) 
-                    If[False, 68, 1], {1, 68 - -10 + 1}]; 
+                    If[False, 72, 1], {1, 72 - -10 + 1}]; 
                     TypeSystem`NestedGrid`PackagePrivate`updateState[
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -4865,22 +4789,21 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                     TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]], True][
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"], True][
                     TypeSystem`NestedGrid`PackagePrivate`$path$$]], 
                     Appearance -> None], " ", 
                     Style[
                     Mouseover[
                     Style[
                     Row[{"rows ", 1, "\[Dash]", 10, " of ", 
-                    Style[68, FontWeight -> Bold]}], FontSize -> 
+                    Style[72, FontWeight -> Bold]}], FontSize -> 
                     9.333333333333332, FontColor -> 
                     RGBColor[
                     0.5098039215686274, 0.5098039215686274, 
                     0.5098039215686274]], 
                     Style[
                     Row[{"rows ", 1, "\[Dash]", 10, " of ", 
-                    Style[68, FontWeight -> Bold]}], FontSize -> 
+                    Style[72, FontWeight -> Bold]}], FontSize -> 
                     9.333333333333332, FontColor -> 
                     RGBColor[
                     0.5098039215686274, 0.5098039215686274, 
@@ -4894,9 +4817,8 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 1, {}]], MenuEvaluator -> Automatic], 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 1, {}]], 
+                    MenuEvaluator -> Automatic], 
                     MenuItem["Show up to 10 Rows", 
                     KernelExecute[
                     
@@ -4906,9 +4828,8 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 10, {}]], MenuEvaluator -> Automatic], 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 10, {}]],
+                     MenuEvaluator -> Automatic], 
                     MenuItem["Show up to 30 Rows", 
                     KernelExecute[
                     
@@ -4918,9 +4839,8 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 30, {}]], MenuEvaluator -> Automatic], 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 30, {}]],
+                     MenuEvaluator -> Automatic], 
                     MenuItem["Show up to 100 Rows", 
                     KernelExecute[
                     
@@ -4930,9 +4850,8 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 100, {}]], MenuEvaluator -> Automatic], 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    100, {}]], MenuEvaluator -> Automatic], 
                     MenuItem["Show All", 
                     KernelExecute[
                     
@@ -4942,10 +4861,8 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
-                    "Rows", 100000000, {}]], MenuEvaluator -> Automatic]}], 
-                    " ", 
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    100000000, {}]], MenuEvaluator -> Automatic]}], " ", 
                     Button[
                     MouseAppearance[
                     Mouseover[
@@ -4985,7 +4902,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$state$$], 
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
                     Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + 
-                    10 If[False, 68, 1], {1, 68 - 10 + 1}]; 
+                    10 If[False, 72, 1], {1, 72 - 10 + 1}]; 
                     TypeSystem`NestedGrid`PackagePrivate`updateState[
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -4993,8 +4910,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                     TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]], True][
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"], True][
                     TypeSystem`NestedGrid`PackagePrivate`$path$$]], 
                     Appearance -> None], 
                     Button[
@@ -5036,7 +4952,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$state$$], 
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
                     Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + 
-                    10 If[True, 68, 1], {1, 68 - 10 + 1}]; 
+                    10 If[True, 72, 1], {1, 72 - 10 + 1}]; 
                     TypeSystem`NestedGrid`PackagePrivate`updateState[
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -5044,8 +4960,7 @@ then applied to a number of important twistronic materials.", "date" ->
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                     TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]], True][
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"], True][
                     TypeSystem`NestedGrid`PackagePrivate`$path$$]], 
                     Appearance -> None]}], ContextMenu -> {}]}], 
                ImageMargins -> {{0, -1}, {-1, 1}}]], Background -> 
@@ -5056,8 +4971,7 @@ then applied to a number of important twistronic materials.", "date" ->
            ContextMenu -> 
             Dynamic[TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
               Which[TypeSystem`NestedGrid`PackagePrivate`$lastOutputID =!= 
-                TypeSystem`NestedGrid`PackagePrivate`localHold[
-                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$], {}, 
+                "7140580b-4a04-4559-bb56-1b90b626abaf", {}, 
                 TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger === 
                 TypeSystem`NestedGrid`PackagePrivate`$lastContextMenuTrigger, 
                 TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu, True, 
@@ -5126,8 +5040,7 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                     TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"]][
                     TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
                     "remove"]], MenuEvaluator -> Automatic]], 
                     If[
@@ -5137,7 +5050,8 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
                     TypeSystem`NestedGrid`PackagePrivate`$state$$], 
                     TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$, 
-                    And[TypeSystem`NestedGrid`PackagePrivate`allHidden$, 
+                    And[
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$, 
                     TypeSystem`NestedGrid`PackagePrivate`headerHidden$]], 
                     Nothing, 
                     MenuItem[
@@ -5157,8 +5071,7 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                     TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"]][
                     TypeSystem`NestedGrid`PackagePrivate`lastPath$, "add"]], 
                     MenuEvaluator -> Automatic]], Delimiter}, 
                     If[
@@ -5178,8 +5091,7 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"][
                     TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
                     "Ascending"]], MenuEvaluator -> Automatic], Nothing], 
                     If[
@@ -5193,8 +5105,7 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"][
                     TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
                     "Descending"]], MenuEvaluator -> Automatic], Nothing], 
                     If[
@@ -5208,8 +5119,7 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    "7140580b-4a04-4559-bb56-1b90b626abaf"][
                     TypeSystem`NestedGrid`PackagePrivate`lastPath$, None]], 
                     MenuEvaluator -> Automatic], Nothing], Delimiter}, {}], {
                     MenuItem["Copy Position to Clipboard", 
@@ -5262,8 +5172,7 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
               TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
               TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
               TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-              TypeSystem`NestedGrid`PackagePrivate`localHold[
-              TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+              "7140580b-4a04-4559-bb56-1b90b626abaf"][
              TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
             Not[
              FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
@@ -5342,13 +5251,13 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
         Hold[
           TypeSystem`NestedGrid`PackagePrivate`localHold[
           TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]], StandardForm],
-      ImageSizeCache->{862., {481.41754150390625`, 488.58245849609375`}},
+      ImageSizeCache->{873., {481.41754150390625`, 488.58245849609375`}},
       TrackedSymbols:>{
        TypeSystem`NestedGrid`PackagePrivate`$state$$, 
         TypeSystem`NestedGrid`PackagePrivate`$grid$$}], 
      TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = 
      MouseAnnotation[],
-     ImageSizeCache->{862., {481.41754150390625`, 488.58245849609375`}}],
+     ImageSizeCache->{873., {481.41754150390625`, 488.58245849609375`}}],
     BaseStyle->{LineBreakWithin -> False},
     DynamicModuleValues:>{},
     Initialization:>(TypeSystem`NestedGrid`PackagePrivate`$outputID$$ = 
@@ -5365,9 +5274,9 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
    3.840109181945481*^9}, {3.8401092261469226`*^9, 3.8401092374429674`*^9}, 
    3.840109276726829*^9, 3.840109896643185*^9, 3.8401106188440466`*^9, 
    3.8401111527910204`*^9, 3.8401113074510126`*^9, 3.8401124627266617`*^9, 
-   3.8401144627693005`*^9},
+   3.8401144627013397`*^9, 3.840142643428432*^9, 3.8401893120564413`*^9},
  CellLabel->
-  "Out[493]=",ExpressionUUID->"458d7a24-8a50-475c-a69b-00f03d927e53"]
+  "Out[600]=",ExpressionUUID->"9c6b9406-a8ff-45bc-a9a8-88bc6e129b54"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -5600,16 +5509,38 @@ Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"exporttex", "[", 
-  RowBox[{"texpath", ",", "bibpath"}], "]"}]], "Input",
- CellChangeTimes->{{3.8401148054650087`*^9, 3.840114812390726*^9}},
+  RowBox[{"texpath", ",", "bibpath", ",", "True"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8401148054650087`*^9, 3.840114812390726*^9}, {
+  3.8401895726728506`*^9, 3.8401895746188545`*^9}, {3.8401901252205424`*^9, 
+  3.840190143181331*^9}},
  CellLabel->
-  "In[517]:=",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
+  "In[652]:=",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
 
 Cell[BoxData["\<\"F:\\\\Research\\\\Projects\\\\large-angle_twisted_bilayer_\
 graphene\\\\Manuscript\\\\bib.txt\"\>"], "Output",
- CellChangeTimes->{3.840114813437257*^9},
+ CellChangeTimes->{
+  3.840114813437257*^9, 3.840142648150847*^9, 3.8401441488294344`*^9, 
+   3.840186141836095*^9, 3.8401890119155607`*^9, 3.8401895753178205`*^9, 
+   3.8401896117329025`*^9, 3.8401898253129997`*^9, 3.8401898557962794`*^9, 
+   3.8401899289921746`*^9, 3.8401900134212637`*^9, {3.84019012617864*^9, 
+   3.8401901440323253`*^9}},
  CellLabel->
-  "Out[517]=",ExpressionUUID->"a71b0a3e-e355-4548-befa-a06fe5095b44"]
+  "Out[652]=",ExpressionUUID->"a4693a9c-e9d2-4503-8be5-c254b2e0db40"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"NotebookDirectory", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.8401906170790253`*^9, 3.840190622296043*^9}},
+ CellLabel->
+  "In[658]:=",ExpressionUUID->"24bd5fd6-fe91-479d-b873-e137db5c75ae"],
+
+Cell[BoxData["\<\"C:\\\\Users\\\\Administrator\\\\Documents\\\\GitHub\\\\bbl_\
+to_tex\\\\\"\>"], "Output",
+ CellChangeTimes->{3.8401906228655357`*^9},
+ CellLabel->
+  "Out[658]=",ExpressionUUID->"1d302bbe-d940-4bf1-9728-ac0e1b497a03"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -5649,44 +5580,48 @@ Cell[13999, 285, 96422, 1730, 1599, "Output",ExpressionUUID->"70070b5f-51ea-432f
 }, Closed]],
 Cell[CellGroupData[{
 Cell[110470, 2021, 154, 3, 89, "Title",ExpressionUUID->"a78bb14c-d08c-4c90-aa79-186053c1f584"],
-Cell[110627, 2026, 12699, 309, 1378, "Input",ExpressionUUID->"fc9d5688-3e7e-443f-ad88-5007756aea8a"],
+Cell[110627, 2026, 14789, 353, 1625, "Input",ExpressionUUID->"fc9d5688-3e7e-443f-ad88-5007756aea8a"],
 Cell[CellGroupData[{
-Cell[123351, 2339, 944, 20, 126, "Input",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
-Cell[124298, 2361, 2527, 43, 138, "Output",ExpressionUUID->"4d3a17e5-c5be-43d5-9889-419a81c8593a"],
-Cell[126828, 2406, 167754, 2963, 993, "Output",ExpressionUUID->"458d7a24-8a50-475c-a69b-00f03d927e53"]
+Cell[125441, 2383, 944, 20, 126, "Input",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
+Cell[126388, 2405, 2709, 46, 138, "Output",ExpressionUUID->"34380783-5841-4f67-9d7c-0dfeac6a7786"],
+Cell[129100, 2453, 158485, 2825, 993, "Output",ExpressionUUID->"9c6b9406-a8ff-45bc-a9a8-88bc6e129b54"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[294619, 5374, 267, 6, 30, "Input",ExpressionUUID->"87aed61f-91ec-4f98-a887-99fe53af75b0"],
-Cell[294889, 5382, 1720, 29, 138, "Output",ExpressionUUID->"1c026716-e68c-4bb6-9a95-54a38beb9876"]
+Cell[287622, 5283, 267, 6, 30, "Input",ExpressionUUID->"87aed61f-91ec-4f98-a887-99fe53af75b0"],
+Cell[287892, 5291, 1720, 29, 138, "Output",ExpressionUUID->"1c026716-e68c-4bb6-9a95-54a38beb9876"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[296646, 5416, 272, 6, 30, "Input",ExpressionUUID->"b11605c4-16ea-476e-a929-148a52669e42"],
-Cell[296921, 5424, 1189, 23, 66, "Output",ExpressionUUID->"c164e29f-de0b-4a83-ab4e-b55cbf5b4fef"]
+Cell[289649, 5325, 272, 6, 30, "Input",ExpressionUUID->"b11605c4-16ea-476e-a929-148a52669e42"],
+Cell[289924, 5333, 1189, 23, 66, "Output",ExpressionUUID->"c164e29f-de0b-4a83-ab4e-b55cbf5b4fef"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[298147, 5452, 272, 6, 30, "Input",ExpressionUUID->"cb6ec748-feb4-4db7-bb16-18b44a68b9f7"],
-Cell[298422, 5460, 1348, 25, 90, "Output",ExpressionUUID->"a005dbee-f844-4560-9407-7e72c266c8f8"]
+Cell[291150, 5361, 272, 6, 30, "Input",ExpressionUUID->"cb6ec748-feb4-4db7-bb16-18b44a68b9f7"],
+Cell[291425, 5369, 1348, 25, 90, "Output",ExpressionUUID->"a005dbee-f844-4560-9407-7e72c266c8f8"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[299807, 5490, 284, 6, 30, "Input",ExpressionUUID->"0f845e25-56ce-45ba-91c6-bac353d175f9"],
-Cell[300094, 5498, 441, 7, 41, "Output",ExpressionUUID->"25ebe523-2690-4a63-881b-c32654d57804"]
+Cell[292810, 5399, 284, 6, 30, "Input",ExpressionUUID->"0f845e25-56ce-45ba-91c6-bac353d175f9"],
+Cell[293097, 5407, 441, 7, 41, "Output",ExpressionUUID->"25ebe523-2690-4a63-881b-c32654d57804"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[300572, 5510, 731, 12, 30, "Input",ExpressionUUID->"0bb8bdcc-c9f1-4b0b-b849-2c47e118b2ff"],
-Cell[301306, 5524, 1306, 18, 41, "Output",ExpressionUUID->"d124a351-5c07-4ca2-85f5-c9ed0264e7e3"]
+Cell[293575, 5419, 731, 12, 30, "Input",ExpressionUUID->"0bb8bdcc-c9f1-4b0b-b849-2c47e118b2ff"],
+Cell[294309, 5433, 1306, 18, 41, "Output",ExpressionUUID->"d124a351-5c07-4ca2-85f5-c9ed0264e7e3"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[302649, 5547, 303, 6, 30, "Input",ExpressionUUID->"0eba9ff8-406c-47ef-b9a6-fa0f148cbc3a"],
-Cell[302955, 5555, 372, 6, 41, "Output",ExpressionUUID->"c09964ef-45a3-4be8-83ce-47ed8b947932"]
+Cell[295652, 5456, 303, 6, 30, "Input",ExpressionUUID->"0eba9ff8-406c-47ef-b9a6-fa0f148cbc3a"],
+Cell[295958, 5464, 372, 6, 41, "Output",ExpressionUUID->"c09964ef-45a3-4be8-83ce-47ed8b947932"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[303364, 5566, 511, 11, 55, "Input",ExpressionUUID->"7fd195bb-9741-401e-9741-02600c96a311"],
-Cell[303878, 5579, 464, 7, 41, "Output",ExpressionUUID->"ffd5aabf-55a6-44dd-8fa3-0e7a48a399b4"],
-Cell[304345, 5588, 453, 7, 41, "Output",ExpressionUUID->"0f7e5542-ca06-431b-aa34-e9f4ed95241e"]
+Cell[296367, 5475, 511, 11, 55, "Input",ExpressionUUID->"7fd195bb-9741-401e-9741-02600c96a311"],
+Cell[296881, 5488, 464, 7, 41, "Output",ExpressionUUID->"ffd5aabf-55a6-44dd-8fa3-0e7a48a399b4"],
+Cell[297348, 5497, 453, 7, 41, "Output",ExpressionUUID->"0f7e5542-ca06-431b-aa34-e9f4ed95241e"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[304835, 5600, 248, 5, 30, "Input",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
-Cell[305086, 5607, 253, 4, 41, "Output",ExpressionUUID->"a71b0a3e-e355-4548-befa-a06fe5095b44"]
+Cell[297838, 5509, 365, 7, 48, "Input",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
+Cell[298206, 5518, 555, 9, 41, "Output",ExpressionUUID->"a4693a9c-e9d2-4503-8be5-c254b2e0db40"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[298798, 5532, 216, 4, 54, "Input",ExpressionUUID->"24bd5fd6-fe91-479d-b873-e137db5c75ae"],
+Cell[299017, 5538, 233, 4, 41, "Output",ExpressionUUID->"1d302bbe-d940-4bf1-9728-ac0e1b497a03"]
 }, Open  ]]
 }, Open  ]]
 }
