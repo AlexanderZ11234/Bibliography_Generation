@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    303236,       5622]
-NotebookOptionsPosition[    299278,       5546]
-NotebookOutlinePosition[    299680,       5562]
-CellTagsIndexPosition[    299637,       5559]
+NotebookDataLength[    313984,       5775]
+NotebookOptionsPosition[    310252,       5703]
+NotebookOutlinePosition[    310654,       5719]
+CellTagsIndexPosition[    310611,       5716]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2376,8 +2376,7 @@ thebibliography}\>\"", "]"}], "[",
    3.8401898464430647`*^9, {3.840189916580244*^9, 3.8401899999342594`*^9}, {
    3.8401901617648325`*^9, 3.8401901623104496`*^9}},
  Background->RGBColor[1, 1, 0.85],
- CellLabel->
-  "In[653]:=",ExpressionUUID->"fc9d5688-3e7e-443f-ad88-5007756aea8a"],
+ CellLabel->"In[1]:=",ExpressionUUID->"fc9d5688-3e7e-443f-ad88-5007756aea8a"],
 
 Cell[CellGroupData[{
 
@@ -2400,8 +2399,7 @@ Manuscript\\\\tBLG_ZLM.bib\>\""}], ";"}], "\[IndentingNewLine]",
   3.8401091396505165`*^9}, {3.840109208513751*^9, 3.8401092365779505`*^9}, {
   3.840109272585844*^9, 3.8401093049385543`*^9}, {3.840112457849145*^9, 
   3.840112461863381*^9}},
- CellLabel->
-  "In[597]:=",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
+ CellLabel->"In[6]:=",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -2447,9 +2445,9 @@ Cell[BoxData[
    3.840109181945481*^9}, {3.8401092261469226`*^9, 3.8401092374429674`*^9}, 
    3.840109276726829*^9, 3.840109896643185*^9, 3.8401106188440466`*^9, 
    3.8401111527910204`*^9, 3.8401113074510126`*^9, 3.8401124627266617`*^9, 
-   3.8401144627013397`*^9, 3.840142643428432*^9, 3.8401893117050624`*^9},
- CellLabel->
-  "Out[599]=",ExpressionUUID->"34380783-5841-4f67-9d7c-0dfeac6a7786"],
+   3.8401144627013397`*^9, 3.840142643428432*^9, 3.8401893117050624`*^9, 
+   3.8401912130973883`*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"47508d81-04bc-48ff-868c-6fc20ec434f5"],
 
 Cell[BoxData[
  TagBox[
@@ -3217,10 +3215,12 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
                     Key["Cao2018N"]}, 1]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Cao2018N"]}, "RowHeader", False], "Mouse"], 
               ImageSize -> {{212.8, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
@@ -3229,7 +3229,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["type", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Cao2018N"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{44.800000000000004`, Full}, Automatic}, 
@@ -3239,7 +3240,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["Article", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Cao2018N"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -3249,7 +3251,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["key", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Cao2018N"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{33.6, Full}, Automatic}, 
@@ -3259,7 +3262,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["Cao2018N", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Cao2018N"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -3287,10 +3291,12 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
                     Key["Cao2018N"]}, 2]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Cao2018N"]}, "Item", False], "Mouse"], 
               ImageMargins -> {{5, 3}, {4, 5}}], BaseStyle -> {{
                 RGBColor[
@@ -3305,7 +3311,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     1]& , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 More Rows at This Level", 
@@ -3317,7 +3325,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     5]& , {All}]], MenuEvaluator -> Automatic], Delimiter, 
                  MenuItem["Show 1 Fewer Row at This Level", 
@@ -3329,7 +3339,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -1]& \
 , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
@@ -3341,7 +3353,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -5]& \
 , {All}]], MenuEvaluator -> Automatic]}}, Alignment -> {Left, Baseline}, 
              Background -> GrayLevel[0.98]], SpanFromLeft}, {
@@ -3366,10 +3380,12 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
                     Key["Po2018PRX"]}, 1]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Po2018PRX"]}, "RowHeader", False], "Mouse"], 
               ImageSize -> {{212.8, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
@@ -3378,7 +3394,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["type", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Po2018PRX"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{44.800000000000004`, Full}, Automatic}, 
@@ -3388,7 +3405,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["Article", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Po2018PRX"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -3398,7 +3416,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["key", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Po2018PRX"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{33.6, Full}, Automatic}, 
@@ -3408,7 +3427,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["Po2018PRX", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Po2018PRX"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -3436,10 +3456,12 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
                     Key["Po2018PRX"]}, 2]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Po2018PRX"]}, "Item", False], "Mouse"], 
               ImageMargins -> {{5, 3}, {4, 5}}], BaseStyle -> {{
                 RGBColor[
@@ -3454,7 +3476,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     1]& , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 More Rows at This Level", 
@@ -3466,7 +3490,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     5]& , {All}]], MenuEvaluator -> Automatic], Delimiter, 
                  MenuItem["Show 1 Fewer Row at This Level", 
@@ -3478,7 +3504,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -1]& \
 , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
@@ -3490,7 +3518,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -5]& \
 , {All}]], MenuEvaluator -> Automatic]}}, Alignment -> {Left, Baseline}, 
              Background -> GrayLevel[0.98]], SpanFromLeft}, {
@@ -3515,10 +3545,12 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
                     Key["Codecido2019SA"]}, 1]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Codecido2019SA"]}, "RowHeader", False], "Mouse"], 
               ImageSize -> {{212.8, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
@@ -3527,7 +3559,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["type", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Codecido2019SA"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{44.800000000000004`, Full}, Automatic}, 
@@ -3537,7 +3570,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["Article", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Codecido2019SA"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -3547,7 +3581,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["key", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Codecido2019SA"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{33.6, Full}, Automatic}, 
@@ -3557,7 +3592,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["Codecido2019SA", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Codecido2019SA"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -3585,10 +3621,12 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
                     Key["Codecido2019SA"]}, 2]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Codecido2019SA"]}, "Item", False], "Mouse"], 
               ImageMargins -> {{5, 3}, {4, 5}}], BaseStyle -> {{
                 RGBColor[
@@ -3603,7 +3641,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     1]& , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 More Rows at This Level", 
@@ -3615,7 +3655,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     5]& , {All}]], MenuEvaluator -> Automatic], Delimiter, 
                  MenuItem["Show 1 Fewer Row at This Level", 
@@ -3627,7 +3669,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -1]& \
 , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
@@ -3639,7 +3683,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -5]& \
 , {All}]], MenuEvaluator -> Automatic]}}, Alignment -> {Left, Baseline}, 
              Background -> GrayLevel[0.98]], SpanFromLeft}, {
@@ -3664,10 +3710,12 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
                     Key["Arora2020N"]}, 1]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Arora2020N"]}, "RowHeader", False], "Mouse"], 
               ImageSize -> {{212.8, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
@@ -3676,7 +3724,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["type", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Arora2020N"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{44.800000000000004`, Full}, Automatic}, 
@@ -3686,7 +3735,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["Article", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Arora2020N"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -3696,7 +3746,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["key", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Arora2020N"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{33.6, Full}, Automatic}, 
@@ -3706,7 +3757,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["Arora2020N", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Arora2020N"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -3734,10 +3786,12 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
                     Key["Arora2020N"]}, 2]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Arora2020N"]}, "Item", False], "Mouse"], 
               ImageMargins -> {{5, 3}, {4, 5}}], BaseStyle -> {{
                 RGBColor[
@@ -3752,7 +3806,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     1]& , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 More Rows at This Level", 
@@ -3764,7 +3820,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     5]& , {All}]], MenuEvaluator -> Automatic], Delimiter, 
                  MenuItem["Show 1 Fewer Row at This Level", 
@@ -3776,7 +3834,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -1]& \
 , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
@@ -3788,7 +3848,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -5]& \
 , {All}]], MenuEvaluator -> Automatic]}}, Alignment -> {Left, Baseline}, 
              Background -> GrayLevel[0.98]], SpanFromLeft}, {
@@ -3813,10 +3875,12 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
                     Key["Hao2021S"]}, 1]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Hao2021S"]}, "RowHeader", False], "Mouse"], 
               ImageSize -> {{212.8, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
@@ -3825,7 +3889,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["type", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Hao2021S"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{44.800000000000004`, Full}, Automatic}, 
@@ -3835,7 +3900,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["Article", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Hao2021S"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -3845,7 +3911,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["key", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Hao2021S"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{33.6, Full}, Automatic}, 
@@ -3855,7 +3922,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["Hao2021S", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Hao2021S"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -3883,10 +3951,12 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
                     Key["Hao2021S"]}, 2]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Hao2021S"]}, "Item", False], "Mouse"], 
               ImageMargins -> {{5, 3}, {4, 5}}], BaseStyle -> {{
                 RGBColor[
@@ -3901,7 +3971,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     1]& , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 More Rows at This Level", 
@@ -3913,7 +3985,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     5]& , {All}]], MenuEvaluator -> Automatic], Delimiter, 
                  MenuItem["Show 1 Fewer Row at This Level", 
@@ -3925,7 +3999,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -1]& \
 , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
@@ -3937,7 +4013,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -5]& \
 , {All}]], MenuEvaluator -> Automatic]}}, Alignment -> {Left, Baseline}, 
              Background -> GrayLevel[0.98]], SpanFromLeft}, {
@@ -3962,10 +4040,12 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
                     Key["Zhou2021N"]}, 1]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Zhou2021N"]}, "RowHeader", False], "Mouse"], 
               ImageSize -> {{212.8, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
@@ -3974,7 +4054,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["type", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Zhou2021N"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{44.800000000000004`, Full}, Automatic}, 
@@ -3984,7 +4065,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["Article", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Zhou2021N"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -3994,7 +4076,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["key", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Zhou2021N"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{33.6, Full}, Automatic}, 
@@ -4004,7 +4087,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["Zhou2021N", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Zhou2021N"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -4032,10 +4116,12 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
                     Key["Zhou2021N"]}, 2]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Zhou2021N"]}, "Item", False], "Mouse"], 
               ImageMargins -> {{5, 3}, {4, 5}}], BaseStyle -> {{
                 RGBColor[
@@ -4050,7 +4136,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     1]& , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 More Rows at This Level", 
@@ -4062,7 +4150,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     5]& , {All}]], MenuEvaluator -> Automatic], Delimiter, 
                  MenuItem["Show 1 Fewer Row at This Level", 
@@ -4074,7 +4164,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -1]& \
 , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
@@ -4086,8 +4178,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
-                    
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -5]& \
 , {All}]], MenuEvaluator -> Automatic]}}, Alignment -> {Left, Baseline}, 
              Background -> GrayLevel[0.98]], SpanFromLeft}, {
@@ -4112,10 +4205,12 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
                     Key["Cao2018Na"]}, 1]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Cao2018Na"]}, "RowHeader", False], "Mouse"], 
               ImageSize -> {{212.8, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
@@ -4124,7 +4219,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["type", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Cao2018Na"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{44.800000000000004`, Full}, Automatic}, 
@@ -4134,7 +4230,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["Article", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Cao2018Na"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -4144,7 +4241,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["key", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Cao2018Na"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{33.6, Full}, Automatic}, 
@@ -4154,7 +4252,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["Cao2018Na", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Cao2018Na"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -4182,10 +4281,12 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
                     Key["Cao2018Na"]}, 2]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Cao2018Na"]}, "Item", False], "Mouse"], 
               ImageMargins -> {{5, 3}, {4, 5}}], BaseStyle -> {{
                 RGBColor[
@@ -4200,7 +4301,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     1]& , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 More Rows at This Level", 
@@ -4212,7 +4315,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     5]& , {All}]], MenuEvaluator -> Automatic], Delimiter, 
                  MenuItem["Show 1 Fewer Row at This Level", 
@@ -4224,7 +4329,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -1]& \
 , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
@@ -4236,7 +4343,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -5]& \
 , {All}]], MenuEvaluator -> Automatic]}}, Alignment -> {Left, Baseline}, 
              Background -> GrayLevel[0.98]], SpanFromLeft}, {
@@ -4261,10 +4370,12 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
                     Key["Calderon2020nQM"]}, 1]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Calderon2020nQM"]}, "RowHeader", False], "Mouse"], 
               ImageSize -> {{212.8, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
@@ -4273,7 +4384,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["type", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Calderon2020nQM"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{44.800000000000004`, Full}, Automatic}, 
@@ -4283,7 +4395,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["Article", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Calderon2020nQM"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -4293,7 +4406,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["key", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Calderon2020nQM"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{33.6, Full}, Automatic}, 
@@ -4303,7 +4417,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["Calderon2020nQM", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Calderon2020nQM"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -4331,10 +4446,12 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
                     Key["Calderon2020nQM"]}, 2]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Calderon2020nQM"]}, "Item", False], "Mouse"], 
               ImageMargins -> {{5, 3}, {4, 5}}], BaseStyle -> {{
                 RGBColor[
@@ -4349,7 +4466,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     1]& , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 More Rows at This Level", 
@@ -4361,7 +4480,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     5]& , {All}]], MenuEvaluator -> Automatic], Delimiter, 
                  MenuItem["Show 1 Fewer Row at This Level", 
@@ -4373,7 +4494,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -1]& \
 , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
@@ -4385,7 +4508,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -5]& \
 , {All}]], MenuEvaluator -> Automatic]}}, Alignment -> {Left, Baseline}, 
              Background -> GrayLevel[0.98]], SpanFromLeft}, {
@@ -4410,10 +4535,12 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
                     Key["Zhang2017SA"]}, 1]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Zhang2017SA"]}, "RowHeader", False], "Mouse"], 
               ImageSize -> {{212.8, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
@@ -4422,7 +4549,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["type", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Zhang2017SA"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{44.800000000000004`, Full}, Automatic}, 
@@ -4432,7 +4560,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["Article", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Zhang2017SA"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -4442,7 +4571,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["key", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Zhang2017SA"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{33.6, Full}, Automatic}, 
@@ -4452,7 +4582,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["Zhang2017SA", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Zhang2017SA"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -4480,10 +4611,12 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
                     Key["Zhang2017SA"]}, 2]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Zhang2017SA"]}, "Item", False], "Mouse"], 
               ImageMargins -> {{5, 3}, {4, 5}}], BaseStyle -> {{
                 RGBColor[
@@ -4498,7 +4631,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     1]& , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 More Rows at This Level", 
@@ -4510,7 +4645,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     5]& , {All}]], MenuEvaluator -> Automatic], Delimiter, 
                  MenuItem["Show 1 Fewer Row at This Level", 
@@ -4522,7 +4659,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -1]& \
 , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
@@ -4534,7 +4673,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -5]& \
 , {All}]], MenuEvaluator -> Automatic]}}, Alignment -> {Left, Baseline}, 
              Background -> GrayLevel[0.98]], SpanFromLeft}, {
@@ -4559,10 +4700,12 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
                     Key["Jin2019N"]}, 1]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Jin2019N"]}, "RowHeader", False], "Mouse"], 
               ImageSize -> {{212.8, Full}, Automatic}, 
               ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
@@ -4571,7 +4714,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["type", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Jin2019N"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{44.800000000000004`, Full}, Automatic}, 
@@ -4581,7 +4725,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["Article", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Jin2019N"], 
                  Key["type"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -4591,7 +4736,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["key", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Jin2019N"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{33.6, Full}, Automatic}, 
@@ -4601,7 +4747,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
              Pane[
               Annotation["Jin2019N", 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Jin2019N"], 
                  Key["key"]}, "Item", False], "Mouse"], 
               ImageSize -> {{560., Full}, Automatic}, 
@@ -4629,10 +4776,12 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                    TypeSystem`NestedGrid`PackagePrivate`localHold[
-                   "7140580b-4a04-4559-bb56-1b90b626abaf"]][{
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
                     Key["Jin2019N"]}, 2]]], 
                TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
-               "7140580b-4a04-4559-bb56-1b90b626abaf"][{
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
                  Key["Jin2019N"]}, "Item", False], "Mouse"], 
               ImageMargins -> {{5, 3}, {4, 5}}], BaseStyle -> {{
                 RGBColor[
@@ -4647,7 +4796,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     1]& , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 More Rows at This Level", 
@@ -4659,7 +4810,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, 
                     5]& , {All}]], MenuEvaluator -> Automatic], Delimiter, 
                  MenuItem["Show 1 Fewer Row at This Level", 
@@ -4671,7 +4824,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -1]& \
 , {All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
@@ -4683,7 +4838,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimitBy[#, -5]& \
 , {All}]], MenuEvaluator -> Automatic]}}, Alignment -> {Left, Baseline}, 
              Background -> GrayLevel[0.98]], SpanFromLeft}, {
@@ -4741,7 +4898,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                     TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"], True][
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]], True][
                     TypeSystem`NestedGrid`PackagePrivate`$path$$]], 
                     Appearance -> None], 
                     Button[
@@ -4789,7 +4947,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                     TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"], True][
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]], True][
                     TypeSystem`NestedGrid`PackagePrivate`$path$$]], 
                     Appearance -> None], " ", 
                     Style[
@@ -4817,8 +4976,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 1, {}]], 
-                    MenuEvaluator -> Automatic], 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 1, {}]], MenuEvaluator -> Automatic], 
                     MenuItem["Show up to 10 Rows", 
                     KernelExecute[
                     
@@ -4828,8 +4988,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 10, {}]],
-                     MenuEvaluator -> Automatic], 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 10, {}]], MenuEvaluator -> Automatic], 
                     MenuItem["Show up to 30 Rows", 
                     KernelExecute[
                     
@@ -4839,8 +5000,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 30, {}]],
-                     MenuEvaluator -> Automatic], 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 30, {}]], MenuEvaluator -> Automatic], 
                     MenuItem["Show up to 100 Rows", 
                     KernelExecute[
                     
@@ -4850,8 +5012,9 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
-                    100, {}]], MenuEvaluator -> Automatic], 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 100, {}]], MenuEvaluator -> Automatic], 
                     MenuItem["Show All", 
                     KernelExecute[
                     
@@ -4861,8 +5024,10 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"}, "Rows", 
-                    100000000, {}]], MenuEvaluator -> Automatic]}], " ", 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]}, 
+                    "Rows", 100000000, {}]], MenuEvaluator -> Automatic]}], 
+                    " ", 
                     Button[
                     MouseAppearance[
                     Mouseover[
@@ -4910,7 +5075,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                     TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"], True][
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]], True][
                     TypeSystem`NestedGrid`PackagePrivate`$path$$]], 
                     Appearance -> None], 
                     Button[
@@ -4960,7 +5126,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                     TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"], True][
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]], True][
                     TypeSystem`NestedGrid`PackagePrivate`$path$$]], 
                     Appearance -> None]}], ContextMenu -> {}]}], 
                ImageMargins -> {{0, -1}, {-1, 1}}]], Background -> 
@@ -4971,7 +5138,8 @@ Yurii E. Lozovik and Boris V. Potapkin", "journal" ->
            ContextMenu -> 
             Dynamic[TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
               Which[TypeSystem`NestedGrid`PackagePrivate`$lastOutputID =!= 
-                "7140580b-4a04-4559-bb56-1b90b626abaf", {}, 
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$], {}, 
                 TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger === 
                 TypeSystem`NestedGrid`PackagePrivate`$lastContextMenuTrigger, 
                 TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu, True, 
@@ -5040,7 +5208,8 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                     TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"]][
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
                     TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
                     "remove"]], MenuEvaluator -> Automatic]], 
                     If[
@@ -5071,7 +5240,8 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
                     TypeSystem`NestedGrid`PackagePrivate`localHold[
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"]][
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
                     TypeSystem`NestedGrid`PackagePrivate`lastPath$, "add"]], 
                     MenuEvaluator -> Automatic]], Delimiter}, 
                     If[
@@ -5091,7 +5261,8 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"][
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
                     TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
                     "Ascending"]], MenuEvaluator -> Automatic], Nothing], 
                     If[
@@ -5105,7 +5276,8 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"][
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
                     TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
                     "Descending"]], MenuEvaluator -> Automatic], Nothing], 
                     If[
@@ -5119,7 +5291,8 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-                    "7140580b-4a04-4559-bb56-1b90b626abaf"][
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
                     TypeSystem`NestedGrid`PackagePrivate`lastPath$, None]], 
                     MenuEvaluator -> Automatic], Nothing], Delimiter}, {}], {
                     MenuItem["Copy Position to Clipboard", 
@@ -5172,7 +5345,8 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
               TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
               TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
               TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
-              "7140580b-4a04-4559-bb56-1b90b626abaf"][
+              TypeSystem`NestedGrid`PackagePrivate`localHold[
+              TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
              TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
             Not[
              FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
@@ -5274,9 +5448,9 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
    3.840109181945481*^9}, {3.8401092261469226`*^9, 3.8401092374429674`*^9}, 
    3.840109276726829*^9, 3.840109896643185*^9, 3.8401106188440466`*^9, 
    3.8401111527910204`*^9, 3.8401113074510126`*^9, 3.8401124627266617`*^9, 
-   3.8401144627013397`*^9, 3.840142643428432*^9, 3.8401893120564413`*^9},
- CellLabel->
-  "Out[600]=",ExpressionUUID->"9c6b9406-a8ff-45bc-a9a8-88bc6e129b54"]
+   3.8401144627013397`*^9, 3.840142643428432*^9, 3.8401893117050624`*^9, 
+   3.840191215166274*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"4e5aefa5-c664-4e7d-925a-d75e35dd3b7e"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -5513,8 +5687,7 @@ Cell[BoxData[
  CellChangeTimes->{{3.8401148054650087`*^9, 3.840114812390726*^9}, {
   3.8401895726728506`*^9, 3.8401895746188545`*^9}, {3.8401901252205424`*^9, 
   3.840190143181331*^9}},
- CellLabel->
-  "In[652]:=",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
+ CellLabel->"In[10]:=",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
 
 Cell[BoxData["\<\"F:\\\\Research\\\\Projects\\\\large-angle_twisted_bilayer_\
 graphene\\\\Manuscript\\\\bib.txt\"\>"], "Output",
@@ -5523,24 +5696,8 @@ graphene\\\\Manuscript\\\\bib.txt\"\>"], "Output",
    3.840186141836095*^9, 3.8401890119155607`*^9, 3.8401895753178205`*^9, 
    3.8401896117329025`*^9, 3.8401898253129997`*^9, 3.8401898557962794`*^9, 
    3.8401899289921746`*^9, 3.8401900134212637`*^9, {3.84019012617864*^9, 
-   3.8401901440323253`*^9}},
- CellLabel->
-  "Out[652]=",ExpressionUUID->"a4693a9c-e9d2-4503-8be5-c254b2e0db40"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"NotebookDirectory", "[", "]"}]], "Input",
- CellChangeTimes->{{3.8401906170790253`*^9, 3.840190622296043*^9}},
- CellLabel->
-  "In[658]:=",ExpressionUUID->"24bd5fd6-fe91-479d-b873-e137db5c75ae"],
-
-Cell[BoxData["\<\"C:\\\\Users\\\\Administrator\\\\Documents\\\\GitHub\\\\bbl_\
-to_tex\\\\\"\>"], "Output",
- CellChangeTimes->{3.8401906228655357`*^9},
- CellLabel->
-  "Out[658]=",ExpressionUUID->"1d302bbe-d940-4bf1-9728-ac0e1b497a03"]
+   3.8401901440323253`*^9}, 3.840191218274107*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"7b7f44ba-c695-472b-94ed-3af645318ef7"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -5580,48 +5737,44 @@ Cell[13999, 285, 96422, 1730, 1599, "Output",ExpressionUUID->"70070b5f-51ea-432f
 }, Closed]],
 Cell[CellGroupData[{
 Cell[110470, 2021, 154, 3, 89, "Title",ExpressionUUID->"a78bb14c-d08c-4c90-aa79-186053c1f584"],
-Cell[110627, 2026, 14789, 353, 1625, "Input",ExpressionUUID->"fc9d5688-3e7e-443f-ad88-5007756aea8a"],
+Cell[110627, 2026, 14784, 352, 1625, "Input",ExpressionUUID->"fc9d5688-3e7e-443f-ad88-5007756aea8a"],
 Cell[CellGroupData[{
-Cell[125441, 2383, 944, 20, 126, "Input",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
-Cell[126388, 2405, 2709, 46, 138, "Output",ExpressionUUID->"34380783-5841-4f67-9d7c-0dfeac6a7786"],
-Cell[129100, 2453, 158485, 2825, 993, "Output",ExpressionUUID->"9c6b9406-a8ff-45bc-a9a8-88bc6e129b54"]
+Cell[125436, 2382, 939, 19, 126, "Input",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
+Cell[126378, 2403, 2732, 46, 138, "Output",ExpressionUUID->"47508d81-04bc-48ff-868c-6fc20ec434f5"],
+Cell[129113, 2451, 169921, 3001, 993, "Output",ExpressionUUID->"4e5aefa5-c664-4e7d-925a-d75e35dd3b7e"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[287622, 5283, 267, 6, 30, "Input",ExpressionUUID->"87aed61f-91ec-4f98-a887-99fe53af75b0"],
-Cell[287892, 5291, 1720, 29, 138, "Output",ExpressionUUID->"1c026716-e68c-4bb6-9a95-54a38beb9876"]
+Cell[299071, 5457, 267, 6, 30, "Input",ExpressionUUID->"87aed61f-91ec-4f98-a887-99fe53af75b0"],
+Cell[299341, 5465, 1720, 29, 138, "Output",ExpressionUUID->"1c026716-e68c-4bb6-9a95-54a38beb9876"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[289649, 5325, 272, 6, 30, "Input",ExpressionUUID->"b11605c4-16ea-476e-a929-148a52669e42"],
-Cell[289924, 5333, 1189, 23, 66, "Output",ExpressionUUID->"c164e29f-de0b-4a83-ab4e-b55cbf5b4fef"]
+Cell[301098, 5499, 272, 6, 30, "Input",ExpressionUUID->"b11605c4-16ea-476e-a929-148a52669e42"],
+Cell[301373, 5507, 1189, 23, 66, "Output",ExpressionUUID->"c164e29f-de0b-4a83-ab4e-b55cbf5b4fef"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[291150, 5361, 272, 6, 30, "Input",ExpressionUUID->"cb6ec748-feb4-4db7-bb16-18b44a68b9f7"],
-Cell[291425, 5369, 1348, 25, 90, "Output",ExpressionUUID->"a005dbee-f844-4560-9407-7e72c266c8f8"]
+Cell[302599, 5535, 272, 6, 30, "Input",ExpressionUUID->"cb6ec748-feb4-4db7-bb16-18b44a68b9f7"],
+Cell[302874, 5543, 1348, 25, 90, "Output",ExpressionUUID->"a005dbee-f844-4560-9407-7e72c266c8f8"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[292810, 5399, 284, 6, 30, "Input",ExpressionUUID->"0f845e25-56ce-45ba-91c6-bac353d175f9"],
-Cell[293097, 5407, 441, 7, 41, "Output",ExpressionUUID->"25ebe523-2690-4a63-881b-c32654d57804"]
+Cell[304259, 5573, 284, 6, 30, "Input",ExpressionUUID->"0f845e25-56ce-45ba-91c6-bac353d175f9"],
+Cell[304546, 5581, 441, 7, 41, "Output",ExpressionUUID->"25ebe523-2690-4a63-881b-c32654d57804"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[293575, 5419, 731, 12, 30, "Input",ExpressionUUID->"0bb8bdcc-c9f1-4b0b-b849-2c47e118b2ff"],
-Cell[294309, 5433, 1306, 18, 41, "Output",ExpressionUUID->"d124a351-5c07-4ca2-85f5-c9ed0264e7e3"]
+Cell[305024, 5593, 731, 12, 30, "Input",ExpressionUUID->"0bb8bdcc-c9f1-4b0b-b849-2c47e118b2ff"],
+Cell[305758, 5607, 1306, 18, 41, "Output",ExpressionUUID->"d124a351-5c07-4ca2-85f5-c9ed0264e7e3"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[295652, 5456, 303, 6, 30, "Input",ExpressionUUID->"0eba9ff8-406c-47ef-b9a6-fa0f148cbc3a"],
-Cell[295958, 5464, 372, 6, 41, "Output",ExpressionUUID->"c09964ef-45a3-4be8-83ce-47ed8b947932"]
+Cell[307101, 5630, 303, 6, 30, "Input",ExpressionUUID->"0eba9ff8-406c-47ef-b9a6-fa0f148cbc3a"],
+Cell[307407, 5638, 372, 6, 41, "Output",ExpressionUUID->"c09964ef-45a3-4be8-83ce-47ed8b947932"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[296367, 5475, 511, 11, 55, "Input",ExpressionUUID->"7fd195bb-9741-401e-9741-02600c96a311"],
-Cell[296881, 5488, 464, 7, 41, "Output",ExpressionUUID->"ffd5aabf-55a6-44dd-8fa3-0e7a48a399b4"],
-Cell[297348, 5497, 453, 7, 41, "Output",ExpressionUUID->"0f7e5542-ca06-431b-aa34-e9f4ed95241e"]
+Cell[307816, 5649, 511, 11, 55, "Input",ExpressionUUID->"7fd195bb-9741-401e-9741-02600c96a311"],
+Cell[308330, 5662, 464, 7, 41, "Output",ExpressionUUID->"ffd5aabf-55a6-44dd-8fa3-0e7a48a399b4"],
+Cell[308797, 5671, 453, 7, 41, "Output",ExpressionUUID->"0f7e5542-ca06-431b-aa34-e9f4ed95241e"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[297838, 5509, 365, 7, 48, "Input",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
-Cell[298206, 5518, 555, 9, 41, "Output",ExpressionUUID->"a4693a9c-e9d2-4503-8be5-c254b2e0db40"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[298798, 5532, 216, 4, 54, "Input",ExpressionUUID->"24bd5fd6-fe91-479d-b873-e137db5c75ae"],
-Cell[299017, 5538, 233, 4, 41, "Output",ExpressionUUID->"1d302bbe-d940-4bf1-9728-ac0e1b497a03"]
+Cell[309287, 5683, 361, 6, 48, "Input",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
+Cell[309651, 5691, 573, 8, 41, "Output",ExpressionUUID->"7b7f44ba-c695-472b-94ed-3af645318ef7"]
 }, Open  ]]
 }, Open  ]]
 }
