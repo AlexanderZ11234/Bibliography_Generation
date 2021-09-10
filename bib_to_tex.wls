@@ -11,7 +11,7 @@ bibdatabase[bibpath_String]:=
 Module[{rawstrings,types,keys,otherfields},
 	rawstrings=(StringSplit[#,RegularExpression["\n\\@"]]&@Import[bibpath,"Text"])[[2;;-2]];
 	types="type"->First[#]&/@StringCases[RegularExpression["(^[A-Z]\\w+?)(?=\\{)"]->"$1"]/@rawstrings;
-	keys=StringCases[RegularExpression["(?<=\\{)([A-Z]\\w+?)(?=\\,)"]->"$1"]/@rawstrings;
+	keys=StringCases[RegularExpression["(?<=\\{)(\\w+?)(?=\\,)"]->"$1"]/@rawstrings;
 	otherfields=StringCases[RegularExpression[" (\\w+) +\\= +\\{(.+)\\}\\,\n"]->("$1"->"$2")]/@rawstrings;
 	Association@Thread[Flatten[keys]->(Association/@Join[{types,"key"->First[#]&/@keys}\[Transpose],otherfields,2])]
 ];

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    314107,       5776]
-NotebookOptionsPosition[    310375,       5704]
-NotebookOutlinePosition[    310777,       5720]
-CellTagsIndexPosition[    310734,       5717]
+NotebookDataLength[    314900,       5793]
+NotebookOptionsPosition[    311168,       5721]
+NotebookOutlinePosition[    311570,       5737]
+CellTagsIndexPosition[    311527,       5734]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2318,14 +2318,24 @@ Cell[BoxData[{
            "RegularExpression", "[", "\"\<(^[A-Z]\\\\w+?)(?=\\\\{)\>\"", 
             "]"}], "->", "\"\<$1\>\""}], "]"}], "/@", "rawstrings"}]}]}], ";",
        "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{"keys", "=", 
+         RowBox[{
+          RowBox[{"StringCases", "[", 
+           RowBox[{
+            RowBox[{
+            "RegularExpression", "[", 
+             "\"\<(?<=\\\\{)([A-Z]\\\\w+?)(?=\\\\,)\>\"", "]"}], "->", 
+            "\"\<$1\>\""}], "]"}], "/@", "rawstrings"}]}], ";"}], "*)"}], 
+      "\[IndentingNewLine]", 
       RowBox[{"keys", "=", 
        RowBox[{
         RowBox[{"StringCases", "[", 
          RowBox[{
           RowBox[{
-          "RegularExpression", "[", 
-           "\"\<(?<=\\\\{)([A-Z]\\\\w+?)(?=\\\\,)\>\"", "]"}], "->", 
-          "\"\<$1\>\""}], "]"}], "/@", "rawstrings"}]}], ";", 
+          "RegularExpression", "[", "\"\<(?<=\\\\{)(\\\\w+?)(?=\\\\,\\n)\>\"",
+            "]"}], "->", "\"\<$1\>\""}], "]"}], "/@", "rawstrings"}]}], ";", 
       "\[IndentingNewLine]", 
       RowBox[{"otherfields", "=", 
        RowBox[{
@@ -2520,7 +2530,6 @@ ed. (`publisher`, `address`, `year`).\>\"", "]"}]}], ";",
  RowBox[{
   RowBox[{"exporttex", "[", 
    RowBox[{"texpath_String", ",", "bibpath_String", ",", 
-    RowBox[{"outname_String", ":", "\"\<bib.tex\>\""}], ",", 
     RowBox[{"hyperlink", ":", 
      RowBox[{"(", 
       RowBox[{"True", "|", "False"}], ")"}], ":", "False"}]}], "]"}], ":=", 
@@ -2560,9 +2569,9 @@ thebibliography}\>\"", "]"}], "[",
          RowBox[{
           RowBox[{"FileNameDrop", "[", 
            RowBox[{"texpath", ",", 
-            RowBox[{"-", "1"}]}], "]"}], ",", "outname"}], "}"}], "]"}], ",", 
-       "finalstring", ",", "\"\<TEXT\>\""}], "]"}]}]}], "\[IndentingNewLine]",
-    "]"}]}]}], "Input",
+            RowBox[{"-", "1"}]}], "]"}], ",", "\"\<bib.tex\>\""}], "}"}], 
+        "]"}], ",", "finalstring", ",", "\"\<TEXT\>\""}], "]"}]}]}], 
+   "\[IndentingNewLine]", "]"}]}]}], "Input",
  CellChangeTimes->{{3.840108557837263*^9, 3.8401086850246143`*^9}, {
    3.84010884998315*^9, 3.8401089306584787`*^9}, {3.8401090516969643`*^9, 
    3.8401091205868473`*^9}, {3.840109153117838*^9, 3.8401091802586117`*^9}, {
@@ -2601,9 +2610,12 @@ thebibliography}\>\"", "]"}], "[",
    3.840189607207486*^9}, {3.8401897582121096`*^9, 3.8401898123758507`*^9}, 
    3.8401898464430647`*^9, {3.840189916580244*^9, 3.8401899999342594`*^9}, {
    3.8401901617648325`*^9, 3.8401901623104496`*^9}, {3.8402277254214225`*^9, 
-   3.840227726560665*^9}},
+   3.840227726560665*^9}, {3.840242379562392*^9, 3.8402423809015293`*^9}, {
+   3.8402424299434423`*^9, 3.840242431452775*^9}, {3.840242684246255*^9, 
+   3.840242691174012*^9}, {3.840243982862913*^9, 3.8402439903817654`*^9}, {
+   3.840244078132162*^9, 3.8402440792603645`*^9}},
  Background->RGBColor[1, 1, 0.85],
- CellLabel->"In[1]:=",ExpressionUUID->"fc9d5688-3e7e-443f-ad88-5007756aea8a"],
+ CellLabel->"In[50]:=",ExpressionUUID->"fc9d5688-3e7e-443f-ad88-5007756aea8a"],
 
 Cell[CellGroupData[{
 
@@ -2626,7 +2638,7 @@ Manuscript\\\\tBLG_ZLM.bib\>\""}], ";"}], "\[IndentingNewLine]",
   3.8401091396505165`*^9}, {3.840109208513751*^9, 3.8401092365779505`*^9}, {
   3.840109272585844*^9, 3.8401093049385543`*^9}, {3.840112457849145*^9, 
   3.840112461863381*^9}},
- CellLabel->"In[6]:=",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
+ CellLabel->"In[55]:=",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -2673,8 +2685,9 @@ Cell[BoxData[
    3.840109276726829*^9, 3.840109896643185*^9, 3.8401106188440466`*^9, 
    3.8401111527910204`*^9, 3.8401113074510126`*^9, 3.8401124627266617`*^9, 
    3.8401144627013397`*^9, 3.840142643428432*^9, 3.8401893117050624`*^9, 
-   3.8401912130973883`*^9, 3.8402277290022507`*^9},
- CellLabel->"Out[8]=",ExpressionUUID->"e2e39a95-ce00-4b04-aed9-f8bcf347ee26"],
+   3.8401912130973883`*^9, 3.8402277290022507`*^9, 3.8402439939322324`*^9, 
+   3.840244085019418*^9},
+ CellLabel->"Out[57]=",ExpressionUUID->"83361f00-6ab3-4b60-bd2c-9863260b7c41"],
 
 Cell[BoxData[
  TagBox[
@@ -5676,19 +5689,22 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
    3.840109276726829*^9, 3.840109896643185*^9, 3.8401106188440466`*^9, 
    3.8401111527910204`*^9, 3.8401113074510126`*^9, 3.8401124627266617`*^9, 
    3.8401144627013397`*^9, 3.840142643428432*^9, 3.8401893117050624`*^9, 
-   3.8401912130973883`*^9, 3.84022772991042*^9},
- CellLabel->"Out[9]=",ExpressionUUID->"ad564a85-2023-4c4a-a9d3-753a6e38b959"]
+   3.8401912130973883`*^9, 3.8402277290022507`*^9, 3.8402439939322324`*^9, 
+   3.8402440851603565`*^9},
+ CellLabel->"Out[58]=",ExpressionUUID->"c20fb11d-82b6-49a3-8d84-deb5fa92ac33"]
 }, Closed]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"exporttex", "[", 
-  RowBox[{"texpath", ",", "bibpath", ",", "True"}], "]"}]], "Input",
+  RowBox[{"texpath", ",", "bibpath"}], 
+  RowBox[{"(*", 
+   RowBox[{",", "True"}], "*)"}], "]"}]], "Input",
  CellChangeTimes->{{3.8401148054650087`*^9, 3.840114812390726*^9}, {
-  3.8401895726728506`*^9, 3.8401895746188545`*^9}, {3.8401901252205424`*^9, 
-  3.840190143181331*^9}},
- CellLabel->"In[10]:=",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
+   3.8401895726728506`*^9, 3.8401895746188545`*^9}, {3.8401901252205424`*^9, 
+   3.840190143181331*^9}, 3.8402440967894306`*^9},
+ CellLabel->"In[60]:=",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
 
 Cell[BoxData["\<\"F:\\\\Research\\\\Projects\\\\large-angle_twisted_bilayer_\
 graphene\\\\Manuscript\\\\bib.tex\"\>"], "Output",
@@ -5697,13 +5713,14 @@ graphene\\\\Manuscript\\\\bib.tex\"\>"], "Output",
    3.840186141836095*^9, 3.8401890119155607`*^9, 3.8401895753178205`*^9, 
    3.8401896117329025`*^9, 3.8401898253129997`*^9, 3.8401898557962794`*^9, 
    3.8401899289921746`*^9, 3.8401900134212637`*^9, {3.84019012617864*^9, 
-   3.8401901440323253`*^9}, 3.840191218274107*^9, 3.8402277344492855`*^9},
- CellLabel->"Out[10]=",ExpressionUUID->"ec6fc9fa-0d1a-4ce8-bc20-d04b7c966c5f"]
+   3.8401901440323253`*^9}, 3.840191218274107*^9, 3.8402277344492855`*^9, {
+   3.8402440891540236`*^9, 3.8402440978935375`*^9}},
+ CellLabel->"Out[60]=",ExpressionUUID->"b211577e-705d-4d72-91d1-c5ed018d80f2"]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1920, 1117},
-WindowMargins->{{Automatic, 1912}, {Automatic, -8}},
+WindowSize->{1904, 1109},
+WindowMargins->{{-1920, Automatic}, {Automatic, 0}},
 FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (June 19, 2021)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"60a0393f-a384-4f73-8b40-264771fe5215"
@@ -5767,15 +5784,15 @@ Cell[120184, 2234, 453, 7, 41, "Output",ExpressionUUID->"0f7e5542-ca06-431b-aa34
 }, Closed]],
 Cell[CellGroupData[{
 Cell[120686, 2247, 154, 3, 89, "Title",ExpressionUUID->"a78bb14c-d08c-4c90-aa79-186053c1f584"],
-Cell[120843, 2252, 14836, 353, 1625, "Input",ExpressionUUID->"fc9d5688-3e7e-443f-ad88-5007756aea8a"],
+Cell[120843, 2252, 15402, 365, 1604, "Input",ExpressionUUID->"fc9d5688-3e7e-443f-ad88-5007756aea8a"],
 Cell[CellGroupData[{
-Cell[135704, 2609, 939, 19, 126, "Input",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
-Cell[136646, 2630, 2756, 46, 138, "Output",ExpressionUUID->"e2e39a95-ce00-4b04-aed9-f8bcf347ee26"],
-Cell[139405, 2678, 169944, 3001, 993, "Output",ExpressionUUID->"ad564a85-2023-4c4a-a9d3-753a6e38b959"]
+Cell[136270, 2621, 940, 19, 126, "Input",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
+Cell[137213, 2642, 2807, 47, 138, "Output",ExpressionUUID->"83361f00-6ab3-4b60-bd2c-9863260b7c41"],
+Cell[140023, 2691, 170000, 3002, 993, "Output",ExpressionUUID->"c20fb11d-82b6-49a3-8d84-deb5fa92ac33"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[309386, 5684, 361, 6, 48, "Input",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
-Cell[309750, 5692, 597, 8, 41, "Output",ExpressionUUID->"ec6fc9fa-0d1a-4ce8-bc20-d04b7c966c5f"]
+Cell[310060, 5698, 426, 8, 30, "Input",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
+Cell[310489, 5708, 651, 9, 41, "Output",ExpressionUUID->"b211577e-705d-4d72-91d1-c5ed018d80f2"]
 }, Open  ]]
 }, Open  ]]
 }
