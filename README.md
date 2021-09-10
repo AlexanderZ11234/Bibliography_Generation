@@ -12,3 +12,5 @@ The function `exporttotex` in the notebook then can extract the corresponding in
 ## `*.bib` to `*.tex`
 
 I personally prefer this second solution.
+
+This time the function `exporttotex` does the similar job, but from the original reference database `*.bib`.
