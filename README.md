@@ -13,4 +13,4 @@ The function `exporttotex` in the notebook then can extract the corresponding in
 
 I personally prefer this second solution.
 
-This time the function `exporttotex` does the similar job, according to the cited keys with the correct order in `\cite{*}` in the `*.tex` file, but from the original reference database `*.bib`.
+This time the function `exporttotex` does the similar job, according to the cited keys with the correct order in `\cite{*}` in the `*.tex` file, extract corresponding pieces of information from the original reference database `*.bib`.
