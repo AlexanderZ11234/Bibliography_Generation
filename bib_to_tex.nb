@@ -2014,7 +2014,233 @@ then applied to a number of important twistronic materials.", "date" ->
  CellLabel->
   "Out[73]//TableForm=",ExpressionUUID->"70070b5f-51ea-432f-a037-\
 dd03119ed55e"]
-}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"bibdatabase", "[", "bibpath", "]"}], "[", "\"\<Carr2020\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.840114347808794*^9, 3.8401143519919133`*^9}},
+ CellLabel->
+  "In[483]:=",ExpressionUUID->"87aed61f-91ec-4f98-a887-99fe53af75b0"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"type\"\>", "\[Rule]", "\<\"phdthesis\"\>"}], ",", 
+   RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Carr2020\"\>"}], ",", 
+   RowBox[{"\<\"author\"\>", "\[Rule]", "\<\"Stephen Thomas Carr\"\>"}], ",", 
+   RowBox[{"\<\"school\"\>", "\[Rule]", "\<\"Harvard University\"\>"}], ",", 
+   RowBox[{"\<\"title\"\>", 
+    "\[Rule]", "\<\"Moir\[EAcute] Patterns in 2D Materials\"\>"}], ",", 
+   RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2020\"\>"}], ",", 
+   RowBox[{"\<\"abstract\"\>", 
+    "\[Rule]", "\<\"The relative orientation between two or more layers of a \
+2D crystal can create moir\[EAcute] patterns. The patterns have a \
+characteristic size, known as the moir\[EAcute] length, which can be directly \
+controlled by the twist angle between layers. As the moir\[EAcute] length \
+grows, new atomic and electronic phases can emerge. The strong dependence of \
+electronic properties on the twist angle has inspired the name for this new \
+topic: \\\"twistronics\\\". Methods designed for modeling these complicated \
+systems are presented and then applied to a number of important twistronic \
+materials.\"\>"}], ",", 
+   RowBox[{"\<\"date\"\>", "\[Rule]", "\<\"2020\"\>"}], ",", 
+   RowBox[{"\<\"groups\"\>", "\[Rule]", "\<\"tBLG_ZLMs\"\>"}], ",", 
+   RowBox[{"\<\"language\"\>", "\[Rule]", "\<\"English\"\>"}], ",", 
+   RowBox[{"\<\"timestamp\"\>", "\[Rule]", "\<\"2021-03-10\"\>"}], ",", 
+   RowBox[{"\<\"url\"\>", 
+    "\[Rule]", "\<\"https://dash.harvard.edu/handle/1/37365981\"\>"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.8401143526299133`*^9},
+ CellLabel->
+  "Out[483]=",ExpressionUUID->"1c026716-e68c-4bb6-9a95-54a38beb9876"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"bibdatabase", "[", "bibpath", "]"}], "[", "\"\<Goldstein2005\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.840113895153866*^9, 3.8401139019842477`*^9}},
+ CellLabel->
+  "In[471]:=",ExpressionUUID->"b11605c4-16ea-476e-a929-148a52669e42"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"type\"\>", "\[Rule]", "\<\"Book\"\>"}], ",", 
+   RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Goldstein2005\"\>"}], ",", 
+   RowBox[{"\<\"author\"\>", 
+    "\[Rule]", "\<\"Herbert Goldstein and Charles Poole and John Safko\"\>"}],
+    ",", 
+   RowBox[{"\<\"publisher\"\>", "\[Rule]", "\<\"Higher Education Press\"\>"}],
+    ",", 
+   RowBox[{"\<\"title\"\>", "\[Rule]", "\<\"Classical Mechanics\"\>"}], ",", 
+   RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2005\"\>"}], ",", 
+   RowBox[{"\<\"address\"\>", "\[Rule]", "\<\"Beijing\"\>"}], ",", 
+   RowBox[{"\<\"edition\"\>", "\[Rule]", "\<\"3rd\"\>"}], ",", 
+   RowBox[{"\<\"isbn\"\>", "\[Rule]", "\<\"978-7-04-016091-8\"\>"}], ",", 
+   RowBox[{"\<\"groups\"\>", "\[Rule]", "\<\"appendix, tBLG_ZLMs\"\>"}], ",", 
+   RowBox[{"\<\"timestamp\"\>", "\[Rule]", "\<\"2021-03-06\"\>"}], ",", 
+   RowBox[{"\<\"url\"\>", 
+    "\[Rule]", \
+"\<\"https://www.hep.com.cn/book/show/14d2e65a-37c1-4280-aa8e-a4c9a465f283\"\>\
+"}]}], "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.8401139023143854`*^9},
+ CellLabel->
+  "Out[471]=",ExpressionUUID->"c164e29f-de0b-4a83-ab4e-b55cbf5b4fef"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"bibdatabase", "[", "bibpath", "]"}], "[", 
+  RowBox[{"[", "1", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.840112607255644*^9, 3.8401126173198023`*^9}},
+ CellLabel->
+  "In[422]:=",ExpressionUUID->"cb6ec748-feb4-4db7-bb16-18b44a68b9f7"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"type\"\>", "\[Rule]", "\<\"Article\"\>"}], ",", 
+   RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Cao2018N\"\>"}], ",", 
+   RowBox[{"\<\"author\"\>", 
+    "\[Rule]", "\<\"Yuan Cao and Valla Fatemi and Shiang Fang and Kenji \
+Watanabe and Takashi Taniguchi and Efthimios Kaxiras and Pablo \
+Jarillo-Herrero\"\>"}], ",", 
+   RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Nature\"\>"}], ",", 
+   RowBox[{"\<\"title\"\>", 
+    "\[Rule]", "\<\"Unconventional superconductivity in magic-angle graphene \
+superlattices\"\>"}], ",", 
+   RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2018\"\>"}], ",", 
+   RowBox[{"\<\"month\"\>", "\[Rule]", "\<\"mar\"\>"}], ",", 
+   RowBox[{"\<\"number\"\>", "\[Rule]", "\<\"7699\"\>"}], ",", 
+   RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"43--50\"\>"}], ",", 
+   RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"556\"\>"}], ",", 
+   RowBox[{"\<\"doi\"\>", "\[Rule]", "\<\"10.1038/nature26160\"\>"}], ",", 
+   RowBox[{"\<\"publisher\"\>", 
+    "\[Rule]", "\<\"Springer Science and Business Media {LLC}\"\>"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{{3.840112608513232*^9, 3.84011261788056*^9}, {
+   3.8401127429968557`*^9, 3.840112751720873*^9}, 3.8401128515576563`*^9},
+ CellLabel->
+  "Out[422]=",ExpressionUUID->"a005dbee-f844-4560-9407-7e72c266c8f8"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"apsrevbibstyle", "[", 
+  RowBox[{"1", ",", 
+   RowBox[{"bibdatabase", "[", "bibpath", "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.840112690775877*^9, 3.840112691128872*^9}},
+ CellLabel->
+  "In[480]:=",ExpressionUUID->"0f845e25-56ce-45ba-91c6-bac353d175f9"],
+
+Cell[BoxData["\<\"\\t\\t\\\\bibitem{Cao2018N} Y. Cao, V. Fatemi, S. Fang, K. \
+Watanabe, T. Taniguchi, E. Kaxiras, and P. Jarillo-Herrero, Nature \
+\\\\textbf{556}, 43 (2018).\"\>"], "Output",
+ CellChangeTimes->{
+  3.8401126917263184`*^9, {3.8401127315451794`*^9, 3.84011275341596*^9}, 
+   3.840112849467826*^9, 3.8401134795739975`*^9, 3.840114029351145*^9},
+ CellLabel->
+  "Out[480]=",ExpressionUUID->"25ebe523-2690-4a63-881b-c32654d57804"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"apsrevbibstyle", "[", 
+  RowBox[{"\"\<Cao2018N\>\"", ",", 
+   RowBox[{"bibdatabase", "[", "bibpath", "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8401097458273635`*^9, 3.8401097499829245`*^9}, {
+   3.8401097922786813`*^9, 3.840109821721302*^9}, 3.8401101286952353`*^9, {
+   3.840110191719801*^9, 3.8401102025902667`*^9}, {3.840110511895425*^9, 
+   3.8401105478230596`*^9}, 3.8401109841790533`*^9, 3.840111189683299*^9, {
+   3.840111917744508*^9, 3.840111941876914*^9}, {3.8401120426797895`*^9, 
+   3.840112078930008*^9}, {3.840112566772386*^9, 3.840112567455205*^9}, {
+   3.8401126776262445`*^9, 3.8401126789983377`*^9}},
+ CellLabel->
+  "In[469]:=",ExpressionUUID->"0bb8bdcc-c9f1-4b0b-b849-2c47e118b2ff"],
+
+Cell[BoxData["\<\"\\t\\t\\\\bibitem{Cao2018N} Y. Cao, V. Fatemi, S. Fang, K. \
+Watanabe, T. Taniguchi, E. Kaxiras, and P. Jarillo-Herrero, Nature \
+\\\\textbf{556}, 43 (2018).\"\>"], "Output",
+ CellChangeTimes->{{3.8401098164049845`*^9, 3.840109836501176*^9}, 
+   3.84010990076659*^9, 3.8401099398876867`*^9, {3.8401100919909744`*^9, 
+   3.840110129162264*^9}, {3.8401101696005945`*^9, 3.8401102031365128`*^9}, {
+   3.8401103040438414`*^9, 3.840110353808393*^9}, 3.840110441386242*^9, {
+   3.840110488963973*^9, 3.8401105486642513`*^9}, 3.8401106212939777`*^9, 
+   3.840110717826167*^9, 3.8401107728729258`*^9, 3.8401109389716954`*^9, 
+   3.8401109848295836`*^9, 3.840111098622033*^9, 3.8401111565930314`*^9, 
+   3.84011119025128*^9, {3.8401113101566095`*^9, 3.84011133504102*^9}, 
+   3.8401114619338446`*^9, 3.840111512537866*^9, 3.8401115697772007`*^9, {
+   3.840112055474213*^9, 3.840112097447415*^9}, 3.84011213726338*^9, 
+   3.84011218796568*^9, {3.8401125283214617`*^9, 3.8401125914631295`*^9}, {
+   3.8401126638888946`*^9, 3.8401126794675612`*^9}, 3.8401128541690073`*^9, 
+   3.840112993057558*^9, 3.840113056840027*^9, 3.840113325918936*^9, {
+   3.840113460088709*^9, 3.840113482785514*^9}, 3.8401137948223248`*^9},
+ CellLabel->
+  "Out[469]=",ExpressionUUID->"d124a351-5c07-4ca2-85f5-c9ed0264e7e3"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"apsrevbibstyle", "[", 
+  RowBox[{"\"\<Shen2017\>\"", ",", 
+   RowBox[{"bibdatabase", "[", "bibpath", "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8401136156236196`*^9, 3.8401136175432796`*^9}},
+ CellLabel->
+  "In[481]:=",ExpressionUUID->"0eba9ff8-406c-47ef-b9a6-fa0f148cbc3a"],
+
+Cell[BoxData["\<\"\\t\\t\\\\bibitem{Shen2017} S.-Q. Shen, \
+\\\\textit{Topological Insulators: Dirac Equation~in Condensed Matter}, 2nd \
+ed. (Springer-Verlag GmbH, Singapore, 2017).\"\>"], "Output",
+ CellChangeTimes->{3.8401136183896494`*^9, 3.84011379649677*^9, 
+  3.840114031597377*^9},
+ CellLabel->
+  "Out[481]=",ExpressionUUID->"c09964ef-45a3-4be8-83ce-47ed8b947932"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"apsrevbibstyle", "[", 
+  RowBox[{"\"\<Goldstein2005\>\"", ",", 
+   RowBox[{"bibdatabase", "[", "bibpath", "]"}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"apsrevbibstyle", "[", 
+  RowBox[{"\"\<Carr2020\>\"", ",", 
+   RowBox[{"bibdatabase", "[", "bibpath", "]"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.840113656184033*^9, 3.8401136718243256`*^9}, {
+  3.840114445521692*^9, 3.840114452968548*^9}},
+ CellLabel->
+  "In[506]:=",ExpressionUUID->"7fd195bb-9741-401e-9741-02600c96a311"],
+
+Cell[BoxData["\<\"\\t\\t\\\\bibitem{Goldstein2005} H. Goldstein, C. Poole, \
+and J. Safko, \\\\textit{Classical Mechanics}, 3rd ed. (Higher Education \
+Press, Beijing, 2005).\"\>"], "Output",
+ CellChangeTimes->{{3.840113672251479*^9, 3.840113695583376*^9}, 
+   3.840114032948636*^9, {3.8401144536462364`*^9, 3.8401144668026333`*^9}, {
+   3.8401145636782*^9, 3.840114581602299*^9}},
+ CellLabel->
+  "Out[506]=",ExpressionUUID->"ffd5aabf-55a6-44dd-8fa3-0e7a48a399b4"],
+
+Cell[BoxData["\<\"\\t\\t\\\\bibitem{Carr2020} S. T. Carr, English, \
+\\\\textit{Moir\[EAcute] Patterns in 2D Materials}, phdthesis, Harvard \
+University, (2020).\"\>"], "Output",
+ CellChangeTimes->{{3.840113672251479*^9, 3.840113695583376*^9}, 
+   3.840114032948636*^9, {3.8401144536462364`*^9, 3.8401144668026333`*^9}, {
+   3.8401145636782*^9, 3.8401145816062965`*^9}},
+ CellLabel->
+  "Out[507]=",ExpressionUUID->"0f7e5542-ca06-431b-aa34-e9f4ed95241e"]
+}, Closed]]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -5456,232 +5682,6 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{
-  RowBox[{"bibdatabase", "[", "bibpath", "]"}], "[", "\"\<Carr2020\>\"", 
-  "]"}]], "Input",
- CellChangeTimes->{{3.840114347808794*^9, 3.8401143519919133`*^9}},
- CellLabel->
-  "In[483]:=",ExpressionUUID->"87aed61f-91ec-4f98-a887-99fe53af75b0"],
-
-Cell[BoxData[
- RowBox[{"\[LeftAssociation]", 
-  RowBox[{
-   RowBox[{"\<\"type\"\>", "\[Rule]", "\<\"phdthesis\"\>"}], ",", 
-   RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Carr2020\"\>"}], ",", 
-   RowBox[{"\<\"author\"\>", "\[Rule]", "\<\"Stephen Thomas Carr\"\>"}], ",", 
-   RowBox[{"\<\"school\"\>", "\[Rule]", "\<\"Harvard University\"\>"}], ",", 
-   RowBox[{"\<\"title\"\>", 
-    "\[Rule]", "\<\"Moir\[EAcute] Patterns in 2D Materials\"\>"}], ",", 
-   RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2020\"\>"}], ",", 
-   RowBox[{"\<\"abstract\"\>", 
-    "\[Rule]", "\<\"The relative orientation between two or more layers of a \
-2D crystal can create moir\[EAcute] patterns. The patterns have a \
-characteristic size, known as the moir\[EAcute] length, which can be directly \
-controlled by the twist angle between layers. As the moir\[EAcute] length \
-grows, new atomic and electronic phases can emerge. The strong dependence of \
-electronic properties on the twist angle has inspired the name for this new \
-topic: \\\"twistronics\\\". Methods designed for modeling these complicated \
-systems are presented and then applied to a number of important twistronic \
-materials.\"\>"}], ",", 
-   RowBox[{"\<\"date\"\>", "\[Rule]", "\<\"2020\"\>"}], ",", 
-   RowBox[{"\<\"groups\"\>", "\[Rule]", "\<\"tBLG_ZLMs\"\>"}], ",", 
-   RowBox[{"\<\"language\"\>", "\[Rule]", "\<\"English\"\>"}], ",", 
-   RowBox[{"\<\"timestamp\"\>", "\[Rule]", "\<\"2021-03-10\"\>"}], ",", 
-   RowBox[{"\<\"url\"\>", 
-    "\[Rule]", "\<\"https://dash.harvard.edu/handle/1/37365981\"\>"}]}], 
-  "\[RightAssociation]"}]], "Output",
- CellChangeTimes->{3.8401143526299133`*^9},
- CellLabel->
-  "Out[483]=",ExpressionUUID->"1c026716-e68c-4bb6-9a95-54a38beb9876"]
-}, Closed]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"bibdatabase", "[", "bibpath", "]"}], "[", "\"\<Goldstein2005\>\"", 
-  "]"}]], "Input",
- CellChangeTimes->{{3.840113895153866*^9, 3.8401139019842477`*^9}},
- CellLabel->
-  "In[471]:=",ExpressionUUID->"b11605c4-16ea-476e-a929-148a52669e42"],
-
-Cell[BoxData[
- RowBox[{"\[LeftAssociation]", 
-  RowBox[{
-   RowBox[{"\<\"type\"\>", "\[Rule]", "\<\"Book\"\>"}], ",", 
-   RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Goldstein2005\"\>"}], ",", 
-   RowBox[{"\<\"author\"\>", 
-    "\[Rule]", "\<\"Herbert Goldstein and Charles Poole and John Safko\"\>"}],
-    ",", 
-   RowBox[{"\<\"publisher\"\>", "\[Rule]", "\<\"Higher Education Press\"\>"}],
-    ",", 
-   RowBox[{"\<\"title\"\>", "\[Rule]", "\<\"Classical Mechanics\"\>"}], ",", 
-   RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2005\"\>"}], ",", 
-   RowBox[{"\<\"address\"\>", "\[Rule]", "\<\"Beijing\"\>"}], ",", 
-   RowBox[{"\<\"edition\"\>", "\[Rule]", "\<\"3rd\"\>"}], ",", 
-   RowBox[{"\<\"isbn\"\>", "\[Rule]", "\<\"978-7-04-016091-8\"\>"}], ",", 
-   RowBox[{"\<\"groups\"\>", "\[Rule]", "\<\"appendix, tBLG_ZLMs\"\>"}], ",", 
-   RowBox[{"\<\"timestamp\"\>", "\[Rule]", "\<\"2021-03-06\"\>"}], ",", 
-   RowBox[{"\<\"url\"\>", 
-    "\[Rule]", \
-"\<\"https://www.hep.com.cn/book/show/14d2e65a-37c1-4280-aa8e-a4c9a465f283\"\>\
-"}]}], "\[RightAssociation]"}]], "Output",
- CellChangeTimes->{3.8401139023143854`*^9},
- CellLabel->
-  "Out[471]=",ExpressionUUID->"c164e29f-de0b-4a83-ab4e-b55cbf5b4fef"]
-}, Closed]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"bibdatabase", "[", "bibpath", "]"}], "[", 
-  RowBox[{"[", "1", "]"}], "]"}]], "Input",
- CellChangeTimes->{{3.840112607255644*^9, 3.8401126173198023`*^9}},
- CellLabel->
-  "In[422]:=",ExpressionUUID->"cb6ec748-feb4-4db7-bb16-18b44a68b9f7"],
-
-Cell[BoxData[
- RowBox[{"\[LeftAssociation]", 
-  RowBox[{
-   RowBox[{"\<\"type\"\>", "\[Rule]", "\<\"Article\"\>"}], ",", 
-   RowBox[{"\<\"key\"\>", "\[Rule]", "\<\"Cao2018N\"\>"}], ",", 
-   RowBox[{"\<\"author\"\>", 
-    "\[Rule]", "\<\"Yuan Cao and Valla Fatemi and Shiang Fang and Kenji \
-Watanabe and Takashi Taniguchi and Efthimios Kaxiras and Pablo \
-Jarillo-Herrero\"\>"}], ",", 
-   RowBox[{"\<\"journal\"\>", "\[Rule]", "\<\"Nature\"\>"}], ",", 
-   RowBox[{"\<\"title\"\>", 
-    "\[Rule]", "\<\"Unconventional superconductivity in magic-angle graphene \
-superlattices\"\>"}], ",", 
-   RowBox[{"\<\"year\"\>", "\[Rule]", "\<\"2018\"\>"}], ",", 
-   RowBox[{"\<\"month\"\>", "\[Rule]", "\<\"mar\"\>"}], ",", 
-   RowBox[{"\<\"number\"\>", "\[Rule]", "\<\"7699\"\>"}], ",", 
-   RowBox[{"\<\"pages\"\>", "\[Rule]", "\<\"43--50\"\>"}], ",", 
-   RowBox[{"\<\"volume\"\>", "\[Rule]", "\<\"556\"\>"}], ",", 
-   RowBox[{"\<\"doi\"\>", "\[Rule]", "\<\"10.1038/nature26160\"\>"}], ",", 
-   RowBox[{"\<\"publisher\"\>", 
-    "\[Rule]", "\<\"Springer Science and Business Media {LLC}\"\>"}]}], 
-  "\[RightAssociation]"}]], "Output",
- CellChangeTimes->{{3.840112608513232*^9, 3.84011261788056*^9}, {
-   3.8401127429968557`*^9, 3.840112751720873*^9}, 3.8401128515576563`*^9},
- CellLabel->
-  "Out[422]=",ExpressionUUID->"a005dbee-f844-4560-9407-7e72c266c8f8"]
-}, Closed]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"apsrevbibstyle", "[", 
-  RowBox[{"1", ",", 
-   RowBox[{"bibdatabase", "[", "bibpath", "]"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.840112690775877*^9, 3.840112691128872*^9}},
- CellLabel->
-  "In[480]:=",ExpressionUUID->"0f845e25-56ce-45ba-91c6-bac353d175f9"],
-
-Cell[BoxData["\<\"\\t\\t\\\\bibitem{Cao2018N} Y. Cao, V. Fatemi, S. Fang, K. \
-Watanabe, T. Taniguchi, E. Kaxiras, and P. Jarillo-Herrero, Nature \
-\\\\textbf{556}, 43 (2018).\"\>"], "Output",
- CellChangeTimes->{
-  3.8401126917263184`*^9, {3.8401127315451794`*^9, 3.84011275341596*^9}, 
-   3.840112849467826*^9, 3.8401134795739975`*^9, 3.840114029351145*^9},
- CellLabel->
-  "Out[480]=",ExpressionUUID->"25ebe523-2690-4a63-881b-c32654d57804"]
-}, Closed]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"apsrevbibstyle", "[", 
-  RowBox[{"\"\<Cao2018N\>\"", ",", 
-   RowBox[{"bibdatabase", "[", "bibpath", "]"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.8401097458273635`*^9, 3.8401097499829245`*^9}, {
-   3.8401097922786813`*^9, 3.840109821721302*^9}, 3.8401101286952353`*^9, {
-   3.840110191719801*^9, 3.8401102025902667`*^9}, {3.840110511895425*^9, 
-   3.8401105478230596`*^9}, 3.8401109841790533`*^9, 3.840111189683299*^9, {
-   3.840111917744508*^9, 3.840111941876914*^9}, {3.8401120426797895`*^9, 
-   3.840112078930008*^9}, {3.840112566772386*^9, 3.840112567455205*^9}, {
-   3.8401126776262445`*^9, 3.8401126789983377`*^9}},
- CellLabel->
-  "In[469]:=",ExpressionUUID->"0bb8bdcc-c9f1-4b0b-b849-2c47e118b2ff"],
-
-Cell[BoxData["\<\"\\t\\t\\\\bibitem{Cao2018N} Y. Cao, V. Fatemi, S. Fang, K. \
-Watanabe, T. Taniguchi, E. Kaxiras, and P. Jarillo-Herrero, Nature \
-\\\\textbf{556}, 43 (2018).\"\>"], "Output",
- CellChangeTimes->{{3.8401098164049845`*^9, 3.840109836501176*^9}, 
-   3.84010990076659*^9, 3.8401099398876867`*^9, {3.8401100919909744`*^9, 
-   3.840110129162264*^9}, {3.8401101696005945`*^9, 3.8401102031365128`*^9}, {
-   3.8401103040438414`*^9, 3.840110353808393*^9}, 3.840110441386242*^9, {
-   3.840110488963973*^9, 3.8401105486642513`*^9}, 3.8401106212939777`*^9, 
-   3.840110717826167*^9, 3.8401107728729258`*^9, 3.8401109389716954`*^9, 
-   3.8401109848295836`*^9, 3.840111098622033*^9, 3.8401111565930314`*^9, 
-   3.84011119025128*^9, {3.8401113101566095`*^9, 3.84011133504102*^9}, 
-   3.8401114619338446`*^9, 3.840111512537866*^9, 3.8401115697772007`*^9, {
-   3.840112055474213*^9, 3.840112097447415*^9}, 3.84011213726338*^9, 
-   3.84011218796568*^9, {3.8401125283214617`*^9, 3.8401125914631295`*^9}, {
-   3.8401126638888946`*^9, 3.8401126794675612`*^9}, 3.8401128541690073`*^9, 
-   3.840112993057558*^9, 3.840113056840027*^9, 3.840113325918936*^9, {
-   3.840113460088709*^9, 3.840113482785514*^9}, 3.8401137948223248`*^9},
- CellLabel->
-  "Out[469]=",ExpressionUUID->"d124a351-5c07-4ca2-85f5-c9ed0264e7e3"]
-}, Closed]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"apsrevbibstyle", "[", 
-  RowBox[{"\"\<Shen2017\>\"", ",", 
-   RowBox[{"bibdatabase", "[", "bibpath", "]"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.8401136156236196`*^9, 3.8401136175432796`*^9}},
- CellLabel->
-  "In[481]:=",ExpressionUUID->"0eba9ff8-406c-47ef-b9a6-fa0f148cbc3a"],
-
-Cell[BoxData["\<\"\\t\\t\\\\bibitem{Shen2017} S.-Q. Shen, \
-\\\\textit{Topological Insulators: Dirac Equation~in Condensed Matter}, 2nd \
-ed. (Springer-Verlag GmbH, Singapore, 2017).\"\>"], "Output",
- CellChangeTimes->{3.8401136183896494`*^9, 3.84011379649677*^9, 
-  3.840114031597377*^9},
- CellLabel->
-  "Out[481]=",ExpressionUUID->"c09964ef-45a3-4be8-83ce-47ed8b947932"]
-}, Closed]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[{
- RowBox[{"apsrevbibstyle", "[", 
-  RowBox[{"\"\<Goldstein2005\>\"", ",", 
-   RowBox[{"bibdatabase", "[", "bibpath", "]"}]}], 
-  "]"}], "\[IndentingNewLine]", 
- RowBox[{"apsrevbibstyle", "[", 
-  RowBox[{"\"\<Carr2020\>\"", ",", 
-   RowBox[{"bibdatabase", "[", "bibpath", "]"}]}], "]"}]}], "Input",
- CellChangeTimes->{{3.840113656184033*^9, 3.8401136718243256`*^9}, {
-  3.840114445521692*^9, 3.840114452968548*^9}},
- CellLabel->
-  "In[506]:=",ExpressionUUID->"7fd195bb-9741-401e-9741-02600c96a311"],
-
-Cell[BoxData["\<\"\\t\\t\\\\bibitem{Goldstein2005} H. Goldstein, C. Poole, \
-and J. Safko, \\\\textit{Classical Mechanics}, 3rd ed. (Higher Education \
-Press, Beijing, 2005).\"\>"], "Output",
- CellChangeTimes->{{3.840113672251479*^9, 3.840113695583376*^9}, 
-   3.840114032948636*^9, {3.8401144536462364`*^9, 3.8401144668026333`*^9}, {
-   3.8401145636782*^9, 3.840114581602299*^9}},
- CellLabel->
-  "Out[506]=",ExpressionUUID->"ffd5aabf-55a6-44dd-8fa3-0e7a48a399b4"],
-
-Cell[BoxData["\<\"\\t\\t\\\\bibitem{Carr2020} S. T. Carr, English, \
-\\\\textit{Moir\[EAcute] Patterns in 2D Materials}, phdthesis, Harvard \
-University, (2020).\"\>"], "Output",
- CellChangeTimes->{{3.840113672251479*^9, 3.840113695583376*^9}, 
-   3.840114032948636*^9, {3.8401144536462364`*^9, 3.8401144668026333`*^9}, {
-   3.8401145636782*^9, 3.8401145816062965`*^9}},
- CellLabel->
-  "Out[507]=",ExpressionUUID->"0f7e5542-ca06-431b-aa34-e9f4ed95241e"]
-}, Closed]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
  RowBox[{"exporttex", "[", 
   RowBox[{"texpath", ",", "bibpath", ",", "True"}], "]"}]], "Input",
  CellChangeTimes->{{3.8401148054650087`*^9, 3.840114812390726*^9}, {
@@ -5701,8 +5701,8 @@ graphene\\\\Manuscript\\\\bib.txt\"\>"], "Output",
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1920, 1117},
-WindowMargins->{{Automatic, 1912}, {Automatic, -8}},
+WindowSize->{1904, 1109},
+WindowMargins->{{-1928, Automatic}, {Automatic, 0}},
 FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (June 19, 2021)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"60a0393f-a384-4f73-8b40-264771fe5215"
@@ -5733,44 +5733,44 @@ Cell[8586, 193, 4834, 72, 186, "Output",ExpressionUUID->"69c169ff-f6bf-417c-bbb8
 Cell[CellGroupData[{
 Cell[13457, 270, 539, 13, 54, "Input",ExpressionUUID->"8d1b38fd-8836-4776-ae62-af21cbcf929d"],
 Cell[13999, 285, 96422, 1730, 1599, "Output",ExpressionUUID->"70070b5f-51ea-432f-a037-dd03119ed55e"]
-}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[110458, 2020, 267, 6, 36, "Input",ExpressionUUID->"87aed61f-91ec-4f98-a887-99fe53af75b0"],
+Cell[110728, 2028, 1720, 29, 138, "Output",ExpressionUUID->"1c026716-e68c-4bb6-9a95-54a38beb9876"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[110470, 2021, 154, 3, 89, "Title",ExpressionUUID->"a78bb14c-d08c-4c90-aa79-186053c1f584"],
-Cell[110627, 2026, 14784, 352, 1625, "Input",ExpressionUUID->"fc9d5688-3e7e-443f-ad88-5007756aea8a"],
-Cell[CellGroupData[{
-Cell[125436, 2382, 939, 19, 126, "Input",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
-Cell[126378, 2403, 2732, 46, 138, "Output",ExpressionUUID->"47508d81-04bc-48ff-868c-6fc20ec434f5"],
-Cell[129113, 2451, 169921, 3001, 993, "Output",ExpressionUUID->"4e5aefa5-c664-4e7d-925a-d75e35dd3b7e"]
+Cell[112485, 2062, 272, 6, 30, "Input",ExpressionUUID->"b11605c4-16ea-476e-a929-148a52669e42"],
+Cell[112760, 2070, 1189, 23, 66, "Output",ExpressionUUID->"c164e29f-de0b-4a83-ab4e-b55cbf5b4fef"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[299071, 5457, 267, 6, 30, "Input",ExpressionUUID->"87aed61f-91ec-4f98-a887-99fe53af75b0"],
-Cell[299341, 5465, 1720, 29, 138, "Output",ExpressionUUID->"1c026716-e68c-4bb6-9a95-54a38beb9876"]
+Cell[113986, 2098, 272, 6, 30, "Input",ExpressionUUID->"cb6ec748-feb4-4db7-bb16-18b44a68b9f7"],
+Cell[114261, 2106, 1348, 25, 90, "Output",ExpressionUUID->"a005dbee-f844-4560-9407-7e72c266c8f8"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[301098, 5499, 272, 6, 30, "Input",ExpressionUUID->"b11605c4-16ea-476e-a929-148a52669e42"],
-Cell[301373, 5507, 1189, 23, 66, "Output",ExpressionUUID->"c164e29f-de0b-4a83-ab4e-b55cbf5b4fef"]
+Cell[115646, 2136, 284, 6, 30, "Input",ExpressionUUID->"0f845e25-56ce-45ba-91c6-bac353d175f9"],
+Cell[115933, 2144, 441, 7, 41, "Output",ExpressionUUID->"25ebe523-2690-4a63-881b-c32654d57804"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[302599, 5535, 272, 6, 30, "Input",ExpressionUUID->"cb6ec748-feb4-4db7-bb16-18b44a68b9f7"],
-Cell[302874, 5543, 1348, 25, 90, "Output",ExpressionUUID->"a005dbee-f844-4560-9407-7e72c266c8f8"]
+Cell[116411, 2156, 731, 12, 30, "Input",ExpressionUUID->"0bb8bdcc-c9f1-4b0b-b849-2c47e118b2ff"],
+Cell[117145, 2170, 1306, 18, 41, "Output",ExpressionUUID->"d124a351-5c07-4ca2-85f5-c9ed0264e7e3"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[304259, 5573, 284, 6, 30, "Input",ExpressionUUID->"0f845e25-56ce-45ba-91c6-bac353d175f9"],
-Cell[304546, 5581, 441, 7, 41, "Output",ExpressionUUID->"25ebe523-2690-4a63-881b-c32654d57804"]
+Cell[118488, 2193, 303, 6, 30, "Input",ExpressionUUID->"0eba9ff8-406c-47ef-b9a6-fa0f148cbc3a"],
+Cell[118794, 2201, 372, 6, 41, "Output",ExpressionUUID->"c09964ef-45a3-4be8-83ce-47ed8b947932"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[305024, 5593, 731, 12, 30, "Input",ExpressionUUID->"0bb8bdcc-c9f1-4b0b-b849-2c47e118b2ff"],
-Cell[305758, 5607, 1306, 18, 41, "Output",ExpressionUUID->"d124a351-5c07-4ca2-85f5-c9ed0264e7e3"]
+Cell[119203, 2212, 511, 11, 55, "Input",ExpressionUUID->"7fd195bb-9741-401e-9741-02600c96a311"],
+Cell[119717, 2225, 464, 7, 41, "Output",ExpressionUUID->"ffd5aabf-55a6-44dd-8fa3-0e7a48a399b4"],
+Cell[120184, 2234, 453, 7, 41, "Output",ExpressionUUID->"0f7e5542-ca06-431b-aa34-e9f4ed95241e"]
+}, Closed]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[307101, 5630, 303, 6, 30, "Input",ExpressionUUID->"0eba9ff8-406c-47ef-b9a6-fa0f148cbc3a"],
-Cell[307407, 5638, 372, 6, 41, "Output",ExpressionUUID->"c09964ef-45a3-4be8-83ce-47ed8b947932"]
-}, Closed]],
+Cell[120686, 2247, 154, 3, 89, "Title",ExpressionUUID->"a78bb14c-d08c-4c90-aa79-186053c1f584"],
+Cell[120843, 2252, 14784, 352, 1625, "Input",ExpressionUUID->"fc9d5688-3e7e-443f-ad88-5007756aea8a"],
 Cell[CellGroupData[{
-Cell[307816, 5649, 511, 11, 55, "Input",ExpressionUUID->"7fd195bb-9741-401e-9741-02600c96a311"],
-Cell[308330, 5662, 464, 7, 41, "Output",ExpressionUUID->"ffd5aabf-55a6-44dd-8fa3-0e7a48a399b4"],
-Cell[308797, 5671, 453, 7, 41, "Output",ExpressionUUID->"0f7e5542-ca06-431b-aa34-e9f4ed95241e"]
+Cell[135652, 2608, 939, 19, 126, "Input",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
+Cell[136594, 2629, 2732, 46, 138, "Output",ExpressionUUID->"47508d81-04bc-48ff-868c-6fc20ec434f5"],
+Cell[139329, 2677, 169921, 3001, 993, "Output",ExpressionUUID->"4e5aefa5-c664-4e7d-925a-d75e35dd3b7e"]
 }, Closed]],
 Cell[CellGroupData[{
 Cell[309287, 5683, 361, 6, 48, "Input",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
