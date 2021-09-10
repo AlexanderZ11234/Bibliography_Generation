@@ -5719,7 +5719,7 @@ graphene\\\\Manuscript\\\\bib.tex\"\>"], "Output",
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1904, 1109},
+WindowSize->{1890, 1101},
 WindowMargins->{{-1920, Automatic}, {Automatic, 0}},
 FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (June 19, 2021)",
 StyleDefinitions->"Default.nb",
