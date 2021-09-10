@@ -3,7 +3,7 @@ dddd
 
 Well, a wierd functionality.
 
-## `*.bbl` to `*.tex`
+## `*.bbl` to `*.tex` (deprecated)
 
 I use [JabRef](https://www.jabref.org/) to generate and manage `*.bib` database file, from which for every single reference, relevant pieces of information would be extracted according to the order and the style written in the main text file `*.tex` by `bibtex`, and a `*.bbl` file would be automatically generated.
 
