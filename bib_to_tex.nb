@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    223964,       4134]
-NotebookOptionsPosition[    220232,       4062]
-NotebookOutlinePosition[    220634,       4078]
-CellTagsIndexPosition[    220591,       4075]
+NotebookDataLength[    224068,       4136]
+NotebookOptionsPosition[    220336,       4064]
+NotebookOutlinePosition[    220738,       4080]
+CellTagsIndexPosition[    220695,       4077]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -4041,8 +4041,9 @@ Cell[BoxData[
   RowBox[{"texpath", ",", "bibpath", ",", "True"}], "]"}]], "Input",
  CellChangeTimes->{{3.8401148054650087`*^9, 3.840114812390726*^9}, {
    3.8401895726728506`*^9, 3.8401895746188545`*^9}, {3.8401901252205424`*^9, 
-   3.840190143181331*^9}, 3.8402440967894306`*^9, 3.8402745305195723`*^9},
- CellLabel->"In[45]:=",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
+   3.840190143181331*^9}, 3.8402440967894306`*^9, 3.8402745305195723`*^9, {
+   3.8403369120749044`*^9, 3.840336922833294*^9}},
+ CellLabel->"In[48]:=",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
 
 Cell[BoxData["\<\"F:\\\\Research\\\\Projects\\\\large-angle_twisted_bilayer_\
 graphene\\\\Manuscript\\\\bib.tex\"\>"], "Output",
@@ -4055,8 +4056,9 @@ graphene\\\\Manuscript\\\\bib.tex\"\>"], "Output",
    3.8402440891540236`*^9, 3.8402440978935375`*^9}, 3.8402745379927115`*^9, 
    3.8402773488897285`*^9, 3.840277835662212*^9, {3.8402783032465534`*^9, 
    3.8402783084170823`*^9}, 3.840278386656764*^9, 3.8402784198002195`*^9, 
-   3.8402786677868834`*^9, 3.8402787072654376`*^9, 3.840278764584739*^9},
- CellLabel->"Out[45]=",ExpressionUUID->"0a1938f0-af10-48f7-8093-09b5c569982b"]
+   3.8402786677868834`*^9, 3.8402787072654376`*^9, 3.840278764584739*^9, {
+   3.8403368985768375`*^9, 3.840336923909193*^9}},
+ CellLabel->"Out[48]=",ExpressionUUID->"3fa68cd5-e74d-445f-9ee4-1b90f5e267a5"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -4132,8 +4134,8 @@ Cell[137280, 2643, 3043, 50, 162, "Output",ExpressionUUID->"cf61f4ed-1a64-4271-8
 Cell[140326, 2695, 78528, 1338, 449, "Output",ExpressionUUID->"60dd92cc-3f27-4959-87e1-6e3572823b63"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[218891, 4038, 411, 6, 48, "Input",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
-Cell[219305, 4046, 899, 12, 41, "Output",ExpressionUUID->"0a1938f0-af10-48f7-8093-09b5c569982b"]
+Cell[218891, 4038, 463, 7, 48, "Input",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
+Cell[219357, 4047, 951, 13, 41, "Output",ExpressionUUID->"3fa68cd5-e74d-445f-9ee4-1b90f5e267a5"]
 }, Open  ]]
 }, Open  ]]
 }
