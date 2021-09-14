@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    326791,       5996]
-NotebookOptionsPosition[    322830,       5920]
-NotebookOutlinePosition[    323232,       5936]
-CellTagsIndexPosition[    323189,       5933]
+NotebookDataLength[    332975,       6090]
+NotebookOptionsPosition[    329014,       6014]
+NotebookOutlinePosition[    329416,       6030]
+CellTagsIndexPosition[    329373,       6027]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2651,12 +2651,12 @@ Cell[BoxData[
   RowBox[{"citedkeys", "[", "texpath", "]"}], "//", "Length"}]], "Input",
  CellChangeTimes->{{3.8406016087887564`*^9, 3.8406016100642147`*^9}},
  CellLabel->
-  "In[169]:=",ExpressionUUID->"56e31ccb-4ee4-4cdc-8a9d-16601df520c7"],
+  "In[175]:=",ExpressionUUID->"56e31ccb-4ee4-4cdc-8a9d-16601df520c7"],
 
-Cell[BoxData["87"], "Output",
- CellChangeTimes->{3.840601610703723*^9},
+Cell[BoxData["94"], "Output",
+ CellChangeTimes->{3.840601610703723*^9, 3.840612503141692*^9},
  CellLabel->
-  "Out[169]=",ExpressionUUID->"f3a93ca4-0e9c-41d5-b3de-488d6df05ef6"]
+  "Out[175]=",ExpressionUUID->"7f37e707-c3bf-4df0-9d2e-e317d6cd307c"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2684,7 +2684,7 @@ Cell[BoxData[{
    3.8405988362830267`*^9, 3.840598907116749*^9, 3.8405991645686436`*^9, 
    3.8405995395452843`*^9},
  CellLabel->
-  "In[162]:=",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
+  "In[177]:=",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -2728,8 +2728,14 @@ Cell[BoxData[
    ",", "\<\"Popov2011PRB\"\>", ",", "\<\"Lebedeva2011PCCP\"\>", 
    ",", "\<\"Slater1954PR\"\>", ",", "\<\"Datta2004\"\>", 
    ",", "\<\"Datta2007\"\>", ",", "\<\"Qiao2009\"\>", 
+   ",", "\<\"Ferry2009\"\>", ",", "\<\"Hirose2014\"\>", 
+   ",", "\<\"Ventra2016\"\>", ",", "\<\"Ryndyk2015\"\>", 
    ",", "\<\"Sancho1984JPFMP\"\>", ",", "\<\"Sancho1985JPFMP\"\>", 
-   ",", "\<\"Qiao2007N\"\>"}], "}"}]], "Output",
+   ",", "\<\"Qiao2007N\"\>", ",", "\<\"Peierls1933ZP\"\>", 
+   ",", "\<\"Wannier1962RMP\"\>", ",", "\<\"Blount1962PR\"\>", 
+   ",", "\<\"Kohn1959PR\"\>", ",", "\<\"Luttinger1951PR\"\>", 
+   ",", "\<\"Hofstadter1976PRB\"\>", ",", "\<\"Feynman2011\"\>"}], 
+  "}"}]], "Output",
  CellChangeTimes->{
   3.8401087202902393`*^9, 3.840108954953451*^9, {3.840109131206562*^9, 
    3.840109181945481*^9}, {3.8401092261469226`*^9, 3.8401092374429674`*^9}, 
@@ -2747,9 +2753,9 @@ Cell[BoxData[
    3.840598897665081*^9, 3.840598908243785*^9}, 3.840599165158038*^9, 
    3.840599288322754*^9, 3.8405994143780875`*^9, 3.840599465423888*^9, {
    3.840599514023947*^9, 3.8405995558996215`*^9}, 3.8406006912347393`*^9, 
-   3.840601057449605*^9},
+   3.840601057449605*^9, 3.840612498639867*^9, 3.8406125932700415`*^9},
  CellLabel->
-  "Out[164]=",ExpressionUUID->"ff15d7b0-a3d3-4ee8-bd58-d49cabdbef36"],
+  "Out[179]=",ExpressionUUID->"41847f0f-ec4a-472d-99d8-88bd5a091046"],
 
 Cell[BoxData[
  TagBox[
@@ -3518,7 +3524,7 @@ multi-probe systems", "year" -> "2007", "month" -> "oct", "number" -> "43",
           "{IOP} Publishing"]}, "Sancho1984JPFMP" -> {
          Association[
          "type" -> "Article", "key" -> "Sancho1984JPFMP", "author" -> 
-          "M P Lopez Sancho and J M Lopez Sancho and J Rubio", "journal" -> 
+          "M. P. Lopez Sancho and J. M. Lopez Sancho and J. Rubio", "journal" -> 
           "J. Phys. F: Met. Phys.", "title" -> 
           "Quick iterative scheme for the calculation of transfer matrices: \
 application to Mo (100)", "year" -> "1984", "month" -> "may", "number" -> "5",
@@ -3527,8 +3533,8 @@ application to Mo (100)", "year" -> "1984", "month" -> "may", "number" -> "5",
        "Sancho1985JPFMP" -> {
          Association[
          "type" -> "Article", "key" -> "Sancho1985JPFMP", "author" -> 
-          "M P Lopez Sancho and J M Lopez Sancho and J M L Sancho and J \
-Rubio", "journal" -> "J. Phys. F: Met. Phys.", "title" -> 
+          "M. P. Lopez Sancho and J. M. Lopez Sancho and J. M. L. Sancho and \
+J. Rubio", "journal" -> "J. Phys. F: Met. Phys.", "title" -> 
           "Highly convergent schemes for the calculation of bulk and surface \
 Green functions", "year" -> "1985", "month" -> "apr", "number" -> "4", 
           "pages" -> "851--858", "volume" -> "15", "doi" -> 
@@ -3554,8 +3560,103 @@ Green functions", "year" -> "1985", "month" -> "apr", "number" -> "4",
           "Charge and spin transport in two-dimensional mesoscopic systems", 
           "year" -> "2009", "address" -> "Pokfulam, Hong Kong", "doi" -> 
           "10.5353/th_b4218228", "language" -> "English", "publisher" -> 
-          "The University of Hong Kong Libraries"]}], "AllowEmbedding" -> 
-     True, "InitialShape" -> TypeSystem`PackageScope`Limited[
+          "The University of Hong Kong Libraries", "url" -> 
+          "http://hub.hku.hk/handle/10722/55540"]}, "Ferry2009" -> {
+         Association[
+         "type" -> "Book", "key" -> "Ferry2009", "author" -> 
+          "David K. Ferry and Stephen M. Goodnick and Jonathan Bird", 
+          "publisher" -> "Cambridge University Press", "title" -> 
+          "Transport in Nanostructures", "year" -> "2009", "address" -> 
+          "Cambridge", "edition" -> "2nd", "isbn" -> "0521877482", "ean" -> 
+          "9780521877480", "pagetotal" -> "670", "url" -> 
+          "https://www.cambridge.org/us/academic/subjects/physics/condensed-\
+matter-physics-nanoscience-and-mesoscopic-physics/transport-nanostructures-\
+2nd-edition?format=HB"]}, "Hirose2014" -> {
+         Association[
+         "type" -> "Book", "key" -> "Hirose2014", "author" -> "Kenji Hirose", 
+          "publisher" -> "CRC Press", "title" -> 
+          "Quantum transport calculations for nanosystems", "year" -> "2014", 
+          "address" -> "Boca Raton", "edition" -> "1st", "isbn" -> 
+          "9789814267328", "url" -> 
+          "https://www.routledge.com/Quantum-Transport-Calculations-for-\
+Nanosystems/Hirose-Kobayashi/p/book/9789814267328"]}, "Ventra2016" -> {
+         Association[
+         "type" -> "Book", "key" -> "Ventra2016", "author" -> 
+          "Massimiliano Di Ventra", "publisher" -> 
+          "Cambridge University Press", "title" -> 
+          "Electrical Transport in Nanoscale Systems", "year" -> "2016", 
+          "address" -> "Cambridge", "edition" -> "1st", "isbn" -> 
+          "0521896347", "ean" -> "9780521896344", "pagetotal" -> "494", "url" -> 
+          "https://www.cambridge.org/us/academic/subjects/physics/condensed-\
+matter-physics-nanoscience-and-mesoscopic-physics/electrical-transport-\
+nanoscale-systems?format=HB"]}, "Ryndyk2015" -> {
+         Association[
+         "type" -> "Book", "key" -> "Ryndyk2015", "author" -> "Dmitry Ryndyk",
+           "publisher" -> "Springer-Verlag GmbH", "title" -> 
+          "Theory of Quantum Transport at Nanoscale", "year" -> "2015", 
+          "address" -> "Switzerland", "edition" -> "1st", "isbn" -> 
+          "9783319240886", "ean" -> "9783319240886", "pagetotal" -> "246", 
+          "url" -> "https://www.springer.com/us/book/9783319240862"]}, 
+       "Peierls1933ZP" -> {
+         Association[
+         "type" -> "Article", "key" -> "Peierls1933ZP", "author" -> 
+          "R. Peierls", "journal" -> "Z. Phys.", "title" -> 
+          "Zur Theorie des Diamagnetismus von Leitungselektronen", "year" -> 
+          "1933", "month" -> "nov", "number" -> "11-12", "pages" -> 
+          "763--791", "volume" -> "80", "doi" -> "10.1007/bf01342591", 
+          "publisher" -> "Springer Science and Business Media {LLC}", "url" -> 
+          "https://link.springer.com/article/10.1007/BF01342591"]}, 
+       "Wannier1962RMP" -> {
+         Association[
+         "type" -> "Article", "key" -> "Wannier1962RMP", "author" -> 
+          "Gregory H. Wannier", "journal" -> "Rev. Mod. Phys.", "title" -> 
+          "Dynamics of Band Electrons in Electric and Magnetic Fields", 
+          "year" -> "1962", "month" -> "oct", "number" -> "4", "pages" -> 
+          "645--655", "volume" -> "34", "doi" -> "10.1103/revmodphys.34.645", 
+          "publisher" -> "American Physical Society ({APS})"]}, 
+       "Blount1962PR" -> {
+         Association[
+         "type" -> "Article", "key" -> "Blount1962PR", "author" -> 
+          "E. I. Blount", "journal" -> "Phys. Rev.", "title" -> 
+          "Bloch Electrons in a Magnetic Field", "year" -> "1962", "month" -> 
+          "jun", "number" -> "5", "pages" -> "1636--1653", "volume" -> "126", 
+          "doi" -> "10.1103/physrev.126.1636", "publisher" -> 
+          "American Physical Society ({APS})"]}, "Kohn1959PR" -> {
+         Association[
+         "type" -> "Article", "key" -> "Kohn1959PR", "author" -> 
+          "Walter Kohn", "journal" -> "Phys. Rev.", "title" -> 
+          "Theory of Bloch Electrons in a Magnetic Field: The Effective \
+Hamiltonian", "year" -> "1959", "month" -> "sep", "number" -> "6", "pages" -> 
+          "1460--1478", "volume" -> "115", "doi" -> 
+          "10.1103/physrev.115.1460", "publisher" -> 
+          "American Physical Society ({APS})"]}, "Luttinger1951PR" -> {
+         Association[
+         "type" -> "Article", "key" -> "Luttinger1951PR", "author" -> 
+          "J. M. Luttinger", "journal" -> "Phys. Rev.", "title" -> 
+          "The Effect of a Magnetic Field on Electrons in a Periodic \
+Potential", "year" -> "1951", "month" -> "nov", "number" -> "4", "pages" -> 
+          "814--817", "volume" -> "84", "doi" -> "10.1103/physrev.84.814", 
+          "publisher" -> "American Physical Society ({APS})"]}, 
+       "Hofstadter1976PRB" -> {
+         Association[
+         "type" -> "Article", "key" -> "Hofstadter1976PRB", "author" -> 
+          "Douglas R. Hofstadter", "journal" -> "Phys. Rev. B", "title" -> 
+          "Energy levels and wave functions of Bloch electrons in rational \
+and irrational magnetic fields", "year" -> "1976", "month" -> "sep", "number" -> 
+          "6", "pages" -> "2239--2249", "volume" -> "14", "doi" -> 
+          "10.1103/physrevb.14.2239", "publisher" -> 
+          "American Physical Society ({APS})"]}, "Feynman2011" -> {
+         Association[
+         "type" -> "Book", "key" -> "Feynman2011", "author" -> 
+          "Richard P. Feynman and Robert B. Leighton and Matthew Sands", 
+          "publisher" -> "Basic Books", "title" -> 
+          "The Feynman Lectures on Physics", "year" -> "2011", "address" -> 
+          "New York", "edition" -> "\\protect{The New Millennium}", "isbn" -> 
+          "9780465079971", "volume" -> "III", "groups" -> "tBLG_ZLMs", 
+          "timestamp" -> "2021-04-29", "url" -> 
+          "https://www.feynmanlectures.caltech.edu/III_21.html"]}], 
+     "AllowEmbedding" -> True, "InitialShape" -> 
+     TypeSystem`PackageScope`Limited[
        TypeSystem`PackageScope`ColumnShape[
         TypeSystem`PackageScope`KeyValueShape[
          TypeSystem`PackageScope`AtomShape[212.8], 
@@ -3572,7 +3673,7 @@ Green functions", "year" -> "1985", "month" -> "apr", "number" -> "4",
        TypeSystem`Atom[String], 
        TypeSystem`Vector[
         TypeSystem`Assoc[TypeSystem`AnyType, 
-         TypeSystem`Atom[String], TypeSystem`AnyLength], 1], 83], "Meta" -> 
+         TypeSystem`Atom[String], TypeSystem`AnyLength], 1], 94], "Meta" -> 
      Association[], "RowTarget" -> 20, "ColumnTarget" -> 10, "Shape" -> 
      TypeSystem`PackageScope`Limited[
        TypeSystem`PackageScope`ColumnShape[
@@ -3591,9 +3692,9 @@ Green functions", "year" -> "1985", "month" -> "apr", "number" -> "4",
        TypeSystem`Atom[String], 
        TypeSystem`Vector[
         TypeSystem`Assoc[TypeSystem`AnyType, 
-         TypeSystem`Atom[String], TypeSystem`AnyLength], 1], 83], 
+         TypeSystem`Atom[String], TypeSystem`AnyLength], 1], 94], 
      "Path" -> {}, "DisplayedRowCount" -> 10, "DisplayedColumnCount" -> 1, 
-     "DataRowCount" -> 83, "DataColumnCount" -> 1, "SortPaths" -> {}, 
+     "DataRowCount" -> 94, "DataColumnCount" -> 1, "SortPaths" -> {}, 
      "SortDirections" -> {}, "HiddenItemsMap" -> Null, "UpdateType" -> 1], 
     TypeSystem`NestedGrid`PackagePrivate`$outputID$$, 
     TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
@@ -3922,7 +4023,6 @@ Green functions", "year" -> "1985", "month" -> "apr", "number" -> "4",
 , {All, All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
                   KernelExecute[
-                   
                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -4088,7 +4188,6 @@ Green functions", "year" -> "1985", "month" -> "apr", "number" -> "4",
 , {All, All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
                   KernelExecute[
-                   
                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -4254,7 +4353,6 @@ Green functions", "year" -> "1985", "month" -> "apr", "number" -> "4",
 , {All, All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
                   KernelExecute[
-                   
                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -4420,7 +4518,6 @@ Green functions", "year" -> "1985", "month" -> "apr", "number" -> "4",
 , {All, All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
                   KernelExecute[
-                   
                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -4586,7 +4683,6 @@ Green functions", "year" -> "1985", "month" -> "apr", "number" -> "4",
 , {All, All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
                   KernelExecute[
-                   
                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -4752,7 +4848,6 @@ Green functions", "year" -> "1985", "month" -> "apr", "number" -> "4",
 , {All, All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
                   KernelExecute[
-                   
                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -5084,7 +5179,6 @@ Green functions", "year" -> "1985", "month" -> "apr", "number" -> "4",
 , {All, All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
                   KernelExecute[
-                   
                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -5250,7 +5344,6 @@ Green functions", "year" -> "1985", "month" -> "apr", "number" -> "4",
 , {All, All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
                   KernelExecute[
-                   
                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -5309,7 +5402,7 @@ Green functions", "year" -> "1985", "month" -> "apr", "number" -> "4",
                     TypeSystem`NestedGrid`PackagePrivate`$state$$], 
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
                     Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + (-10) 
-                    If[True, 83, 1], {1, 83 - -10 + 1}]; 
+                    If[True, 94, 1], {1, 94 - -10 + 1}]; 
                     TypeSystem`NestedGrid`PackagePrivate`updateState[
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -5358,7 +5451,7 @@ Green functions", "year" -> "1985", "month" -> "apr", "number" -> "4",
                     TypeSystem`NestedGrid`PackagePrivate`$state$$], 
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
                     Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + (-10) 
-                    If[False, 83, 1], {1, 83 - -10 + 1}]; 
+                    If[False, 94, 1], {1, 94 - -10 + 1}]; 
                     TypeSystem`NestedGrid`PackagePrivate`updateState[
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -5374,14 +5467,14 @@ Green functions", "year" -> "1985", "month" -> "apr", "number" -> "4",
                     Mouseover[
                     Style[
                     Row[{"rows ", 1, "\[Dash]", 10, " of ", 
-                    Style[83, FontWeight -> Bold]}], FontSize -> 
+                    Style[94, FontWeight -> Bold]}], FontSize -> 
                     9.333333333333332, FontColor -> 
                     RGBColor[
                     0.5098039215686274, 0.5098039215686274, 
                     0.5098039215686274]], 
                     Style[
                     Row[{"rows ", 1, "\[Dash]", 10, " of ", 
-                    Style[83, FontWeight -> Bold]}], FontSize -> 
+                    Style[94, FontWeight -> Bold]}], FontSize -> 
                     9.333333333333332, FontColor -> 
                     RGBColor[
                     0.5098039215686274, 0.5098039215686274, 
@@ -5424,7 +5517,6 @@ Green functions", "year" -> "1985", "month" -> "apr", "number" -> "4",
                     "Rows", 30, {}]], MenuEvaluator -> Automatic], 
                     MenuItem["Show up to 100 Rows", 
                     KernelExecute[
-                    
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -5486,7 +5578,7 @@ Green functions", "year" -> "1985", "month" -> "apr", "number" -> "4",
                     TypeSystem`NestedGrid`PackagePrivate`$state$$], 
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
                     Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + 
-                    10 If[False, 83, 1], {1, 83 - 10 + 1}]; 
+                    10 If[False, 94, 1], {1, 94 - 10 + 1}]; 
                     TypeSystem`NestedGrid`PackagePrivate`updateState[
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -5537,7 +5629,7 @@ Green functions", "year" -> "1985", "month" -> "apr", "number" -> "4",
                     TypeSystem`NestedGrid`PackagePrivate`$state$$], 
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
                     Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + 
-                    10 If[True, 83, 1], {1, 83 - 10 + 1}]; 
+                    10 If[True, 94, 1], {1, 94 - 10 + 1}]; 
                     TypeSystem`NestedGrid`PackagePrivate`updateState[
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -5556,7 +5648,8 @@ Green functions", "year" -> "1985", "month" -> "apr", "number" -> "4",
           BaseStyle -> {
            ContextMenu -> 
             Dynamic[TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
-              Which[TypeSystem`NestedGrid`PackagePrivate`$lastOutputID =!= 
+              Which[
+               TypeSystem`NestedGrid`PackagePrivate`$lastOutputID =!= 
                 TypeSystem`NestedGrid`PackagePrivate`localHold[
                  TypeSystem`NestedGrid`PackagePrivate`$outputID$$], {}, 
                 TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger === 
@@ -5879,9 +5972,9 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
    3.840598897665081*^9, 3.840598908243785*^9}, 3.840599165158038*^9, 
    3.840599288322754*^9, 3.8405994143780875`*^9, 3.840599465423888*^9, {
    3.840599514023947*^9, 3.8405995558996215`*^9}, 3.8406006912347393`*^9, 
-   3.840601057636498*^9},
+   3.840601057449605*^9, 3.840612498639867*^9, 3.840612593436945*^9},
  CellLabel->
-  "Out[165]=",ExpressionUUID->"c6b64229-3ec1-4cd8-8c7c-4975d6205bd5"]
+  "Out[180]=",ExpressionUUID->"e3fe28bd-6fce-40a3-82ce-db1bc83f0b87"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -5895,7 +5988,7 @@ Cell[BoxData[
    3.8403369120749044`*^9, 3.840336922833294*^9}, 3.840421204121168*^9, 
    3.840421254721751*^9},
  CellLabel->
-  "In[168]:=",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
+  "In[181]:=",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
 
 Cell[BoxData["\<\"F:\\\\Research\\\\Manuscript\\\\tBLG_ZLM_transport\\\\bib.\
 tex\"\>"], "Output",
@@ -5912,9 +6005,10 @@ tex\"\>"], "Output",
    3.8403368985768375`*^9, 3.840336923909193*^9}, 3.8404212050464573`*^9, 
    3.84042125560563*^9, 3.84052275381524*^9, 3.84059892169096*^9, 
    3.8405995911698065`*^9, 3.840600700272707*^9, 3.840601060517446*^9, 
-   3.8406011238153067`*^9, 3.840601565735389*^9},
+   3.8406011238153067`*^9, 3.840601565735389*^9, 3.8406018579499426`*^9, 
+   3.8406125045330725`*^9, 3.840612596387786*^9},
  CellLabel->
-  "Out[168]=",ExpressionUUID->"147a69cc-335b-4049-b21b-12018db94077"]
+  "Out[181]=",ExpressionUUID->"4c5777c5-d2db-4049-b212-4bc80771242c"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -5986,16 +6080,16 @@ Cell[120686, 2247, 154, 3, 89, "Title",ExpressionUUID->"a78bb14c-d08c-4c90-aa79-
 Cell[120843, 2252, 16637, 392, 1628, "Input",ExpressionUUID->"fc9d5688-3e7e-443f-ad88-5007756aea8a"],
 Cell[CellGroupData[{
 Cell[137505, 2648, 250, 5, 54, "Input",ExpressionUUID->"56e31ccb-4ee4-4cdc-8a9d-16601df520c7"],
-Cell[137758, 2655, 154, 3, 41, "Output",ExpressionUUID->"f3a93ca4-0e9c-41d5-b3de-488d6df05ef6"]
+Cell[137758, 2655, 176, 3, 41, "Output",ExpressionUUID->"7f37e707-c3bf-4df0-9d2e-e317d6cd307c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[137949, 2663, 1113, 23, 126, "Input",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
-Cell[139065, 2688, 3874, 63, 162, "Output",ExpressionUUID->"ff15d7b0-a3d3-4ee8-bd58-d49cabdbef36"],
-Cell[142942, 2753, 178167, 3130, 993, "Output",ExpressionUUID->"c6b64229-3ec1-4cd8-8c7c-4975d6205bd5"]
+Cell[137971, 2663, 1113, 23, 126, "Input",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
+Cell[139087, 2688, 4261, 69, 186, "Output",ExpressionUUID->"41847f0f-ec4a-472d-99d8-88bd5a091046"],
+Cell[143351, 2759, 183868, 3217, 993, "Output",ExpressionUUID->"e3fe28bd-6fce-40a3-82ce-db1bc83f0b87"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[321146, 5888, 515, 9, 48, "Input",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
-Cell[321664, 5899, 1138, 17, 41, "Output",ExpressionUUID->"147a69cc-335b-4049-b21b-12018db94077"]
+Cell[327256, 5981, 515, 9, 48, "Input",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
+Cell[327774, 5992, 1212, 18, 41, "Output",ExpressionUUID->"4c5777c5-d2db-4049-b212-4bc80771242c"]
 }, Open  ]]
 }, Open  ]]
 }
