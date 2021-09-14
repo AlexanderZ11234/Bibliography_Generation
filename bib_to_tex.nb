@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    318115,       5843]
-NotebookOptionsPosition[    314382,       5771]
-NotebookOutlinePosition[    314784,       5787]
-CellTagsIndexPosition[    314741,       5784]
+NotebookDataLength[    318724,       5853]
+NotebookOptionsPosition[    314991,       5781]
+NotebookOutlinePosition[    315393,       5797]
+CellTagsIndexPosition[    315350,       5794]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2639,7 +2639,7 @@ Cell[BoxData[{
   3.8401091396505165`*^9}, {3.840109208513751*^9, 3.8401092365779505`*^9}, {
   3.840109272585844*^9, 3.8401093049385543`*^9}, {3.840112457849145*^9, 
   3.840112461863381*^9}, {3.840421170213825*^9, 3.8404211954983363`*^9}},
- CellLabel->"In[14]:=",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
+ CellLabel->"In[6]:=",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -2680,8 +2680,8 @@ Cell[BoxData[
    ",", "\<\"Logg2012\"\>", ",", "\<\"Reddy2014\"\>", 
    ",", "\<\"Logan2017\"\>", ",", "\<\"Carr2020\"\>", 
    ",", "\<\"Zakharchenko2009PRL\"\>", ",", "\<\"Jung2015NC\"\>", 
-   ",", "\<\"Popov2011PRB\"\>", ",", "\<\"Lebedeva2011PCCP\"\>"}], 
-  "}"}]], "Output",
+   ",", "\<\"Popov2011PRB\"\>", ",", "\<\"Lebedeva2011PCCP\"\>", 
+   ",", "\<\"Slater1954PR\"\>"}], "}"}]], "Output",
  CellChangeTimes->{
   3.8401087202902393`*^9, 3.840108954953451*^9, {3.840109131206562*^9, 
    3.840109181945481*^9}, {3.8401092261469226`*^9, 3.8401092374429674`*^9}, 
@@ -2691,8 +2691,9 @@ Cell[BoxData[
    3.8401912130973883`*^9, 3.8402277290022507`*^9, 3.8402439939322324`*^9, 
    3.840244085019418*^9, 3.8402745323008237`*^9, 3.8402773293228865`*^9, 
    3.8402778316552453`*^9, 3.8402783049261813`*^9, 3.8402783613885326`*^9, 
-   3.8404211191572833`*^9, {3.840421176613199*^9, 3.8404211961377325`*^9}},
- CellLabel->"Out[16]=",ExpressionUUID->"712c71ff-2cb8-4848-935f-8d342f76a597"],
+   3.8404211191572833`*^9, {3.840421176613199*^9, 3.8404211961377325`*^9}, 
+   3.840522748798399*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"314ab159-bd9e-4385-919c-79864ffd396f"],
 
 Cell[BoxData[
  TagBox[
@@ -3430,13 +3431,21 @@ applications to heat transfer, fluid mechanics, and solid mechanics", "year" ->
 nonlinear-finite-element-analysis-9780199641758?q=An Introduction to \
 Nonlinear Finite Element Analysis&lang=en&cc=us#"], "Logan2017" -> 
        Association[
-        "type" -> "Book", "key" -> "Logan2017", "author" -> "Daryl L. Logan", 
+        "type" -> "Book", "key" -> "Logan2017", "author" -> "Daryl Logan", 
          "publisher" -> "Cengage Learning", "title" -> 
          "A first course in the finite element method", "year" -> "2017", 
          "address" -> "Boston, MA", "edition" -> "1st", "isbn" -> 
          "9781305635111", "url" -> 
          "https://www.cengage.com/c/a-first-course-in-the-finite-element-\
-method-6e-logan/9781305635111PF/"]], "AllowEmbedding" -> True, "InitialShape" -> 
+method-6e-logan/9781305635111PF/"], "Slater1954PR" -> 
+       Association[
+        "type" -> "Article", "key" -> "Slater1954PR", "author" -> 
+         "J. C. Slater and G. F. Koster", "journal" -> "Phys. Rev.", "title" -> 
+         "Simplified {LCAO} Method for the Periodic Potential Problem", 
+         "year" -> "1954", "pages" -> "1498--1524", "volume" -> "94", "doi" -> 
+         "10.1103/physrev.94.1498", "groups" -> "intro, tBLG_ZLMs", 
+         "publisher" -> "American Physical Society ({APS})", "timestamp" -> 
+         "2021-05-20"]], "AllowEmbedding" -> True, "InitialShape" -> 
      TypeSystem`PackageScope`Limited[
        TypeSystem`PackageScope`ColumnShape[
         TypeSystem`PackageScope`KeyValueShape[
@@ -3450,7 +3459,7 @@ method-6e-logan/9781305635111PF/"]], "AllowEmbedding" -> True, "InitialShape" ->
        DirectedInfinity[1], {}], "InitialType" -> TypeSystem`Assoc[
        TypeSystem`Atom[String], 
        TypeSystem`Assoc[TypeSystem`AnyType, 
-        TypeSystem`Atom[String], TypeSystem`AnyLength], 76], "Meta" -> 
+        TypeSystem`Atom[String], TypeSystem`AnyLength], 77], "Meta" -> 
      Association[], "RowTarget" -> 20, "ColumnTarget" -> 10, "Shape" -> 
      TypeSystem`PackageScope`Limited[
        TypeSystem`PackageScope`ColumnShape[
@@ -3465,9 +3474,9 @@ method-6e-logan/9781305635111PF/"]], "AllowEmbedding" -> True, "InitialShape" ->
        DirectedInfinity[1], {}], "Type" -> TypeSystem`Assoc[
        TypeSystem`Atom[String], 
        TypeSystem`Assoc[TypeSystem`AnyType, 
-        TypeSystem`Atom[String], TypeSystem`AnyLength], 76], "Path" -> {}, 
+        TypeSystem`Atom[String], TypeSystem`AnyLength], 77], "Path" -> {}, 
      "DisplayedRowCount" -> 10, "DisplayedColumnCount" -> 1, "DataRowCount" -> 
-     76, "DataColumnCount" -> 1, "SortPaths" -> {}, "SortDirections" -> {}, 
+     77, "DataColumnCount" -> 1, "SortPaths" -> {}, "SortDirections" -> {}, 
      "HiddenItemsMap" -> Null, "UpdateType" -> 1], 
     TypeSystem`NestedGrid`PackagePrivate`$outputID$$, 
     TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
@@ -5173,7 +5182,7 @@ method-6e-logan/9781305635111PF/"]], "AllowEmbedding" -> True, "InitialShape" ->
                     TypeSystem`NestedGrid`PackagePrivate`$state$$], 
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
                     Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + (-10) 
-                    If[True, 76, 1], {1, 76 - -10 + 1}]; 
+                    If[True, 77, 1], {1, 77 - -10 + 1}]; 
                     TypeSystem`NestedGrid`PackagePrivate`updateState[
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -5222,7 +5231,7 @@ method-6e-logan/9781305635111PF/"]], "AllowEmbedding" -> True, "InitialShape" ->
                     TypeSystem`NestedGrid`PackagePrivate`$state$$], 
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
                     Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + (-10) 
-                    If[False, 76, 1], {1, 76 - -10 + 1}]; 
+                    If[False, 77, 1], {1, 77 - -10 + 1}]; 
                     TypeSystem`NestedGrid`PackagePrivate`updateState[
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -5238,14 +5247,14 @@ method-6e-logan/9781305635111PF/"]], "AllowEmbedding" -> True, "InitialShape" ->
                     Mouseover[
                     Style[
                     Row[{"rows ", 1, "\[Dash]", 10, " of ", 
-                    Style[76, FontWeight -> Bold]}], FontSize -> 
+                    Style[77, FontWeight -> Bold]}], FontSize -> 
                     9.333333333333332, FontColor -> 
                     RGBColor[
                     0.5098039215686274, 0.5098039215686274, 
                     0.5098039215686274]], 
                     Style[
                     Row[{"rows ", 1, "\[Dash]", 10, " of ", 
-                    Style[76, FontWeight -> Bold]}], FontSize -> 
+                    Style[77, FontWeight -> Bold]}], FontSize -> 
                     9.333333333333332, FontColor -> 
                     RGBColor[
                     0.5098039215686274, 0.5098039215686274, 
@@ -5350,7 +5359,7 @@ method-6e-logan/9781305635111PF/"]], "AllowEmbedding" -> True, "InitialShape" ->
                     TypeSystem`NestedGrid`PackagePrivate`$state$$], 
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
                     Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + 
-                    10 If[False, 76, 1], {1, 76 - 10 + 1}]; 
+                    10 If[False, 77, 1], {1, 77 - 10 + 1}]; 
                     TypeSystem`NestedGrid`PackagePrivate`updateState[
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -5401,7 +5410,7 @@ method-6e-logan/9781305635111PF/"]], "AllowEmbedding" -> True, "InitialShape" ->
                     TypeSystem`NestedGrid`PackagePrivate`$state$$], 
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
                     Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + 
-                    10 If[True, 76, 1], {1, 76 - 10 + 1}]; 
+                    10 If[True, 77, 1], {1, 77 - 10 + 1}]; 
                     TypeSystem`NestedGrid`PackagePrivate`updateState[
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -5735,8 +5744,9 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
    3.8401912130973883`*^9, 3.8402277290022507`*^9, 3.8402439939322324`*^9, 
    3.840244085019418*^9, 3.8402745323008237`*^9, 3.8402773293228865`*^9, 
    3.8402778316552453`*^9, 3.8402783049261813`*^9, 3.8402783613885326`*^9, 
-   3.8404211191572833`*^9, {3.840421176613199*^9, 3.8404211964415584`*^9}},
- CellLabel->"Out[17]=",ExpressionUUID->"0d129cb4-9336-4c19-9d9f-4900030cbfca"]
+   3.8404211191572833`*^9, {3.840421176613199*^9, 3.8404211961377325`*^9}, 
+   3.8405227500842657`*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"fab91417-5c72-4e26-85d4-d04eade2c28e"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -5749,7 +5759,7 @@ Cell[BoxData[
    3.840190143181331*^9}, 3.8402440967894306`*^9, 3.8402745305195723`*^9, {
    3.8403369120749044`*^9, 3.840336922833294*^9}, 3.840421204121168*^9, 
    3.840421254721751*^9},
- CellLabel->"In[19]:=",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
+ CellLabel->"In[10]:=",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
 
 Cell[BoxData["\<\"F:\\\\Research\\\\Manuscript\\\\tBLG_ZLM_transport\\\\bib.\
 tex\"\>"], "Output",
@@ -5764,8 +5774,8 @@ tex\"\>"], "Output",
    3.8402783084170823`*^9}, 3.840278386656764*^9, 3.8402784198002195`*^9, 
    3.8402786677868834`*^9, 3.8402787072654376`*^9, 3.840278764584739*^9, {
    3.8403368985768375`*^9, 3.840336923909193*^9}, 3.8404212050464573`*^9, 
-   3.84042125560563*^9},
- CellLabel->"Out[19]=",ExpressionUUID->"99bab735-a49c-49bc-9a11-d973e1c15eba"]
+   3.84042125560563*^9, 3.84052275381524*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"eaebeef1-4989-4e8b-9896-be4475479342"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -5836,13 +5846,13 @@ Cell[CellGroupData[{
 Cell[120686, 2247, 154, 3, 89, "Title",ExpressionUUID->"a78bb14c-d08c-4c90-aa79-186053c1f584"],
 Cell[120843, 2252, 15468, 366, 1604, "Input",ExpressionUUID->"fc9d5688-3e7e-443f-ad88-5007756aea8a"],
 Cell[CellGroupData[{
-Cell[136336, 2622, 929, 19, 126, "Input",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
-Cell[137268, 2643, 3119, 51, 162, "Output",ExpressionUUID->"712c71ff-2cb8-4848-935f-8d342f76a597"],
-Cell[140390, 2696, 172443, 3042, 993, "Output",ExpressionUUID->"0d129cb4-9336-4c19-9d9f-4900030cbfca"]
+Cell[136336, 2622, 928, 19, 126, "Input",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
+Cell[137267, 2643, 3174, 52, 162, "Output",ExpressionUUID->"314ab159-bd9e-4385-919c-79864ffd396f"],
+Cell[140444, 2697, 172977, 3051, 993, "Output",ExpressionUUID->"fab91417-5c72-4e26-85d4-d04eade2c28e"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[312870, 5743, 511, 8, 48, "Input",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
-Cell[313384, 5753, 970, 14, 41, "Output",ExpressionUUID->"99bab735-a49c-49bc-9a11-d973e1c15eba"]
+Cell[313458, 5753, 511, 8, 48, "Input",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
+Cell[313972, 5763, 991, 14, 41, "Output",ExpressionUUID->"eaebeef1-4989-4e8b-9896-be4475479342"]
 }, Open  ]]
 }, Open  ]]
 }
