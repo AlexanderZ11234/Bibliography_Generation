@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    333243,       6088]
-NotebookOptionsPosition[    329281,       6012]
-NotebookOutlinePosition[    329683,       6028]
-CellTagsIndexPosition[    329640,       6025]
+NotebookDataLength[    334326,       6109]
+NotebookOptionsPosition[    330364,       6033]
+NotebookOutlinePosition[    330766,       6049]
+CellTagsIndexPosition[    330723,       6046]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2641,7 +2641,7 @@ thebibliography}\>\"", "]"}], "[",
    3.8405994093292947`*^9}, {3.8405994587791967`*^9, 3.84059946118725*^9}, {
    3.840599509074106*^9, 3.840599552475243*^9}, 3.840599584572503*^9},
  Background->RGBColor[1, 1, 0.85],
- CellLabel->"In[8]:=",ExpressionUUID->"fc9d5688-3e7e-443f-ad88-5007756aea8a"],
+ CellLabel->"In[22]:=",ExpressionUUID->"fc9d5688-3e7e-443f-ad88-5007756aea8a"],
 
 Cell[CellGroupData[{
 
@@ -2649,12 +2649,12 @@ Cell[BoxData[
  RowBox[{
   RowBox[{"citedkeys", "[", "texpath", "]"}], "//", "Length"}]], "Input",
  CellChangeTimes->{{3.8406016087887564`*^9, 3.8406016100642147`*^9}},
- CellLabel->"In[10]:=",ExpressionUUID->"56e31ccb-4ee4-4cdc-8a9d-16601df520c7"],
+ CellLabel->"In[45]:=",ExpressionUUID->"56e31ccb-4ee4-4cdc-8a9d-16601df520c7"],
 
 Cell[BoxData["94"], "Output",
  CellChangeTimes->{3.840601610703723*^9, 3.840612503141692*^9, 
-  3.8406167220197515`*^9},
- CellLabel->"Out[10]=",ExpressionUUID->"42791e7c-651e-4dff-b7e5-382dd21ff5d5"]
+  3.8406167220197515`*^9, 3.8407481790181174`*^9, 3.8407527507435102`*^9},
+ CellLabel->"Out[45]=",ExpressionUUID->"1359a368-babe-4cab-8895-e0c2d914b528"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -2681,58 +2681,57 @@ Cell[BoxData[{
    3.8405986780496993`*^9, {3.840598709527622*^9, 3.840598712342577*^9}, 
    3.8405988362830267`*^9, 3.840598907116749*^9, 3.8405991645686436`*^9, 
    3.8405995395452843`*^9},
- CellLabel->"In[13]:=",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
+ CellLabel->"In[41]:=",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
 
 Cell[BoxData[
  RowBox[{"{", 
   RowBox[{"\<\"Cao2018N\"\>", ",", "\<\"Po2018PRX\"\>", 
    ",", "\<\"Codecido2019SA\"\>", ",", "\<\"Arora2020N\"\>", 
-   ",", "\<\"Hao2021S\"\>", ",", "\<\"Zhou2021N\"\>", 
-   ",", "\<\"Cao2018Na\"\>", ",", "\<\"Calderon2020nQM\"\>", 
-   ",", "\<\"Zhang2017SA\"\>", ",", "\<\"Jin2019N\"\>", 
-   ",", "\<\"Seyler2019N\"\>", ",", "\<\"Tran2019N\"\>", 
-   ",", "\<\"Liu2020JPDAP\"\>", ",", "\<\"Zhang2020NC\"\>", 
-   ",", "\<\"Brem2020NL\"\>", ",", "\<\"Song2019PRL\"\>", 
-   ",", "\<\"Nuckolls2020N\"\>", ",", "\<\"Wu2021NM\"\>", 
-   ",", "\<\"Stepanov2020a\"\>", ",", "\<\"Repellin2020PRR\"\>", 
-   ",", "\<\"Park2019PRL\"\>", ",", "\<\"Liu2021PRL\"\>", 
-   ",", "\<\"Park2021C\"\>", ",", "\<\"Santos2007PRL\"\>", 
-   ",", "\<\"Bistritzer2011PNAS\"\>", ",", "\<\"Carr2019PRR\"\>", 
-   ",", "\<\"Balents2019SP\"\>", ",", "\<\"Guinea2019PRB\"\>", 
-   ",", "\<\"Phong2020PRL\"\>", ",", "\<\"Koshino2020PRB\"\>", 
-   ",", "\<\"Andrei2020NM\"\>", ",", "\<\"Nam2017PRB\"\>", 
-   ",", "\<\"Perebeinos2012PRL\"\>", ",", "\<\"Laissardiere2012PRB\"\>", 
-   ",", "\<\"Moon2012PRB\"\>", ",", "\<\"Andelkovic2018PRM\"\>", 
-   ",", "\<\"Po2019PRB\"\>", ",", "\<\"Gargiulo20172M\"\>", 
-   ",", "\<\"Yan2013NC\"\>", ",", "\<\"Yoo2019NM\"\>", 
-   ",", "\<\"Shi2020NC\"\>", ",", "\<\"Liu2020PRL\"\>", 
-   ",", "\<\"Uchida2014PRB\"\>", ",", "\<\"Jain20162M\"\>", 
-   ",", "\<\"Dai2016NL\"\>", ",", "\<\"Wijk20152M\"\>", 
-   ",", "\<\"Goldstein2005\"\>", ",", "\<\"Lin2020PRB\"\>", 
-   ",", "\<\"SanJose2014PRB\"\>", ",", "\<\"SanJose2014PRBa\"\>", 
-   ",", "\<\"Suzuura2002PRB\"\>", ",", "\<\"Jackiw1976PRD\"\>", 
-   ",", "\<\"Shen2017\"\>", ",", "\<\"Yin2016NC\"\>", 
-   ",", "\<\"Hou2018PRB\"\>", ",", "\<\"Ren2016RPP\"\>", 
-   ",", "\<\"Zhang2013PRB\"\>", ",", "\<\"Ju2015N\"\>", 
-   ",", "\<\"Bi2015PRB\"\>", ",", "\<\"Li2016NN\"\>", 
+   ",", "\<\"Hao2021S\"\>", ",", "\<\"Cao2018Na\"\>", 
+   ",", "\<\"Calderon2020nQM\"\>", ",", "\<\"Zhang2017SA\"\>", 
+   ",", "\<\"Jin2019N\"\>", ",", "\<\"Seyler2019N\"\>", 
+   ",", "\<\"Tran2019N\"\>", ",", "\<\"Liu2020JPDAP\"\>", 
+   ",", "\<\"Zhang2020NC\"\>", ",", "\<\"Brem2020NL\"\>", 
+   ",", "\<\"Song2019PRL\"\>", ",", "\<\"Nuckolls2020N\"\>", 
+   ",", "\<\"Wu2021NM\"\>", ",", "\<\"Stepanov2020a\"\>", 
+   ",", "\<\"Repellin2020PRR\"\>", ",", "\<\"Park2019PRL\"\>", 
+   ",", "\<\"Liu2021PRL\"\>", ",", "\<\"Park2021C\"\>", 
+   ",", "\<\"Santos2007PRL\"\>", ",", "\<\"Bistritzer2011PNAS\"\>", 
+   ",", "\<\"Carr2019PRR\"\>", ",", "\<\"Balents2019SP\"\>", 
+   ",", "\<\"Guinea2019PRB\"\>", ",", "\<\"Phong2020PRL\"\>", 
+   ",", "\<\"Koshino2020PRB\"\>", ",", "\<\"Andrei2020NM\"\>", 
+   ",", "\<\"Nam2017PRB\"\>", ",", "\<\"Perebeinos2012PRL\"\>", 
+   ",", "\<\"Laissardiere2012PRB\"\>", ",", "\<\"Moon2012PRB\"\>", 
+   ",", "\<\"Andelkovic2018PRM\"\>", ",", "\<\"Po2019PRB\"\>", 
+   ",", "\<\"Gargiulo20172M\"\>", ",", "\<\"Yan2013NC\"\>", 
+   ",", "\<\"Yoo2019NM\"\>", ",", "\<\"Shi2020NC\"\>", 
+   ",", "\<\"Liu2020PRL\"\>", ",", "\<\"Uchida2014PRB\"\>", 
+   ",", "\<\"Jain20162M\"\>", ",", "\<\"Dai2016NL\"\>", 
+   ",", "\<\"Wijk20152M\"\>", ",", "\<\"Goldstein2005\"\>", 
+   ",", "\<\"Lin2020PRB\"\>", ",", "\<\"SanJose2014PRB\"\>", 
+   ",", "\<\"SanJose2014PRBa\"\>", ",", "\<\"Suzuura2002PRB\"\>", 
+   ",", "\<\"Jackiw1976PRD\"\>", ",", "\<\"Shen2017\"\>", 
+   ",", "\<\"Yin2016NC\"\>", ",", "\<\"Hou2018PRB\"\>", 
+   ",", "\<\"Ren2016RPP\"\>", ",", "\<\"Zhang2013PRB\"\>", 
+   ",", "\<\"Ju2015N\"\>", ",", "\<\"Bi2015PRB\"\>", ",", "\<\"Li2016NN\"\>", 
    ",", "\<\"Wang2017PRB\"\>", ",", "\<\"Ren2017PRB\"\>", 
-   ",", "\<\"Wang2018FP\"\>", ",", "\<\"Hou2020PRB\"\>", 
+   ",", "\<\"Wang2019FP\"\>", ",", "\<\"Hou2020PRB\"\>", 
    ",", "\<\"Hou2020PRBa\"\>", ",", "\<\"Qiao2014PRL\"\>", 
    ",", "\<\"Kim2016NP\"\>", ",", "\<\"Bhatti2006\"\>", 
-   ",", "\<\"Logg2012\"\>", ",", "\<\"Reddy2014\"\>", 
-   ",", "\<\"Logan2017\"\>", ",", "\<\"Carr2020\"\>", 
-   ",", "\<\"Zakharchenko2009PRL\"\>", ",", "\<\"Jung2015NC\"\>", 
-   ",", "\<\"Popov2011PRB\"\>", ",", "\<\"Lebedeva2011PCCP\"\>", 
-   ",", "\<\"Slater1954PR\"\>", ",", "\<\"Datta2004\"\>", 
-   ",", "\<\"Datta2007\"\>", ",", "\<\"Qiao2009\"\>", 
-   ",", "\<\"Ferry2009\"\>", ",", "\<\"Hirose2014\"\>", 
-   ",", "\<\"Ventra2016\"\>", ",", "\<\"Ryndyk2015\"\>", 
-   ",", "\<\"Sancho1984JPFMP\"\>", ",", "\<\"Sancho1985JPFMP\"\>", 
-   ",", "\<\"Qiao2007N\"\>", ",", "\<\"Peierls1933ZP\"\>", 
-   ",", "\<\"Wannier1962RMP\"\>", ",", "\<\"Blount1962PR\"\>", 
-   ",", "\<\"Kohn1959PR\"\>", ",", "\<\"Luttinger1951PR\"\>", 
-   ",", "\<\"Hofstadter1976PRB\"\>", ",", "\<\"Feynman2011\"\>"}], 
-  "}"}]], "Output",
+   ",", "\<\"Logg2012\"\>", ",", "\<\"Zienkiewicz2013\"\>", 
+   ",", "\<\"Reddy2014\"\>", ",", "\<\"Logan2017\"\>", 
+   ",", "\<\"Carr2020\"\>", ",", "\<\"Zakharchenko2009PRL\"\>", 
+   ",", "\<\"Jung2015NC\"\>", ",", "\<\"Popov2011PRB\"\>", 
+   ",", "\<\"Lebedeva2011PCCP\"\>", ",", "\<\"Slater1954PR\"\>", 
+   ",", "\<\"Datta2004\"\>", ",", "\<\"Datta2007\"\>", 
+   ",", "\<\"Qiao2009\"\>", ",", "\<\"Ferry2009\"\>", 
+   ",", "\<\"Hirose2014\"\>", ",", "\<\"Ventra2016\"\>", 
+   ",", "\<\"Ryndyk2015\"\>", ",", "\<\"Sancho1984JPFMP\"\>", 
+   ",", "\<\"Sancho1985JPFMP\"\>", ",", "\<\"Qiao2007N\"\>", 
+   ",", "\<\"Peierls1933ZP\"\>", ",", "\<\"Wannier1962RMP\"\>", 
+   ",", "\<\"Blount1962PR\"\>", ",", "\<\"Kohn1959PR\"\>", 
+   ",", "\<\"Luttinger1951PR\"\>", ",", "\<\"Hofstadter1976PRB\"\>", 
+   ",", "\<\"Feynman2011\"\>"}], "}"}]], "Output",
  CellChangeTimes->{
   3.8401087202902393`*^9, 3.840108954953451*^9, {3.840109131206562*^9, 
    3.840109181945481*^9}, {3.8401092261469226`*^9, 3.8401092374429674`*^9}, 
@@ -2751,8 +2750,9 @@ Cell[BoxData[
    3.840599288322754*^9, 3.8405994143780875`*^9, 3.840599465423888*^9, {
    3.840599514023947*^9, 3.8405995558996215`*^9}, 3.8406006912347393`*^9, 
    3.840601057449605*^9, 3.840612498639867*^9, 3.8406125932700415`*^9, 
-   3.8406167204813323`*^9, 3.840702407362671*^9},
- CellLabel->"Out[15]=",ExpressionUUID->"9d7f81b6-e792-48f8-894d-32c6f9968e1e"],
+   3.8406167204813323`*^9, 3.840702407362671*^9, 3.8407481711998434`*^9, 
+   3.8407501105532475`*^9, 3.840752749777766*^9},
+ CellLabel->"Out[43]=",ExpressionUUID->"fc5acc1b-b0e3-4cbf-ac83-61cb85173da5"],
 
 Cell[BoxData[
  TagBox[
@@ -3338,13 +3338,13 @@ Qiao", "journal" -> "Phys. Rev. B", "title" ->
 anomalous Hall topologies", "year" -> "2017", "month" -> "oct", "number" -> 
           "15", "pages" -> "155445", "volume" -> "96", "doi" -> 
           "10.1103/physrevb.96.155445", "publisher" -> 
-          "American Physical Society ({APS})"]}, "Wang2018FP" -> {
+          "American Physical Society ({APS})"]}, "Wang2019FP" -> {
          Association[
-         "type" -> "Article", "key" -> "Wang2018FP", "author" -> 
+         "type" -> "Article", "key" -> "Wang2019FP", "author" -> 
           "Ke Wang and Tao Hou and Yafei Ren and Zhenhua Qiao", "journal" -> 
           "Front. Phys.", "title" -> 
           "Enhanced robustness of zero-line modes in graphene via magnetic \
-field", "year" -> "2018", "month" -> "nov", "number" -> "2", "pages" -> 
+field", "year" -> "2019", "month" -> "nov", "number" -> "2", "pages" -> 
           "23501", "volume" -> "14", "doi" -> "10.1007/s11467-018-0869-9", 
           "publisher" -> "Springer Science and Business Media {LLC}"]}, 
        "Hou2020PRB" -> {
@@ -3487,8 +3487,8 @@ Method", "year" -> "2012", "address" -> "Berlin Heidelberg", "edition" ->
          Association[
          "type" -> "Book", "key" -> "Reddy2014", "author" -> "J. N. Reddy", 
           "publisher" -> "Oxford University Press", "title" -> 
-          "An introduction to nonlinear finite element analysis : with \
-applications to heat transfer, fluid mechanics, and solid mechanics", "year" -> 
+          "An Introduction to Nonlinear Finite Element Analysis: With \
+Applications to Heat Transfer, Fluid Mechanics, and Solid Mechanics", "year" -> 
           "2014", "address" -> "Oxford", "edition" -> "1st", "isbn" -> 
           "9780199641758", "url" -> 
           "https://global.oup.com/academic/product/an-introduction-to-\
@@ -3497,7 +3497,7 @@ Nonlinear Finite Element Analysis&lang=en&cc=us#"]}, "Logan2017" -> {
          Association[
          "type" -> "Book", "key" -> "Logan2017", "author" -> "Daryl Logan", 
           "publisher" -> "Cengage Learning", "title" -> 
-          "A first course in the finite element method", "year" -> "2017", 
+          "A First Course in the Finite Element Method", "year" -> "2017", 
           "address" -> "Boston, MA", "edition" -> "1st", "isbn" -> 
           "9781305635111", "url" -> 
           "https://www.cengage.com/c/a-first-course-in-the-finite-element-\
@@ -3540,14 +3540,14 @@ Green functions", "year" -> "1985", "month" -> "apr", "number" -> "4",
          Association[
          "type" -> "Book", "key" -> "Datta2004", "author" -> "Supriyo Datta", 
           "publisher" -> "World Publishing Corporation", "title" -> 
-          "Electronic transport in mesoscopic systems", "year" -> "2004", 
+          "Electronic Transport in Mesoscopic Systems", "year" -> "2004", 
           "address" -> "Beijing", "edition" -> "1st", "isbn" -> 
           "9787506265966", "url" -> 
           "http://www.wpcbj.com.cn/book/1107/bookinfo/"]}, "Datta2007" -> {
          Association[
          "type" -> "Book", "key" -> "Datta2007", "author" -> "Supriyo Datta", 
           "publisher" -> "Beijing World Publishing Corporation", "title" -> 
-          "Quantum transport : atom to transistor", "year" -> "2007", 
+          "Quantum Transport: Atom to Transistor", "year" -> "2007", 
           "address" -> "Beijing", "edition" -> "1st", "isbn" -> 
           "9787506282994", "url" -> 
           "http://www.wpcbj.com.cn/book/1199/bookinfo/"]}, "Qiao2009" -> {
@@ -3572,7 +3572,7 @@ matter-physics-nanoscience-and-mesoscopic-physics/transport-nanostructures-\
          Association[
          "type" -> "Book", "key" -> "Hirose2014", "author" -> "Kenji Hirose", 
           "publisher" -> "CRC Press", "title" -> 
-          "Quantum transport calculations for nanosystems", "year" -> "2014", 
+          "Quantum Transport Calculations for Nanosystems", "year" -> "2014", 
           "address" -> "Boca Raton", "edition" -> "1st", "isbn" -> 
           "9789814267328", "url" -> 
           "https://www.routledge.com/Quantum-Transport-Calculations-for-\
@@ -3651,9 +3651,18 @@ and irrational magnetic fields", "year" -> "1976", "month" -> "sep", "number" ->
           "New York", "edition" -> "\\protect{The New Millennium}", "isbn" -> 
           "9780465079971", "volume" -> "III", "groups" -> "tBLG_ZLMs", 
           "timestamp" -> "2021-04-29", "url" -> 
-          "https://www.feynmanlectures.caltech.edu/III_21.html"]}], 
-     "AllowEmbedding" -> True, "InitialShape" -> 
-     TypeSystem`PackageScope`Limited[
+          "https://www.feynmanlectures.caltech.edu/III_21.html"]}, 
+       "Zienkiewicz2013" -> {
+         Association[
+         "type" -> "Book", "key" -> "Zienkiewicz2013", "author" -> 
+          "O. C. Zienkiewicz and R. L. Taylor and J. Z. Zhu", "publisher" -> 
+          "Butterworth-Heinemann Elsevier", "title" -> 
+          "The Finite Element Method: Its Basis and Fundamentals", "year" -> 
+          "2013", "address" -> "Amsterdam", "edition" -> "7th", "isbn" -> 
+          "978-1-85617-633-0", "url" -> 
+          "https://www.elsevier.com/books/the-finite-element-method-its-basis-\
+and-fundamentals/zienkiewicz/978-1-85617-633-0"]}], "AllowEmbedding" -> True, 
+     "InitialShape" -> TypeSystem`PackageScope`Limited[
        TypeSystem`PackageScope`ColumnShape[
         TypeSystem`PackageScope`KeyValueShape[
          TypeSystem`PackageScope`AtomShape[212.8], 
@@ -3670,7 +3679,7 @@ and irrational magnetic fields", "year" -> "1976", "month" -> "sep", "number" ->
        TypeSystem`Atom[String], 
        TypeSystem`Vector[
         TypeSystem`Assoc[TypeSystem`AnyType, 
-         TypeSystem`Atom[String], TypeSystem`AnyLength], 1], 94], "Meta" -> 
+         TypeSystem`Atom[String], TypeSystem`AnyLength], 1], 95], "Meta" -> 
      Association[], "RowTarget" -> 20, "ColumnTarget" -> 10, "Shape" -> 
      TypeSystem`PackageScope`Limited[
        TypeSystem`PackageScope`ColumnShape[
@@ -3689,9 +3698,9 @@ and irrational magnetic fields", "year" -> "1976", "month" -> "sep", "number" ->
        TypeSystem`Atom[String], 
        TypeSystem`Vector[
         TypeSystem`Assoc[TypeSystem`AnyType, 
-         TypeSystem`Atom[String], TypeSystem`AnyLength], 1], 94], 
+         TypeSystem`Atom[String], TypeSystem`AnyLength], 1], 95], 
      "Path" -> {}, "DisplayedRowCount" -> 10, "DisplayedColumnCount" -> 1, 
-     "DataRowCount" -> 94, "DataColumnCount" -> 1, "SortPaths" -> {}, 
+     "DataRowCount" -> 95, "DataColumnCount" -> 1, "SortPaths" -> {}, 
      "SortDirections" -> {}, "HiddenItemsMap" -> Null, "UpdateType" -> 1], 
     TypeSystem`NestedGrid`PackagePrivate`$outputID$$, 
     TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
@@ -3854,6 +3863,7 @@ and irrational magnetic fields", "year" -> "1976", "month" -> "sep", "number" ->
 , {All, All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
                   KernelExecute[
+                   
                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -4019,6 +4029,7 @@ and irrational magnetic fields", "year" -> "1976", "month" -> "sep", "number" ->
 , {All, All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
                   KernelExecute[
+                   
                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -4184,6 +4195,7 @@ and irrational magnetic fields", "year" -> "1976", "month" -> "sep", "number" ->
 , {All, All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
                   KernelExecute[
+                   
                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -4349,6 +4361,7 @@ and irrational magnetic fields", "year" -> "1976", "month" -> "sep", "number" ->
 , {All, All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
                   KernelExecute[
+                   
                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -4514,6 +4527,7 @@ and irrational magnetic fields", "year" -> "1976", "month" -> "sep", "number" ->
 , {All, All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
                   KernelExecute[
+                   
                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -4679,6 +4693,7 @@ and irrational magnetic fields", "year" -> "1976", "month" -> "sep", "number" ->
 , {All, All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
                   KernelExecute[
+                   
                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -4844,6 +4859,7 @@ and irrational magnetic fields", "year" -> "1976", "month" -> "sep", "number" ->
 , {All, All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
                   KernelExecute[
+                   
                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -5175,6 +5191,7 @@ and irrational magnetic fields", "year" -> "1976", "month" -> "sep", "number" ->
 , {All, All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
                   KernelExecute[
+                   
                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -5340,6 +5357,7 @@ and irrational magnetic fields", "year" -> "1976", "month" -> "sep", "number" ->
 , {All, All}]], MenuEvaluator -> Automatic], 
                  MenuItem["Show 5 Fewer Rows at This Level", 
                   KernelExecute[
+                   
                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -5398,7 +5416,7 @@ and irrational magnetic fields", "year" -> "1976", "month" -> "sep", "number" ->
                     TypeSystem`NestedGrid`PackagePrivate`$state$$], 
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
                     Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + (-10) 
-                    If[True, 94, 1], {1, 94 - -10 + 1}]; 
+                    If[True, 95, 1], {1, 95 - -10 + 1}]; 
                     TypeSystem`NestedGrid`PackagePrivate`updateState[
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -5447,7 +5465,7 @@ and irrational magnetic fields", "year" -> "1976", "month" -> "sep", "number" ->
                     TypeSystem`NestedGrid`PackagePrivate`$state$$], 
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
                     Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + (-10) 
-                    If[False, 94, 1], {1, 94 - -10 + 1}]; 
+                    If[False, 95, 1], {1, 95 - -10 + 1}]; 
                     TypeSystem`NestedGrid`PackagePrivate`updateState[
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -5463,14 +5481,14 @@ and irrational magnetic fields", "year" -> "1976", "month" -> "sep", "number" ->
                     Mouseover[
                     Style[
                     Row[{"rows ", 1, "\[Dash]", 10, " of ", 
-                    Style[94, FontWeight -> Bold]}], FontSize -> 
+                    Style[95, FontWeight -> Bold]}], FontSize -> 
                     9.333333333333332, FontColor -> 
                     RGBColor[
                     0.5098039215686274, 0.5098039215686274, 
                     0.5098039215686274]], 
                     Style[
                     Row[{"rows ", 1, "\[Dash]", 10, " of ", 
-                    Style[94, FontWeight -> Bold]}], FontSize -> 
+                    Style[95, FontWeight -> Bold]}], FontSize -> 
                     9.333333333333332, FontColor -> 
                     RGBColor[
                     0.5098039215686274, 0.5098039215686274, 
@@ -5513,6 +5531,7 @@ and irrational magnetic fields", "year" -> "1976", "month" -> "sep", "number" ->
                     "Rows", 30, {}]], MenuEvaluator -> Automatic], 
                     MenuItem["Show up to 100 Rows", 
                     KernelExecute[
+                    
                     TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -5574,7 +5593,7 @@ and irrational magnetic fields", "year" -> "1976", "month" -> "sep", "number" ->
                     TypeSystem`NestedGrid`PackagePrivate`$state$$], 
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
                     Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + 
-                    10 If[False, 94, 1], {1, 94 - 10 + 1}]; 
+                    10 If[False, 95, 1], {1, 95 - 10 + 1}]; 
                     TypeSystem`NestedGrid`PackagePrivate`updateState[
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -5625,7 +5644,7 @@ and irrational magnetic fields", "year" -> "1976", "month" -> "sep", "number" ->
                     TypeSystem`NestedGrid`PackagePrivate`$state$$], 
                     TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
                     Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + 
-                    10 If[True, 94, 1], {1, 94 - 10 + 1}]; 
+                    10 If[True, 95, 1], {1, 95 - 10 + 1}]; 
                     TypeSystem`NestedGrid`PackagePrivate`updateState[
                     TypeSystem`NestedGrid`PackagePrivate`$state$$, 
                     TypeSystem`NestedGrid`PackagePrivate`$path$$, 
@@ -5644,8 +5663,7 @@ and irrational magnetic fields", "year" -> "1976", "month" -> "sep", "number" ->
           BaseStyle -> {
            ContextMenu -> 
             Dynamic[TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
-              Which[
-               TypeSystem`NestedGrid`PackagePrivate`$lastOutputID =!= 
+              Which[TypeSystem`NestedGrid`PackagePrivate`$lastOutputID =!= 
                 TypeSystem`NestedGrid`PackagePrivate`localHold[
                  TypeSystem`NestedGrid`PackagePrivate`$outputID$$], {}, 
                 TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger === 
@@ -5969,8 +5987,9 @@ lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
    3.840599288322754*^9, 3.8405994143780875`*^9, 3.840599465423888*^9, {
    3.840599514023947*^9, 3.8405995558996215`*^9}, 3.8406006912347393`*^9, 
    3.840601057449605*^9, 3.840612498639867*^9, 3.8406125932700415`*^9, 
-   3.8406167204813323`*^9, 3.840702408479537*^9},
- CellLabel->"Out[16]=",ExpressionUUID->"f1dbf546-b70a-47bc-999e-9fa4510629a4"]
+   3.8406167204813323`*^9, 3.840702407362671*^9, 3.8407481711998434`*^9, 
+   3.8407501105532475`*^9, 3.840752749969236*^9},
+ CellLabel->"Out[44]=",ExpressionUUID->"b96be573-32af-47ff-a50e-0104bafd72a9"]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -5985,7 +6004,7 @@ Cell[BoxData[
    3.840190143181331*^9}, 3.8402440967894306`*^9, 3.8402745305195723`*^9, {
    3.8403369120749044`*^9, 3.840336922833294*^9}, 3.840421204121168*^9, 
    3.840421254721751*^9, 3.8406167282208986`*^9},
- CellLabel->"In[21]:=",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
+ CellLabel->"In[40]:=",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
 
 Cell[BoxData["\<\"F:\\\\Research\\\\Manuscript\\\\tBLG_ZLM_transport\\\\bib.\
 tex\"\>"], "Output",
@@ -6005,8 +6024,10 @@ tex\"\>"], "Output",
    3.8406011238153067`*^9, 3.840601565735389*^9, 3.8406018579499426`*^9, 
    3.8406125045330725`*^9, 3.840612596387786*^9, 3.840616728876933*^9, 
    3.84070241195828*^9, 3.84070247587665*^9, 3.840702582547394*^9, 
-   3.840702691048251*^9, 3.840702733840053*^9},
- CellLabel->"Out[21]=",ExpressionUUID->"51fcc4f0-d9a4-428d-8aa1-b3a239bd4364"]
+   3.840702691048251*^9, 3.840702733840053*^9, 3.8407481818033247`*^9, 
+   3.8407483206655188`*^9, 3.8407501028388214`*^9, 3.8407501361712694`*^9, 
+   3.840752748490213*^9},
+ CellLabel->"Out[40]=",ExpressionUUID->"dab5161c-fe28-44c2-8c00-f274367b98fc"]
 }, Open  ]]
 }, Open  ]]
 },
@@ -6075,19 +6096,19 @@ Cell[120184, 2234, 453, 7, 41, "Output",ExpressionUUID->"0f7e5542-ca06-431b-aa34
 }, Closed]],
 Cell[CellGroupData[{
 Cell[120686, 2247, 154, 3, 89, "Title",ExpressionUUID->"a78bb14c-d08c-4c90-aa79-186053c1f584"],
-Cell[120843, 2252, 16632, 391, 1628, "Input",ExpressionUUID->"fc9d5688-3e7e-443f-ad88-5007756aea8a"],
+Cell[120843, 2252, 16633, 391, 1628, "Input",ExpressionUUID->"fc9d5688-3e7e-443f-ad88-5007756aea8a"],
 Cell[CellGroupData[{
-Cell[137500, 2647, 246, 4, 54, "Input",ExpressionUUID->"56e31ccb-4ee4-4cdc-8a9d-16601df520c7"],
-Cell[137749, 2653, 199, 3, 41, "Output",ExpressionUUID->"42791e7c-651e-4dff-b7e5-382dd21ff5d5"]
+Cell[137501, 2647, 246, 4, 54, "Input",ExpressionUUID->"56e31ccb-4ee4-4cdc-8a9d-16601df520c7"],
+Cell[137750, 2653, 247, 3, 41, "Output",ExpressionUUID->"1359a368-babe-4cab-8895-e0c2d914b528"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[137985, 2661, 1109, 22, 120, "Input",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
-Cell[139097, 2685, 4307, 69, 186, "Output",ExpressionUUID->"9d7f81b6-e792-48f8-894d-32c6f9968e1e"],
-Cell[143407, 2756, 183886, 3216, 993, "Output",ExpressionUUID->"f1dbf546-b70a-47bc-999e-9fa4510629a4"]
+Cell[138034, 2661, 1109, 22, 120, "Input",ExpressionUUID->"bfa401c2-3f45-4fd5-a4dc-b218b4c3f120"],
+Cell[139146, 2685, 4384, 69, 186, "Output",ExpressionUUID->"fc5acc1b-b0e3-4cbf-ac83-61cb85173da5"],
+Cell[143533, 2756, 184717, 3235, 993, "Output",ExpressionUUID->"b96be573-32af-47ff-a50e-0104bafd72a9"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[327330, 5977, 574, 10, 30, "Input",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
-Cell[327907, 5989, 1346, 19, 41, "Output",ExpressionUUID->"51fcc4f0-d9a4-428d-8aa1-b3a239bd4364"]
+Cell[328287, 5996, 574, 10, 30, "Input",ExpressionUUID->"459a938e-3c05-4de8-a44b-0ea0eab4fe95"],
+Cell[328864, 6008, 1472, 21, 41, "Output",ExpressionUUID->"dab5161c-fe28-44c2-8c00-f274367b98fc"]
 }, Open  ]]
 }, Open  ]]
 }
